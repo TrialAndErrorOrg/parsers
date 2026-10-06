@@ -11,7 +11,7 @@ unified-latex with the converter's macro signatures) → a unified processor run
 ## Library
 
 ```ts
-import { texToTypst } from '@jote/processors/tex-to-typst'
+import { texToTypst } from 'tex-to-typst'
 
 const file = await texToTypst(source, { templatePath: 'jote-article/lib.typ' })
 String(file.value) // main.typ
@@ -20,12 +20,12 @@ file.data.typast // the Typst tree
 ```
 
 Options: `templatePath` (default `'jote-article/lib.typ'`, e.g. `'@local/jote-article:0.1.0'`),
-`path` (for messages), plus every option of `totypast` (`resolveImage`, `bibliographyStyle`, …).
+`path` (for messages), plus every option of `toTypast` (`resolveImage`, `bibliographyStyle`, …).
 
 ## CLI
 
 ```sh
-npx tsx --tsconfig tsconfig.base.json libs/processors/tex-to-typst/src/cli.ts \
+npx tsx --conditions=@jote/source libs/processors/tex-to-typst/src/cli.ts \
   "path/to/article/main.tex" out/article [--compile] [--font-path dir]… \
   [--template templates/typst/jote-article] [--copy-template] [--import "@local/jote-article:0.1.0"]
 ```
@@ -39,7 +39,7 @@ unsupported one. Warnings are printed as `main.tex:line:col  warning  reason`.
 `--compile` then runs `typst compile` (pass the JOTE fonts with `--font-path`):
 
 ```sh
-npx tsx --tsconfig tsconfig.base.json libs/processors/tex-to-typst/src/cli.ts \
+npx tsx --conditions=@jote/source libs/processors/tex-to-typst/src/cli.ts \
   "$HOME/JOTE/archive/issues/issue 6-2/kohrt framework/main.tex" /tmp/kohrt --compile \
   --font-path ~/JOTE/archive/fonts --font-path ~/JOTE/archive/OverpassFonts --font-path ~/JOTE/archive
 ```

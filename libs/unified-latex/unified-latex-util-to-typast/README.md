@@ -9,23 +9,23 @@ LaTeX fragments.
 ## Use
 
 ```ts
-import { parseLatex, totypast } from 'unified-latex-util-to-typast'
+import { parseLatex, toTypast } from 'unified-latex-util-to-typast'
 import { toTypst } from 'typast-util-to-typst'
 import { VFile } from 'vfile'
 
 const file = new VFile()
-const tree = totypast(parseLatex(source), file, { templatePath: 'jote-article/lib.typ' })
+const tree = toTypast(parseLatex(source), file, { templatePath: 'jote-article/lib.typ' })
 const typst = toTypst(tree)
 file.messages // everything that couldn't be converted faithfully
 ```
 
 `parseLatex` runs the unified-latex parser with the argument signatures of every macro and
 environment the converter handles (`macroSignatures`, `environmentSignatures`). If you parse
-yourself, pass those to `unifiedLatexFromString`; `totypast` attaches missing macro arguments
+yourself, pass those to `unifiedLatexFromString`; `toTypast` attaches missing macro arguments
 itself, but environment arguments are only gobbled for the environments it handles.
 
 For a unified pipeline use [`unified-latex-typast`](../unified-latex-typast); for a ready-made
-LaTeX → Typst project converter use [`@jote/processors/tex-to-typst`](../../processors/tex-to-typst).
+LaTeX → Typst project converter use [`tex-to-typst`](../../processors/tex-to-typst).
 
 ### Options
 

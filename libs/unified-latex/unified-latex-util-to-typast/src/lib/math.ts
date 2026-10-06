@@ -57,8 +57,8 @@ const MATH_ENVS: Record<string, string> = {
  * Each pattern matches `\\` (a line break) as a token of its own first, so the second backslash of
  * `\\b` is never read as the start of a command `\b`. Replacers return that token unchanged.
  */
-const COMMAND = /\\\\|\\([a-zA-Z]+)(\*?)/g
-const ACCENT = /\\\\|\\([\^~=."])\s*(\{[^{}]*\}|[a-zA-Z])/g
+const COMMAND = /\\\\|\\([a-z]+)(\*?)/gi
+const ACCENT = /\\\\|\\([\^~=."])\s*(\{[^{}]*\}|[a-z])/gi
 const ENV = /\\\\|\\(begin|end)\{([a-z]+\*?)\}/g
 const TEXT_ARG = /\\\\|\\text\s*\{/g
 /** `\\[2pt]`, `\\*[1ex]`: the optional vertical space after a line break */

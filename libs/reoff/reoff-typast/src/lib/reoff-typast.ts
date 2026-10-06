@@ -1,7 +1,7 @@
 import type { Plugin, Processor as UnifiedProcessor, Transformer } from 'unified'
 import type { Root as OoxastRoot } from 'ooxast'
-import type { Root as typastRoot } from 'typast'
-import { totypast, type Options } from 'ooxast-util-to-typast'
+import type { Root as TypastRoot } from 'typast'
+import { toTypast, type Options } from 'ooxast-util-to-typast'
 import type { Root as XastRoot } from 'xast'
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -14,7 +14,7 @@ export type { Options }
  */
 function bridge(destination: Processor, options?: Options): Transformer<OoxastRoot> {
   return (node, file, next) => {
-    destination.run(totypast(node as unknown as XastRoot, file, options), file, (error) => {
+    destination.run(toTypast(node as unknown as XastRoot, file, options), file, (error) => {
       next(error)
     })
   }
@@ -23,8 +23,8 @@ function bridge(destination: Processor, options?: Options): Transformer<OoxastRo
 /**
  * Mutate-mode: further plugins run on the typast tree.
  */
-function mutate(options?: Options): Transformer<OoxastRoot, typastRoot> {
-  return (node, file) => totypast(node as unknown as XastRoot, file, options)
+function mutate(options?: Options): Transformer<OoxastRoot, TypastRoot> {
+  return (node, file) => toTypast(node as unknown as XastRoot, file, options)
 }
 
 /**
@@ -34,13 +34,13 @@ function mutate(options?: Options): Transformer<OoxastRoot, typastRoot> {
  * before `typast-stringify`:
  *
  * ```ts
- * unified().use(reoffParse).use(reofftypast, options).use(typastStringify).process(vfile)
+ * unified().use(reoffParse).use(reoffTypast, options).use(typastStringify).process(vfile)
  * ```
  *
  * Given a processor as first argument it runs that processor on the typast tree instead
  * (bridge mode), like `remark-rehype`.
  */
-const reofftypast = function (
+const reoffTypast = function (
   this: Processor,
   destination?: Processor | Options,
   options?: Options,
@@ -49,6 +49,6 @@ const reofftypast = function (
     return bridge(destination as Processor, options)
   }
   return mutate((destination as Options | undefined) ?? options)
-} as Plugin<[(Processor | Options)?, Options?], OoxastRoot, typastRoot>
+} as Plugin<[(Processor | Options)?, Options?], OoxastRoot, TypastRoot>
 
-export default reofftypast
+export default reoffTypast

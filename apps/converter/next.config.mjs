@@ -39,12 +39,12 @@ const nextConfig = {
     'reoff-markup-to-style',
     'reoff-unified-latex',
     'unified-latex-stringify',
-    'ooxast-util-to-tyast',
-    'reoff-tyast',
+    'ooxast-util-to-typast',
+    'reoff-typast',
     'typast',
     'typast-util-to-typst',
     'typast-stringify',
-    '@jote/processors/docx-to-typst',
+    'docx-to-typst',
   ],
   webpack: (config) => {
     // Resolve workspace packages to their `src/index.ts` instead of the built `dist`.

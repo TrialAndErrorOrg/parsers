@@ -1,11 +1,12 @@
+import { describe, it, expect } from 'vitest'
 import { toTypst } from 'typast-util-to-typst'
 import type { FunctionCall, Root, ShowRule } from 'typast'
 import { VFile } from 'vfile'
 import { parseLatex } from './parse.js'
-import { totypast } from './to-typast.js'
+import { toTypast } from './to-typast.js'
 
 function tree(latex: string, file = new VFile()): Root {
-  return totypast(parseLatex(latex), file, { document: false })
+  return toTypast(parseLatex(latex), file, { document: false })
 }
 
 /** LaTeX fragment → Typst source (trimmed) */
@@ -32,11 +33,13 @@ describe('text', () => {
   })
 
   it('composes accents', () => {
-    expect(typ("\\'ecole \\\"o \\c{c} Sch\\\"{o}nbrodt")).toBe('école ö ç Schönbrodt')
+    expect(typ('\\\'ecole \\"o \\c{c} Sch\\"{o}nbrodt')).toBe('école ö ç Schönbrodt')
   })
 
   it('maps sub/superscripts, underline, url and href', () => {
-    expect(typ('n\\textsubscript{1} x\\textsuperscript{2} \\underline{u}')).toBe('n#sub[1] x#super[2] #underline[u]')
+    expect(typ('n\\textsubscript{1} x\\textsuperscript{2} \\underline{u}')).toBe(
+      'n#sub[1] x#super[2] #underline[u]',
+    )
     expect(typ('\\url{https://x.org/a_b}')).toBe('#link("https://x.org/a_b")')
     expect(typ('\\href{https://doi.org/1}{the doi}')).toBe('#link("https://doi.org/1")[the doi]')
   })
@@ -67,7 +70,9 @@ describe('text', () => {
     expect(typ('S8 \\rightarrow{ }n')).toBe('S8 → n')
     expect(typ('\\textbullet{}')).toBe('•')
     // LaTeX sets a text-mode \bullet as maths: a big dot on the maths axis
-    expect(typ('\\bullet')).toBe('\u200B#box(baseline: -0.05em, circle(radius: 0.2em, fill: black))')
+    expect(typ('\\bullet')).toBe(
+      '\u200B#box(baseline: -0.05em, circle(radius: 0.2em, fill: black))',
+    )
   })
 
   it('handles font declarations until the end of the group', () => {
@@ -88,13 +93,19 @@ describe('text', () => {
   it('keeps the text of unknown macros and warns', () => {
     const file = new VFile()
     expect(typ('a \\frobnicate{kept} b', file)).toBe('a kept b')
-    expect(file.messages.map((m) => m.reason)).toEqual(['Unknown \\frobnicate: kept its text content'])
+    expect(file.messages.map((m) => m.reason)).toEqual([
+      'Unknown \\frobnicate: kept its text content',
+    ])
   })
 })
 
 describe('structure', () => {
   it('converts sectioning with labels', () => {
-    expect(typ('\\section{Intro}\\label{sec:intro}\nText\n\\subsection*{Sub}\n\\subsubsection{Third}\n\\paragraph{Run-in} text')).toBe(
+    expect(
+      typ(
+        '\\section{Intro}\\label{sec:intro}\nText\n\\subsection*{Sub}\n\\subsubsection{Third}\n\\paragraph{Run-in} text',
+      ),
+    ).toBe(
       '= Intro <sec:intro>\n\nText\n\n#heading(depth: 2, numbering: none)[Sub]\n\n=== Third\n\n==== Run-in\n\ntext',
     )
   })
@@ -116,25 +127,37 @@ describe('structure', () => {
 
   it('converts quotes and epigraphs', () => {
     expect(typ('\\begin{quote}Quoted.\\end{quote}')).toBe('#quote(block: true)[Quoted.]')
-    expect(typ('\\begin{epigraph}{Someone}Wise words.\\end{epigraph}')).toBe('#epigraph([Someone])[Wise words.]')
+    expect(typ('\\begin{epigraph}{Someone}Wise words.\\end{epigraph}')).toBe(
+      '#epigraph([Someone])[Wise words.]',
+    )
   })
 })
 
 describe('lists', () => {
   it('converts nested itemize and enumerate', () => {
-    expect(typ('\\begin{itemize}\\item one\\begin{enumerate}\\item a\\item b\\end{enumerate}\\item two\\end{itemize}')).toBe(
-      '- one\n  + a\n  + b\n- two',
-    )
+    expect(
+      typ(
+        '\\begin{itemize}\\item one\\begin{enumerate}\\item a\\item b\\end{enumerate}\\item two\\end{itemize}',
+      ),
+    ).toBe('- one\n  + a\n  + b\n- two')
   })
 
   it('maps enumitem labels', () => {
-    expect(typ('\\begin{enumerate}[label=(\\alph*)]\\item a\\end{enumerate}')).toBe('#enum(numbering: "(a)")[a]')
+    expect(typ('\\begin{enumerate}[label=(\\alph*)]\\item a\\end{enumerate}')).toBe(
+      '#enum(numbering: "(a)")[a]',
+    )
     // topsep=0pt: a plain block, so the list sits on the line grid
-    expect(typ('\\begin{itemize}[label=\\phantom{\\textbullet},topsep=0pt]\\item x\\end{itemize}')).toBe(
+    expect(
+      typ('\\begin{itemize}[label=\\phantom{\\textbullet},topsep=0pt]\\item x\\end{itemize}'),
+    ).toBe(
       // an outer list's text starts at the paragraph indent, whatever the label's width
       '#block[#list(\n  marker: box(width: 10pt - 0.5em, [*#hide[•]*]),\n  indent: 0pt,\n  body-indent: 0.5em,\n  [x],\n)]',
     )
-    expect(typ('\\begin{itemize}[leftmargin=2.5em, label={\\hspace{1em}\\textendash}]\\item x\\end{itemize}')).toBe(
+    expect(
+      typ(
+        '\\begin{itemize}[leftmargin=2.5em, label={\\hspace{1em}\\textendash}]\\item x\\end{itemize}',
+      ),
+    ).toBe(
       // leftmargin: the text starts 2.5em in, the label ends a label separation before it
       '#list(\n  marker: box(width: 2.5em - 0.5em, align(right, [*#h(1em)–*])),\n  indent: 0pt,\n  body-indent: 0.5em,\n  [x],\n)',
     )
@@ -159,13 +182,15 @@ describe('math', () => {
   })
 
   it('maps text commands and accents used in math', () => {
-    expect(typ('$\\textbf{a}_1 + \\textbf{\\^{y}}$')).toBe('$upright(bold(a))_1 + upright(bold(hat(y)))$')
+    expect(typ('$\\textbf{a}_1 + \\textbf{\\^{y}}$')).toBe(
+      '$upright(bold(a))_1 + upright(bold(hat(y)))$',
+    )
   })
 
   it('wraps split in aligned', () => {
-    expect(typ('\\begin{equation*}\\begin{split} a &= b \\\\ c &= d \\end{split}\\end{equation*}')).toBe(
-      '$ a &= b \\ c &= d $',
-    )
+    expect(
+      typ('\\begin{equation*}\\begin{split} a &= b \\\\ c &= d \\end{split}\\end{equation*}'),
+    ).toBe('$ a &= b \\ c &= d $')
   })
 
   it('keeps \\left. and \\right. delimiters for tex2typst', () => {
@@ -208,8 +233,12 @@ describe('math', () => {
 describe('figures', () => {
   it('converts figure and figure* with width, alt, caption and label', () => {
     expect(
-      typ('\\begin{figure*}\\centering\\includegraphics[width=0.5\\linewidth, alt={A "chart"}]{media/a.png}\\caption{The caption}\\label{fig:a}\\end{figure*}'),
-    ).toBe('#wide-figure(image("media/a.png", width: 50%, alt: "A \\"chart\\""), caption: [The caption]) <fig:a>')
+      typ(
+        '\\begin{figure*}\\centering\\includegraphics[width=0.5\\linewidth, alt={A "chart"}]{media/a.png}\\caption{The caption}\\label{fig:a}\\end{figure*}',
+      ),
+    ).toBe(
+      '#wide-figure(image("media/a.png", width: 50%, alt: "A \\"chart\\""), caption: [The caption]) <fig:a>',
+    )
     expect(typ('\\begin{figure}[h]\\includegraphics{media/b.pdf}\\caption{B}\\end{figure}')).toBe(
       '#figure(image("media/b.pdf"), caption: [B], placement: none)',
     )
@@ -223,15 +252,21 @@ describe('figures', () => {
   })
 
   it('crops images with trim and clip', () => {
-    const out = typ('\\includegraphics[trim=0cm 44cm 0cm 0cm, clip, width=\\linewidth]{media/i.pdf}')
+    const out = typ(
+      '\\includegraphics[trim=0cm 44cm 0cm 0cm, clip, width=\\linewidth]{media/i.pdf}',
+    )
     expect(out).toContain('box(clip: true')
     expect(out).toContain('height: (nat.height - 0cm - 44cm) * s')
   })
 
   it('turns a minipage with \\captionof into an in-flow figure and hoists headings', () => {
-    const out = typ('\\begin{minipage}{\\textwidth}\\section{Appendix}\\captionof{figure}{Cap}\\includegraphics{a.png}\\label{fig:z}\\end{minipage}')
+    const out = typ(
+      '\\begin{minipage}{\\textwidth}\\section{Appendix}\\captionof{figure}{Cap}\\includegraphics{a.png}\\label{fig:z}\\end{minipage}',
+    )
     // the caption comes first in the source, so it is set above the image
-    expect(out).toBe('= Appendix\n\n#figure(image("a.png"), caption: figure.caption(position: top)[Cap], placement: none) <fig:z>')
+    expect(out).toBe(
+      '= Appendix\n\n#figure(image("a.png"), caption: figure.caption(position: top)[Cap], placement: none) <fig:z>',
+    )
   })
 
   it('lays out subfigures in a grid', () => {
@@ -246,7 +281,9 @@ describe('figures', () => {
 
 describe('tables', () => {
   it('converts a booktabs tabular', () => {
-    const out = typ('\\begin{tabular}{lr}\\toprule A & B \\\\ \\midrule 1 & 2 \\\\ \\bottomrule\\end{tabular}')
+    const out = typ(
+      '\\begin{tabular}{lr}\\toprule A & B \\\\ \\midrule 1 & 2 \\\\ \\bottomrule\\end{tabular}',
+    )
     expect(out).toBe(
       [
         '#table(',
@@ -272,7 +309,9 @@ describe('tables', () => {
       expect(file.messages).toHaveLength(0)
       return out.split('\n').slice(1, 3).join('\n')
     }
-    expect(cols('*{3}{c}')).toBe('  columns: (auto, auto, auto),\n  align: (center, center, center),')
+    expect(cols('*{3}{c}')).toBe(
+      '  columns: (auto, auto, auto),\n  align: (center, center, center),',
+    )
     expect(cols('*{2}{lr}')).toBe(
       '  columns: (auto, auto, auto, auto),\n  align: (left, right, left, right),',
     )
@@ -324,7 +363,9 @@ describe('tables', () => {
   })
 
   it('maps the fullwidth environment, keeping an in-flow table and its caption inside', () => {
-    const out = typ('\\begin{table}[H]\\begin{fullwidth}\\caption{T}\\begin{tabular}{l}x\\\\\\end{tabular}\\end{fullwidth}\\end{table}')
+    const out = typ(
+      '\\begin{table}[H]\\begin{fullwidth}\\caption{T}\\begin{tabular}{l}x\\\\\\end{tabular}\\end{fullwidth}\\end{table}',
+    )
     expect(out).toMatch(/^#fullwidth\[#figure\(/)
     expect(out).toContain('placement: none')
     expect(typ('\\begin{fullwidth}text\\end{fullwidth}')).toBe('#fullwidth[text]')
@@ -353,20 +394,26 @@ describe('tables', () => {
   })
 
   it('converts landscape tables without floating them', () => {
-    const out = typ('\\begin{landscape}\\begin{table}\\caption{L}\\begin{tabular}{l}x\\\\\\end{tabular}\\end{table}\\end{landscape}')
+    const out = typ(
+      '\\begin{landscape}\\begin{table}\\caption{L}\\begin{tabular}{l}x\\\\\\end{tabular}\\end{table}\\end{landscape}',
+    )
     expect(out).toMatch(/^#landscape\[#figure\(/)
     expect(out).not.toContain('placement')
   })
 
   it('converts lists inside cells (tabitemize)', () => {
-    const out = typ('\\begin{tabular}{lp{4cm}}A & \\begin{tabitemize}\\item one\\item two\\end{tabitemize}\\\\\\end{tabular}')
+    const out = typ(
+      '\\begin{tabular}{lp{4cm}}A & \\begin{tabitemize}\\item one\\item two\\end{tabitemize}\\\\\\end{tabular}',
+    )
     expect(out).toContain('- one\n')
   })
 })
 
 describe('jote boxes', () => {
   it('maps rightWide/fullWide and class floats', () => {
-    expect(typ('\\begin{rightWide}[Box 1]\\textbf{Sum}\\end{rightWide}')).toBe('#jote-box(title: [Box 1], width: "wide")[*Sum*]')
+    expect(typ('\\begin{rightWide}[Box 1]\\textbf{Sum}\\end{rightWide}')).toBe(
+      '#jote-box(title: [Box 1], width: "wide")[*Sum*]',
+    )
     expect(typ('\\begin{fullWide}[]x\\end{fullWide}')).toBe('#jote-box(width: "full")[x]')
     expect(typ('\\begin{takeHomeMessage}t\\end{takeHomeMessage}')).toBe('#take-home[t]')
     expect(typ('\\begin{originalPurpose}o\\end{originalPurpose}')).toBe('#original-purpose[o]')
@@ -401,7 +448,9 @@ describe('citations', () => {
 
 describe('JOTE quirks', () => {
   it('turns \\noindent after a paragraph into an unindented paragraph', () => {
-    expect(typ('First.\n\n\\noindent Second.')).toBe('First.\n\n#par(first-line-indent: 0pt)[Second.]')
+    expect(typ('First.\n\n\\noindent Second.')).toBe(
+      'First.\n\n#par(first-line-indent: 0pt)[Second.]',
+    )
     // nothing to do where Typst does not indent anyway
     expect(typ('\\section{A}\n\\noindent Text.')).toBe('= A\n\nText.')
     // vertical space between the paragraphs does not stop Typst from indenting
@@ -413,7 +462,9 @@ describe('JOTE quirks', () => {
   it('maps \\lettrine, \\color and \\rule', () => {
     expect(typ('\\lettrine{I}{n} the')).toBe('I#smallcaps[n] the')
     expect(typ('{\\color{joteorange} hot} cold')).toBe('#text(fill: joteorange)[hot] cold')
-    expect(typ('\\rule{\\linewidth}{1pt}')).toBe('#context box(width: 100%, height: 1pt, fill: text.fill)')
+    expect(typ('\\rule{\\linewidth}{1pt}')).toBe(
+      '#context box(width: 100%, height: 1pt, fill: text.fill)',
+    )
   })
 
   it('places a TikZ page overlay (correction notice) on the page', () => {
@@ -424,7 +475,9 @@ describe('JOTE quirks', () => {
 \end{tikzpicture}`,
       file,
     )
-    expect(out).toContain('#context { let p = here().position(); place(dx: 4.7cm - p.x, dy: -(-0.3cm) - p.y)[')
+    expect(out).toContain(
+      '#context { let p = here().position(); place(dx: 4.7cm - p.x, dy: -(-0.3cm) - p.y)[',
+    )
     expect(out).toContain('Notice')
     expect(file.messages).toHaveLength(0)
   })
@@ -465,8 +518,14 @@ As \textcite{key} said.
 \end{document}`
 
   it('builds the import and jote-article show rule', () => {
-    const root = totypast(parseLatex(doc), new VFile(), { templatePath: '@local/jote-article:0.1.0' })
-    expect(root.children[0]).toEqual({ type: 'import', source: '@local/jote-article:0.1.0', items: '*' })
+    const root = toTypast(parseLatex(doc), new VFile(), {
+      templatePath: '@local/jote-article:0.1.0',
+    })
+    expect(root.children[0]).toEqual({
+      type: 'import',
+      source: '@local/jote-article:0.1.0',
+      items: '*',
+    })
     const show = root.children[1] as ShowRule
     const call = show.transform as FunctionCall
     expect(call.name).toBe('jote-article.with')
@@ -498,7 +557,7 @@ As \textcite{key} said.
         'As \\textcite{key} said.',
         'As \\textcite{key:with/slash} said \\parencite[see][p.~5]{a,b}, \\parencite[p.~5]{c,d} \\footcite{e}\\nocite{f}.',
       )
-    const out = toTypst(totypast(parseLatex(source), file))
+    const out = toTypst(toTypast(parseLatex(source), file))
     expect(out).not.toContain('#cite')
     expect(out).not.toContain('bibliography:')
     expect(out).toContain('abstract: [An abstract (abs).]')
@@ -511,7 +570,7 @@ As \textcite{key} said.
   })
 
   it('emits no abstract with noabstract', () => {
-    const out = toTypst(totypast(parseLatex(doc.replace('issue]', 'issue, noabstract]'))))
+    const out = toTypst(toTypast(parseLatex(doc.replace('issue]', 'issue, noabstract]'))))
     expect(out).toContain('abstract: none')
   })
 })

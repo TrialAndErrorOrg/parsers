@@ -1,7 +1,7 @@
 /**
  * Convert a .docx manuscript into a buildable Typst project for the JOTE template.
  *
- *   npx tsx --tsconfig tsconfig.base.json libs/processors/docx-to-typst/src/cli.ts \
+ *   npx tsx --conditions=@jote/source libs/processors/docx-to-typst/src/cli.ts \
  *     path/to/manuscript.docx out/dir [--meta meta.json] [--template templates/typst/jote-article] \
  *     [--copy-template] [--import "@local/jote-article:0.1.0"] [--compile] [--font-path dir]…
  *

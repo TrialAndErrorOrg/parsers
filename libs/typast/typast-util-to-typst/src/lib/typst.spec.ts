@@ -1,3 +1,4 @@
+import { describe, it, expect } from 'vitest'
 /**
  * These tests run the real `typst` CLI on the serializer's output and check
  * that Typst (a) accepts it and (b) parses it into the content the tree
@@ -373,7 +374,11 @@ describe.skipIf(!hasTypst)('toTypst output in typst', () => {
       call('figure', [a(content(t('body'))), a(content(t('Caption')), 'caption')]),
       label('fig:a'),
     )
-    expect(flatten(toTypst(tree)).trim().replace(/ ?¶ ?/g, '¶')).toBe(
+    expect(
+      flatten(toTypst(tree))
+        .trim()
+        .replace(/ ?¶ ?/g, '¶'),
+    ).toBe(
       'H1{Intro}<sec:intro>¶See @sec:intro and @fig:a[Fig.].¶' +
         '-{one -{one.a} -{- one.b}} -{two¶two, again}¶' +
         '4{four} +{five}¶N{+A|+B}¶/{Term: x=Desc}¶figure{body}<fig:a>',

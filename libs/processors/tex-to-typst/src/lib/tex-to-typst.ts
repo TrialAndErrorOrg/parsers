@@ -1,12 +1,12 @@
-import type { Root as typastRoot } from 'typast'
+import type { Root as TypastRoot } from 'typast'
 import typastStringify from 'typast-stringify'
 import type { Options as StringifyOptions } from 'typast-util-to-typst'
 import { unified } from 'unified'
-import unifiedLatextypast from 'unified-latex-typast'
-import { parseLatex, type Options as TotypastOptions } from 'unified-latex-util-to-typast'
+import unifiedLatexTypast from 'unified-latex-typast'
+import { parseLatex, type Options as ToTypastOptions } from 'unified-latex-util-to-typast'
 import { VFile } from 'vfile'
 
-export interface Options extends Omit<TotypastOptions, 'templatePath'> {
+export interface Options extends Omit<ToTypastOptions, 'templatePath'> {
   /**
    * What `main.typ` imports the template from, e.g. `"@local/jote-article:0.1.0"`.
    * @default 'jote-article/lib.typ'
@@ -32,9 +32,9 @@ export async function texToTypst(input: string, options: Options = {}): Promise<
   const { path, stringify, ...rest } = options
   const file = new VFile({ value: input, path })
   const processor = unified()
-    .use(unifiedLatextypast, { ...rest, templatePath: rest.templatePath ?? 'jote-article/lib.typ' })
+    .use(unifiedLatexTypast, { ...rest, templatePath: rest.templatePath ?? 'jote-article/lib.typ' })
     .use(typastStringify, stringify)
-  const tree = (await processor.run(parseLatex(input), file)) as typastRoot
+  const tree = (await processor.run(parseLatex(input), file)) as TypastRoot
   file.data.typast = tree
   file.value = processor.stringify(tree, file)
   return file

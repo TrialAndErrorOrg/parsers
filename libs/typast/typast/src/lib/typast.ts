@@ -273,7 +273,7 @@ export type PhrasingContent =
 
 export type Content = BlockContent | PhrasingContent | ListItem
 
-export type typastNode = Root | Content | Argument | Value
+export type TypastNode = Root | Content | Argument | Value
 
 /** Map of node type names to nodes, for handler tables and type guards. */
 export interface NodeMap {

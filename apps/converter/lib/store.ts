@@ -1,7 +1,7 @@
 import { create } from 'zustand'
 import { persist } from 'zustand/middleware'
 import { type MetaForm, metaToPreamble } from './meta-to-preamble'
-import { metaToTemplateArgs, type JoteArticleMeta } from '@jote/processors/docx-to-typst'
+import { metaToTemplateArgs, type JoteArticleMeta } from 'docx-to-typst'
 
 interface CredentialsState {
   token: string

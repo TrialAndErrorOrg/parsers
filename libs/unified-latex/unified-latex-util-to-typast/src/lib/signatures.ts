@@ -3,7 +3,7 @@ import type { EnvInfoRecord, MacroInfoRecord } from '@unified-latex/unified-late
 /**
  * Argument signatures (xparse syntax) for every macro the converter understands that
  * unified-latex doesn't know out of the box. Pass these to the parser (see `parseLatex`), or
- * let `totypast` attach them itself.
+ * let `toTypast` attach them itself.
  */
 export const macroSignatures: MacroInfoRecord = {
   // jote-new-article.cls metadata

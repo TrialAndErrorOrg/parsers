@@ -279,7 +279,7 @@ export class State {
           }
           // TeX swallows the space after a control word without arguments
           if (
-            /^[a-zA-Z]+$/.test(node.content) &&
+            /^[a-z]+$/i.test(node.content) &&
             (!node.args || node.args.every((a) => a.content.length === 0 && a.openMark === '')) &&
             nodes[i + 1]?.type === 'whitespace'
           ) {

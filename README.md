@@ -199,14 +199,14 @@ The Typst port of `jote-new-article.cls`. Converters emit `#import "jote-article
 From a Word manuscript (`--meta` takes template arguments or a converter metadata form as JSON):
 
 ```sh
-npx tsx --tsconfig tsconfig.base.json libs/processors/docx-to-typst/src/cli.ts \
+npx tsx --conditions=@jote/source libs/processors/docx-to-typst/src/cli.ts \
   Manuscript.docx out/article [--meta meta.json]
 ```
 
 From a LaTeX article:
 
 ```sh
-npx tsx --tsconfig tsconfig.base.json libs/processors/tex-to-typst/src/cli.ts \
+npx tsx --conditions=@jote/source libs/processors/tex-to-typst/src/cli.ts \
   "path/to/article/main.tex" out/article
 ```
 

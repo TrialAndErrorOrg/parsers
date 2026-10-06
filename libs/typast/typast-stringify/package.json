@@ -1,16 +1,16 @@
 {
   "name": "typast-stringify",
-  "version": "0.0.1",
-  "dependencies": {
-    "typast": "0.0.1",
-    "typast-util-to-typst": "0.0.1",
-    "unified": "^10.1.2"
-  },
+  "version": "0.0.0",
+  "description": "unified compiler plugin that turns a `typast` tree into Typst source.",
   "license": "GPL-3.0-or-later",
-  "repository": "https://github.com/TrialAndErrorOrg/parsers",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TrialAndErrorOrg/parsers.git",
+    "directory": "libs/typast/typast-stringify"
+  },
+  "homepage": "https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/typast/typast-stringify#readme",
   "author": "Thomas F. K. Jorna <hello@tefkah.com>",
   "type": "module",
-  "description": "unified compiler plugin that turns a `typast` tree into Typst source.",
   "keywords": [
     "unified",
     "unified-plugin",
@@ -19,24 +19,32 @@
     "stringify",
     "ast"
   ],
+  "exports": {
+    ".": {
+      "@jote/source": "./src/index.ts",
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.lib.json",
+    "typecheck": "tsc -p tsconfig.json",
+    "test": "vitest run"
+  },
   "typedoc": {
     "entryPoint": "./src/index.ts",
     "readmeFile": "./README.md",
     "displayName": "typast-stringify",
     "tsconfig": "./tsconfig.lib.json"
   },
-  "exports": {
-    ".": {
-      "types": "./index.d.ts",
-      "import": "./index.js"
-    }
-  },
-  "main": "./index.js",
-  "module": "./index.js",
-  "types": "./index.d.ts",
-  "files": [
-    "index.d.ts",
-    "index.js",
-    "/lib"
-  ]
+  "dependencies": {
+    "typast": "workspace:^",
+    "typast-util-to-typst": "workspace:^",
+    "unified": "catalog:"
+  }
 }

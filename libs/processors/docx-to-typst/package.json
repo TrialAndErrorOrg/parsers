@@ -1,41 +1,59 @@
 {
   "name": "docx-to-typst",
-  "version": "0.0.1",
+  "version": "0.0.0",
+  "private": true,
   "description": "Convert a Word manuscript (.docx) to Typst for the JOTE jote-article template",
-  "type": "module",
-  "dependencies": {
-    "docx-to-vfile": "0.10.0",
-    "ooxast-util-to-typast": "0.0.1",
-    "reoff-clean": "0.3.0",
-    "reoff-markup-to-style": "0.2.0",
-    "reoff-parse": "0.5.0",
-    "reoff-typast": "0.0.1",
-    "typast-stringify": "0.0.1",
-    "typast-util-to-typst": "0.0.1",
-    "unified": "^10.1.2",
-    "vfile": "^5.3.7"
-  },
   "license": "GPL-3.0-or-later",
-  "repository": "https://github.com/TrialAndErrorOrg/parsers",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TrialAndErrorOrg/parsers.git",
+    "directory": "libs/processors/docx-to-typst"
+  },
+  "homepage": "https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/processors/docx-to-typst#readme",
   "author": "Thomas F. K. Jorna <hello@tefkah.com>",
+  "type": "module",
+  "keywords": [
+    "unified",
+    "typst",
+    "ast"
+  ],
+  "exports": {
+    ".": {
+      "@jote/source": "./src/index.ts",
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.lib.json",
+    "typecheck": "tsc -p tsconfig.json",
+    "test": "vitest run"
+  },
   "typedoc": {
     "entryPoint": "./src/index.ts",
     "readmeFile": "./README.md",
     "displayName": "docx-to-typst",
     "tsconfig": "./tsconfig.lib.json"
   },
-  "exports": {
-    ".": {
-      "types": "./index.d.ts",
-      "import": "./index.js"
-    }
+  "dependencies": {
+    "docx-to-vfile": "workspace:^",
+    "ooxast-util-to-typast": "workspace:^",
+    "reoff-clean": "workspace:^",
+    "reoff-markup-to-style": "workspace:^",
+    "reoff-parse": "workspace:^",
+    "reoff-typast": "workspace:^",
+    "typast-stringify": "workspace:^",
+    "typast-util-to-typst": "workspace:^",
+    "unified": "catalog:",
+    "vfile": "catalog:"
   },
-  "main": "./index.js",
-  "module": "./index.js",
-  "types": "./index.d.ts",
-  "files": [
-    "index.d.ts",
-    "index.js",
-    "/lib"
-  ]
+  "devDependencies": {
+    "@types/xast": "catalog:",
+    "xast-util-from-xml": "catalog:"
+  }
 }

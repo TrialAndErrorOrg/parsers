@@ -21,7 +21,7 @@ import {
 // ---------------------------------------------------------------------------
 
 function defaultResolve(path: string): string {
-  return /\.[a-zA-Z\d]+$/.test(path) ? path : `${path}.png`
+  return /\.[a-z\d]+$/i.test(path) ? path : `${path}.png`
 }
 
 /** `trim=l b r t` lengths (default unit bp) as Typst lengths. */
@@ -91,8 +91,8 @@ function cropped(
   const w = !width
     ? `nat.width - ${l} - ${r}`
     : width.endsWith('%')
-    ? `size.width * ${Number(width.slice(0, -1)) / 100}`
-    : width
+      ? `size.width * ${Number(width.slice(0, -1)) / 100}`
+      : width
   const p = JSON.stringify(path)
   const altArg = alt ? `, alt: ${JSON.stringify(alt)}` : ''
   const expr =
@@ -158,7 +158,7 @@ interface Collected {
 
 const TABULARS = new Set(['tabular', 'tabular*', 'tabularx', 'tabulary', 'longtable', 'longtabu'])
 
-function collect(nodes: Ast.Node[], acc: Collected, state: State) {
+function collect(nodes: Ast.Node[], acc: Collected) {
   for (const node of nodes) {
     if (node.type === 'macro') {
       const name = node.content
@@ -184,7 +184,7 @@ function collect(nodes: Ast.Node[], acc: Collected, state: State) {
       }
       if (IGNORED_MACROS.has(name)) continue
       if (TRANSPARENT_MACROS.has(name)) {
-        collect(lastArg(node), acc, state)
+        collect(lastArg(node), acc)
         continue
       }
       if (name === 'includegraphics') acc.images++
@@ -207,7 +207,7 @@ function collect(nodes: Ast.Node[], acc: Collected, state: State) {
         if (name === 'adjustbox') envArgs(node, 'm')
         if (name === 'minipage') envArgs(node, 'o o o m')
         if (name === 'threeparttable') envArgs(node, 'o')
-        collect(node.content, acc, state)
+        collect(node.content, acc)
         continue
       }
       if (TABULARS.has(name)) acc.tables++
@@ -215,7 +215,7 @@ function collect(nodes: Ast.Node[], acc: Collected, state: State) {
       continue
     }
     if (node.type === 'group') {
-      collect(node.content, acc, state)
+      collect(node.content, acc)
       continue
     }
     acc.body.push(node)
@@ -259,7 +259,7 @@ function subfigure(
   const a = envArgs(env, 'o o o m')
   const width = convertLength(rawText(a[3]))
   const acc: Collected = { labels: [], body: [], hoisted: [], subfigures: [], tables: 0, images: 0 }
-  collect(env.content, acc, state)
+  collect(env.content, acc)
   const letter = `(${String.fromCharCode(97 + (index % 26))})`
   const caption = acc.caption ? state.inline(acc.caption) : []
   for (const l of acc.labels) state.labels.set(l, { kind: 'subfigure', text: [text(letter)] })
@@ -289,7 +289,7 @@ interface FloatOptions {
 
 function buildFloat(nodes: Ast.Node[], env: Ast.Node, opts: FloatOptions, state: State): Content[] {
   const acc: Collected = { labels: [], body: [], hoisted: [], subfigures: [], tables: 0, images: 0 }
-  collect(nodes, acc, state)
+  collect(nodes, acc)
   let kind = opts.kind
   if (acc.captionKind === 'table') kind = 'table'
   if (acc.captionKind === 'figure') kind = 'image'
@@ -322,12 +322,12 @@ function buildFloat(nodes: Ast.Node[], env: Ast.Node, opts: FloatOptions, state:
   const captionValue: Value | undefined = !caption
     ? undefined
     : acc.captionFirst === defaultTop
-    ? content(caption)
-    : call(
-        'figure.caption',
-        [arg(code(acc.captionFirst ? 'top' : 'bottom'), 'position')],
-        [caption],
-      )
+      ? content(caption)
+      : call(
+          'figure.caption',
+          [arg(code(acc.captionFirst ? 'top' : 'bottom'), 'position')],
+          [caption],
+        )
   const figure = asBlock(
     call(opts.wide ? 'wide-figure' : 'figure', [
       arg(value),
@@ -361,7 +361,7 @@ const floatEnv =
   (node, state) => {
     const a = envArgs(node, 'o')
     const placement = plainText(a[0])
-    const floating = !/^[hH]!?$/.test(placement.trim())
+    const floating = !/^[h]!?$/i.test(placement.trim())
     if (kind === 'table') state.inTableEnv++
     try {
       return buildFloat(node.content, node, { kind, wide, floating }, state)

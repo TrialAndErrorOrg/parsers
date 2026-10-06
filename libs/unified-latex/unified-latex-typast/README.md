@@ -12,12 +12,12 @@
 import { unified } from 'unified'
 import { unifiedLatexFromString } from '@unified-latex/unified-latex-util-parse'
 import { macroSignatures, environmentSignatures } from 'unified-latex-util-to-typast'
-import unifiedLatextypast from 'unified-latex-typast'
+import unifiedLatexTypast from 'unified-latex-typast'
 import { toTypst } from 'typast-util-to-typst'
 
 const processor = unified()
   .use(unifiedLatexFromString, { macros: macroSignatures, environments: environmentSignatures })
-  .use(unifiedLatextypast, { templatePath: 'jote-article/lib.typ' })
+  .use(unifiedLatexTypast, { templatePath: 'jote-article/lib.typ' })
 
 const file = new VFile(source)
 const tree = await processor.run(processor.parse(file), file)
@@ -26,8 +26,8 @@ const typst = toTypst(tree)
 
 Add a typast compiler (e.g. `typast-stringify`) to use `processor.process()` directly.
 
-- **mutate mode** — `.use(unifiedLatextypast, options)`: the following plugins run on the typast tree.
-- **bridge mode** — `.use(unifiedLatextypast, destination, options)`: runs the `destination`
+- **mutate mode** — `.use(unifiedLatexTypast, options)`: the following plugins run on the typast tree.
+- **bridge mode** — `.use(unifiedLatexTypast, destination, options)`: runs the `destination`
   processor on the typast tree, and the original pipeline continues with the LaTeX tree.
 
 Options are those of [`unified-latex-util-to-typast`](../unified-latex-util-to-typast#options).

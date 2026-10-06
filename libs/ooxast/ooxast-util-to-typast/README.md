@@ -14,12 +14,12 @@ plugin [`reoff-typast`](../../reoff/reoff-typast) and the processor
 import { docxToVFile } from 'docx-to-vfile'
 import { unified } from 'unified'
 import reoffParse from 'reoff-parse'
-import { totypast } from 'ooxast-util-to-typast'
+import { toTypast } from 'ooxast-util-to-typast'
 import { toTypst } from 'typast-util-to-typst'
 
 const vfile = await docxToVFile(bytes)
 const tree = unified().use(reoffParse).parse(vfile)
-const typ = toTypst(totypast(tree, vfile, { meta: { articleType: 'meta', doi: '10.36850/…' } }))
+const typ = toTypst(toTypast(tree, vfile, { meta: { articleType: 'meta', doi: '10.36850/…' } }))
 vfile.data.typast // { media: [{ source: 'word/media/image1.png', path: 'media/image1.png' }], citations, bibliography, meta }
 ```
 
@@ -60,7 +60,7 @@ win.
 
 ## API
 
-### `totypast(tree, file?, options?)`
+### `toTypast(tree, file?, options?)`
 
 Returns a typast `Root`. With `document: false` only the body is returned (no `#import`/`#show`).
 

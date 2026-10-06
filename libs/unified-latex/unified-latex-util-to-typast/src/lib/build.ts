@@ -80,7 +80,7 @@ export const isNoindentMarker = (node: Content): boolean =>
 /** Mark a node as block-level for paragraph grouping. */
 export function asBlock<T extends Content>(node: T): T {
   ;(node as { data?: Record<string, unknown> }).data = {
-    ...((node as { data?: Record<string, unknown> }).data ?? {}),
+    ...(node as { data?: Record<string, unknown> }).data,
     block: true,
   }
   return node

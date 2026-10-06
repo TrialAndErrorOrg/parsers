@@ -1,3 +1,4 @@
+import { describe, it, expect } from 'vitest'
 import { spawnSync } from 'node:child_process'
 import { existsSync, mkdtempSync, rmSync, symlinkSync, writeFileSync } from 'node:fs'
 import { tmpdir } from 'node:os'
@@ -41,7 +42,9 @@ describe('texToTypst', () => {
   it('converts a whole article', async () => {
     const file = await texToTypst(article)
     const out = String(file.value)
-    expect(out.startsWith('#import "jote-article/lib.typ": *\n#show: jote-article.with(')).toBe(true)
+    expect(out.startsWith('#import "jote-article/lib.typ": *\n#show: jote-article.with(')).toBe(
+      true,
+    )
     expect(out).toContain('article-type: "Empirical"')
     expect(out).toContain('= Introduction <sec:intro>')
     expect(out).toContain('Table #ref(<tab:t>, supplement: none)')
@@ -64,18 +67,25 @@ describe('texToTypst', () => {
 
   const template = resolve(__dirname, '../../../../../templates/typst/jote-article')
   const hasTypst = spawnSync('typst', ['--version']).status === 0
-  it.skipIf(!hasTypst || !existsSync(join(template, 'lib.typ')))('compiles with typst', async () => {
-    const dir = mkdtempSync(join(tmpdir(), 'tex-to-typst-'))
-    try {
-      writeFileSync(join(dir, 'main.typ'), String((await texToTypst(article)).value))
-      symlinkSync(template, join(dir, 'jote-article'), 'dir')
-      const result = spawnSync('typst', ['compile', 'main.typ', 'main.pdf'], { cwd: dir, encoding: 'utf8' })
-      expect(result.stderr).not.toMatch(/error/)
-      expect(result.status).toBe(0)
-    } finally {
-      rmSync(dir, { recursive: true, force: true })
-    }
-  }, 60000)
+  it.skipIf(!hasTypst || !existsSync(join(template, 'lib.typ')))(
+    'compiles with typst',
+    async () => {
+      const dir = mkdtempSync(join(tmpdir(), 'tex-to-typst-'))
+      try {
+        writeFileSync(join(dir, 'main.typ'), String((await texToTypst(article)).value))
+        symlinkSync(template, join(dir, 'jote-article'), 'dir')
+        const result = spawnSync('typst', ['compile', 'main.typ', 'main.pdf'], {
+          cwd: dir,
+          encoding: 'utf8',
+        })
+        expect(result.stderr).not.toMatch(/error/)
+        expect(result.status).toBe(0)
+      } finally {
+        rmSync(dir, { recursive: true, force: true })
+      }
+    },
+    60000,
+  )
 
   const cited = article
     .replace('\\usepackage{booktabs}', '\\usepackage{booktabs}\n\\addbibresource{bibliography.bib}')
@@ -101,11 +111,17 @@ As \textcite[p.~5]{doe2020} showed \parencites[see][p.~2]{doe2020}{roe2021}, thi
         writeFileSync(join(dir, 'main.typ'), out)
         writeFileSync(join(dir, 'bibliography.bib'), bib)
         symlinkSync(template, join(dir, 'jote-article'), 'dir')
-        const result = spawnSync('typst', ['compile', 'main.typ', 'main.pdf'], { cwd: dir, encoding: 'utf8' })
+        const result = spawnSync('typst', ['compile', 'main.typ', 'main.pdf'], {
+          cwd: dir,
+          encoding: 'utf8',
+        })
         // no errors, and the held-back float machinery settles
         expect(result.stderr).toBe('')
         expect(result.status).toBe(0)
-        const text = spawnSync('pdftotext', ['main.pdf', '-'], { cwd: dir, encoding: 'utf8' }).stdout.replace(/\s+/g, ' ')
+        const text = spawnSync('pdftotext', ['main.pdf', '-'], {
+          cwd: dir,
+          encoding: 'utf8',
+        }).stdout.replace(/\s+/g, ' ')
         expect(text).toContain('Doe (2020, p. 5)')
         expect(text).toContain('(see Doe, 2020, p. 2; Roe, 2021)')
         expect(text).toContain('(Roe, 2021)')
@@ -131,11 +147,19 @@ As \textcite[p.~5]{doe2020} showed \parencites[see][p.~2]{doe2020}{roe2021}, thi
         expect(out).not.toContain('#cite')
         writeFileSync(join(dir, 'main.typ'), out)
         symlinkSync(template, join(dir, 'jote-article'), 'dir')
-        const result = spawnSync('typst', ['compile', 'main.typ', 'main.pdf'], { cwd: dir, encoding: 'utf8' })
+        const result = spawnSync('typst', ['compile', 'main.typ', 'main.pdf'], {
+          cwd: dir,
+          encoding: 'utf8',
+        })
         expect(result.stderr).toBe('')
         expect(result.status).toBe(0)
-        const text = spawnSync('pdftotext', ['main.pdf', '-'], { cwd: dir, encoding: 'utf8' }).stdout.replace(/\s+/g, ' ')
-        expect(text).toContain('As doe2020 (p. 5) showed (see doe2020, p. 2; roe2021), things (roe2021).')
+        const text = spawnSync('pdftotext', ['main.pdf', '-'], {
+          cwd: dir,
+          encoding: 'utf8',
+        }).stdout.replace(/\s+/g, ' ')
+        expect(text).toContain(
+          'As doe2020 (p. 5) showed (see doe2020, p. 2; roe2021), things (roe2021).',
+        )
       } finally {
         rmSync(dir, { recursive: true, force: true })
       }

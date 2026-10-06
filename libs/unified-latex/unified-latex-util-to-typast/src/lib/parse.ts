@@ -1,6 +1,5 @@
 import type * as Ast from '@unified-latex/unified-latex-types'
-import { unifiedLatexFromString } from '@unified-latex/unified-latex-util-parse'
-import { unified } from 'unified'
+import { getParser } from '@unified-latex/unified-latex-util-parse'
 import { environmentSignatures, macroSignatures } from './signatures.js'
 
 /**
@@ -20,10 +19,6 @@ export function preprocessLatex(input: string): string {
  * every macro/environment the converter knows about (JOTE class, biblatex, tables, …).
  */
 export function parseLatex(input: string): Ast.Root {
-  const processor = unified().use(unifiedLatexFromString, {
-    macros: macroSignatures,
-    environments: environmentSignatures,
-  })
-  const tree = processor.parse(preprocessLatex(input))
-  return processor.runSync(tree) as Ast.Root
+  const processor = getParser({ macros: macroSignatures, environments: environmentSignatures })
+  return processor.runSync(processor.parse(preprocessLatex(input))) as Ast.Root
 }

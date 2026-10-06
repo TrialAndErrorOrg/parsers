@@ -163,7 +163,7 @@ function linearLatex(node: Element): string | undefined {
   }
   walk(node)
   if (structural) return undefined
-  if (/\\[a-zA-Z]+|[_^]\{/.test(text)) return text
+  if (/\\[a-z]+|[_^]\{/i.test(text)) return text
   return undefined
 }
 
@@ -201,7 +201,7 @@ function isAtom(s: string): boolean {
     /^[a-z]+(?:\.[a-z]+)*$/i.test(s) ||
     /^"[^"]*"$/.test(s) ||
     /^\\?[^\s\p{L}\p{N}]$/u.test(s) ||
-    (/^[a-zA-Z.]+\(.*\)$/.test(s) &&
+    (/^[a-z.]+\(.*\)$/i.test(s) &&
       balanced(s.slice(s.indexOf('('))) &&
       matchingClose(s, s.indexOf('(')) === s.length - 1)
   )

@@ -10,12 +10,12 @@
 import { unified } from 'unified'
 import { docxToVFile } from 'docx-to-vfile'
 import reoffParse from 'reoff-parse'
-import reofftypast from 'reoff-typast'
+import reoffTypast from 'reoff-typast'
 import typastStringify from 'typast-stringify'
 
 const file = await unified()
   .use(reoffParse)
-  .use(reofftypast, { meta: { articleType: 'empirical' } })
+  .use(reoffTypast, { meta: { articleType: 'empirical' } })
   .use(typastStringify)
   .process(await docxToVFile(bytes))
 
@@ -23,7 +23,7 @@ String(file) // main.typ
 file.data.typast // images to copy, citations, bibliography.bib contents, template arguments
 ```
 
-Options are those of `totypast` (see `ooxast-util-to-typast`). Given a unified processor as first
+Options are those of `toTypast` (see `ooxast-util-to-typast`). Given a unified processor as first
 argument, the plugin runs that processor on the typast tree instead (bridge mode).
 
 For a ready-made pipeline (with `reoff-clean`, `reoff-markup-to-style` and the output files) use

@@ -113,7 +113,7 @@ export function TypstOutput() {
       <Card>
         <CardContent className="flex items-center justify-center gap-2 py-12">
           <Loader2 className="h-5 w-5 animate-spin" />
-          <span className="text-muted-foreground text-sm">Converting document to Typst...</span>
+          <span className="text-sm text-muted-foreground">Converting document to Typst...</span>
         </CardContent>
       </Card>
     )
@@ -123,8 +123,8 @@ export function TypstOutput() {
     return (
       <Card className="border-destructive/50">
         <CardContent className="flex items-center gap-2 py-6">
-          <AlertTriangle className="text-destructive h-5 w-5" />
-          <span className="text-destructive text-sm">{error}</span>
+          <AlertTriangle className="h-5 w-5 text-destructive" />
+          <span className="text-sm text-destructive">{error}</span>
         </CardContent>
       </Card>
     )
@@ -150,7 +150,7 @@ export function TypstOutput() {
             </Button>
           </div>
         </div>
-        <p className="text-muted-foreground text-xs">
+        <p className="text-xs text-muted-foreground">
           The ZIP has main.typ, the images{hasBibliography ? ', bibliography.bib' : ''} and the
           jote-article template; build it with <code>typst compile main.typ</code>.
         </p>
@@ -171,7 +171,7 @@ export function TypstOutput() {
 
         {images.length > 0 && (
           <div className="space-y-2">
-            <p className="text-muted-foreground text-xs font-medium">Extracted images</p>
+            <p className="text-xs font-medium text-muted-foreground">Extracted images</p>
             <div className="flex flex-wrap gap-2">
               {images.map(({ path, url }) =>
                 url ? (
@@ -186,7 +186,7 @@ export function TypstOutput() {
                   <div
                     key={path}
                     title={path}
-                    className="text-muted-foreground flex h-20 w-20 items-center justify-center rounded border p-1 text-center text-[10px]"
+                    className="flex h-20 w-20 items-center justify-center rounded border p-1 text-center text-[10px] text-muted-foreground"
                   >
                     {path.split('/').pop()}
                   </div>

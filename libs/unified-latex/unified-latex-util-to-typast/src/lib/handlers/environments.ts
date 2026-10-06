@@ -66,7 +66,7 @@ function numberingPattern(nodes: Ast.Node[]): string | undefined {
   if (!found) return undefined
   return pattern
     .replace(/[{}]/g, '')
-    .replace(/\\[a-zA-Z]+/g, '')
+    .replace(/\\[a-z]+/gi, '')
     .trim()
 }
 
@@ -133,8 +133,8 @@ const list =
               arg(call('align', [arg(code('right')), arg(content(segMarker))])),
             ])
           : outer
-          ? call('box', [arg(code(`10pt - ${labelsep}`), 'width'), arg(content(segMarker))])
-          : content(segMarker)
+            ? call('box', [arg(code(`10pt - ${labelsep}`), 'width'), arg(content(segMarker))])
+            : content(segMarker)
         out.push(
           asBlock(
             call(isEnum ? 'enum' : 'list', [
@@ -151,9 +151,10 @@ const list =
         type: 'list',
         ordered,
         tight: true,
-        children: segment.items.map(
-          (item): ListItem => ({ type: 'listItem', children: convertItem(item) }),
-        ),
+        children: segment.items.map((item): ListItem => ({
+          type: 'listItem',
+          children: convertItem(item),
+        })),
       }
       if (numbering) listNode.numbering = numbering
       if (start && start !== 1) listNode.start = start

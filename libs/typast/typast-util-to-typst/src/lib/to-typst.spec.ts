@@ -1,3 +1,4 @@
+import { describe, it, expect } from 'vitest'
 import { toTypst } from './to-typst.js'
 import {
   a,

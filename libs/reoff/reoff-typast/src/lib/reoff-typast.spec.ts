@@ -5,7 +5,7 @@ import { unified } from 'unified'
 import { docxToVFile } from 'docx-to-vfile'
 import reoffParse from 'reoff-parse'
 import typastStringify from 'typast-stringify'
-import reofftypast from './reoff-typast.js'
+import reoffTypast from './reoff-typast.js'
 
 const fixture = fileURLToPath(
   new URL(
@@ -14,13 +14,13 @@ const fixture = fileURLToPath(
   ),
 )
 
-describe('reofftypast', () => {
+describe('reoffTypast', () => {
   it('turns a docx into Typst source in a unified pipeline', async () => {
     const vfile = await docxToVFile(readFileSync(fixture))
     const file = await unified()
       .use(reoffParse)
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
-      .use(reofftypast as any, { templatePath: 'template.typ' })
+      .use(reoffTypast as any, { templatePath: 'template.typ' })
       .use(typastStringify)
       .process(vfile)
     const out = String(file)

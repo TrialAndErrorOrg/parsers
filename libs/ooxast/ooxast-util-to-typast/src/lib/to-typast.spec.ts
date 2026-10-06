@@ -3,7 +3,7 @@ import { fromXml } from 'xast-util-from-xml'
 import type { Element, Root } from 'xast'
 import { VFile } from 'vfile'
 import { toTypst } from 'typast-util-to-typst'
-import { totypast } from './to-typast.js'
+import { toTypast } from './to-typast.js'
 import { ommlToTypst } from './math.js'
 import { parseAffiliations, parseAuthors } from './front-matter.js'
 import type { Options } from './types.js'
@@ -45,7 +45,7 @@ const li = (text: string, numId: number, ilvl = 0) =>
 
 function convert(body: string, options: Options = {}): string {
   return toTypst(
-    totypast(doc(body), {
+    toTypast(doc(body), {
       styles: STYLES,
       numbering: NUMBERING,
       document: false,
@@ -106,7 +106,7 @@ describe('tables', () => {
     for (const empty of ['<w:tbl><w:tblGrid/></w:tbl>', '<w:tbl><w:tblGrid/><w:tr/></w:tbl>']) {
       const file = new VFile()
       const out = toTypst(
-        totypast(doc(empty + p('after')), file, {
+        toTypast(doc(empty + p('after')), file, {
           styles: STYLES,
           document: false,
           inferFrontMatter: false,
@@ -194,7 +194,7 @@ describe('images', () => {
     `<w:p><w:r><w:drawing xmlns:wp="http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing" xmlns:a="http://schemas.openxmlformats.org/drawingml/2006/main"><wp:inline><wp:extent cx="2540000" cy="1270000"/><a:graphic><a:graphicData><a:blip r:embed="${rId}"/></a:graphicData></a:graphic></wp:inline></w:drawing></w:r></w:p>`
   const run = (media: Record<string, unknown>, rels: Record<string, string>, body: string) => {
     const file = new VFile({ data: { media, relations: { document: rels } } as never })
-    const out = toTypst(totypast(doc(body), file, { document: false, inferFrontMatter: false }))
+    const out = toTypst(toTypast(doc(body), file, { document: false, inferFrontMatter: false }))
     return { out, file }
   }
 
@@ -235,7 +235,7 @@ describe('notes, links and fields', () => {
         relations: { document: { rId1: 'https://example.org' } },
       } as never,
     })
-    const tree = totypast(
+    const tree = toTypast(
       doc(
         '<w:p><w:r><w:t>Text</w:t></w:r><w:r><w:footnoteReference w:id="1"/></w:r><w:r><w:t xml:space="preserve"> see </w:t></w:r><w:hyperlink r:id="rId1"><w:r><w:t>here</w:t></w:r></w:hyperlink></w:p>',
       ),
@@ -250,7 +250,7 @@ describe('notes, links and fields', () => {
       `<w:footnotes ${NS}><w:footnote w:id="1"><w:p><w:r><w:footnoteRef/></w:r><w:r><w:t xml:space="preserve"> First.</w:t></w:r></w:p><w:p><w:r><w:t>Second.</w:t></w:r></w:p></w:footnote></w:footnotes>`,
     )
     const file = new VFile({ data: { parsed: { 'word/footnotes.xml': footnotes } } as never })
-    const tree = totypast(
+    const tree = toTypast(
       doc('<w:p><w:r><w:t>Text</w:t></w:r><w:r><w:footnoteReference w:id="1"/></w:r></w:p>'),
       file,
       { document: false, inferFrontMatter: false },
@@ -288,7 +288,7 @@ describe('notes, links and fields', () => {
       '<w:fldChar w:fldCharType="end"/>',
     )}${run('<w:t>.</w:t>')}</w:p>`
     const file = new VFile()
-    const out = toTypst(totypast(doc(body), file, { inferFrontMatter: false }))
+    const out = toTypst(toTypast(doc(body), file, { inferFrontMatter: false }))
     expect(out).toContain('As shown #cite(<Smith2020>, supplement: [p. 4]).')
     expect(out).toContain('bibliography: bibliography("bibliography.bib")')
     expect(file.data.typast?.bibliography).toContain('@article{Smith2020,')
@@ -365,7 +365,7 @@ describe('front matter', () => {
       p('Keywords: one, two') +
       p('Introduction', 'Heading1') +
       p('Text.')
-    const out = toTypst(totypast(doc(body), { styles: STYLES }))
+    const out = toTypst(toTypast(doc(body), { styles: STYLES }))
     expect(out).toContain('title: [A Title]')
     expect(out).toContain('(name: "Ann Author", affiliations: (1,))')
     expect(out).toContain('affiliations: ([Uni One], [Uni Two])')
@@ -377,7 +377,7 @@ describe('front matter', () => {
 
   const frontMatter = (body: string, options: Options = {}) => {
     const file = new VFile()
-    const out = toTypst(totypast(doc(body), file, { styles: STYLES, ...options }))
+    const out = toTypst(toTypast(doc(body), file, { styles: STYLES, ...options }))
     return { out, messages: file.messages.map((m) => m.reason) }
   }
   const realTitle = { title: [t('Real Title')] }

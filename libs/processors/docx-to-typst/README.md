@@ -13,7 +13,7 @@ switched off.
 ## Library
 
 ```ts
-import { docxToTypst, metaToTemplateArgs } from '@jote/processors/docx-to-typst'
+import { docxToTypst, metaToTemplateArgs } from 'docx-to-typst'
 
 const file = await docxToTypst(bytes, {
   // optional: metadata from the converter form wins over what is read from the manuscript
@@ -47,7 +47,7 @@ app (`apps/converter`) uses this for its Typst tab.
 ## CLI
 
 ```sh
-npx tsx --tsconfig tsconfig.base.json libs/processors/docx-to-typst/src/cli.ts \
+npx tsx --conditions=@jote/source libs/processors/docx-to-typst/src/cli.ts \
   manuscript.docx out/article [--meta meta.json] [--compile] [--font-path dir]… \
   [--template templates/typst/jote-article] [--copy-template] [--import "@local/jote-article:0.1.0"]
 ```
@@ -58,7 +58,7 @@ Writes `out/article/main.typ`, `out/article/media/*` and (with citation fields)
 (`JoteArticleMeta`) or a converter `MetaForm`. `--compile` runs `typst compile` afterwards:
 
 ```sh
-npx tsx --tsconfig tsconfig.base.json libs/processors/docx-to-typst/src/cli.ts \
+npx tsx --conditions=@jote/source libs/processors/docx-to-typst/src/cli.ts \
   Manuscript.docx /tmp/kohrt-docx --compile \
   --font-path ~/JOTE/archive/fonts --font-path ~/JOTE/archive/OverpassFonts --font-path ~/JOTE/archive
 ```

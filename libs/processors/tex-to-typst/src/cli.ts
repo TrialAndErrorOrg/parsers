@@ -1,7 +1,7 @@
 /**
  * Convert a JOTE `main.tex` into a buildable Typst project.
  *
- *   npx tsx --tsconfig tsconfig.base.json libs/processors/tex-to-typst/src/cli.ts \
+ *   npx tsx --conditions=@jote/source libs/processors/tex-to-typst/src/cli.ts \
  *     path/to/main.tex out/dir [--template templates/typst/jote-article] [--copy-template] \
  *     [--import "@local/jote-article:0.1.0"] [--compile] [--font-path dir]…
  *
@@ -11,7 +11,17 @@
  * compiling).
  */
 import { spawnSync } from 'node:child_process'
-import { cpSync, existsSync, mkdirSync, readdirSync, readFileSync, rmSync, statSync, symlinkSync, writeFileSync } from 'node:fs'
+import {
+  cpSync,
+  existsSync,
+  mkdirSync,
+  readdirSync,
+  readFileSync,
+  rmSync,
+  statSync,
+  symlinkSync,
+  writeFileSync,
+} from 'node:fs'
 import { basename, dirname, extname, join, relative, resolve } from 'node:path'
 import { fileURLToPath } from 'node:url'
 import { texToTypst } from './lib/tex-to-typst.js'
@@ -43,7 +53,15 @@ function parseArgs(argv: string[]) {
     else positional.push(a)
   }
   if (positional.length !== 2) usage()
-  return { input: positional[0], out: positional[1], template, importPath, copyTemplate, compile, fontPaths }
+  return {
+    input: positional[0],
+    out: positional[1],
+    template,
+    importPath,
+    copyTemplate,
+    compile,
+    fontPaths,
+  }
 }
 
 /** The repo's template directory, found relative to this file. */
@@ -88,7 +106,8 @@ async function main() {
   writeFileSync(join(out, 'main.typ'), String(file.value))
 
   // media/ wholesale, plus any image referenced from elsewhere
-  if (existsSync(join(srcDir, 'media'))) cpSync(join(srcDir, 'media'), join(out, 'media'), { recursive: true })
+  if (existsSync(join(srcDir, 'media')))
+    cpSync(join(srcDir, 'media'), join(out, 'media'), { recursive: true })
   for (const img of usedImages) {
     const from = join(srcDir, img)
     const to = join(out, img)
@@ -106,7 +125,9 @@ async function main() {
   if (!args.importPath || args.importPath.startsWith('jote-article/')) {
     if (existsSync(link) || isSymlink(link)) rmSync(link, { recursive: true, force: true })
     if (!existsSync(templateDir)) {
-      console.warn(`template not found at ${templateDir}; ${relative(process.cwd(), link)} not created`)
+      console.warn(
+        `template not found at ${templateDir}; ${relative(process.cwd(), link)} not created`,
+      )
     } else if (args.copyTemplate || args.compile) {
       cpSync(templateDir, link, { recursive: true, dereference: true })
     } else {
@@ -115,23 +136,34 @@ async function main() {
   }
 
   for (const message of file.messages) {
-    const where = message.line ? `${basename(input)}:${message.line}:${message.column ?? 0}` : basename(input)
+    const where = message.line
+      ? `${basename(input)}:${message.line}:${message.column ?? 0}`
+      : basename(input)
     console.warn(`${where}  warning  ${message.reason}`)
   }
-  console.log(`wrote ${relative(process.cwd(), join(out, 'main.typ'))} (${file.messages.length} warnings)`)
+  console.log(
+    `wrote ${relative(process.cwd(), join(out, 'main.typ'))} (${file.messages.length} warnings)`,
+  )
 
   if (args.compile) {
     const fontArgs = args.fontPaths.flatMap((p) => ['--font-path', resolve(p)])
-    const result = spawnSync('typst', ['compile', '--root', out, ...fontArgs, join(out, 'main.typ'), join(out, 'main.pdf')], {
-      stdio: 'inherit',
-    })
+    const result = spawnSync(
+      'typst',
+      ['compile', '--root', out, ...fontArgs, join(out, 'main.typ'), join(out, 'main.pdf')],
+      {
+        stdio: 'inherit',
+      },
+    )
     process.exit(result.status ?? 1)
   }
 }
 
 function isSymlink(path: string): boolean {
   try {
-    return statSync(path, { throwIfNoEntry: false }) === undefined && readdirSync(dirname(path)).includes(basename(path))
+    return (
+      statSync(path, { throwIfNoEntry: false }) === undefined &&
+      readdirSync(dirname(path)).includes(basename(path))
+    )
   } catch {
     return false
   }

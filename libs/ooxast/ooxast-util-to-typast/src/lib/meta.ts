@@ -63,7 +63,7 @@ function dict(entries: Array<[string, Value | undefined]>): Value {
     type: 'dict',
     entries: entries
       .filter((e): e is [string, Value] => e[1] !== undefined)
-      .map(([key, value]) => ({ key, value } as DictEntry)),
+      .map(([key, value]) => ({ key, value }) as DictEntry),
   }
 }
 

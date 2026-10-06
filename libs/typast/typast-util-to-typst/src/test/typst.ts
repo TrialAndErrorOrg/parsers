@@ -41,7 +41,10 @@ function evalIn(dir: string, expr: string): string {
 }
 
 export class TypstError extends Error {
-  constructor(message: string, public source: string) {
+  constructor(
+    message: string,
+    public source: string,
+  ) {
     super(`${message}\n--- source ---\n${source}`)
   }
 }

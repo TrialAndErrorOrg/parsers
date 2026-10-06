@@ -18,7 +18,7 @@ import type {
   ShowRule,
   Strong,
   TermItem,
-  typastNode,
+  TypastNode,
   Value,
 } from 'typast'
 
@@ -72,7 +72,7 @@ interface Context {
  * contains. Calls get a leading `#` in markup and none in code.
  */
 export function toTypst(
-  tree: Root | Content | typastNode | typastNode[],
+  tree: Root | Content | TypastNode | TypastNode[],
   options: Options = {},
 ): string {
   const ctx: Context = {
@@ -474,8 +474,8 @@ function statement(node: SetRule | ShowRule | Import | Let, ctx: Context): strin
         node.items === '*'
           ? ': *'
           : node.items && node.items.length
-          ? `: ${node.items.join(', ')}`
-          : ''
+            ? `: ${node.items.join(', ')}`
+            : ''
       return `import ${escapeString(node.source)}${items}`
     }
     case 'let':

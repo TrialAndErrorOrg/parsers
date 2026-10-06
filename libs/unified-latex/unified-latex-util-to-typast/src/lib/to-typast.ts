@@ -30,7 +30,7 @@ export const ARTICLE_TYPES: Record<string, string> = {
  *
  * Never throws on unknown input: unknown macros keep their text and produce a warning on `file`.
  */
-export function totypast(tree: Ast.Root, file?: VFile | Options, options?: Options): Root {
+export function toTypast(tree: Ast.Root, file?: VFile | Options, options?: Options): Root {
   let vfile: VFile
   let opts: Options
   if (file instanceof VFile) {

@@ -281,13 +281,13 @@ function typstTable(state: State, item: TableItem, captioned: boolean): Function
       value: {
         type: 'call',
         name: 'table.header',
-        args: header.map((v) => ({ type: 'argument', value: v } as Argument)),
+        args: header.map((v) => ({ type: 'argument', value: v }) as Argument),
       },
     })
     args.push(hline('0.05em'))
   }
   for (let r = headerRows; r < rows.length; r++) {
-    args.push(...cellValues(rows[r], r).map((v) => ({ type: 'argument', value: v } as Argument)))
+    args.push(...cellValues(rows[r], r).map((v) => ({ type: 'argument', value: v }) as Argument))
   }
   args.push(hline())
   return { type: 'call', name: 'table', args }

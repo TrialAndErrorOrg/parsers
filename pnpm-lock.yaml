@@ -27,6 +27,15 @@ catalogs:
     '@unified-latex/unified-latex-types':
       specifier: ^1.8.4
       version: 1.8.4
+    '@unified-latex/unified-latex-util-arguments':
+      specifier: ^1.8.4
+      version: 1.8.4
+    '@unified-latex/unified-latex-util-parse':
+      specifier: ^1.8.4
+      version: 1.8.4
+    '@unified-latex/unified-latex-util-print-raw':
+      specifier: ^1.8.4
+      version: 1.8.4
     '@unified-latex/unified-latex-util-render-info':
       specifier: ^1.8.4
       version: 1.8.4
@@ -231,6 +240,9 @@ importers:
       date-fns:
         specifier: ^4.4.0
         version: 4.4.0
+      docx-to-typst:
+        specifier: workspace:^
+        version: link:../../libs/processors/docx-to-typst
       docx-to-vfile:
         specifier: workspace:^
         version: link:../../libs/reoff/docx-to-vfile
@@ -906,6 +918,33 @@ importers:
         specifier: 'catalog:'
         version: 4.0.0
 
+  libs/ooxast/ooxast-util-to-typast:
+    dependencies:
+      '@types/xast':
+        specifier: 'catalog:'
+        version: 2.0.4
+      csl-json:
+        specifier: 0.1.0
+        version: 0.1.0
+      csl-to-biblatex:
+        specifier: workspace:^
+        version: link:../../citations/csl-to-biblatex
+      tex2typst:
+        specifier: ^0.6.2
+        version: 0.6.2
+      typast:
+        specifier: workspace:^
+        version: link:../../typast/typast
+      typast-util-to-typst:
+        specifier: workspace:^
+        version: link:../../typast/typast-util-to-typst
+      vfile:
+        specifier: 'catalog:'
+        version: 6.0.3
+      xast-util-from-xml:
+        specifier: 'catalog:'
+        version: 4.0.0
+
   libs/ooxast/ooxast-util-to-unified-latex:
     dependencies:
       '@types/xast':
@@ -990,6 +1029,70 @@ importers:
       xastscript:
         specifier: 'catalog:'
         version: 4.0.0
+
+  libs/processors/docx-to-typst:
+    dependencies:
+      docx-to-vfile:
+        specifier: workspace:^
+        version: link:../../reoff/docx-to-vfile
+      ooxast-util-to-typast:
+        specifier: workspace:^
+        version: link:../../ooxast/ooxast-util-to-typast
+      reoff-clean:
+        specifier: workspace:^
+        version: link:../../reoff/reoff-clean
+      reoff-markup-to-style:
+        specifier: workspace:^
+        version: link:../../reoff/reoff-markup-to-style
+      reoff-parse:
+        specifier: workspace:^
+        version: link:../../reoff/reoff-parse
+      reoff-typast:
+        specifier: workspace:^
+        version: link:../../reoff/reoff-typast
+      typast-stringify:
+        specifier: workspace:^
+        version: link:../../typast/typast-stringify
+      typast-util-to-typst:
+        specifier: workspace:^
+        version: link:../../typast/typast-util-to-typst
+      unified:
+        specifier: 'catalog:'
+        version: 11.0.5
+      vfile:
+        specifier: 'catalog:'
+        version: 6.0.3
+    devDependencies:
+      '@types/xast':
+        specifier: 'catalog:'
+        version: 2.0.4
+      xast-util-from-xml:
+        specifier: 'catalog:'
+        version: 4.0.0
+
+  libs/processors/tex-to-typst:
+    dependencies:
+      typast:
+        specifier: workspace:^
+        version: link:../../typast/typast
+      typast-stringify:
+        specifier: workspace:^
+        version: link:../../typast/typast-stringify
+      typast-util-to-typst:
+        specifier: workspace:^
+        version: link:../../typast/typast-util-to-typst
+      unified:
+        specifier: 'catalog:'
+        version: 11.0.5
+      unified-latex-typast:
+        specifier: workspace:^
+        version: link:../../unified-latex/unified-latex-typast
+      unified-latex-util-to-typast:
+        specifier: workspace:^
+        version: link:../../unified-latex/unified-latex-util-to-typast
+      vfile:
+        specifier: 'catalog:'
+        version: 6.0.3
 
   libs/rejour/rejour-frontmatter:
     dependencies:
@@ -1272,6 +1375,34 @@ importers:
         specifier: 'catalog:'
         version: 6.0.3
 
+  libs/reoff/reoff-typast:
+    dependencies:
+      '@types/xast':
+        specifier: 'catalog:'
+        version: 2.0.4
+      ooxast:
+        specifier: workspace:^
+        version: link:../../ooxast/ooxast
+      ooxast-util-to-typast:
+        specifier: workspace:^
+        version: link:../../ooxast/ooxast-util-to-typast
+      typast:
+        specifier: workspace:^
+        version: link:../../typast/typast
+      unified:
+        specifier: 'catalog:'
+        version: 11.0.5
+    devDependencies:
+      docx-to-vfile:
+        specifier: workspace:^
+        version: link:../docx-to-vfile
+      reoff-parse:
+        specifier: workspace:^
+        version: link:../reoff-parse
+      typast-stringify:
+        specifier: workspace:^
+        version: link:../../typast/typast-stringify
+
   libs/reoff/reoff-unified-latex:
     dependencies:
       '@unified-latex/unified-latex-types':
@@ -1287,6 +1418,30 @@ importers:
         specifier: 'catalog:'
         version: 11.0.5
 
+  libs/typast/typast:
+    dependencies:
+      '@types/unist':
+        specifier: 'catalog:'
+        version: 3.0.3
+
+  libs/typast/typast-stringify:
+    dependencies:
+      typast:
+        specifier: workspace:^
+        version: link:../typast
+      typast-util-to-typst:
+        specifier: workspace:^
+        version: link:../typast-util-to-typst
+      unified:
+        specifier: 'catalog:'
+        version: 11.0.5
+
+  libs/typast/typast-util-to-typst:
+    dependencies:
+      typast:
+        specifier: workspace:^
+        version: link:../typast
+
   libs/unified-latex/unified-latex-stringify:
     dependencies:
       '@unified-latex/unified-latex-types':
@@ -1298,6 +1453,62 @@ importers:
       unified:
         specifier: 'catalog:'
         version: 11.0.5
+
+  libs/unified-latex/unified-latex-typast:
+    dependencies:
+      '@unified-latex/unified-latex-types':
+        specifier: 'catalog:'
+        version: 1.8.4
+      typast:
+        specifier: workspace:^
+        version: link:../../typast/typast
+      unified:
+        specifier: 'catalog:'
+        version: 11.0.5
+      unified-latex-util-to-typast:
+        specifier: workspace:^
+        version: link:../unified-latex-util-to-typast
+    devDependencies:
+      '@unified-latex/unified-latex-util-parse':
+        specifier: 'catalog:'
+        version: 1.8.4
+      typast-util-to-typst:
+        specifier: workspace:^
+        version: link:../../typast/typast-util-to-typst
+      vfile:
+        specifier: 'catalog:'
+        version: 6.0.3
+
+  libs/unified-latex/unified-latex-util-to-typast:
+    dependencies:
+      '@unified-latex/unified-latex-types':
+        specifier: 'catalog:'
+        version: 1.8.4
+      '@unified-latex/unified-latex-util-arguments':
+        specifier: 'catalog:'
+        version: 1.8.4
+      '@unified-latex/unified-latex-util-parse':
+        specifier: 'catalog:'
+        version: 1.8.4
+      '@unified-latex/unified-latex-util-print-raw':
+        specifier: 'catalog:'
+        version: 1.8.4
+      tex2typst:
+        specifier: ^0.6.2
+        version: 0.6.2
+      typast:
+        specifier: workspace:^
+        version: link:../../typast/typast
+      unified:
+        specifier: 'catalog:'
+        version: 11.0.5
+      vfile:
+        specifier: 'catalog:'
+        version: 6.0.3
+    devDependencies:
+      typast-util-to-typst:
+        specifier: workspace:^
+        version: link:../../typast/typast-util-to-typst
 
   libs/xast/xast-util-has-attribute: {}
 
@@ -4777,6 +4988,9 @@ packages:
   tapable@2.3.3:
     resolution: {integrity: sha512-uxc/zpqFg6x7C8vOE7lh6Lbda8eEL9zmVm/PLeTPBRhh1xCgdWaQ+J1CUieGpIfm2HdtsUpRv+HshiasBMcc6A==}
     engines: {node: '>=6'}
+
+  tex2typst@0.6.2:
+    resolution: {integrity: sha512-KQwpKUZ3kWI/cBEChFhVPJJV5/61R2Eb0epL6AGlQTKdto4OZer9wX4F2mbTsThVJPeLP4Ax0CkUk23IdcgnGQ==}
 
   text-table@0.2.0:
     resolution: {integrity: sha512-N+8UisAXDGk8PFXP4HAzVR9nbfmVJ3zYLAWiTIoqC5v5isinhr+r5uaO8+7r3BMfuNIufIsA7RdpVgacC2cSpw==}
@@ -8420,6 +8634,8 @@ snapshots:
   tailwindcss@4.3.3: {}
 
   tapable@2.3.3: {}
+
+  tex2typst@0.6.2: {}
 
   text-table@0.2.0: {}
 

@@ -112,7 +112,7 @@ export function listInfo(p: Element, numbering: Numbering | undefined): ListInfo
 
   const ownIndent = attr(child(pPr, 'w:ind'), 'w:left') ?? attr(child(pPr, 'w:ind'), 'w:start')
   const indent =
-    ownIndent !== undefined ? parseInt(ownIndent, 10) : level?.indent ?? (ilvl + 1) * 720
+    ownIndent !== undefined ? parseInt(ownIndent, 10) : (level?.indent ?? (ilvl + 1) * 720)
 
   const ordered = !!level && level.numFmt in ORDERED
   let pattern: string | undefined

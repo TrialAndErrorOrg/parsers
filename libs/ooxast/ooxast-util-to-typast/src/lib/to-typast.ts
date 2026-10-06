@@ -2,7 +2,7 @@ import type { Element, Root as XastRoot } from 'xast'
 import type { Content, FunctionCall, PhrasingContent, Root, Value } from 'typast'
 import { VFile } from 'vfile'
 import type { Data as CSL } from 'csl-json'
-import type { Options, State, typastData } from './types.js'
+import type { Options, State, TypastData } from './types.js'
 import { parseStyles } from './styles.js'
 import { parseNumbering } from './numbering.js'
 import { indexNotes } from './notes.js'
@@ -16,7 +16,7 @@ import { attr, child, find, kids, twipsToPt } from './util.js'
 
 declare module 'vfile' {
   interface DataMap {
-    typast: typastData
+    typast: TypastData
   }
 }
 
@@ -43,9 +43,13 @@ type Tree = XastRoot | Element
  * (hyperlinks, images), styles and numbering. Information for writing the output directory
  * (images, `bibliography.bib`) is left on `file.data.typast`.
  */
-export function totypast(tree: Tree, file: VFile, options?: Options): Root
-export function totypast(tree: Tree, options?: Options): Root
-export function totypast(tree: Tree, fileOrOptions?: VFile | Options, maybeOptions?: Options): Root {
+export function toTypast(tree: Tree, file: VFile, options?: Options): Root
+export function toTypast(tree: Tree, options?: Options): Root
+export function toTypast(
+  tree: Tree,
+  fileOrOptions?: VFile | Options,
+  maybeOptions?: Options,
+): Root {
   const file = fileOrOptions instanceof VFile ? fileOrOptions : undefined
   const userOptions = (fileOrOptions instanceof VFile ? maybeOptions : fileOrOptions) ?? {}
   const options = { ...defaultOptions, ...stripUndefined(userOptions) } as State['options']
@@ -85,7 +89,7 @@ export function totypast(tree: Tree, fileOrOptions?: VFile | Options, maybeOptio
         data.parsed?.['word/endnotes.xml'] ?? parseMaybe(data['word/endnotes.xml']),
       ),
     },
-    formattingHandlers: { ...defaultFormattingHandlers, ...(options.formattingHandlers ?? {}) },
+    formattingHandlers: { ...defaultFormattingHandlers, ...options.formattingHandlers },
     paragraphHandlers: options.paragraphHandlers ?? [],
     fields: [],
     out: [],

@@ -78,6 +78,9 @@ catalog:
   # unified-latex (1.8 ships its own types: no more patches)
   '@unified-latex/unified-latex-builder': ^1.8.4
   '@unified-latex/unified-latex-types': ^1.8.4
+  '@unified-latex/unified-latex-util-arguments': ^1.8.4
+  '@unified-latex/unified-latex-util-parse': ^1.8.4
+  '@unified-latex/unified-latex-util-print-raw': ^1.8.4
   '@unified-latex/unified-latex-util-render-info': ^1.8.4
   '@unified-latex/unified-latex-util-to-string': ^1.8.4
 

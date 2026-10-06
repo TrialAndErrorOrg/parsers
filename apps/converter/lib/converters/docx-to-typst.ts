@@ -1,5 +1,5 @@
 import type { VFile } from 'vfile'
-import { docxToTypst, type JoteArticleMeta, type OutputFiles } from '@jote/processors/docx-to-typst'
+import { docxToTypst, type JoteArticleMeta, type OutputFiles } from 'docx-to-typst'
 import { typstTemplateFiles } from '../generated/jote-article-typst'
 
 /** Where the template goes in the download, matching the `#import` at the top of main.typ. */

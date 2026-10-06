@@ -4,9 +4,9 @@ import { docxToVFile } from 'docx-to-vfile'
 import reoffParse from 'reoff-parse'
 import { reoffClean } from 'reoff-clean'
 import reoffMarkupToStyle, { type Options as MarkupToStyleOptions } from 'reoff-markup-to-style'
-import reofftypast from 'reoff-typast'
+import reoffTypast from 'reoff-typast'
 import typastStringify from 'typast-stringify'
-import type { Options as typastOptions, typastData } from 'ooxast-util-to-typast'
+import type { Options as TypastOptions, TypastData } from 'ooxast-util-to-typast'
 import type { Options as StringifyOptions } from 'typast-util-to-typst'
 
 /** The reoff-clean configuration of the LaTeX route (`apps/converter/lib/converters/docx-to-tex.ts`) */
@@ -30,7 +30,7 @@ export const defaultMarkupToStyle: MarkupToStyleOptions = [
   { markup: ['w:i'], style: 'Heading 2' },
 ]
 
-export interface DocxToTypstOptions extends typastOptions {
+export interface DocxToTypstOptions extends TypastOptions {
   /** `reoff-clean` options, or `false` to skip cleaning */
   clean?: { rPrRemoveList?: string[] } | false
   /** `reoff-markup-to-style` options, or `false` to skip inferring styles from formatting */
@@ -68,7 +68,7 @@ export async function docxToTypst(
     clean = defaultCleanOptions,
     markupToStyle = defaultMarkupToStyle,
     stringify,
-    ...typastOptions
+    ...TypastOptions
   } = options
   const bytes = input instanceof Uint8Array ? input : new Uint8Array(input)
   const vfile = await docxToVFile(bytes as unknown as ArrayBuffer)
@@ -77,7 +77,7 @@ export async function docxToTypst(
   let processor: any = unified().use(reoffParse)
   if (clean !== false) processor = processor.use(reoffClean, clean)
   if (markupToStyle !== false) processor = processor.use(reoffMarkupToStyle, markupToStyle)
-  processor = processor.use(reofftypast, typastOptions).use(typastStringify, stringify)
+  processor = processor.use(reoffTypast, TypastOptions).use(typastStringify, stringify)
 
   const file: VFile = await processor.process(vfile)
   file.data.files = await outputFiles(file)
@@ -86,7 +86,7 @@ export async function docxToTypst(
 
 async function outputFiles(file: VFile): Promise<OutputFiles> {
   const files: OutputFiles = { 'main.typ': String(file.value) }
-  const data = file.data.typast as typastData | undefined
+  const data = file.data.typast as TypastData | undefined
   if (!data) return files
   const media = (file.data.media ?? {}) as Record<string, Blob | ArrayBuffer | Uint8Array>
   for (const { source, path } of data.media) {

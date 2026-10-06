@@ -1,21 +1,16 @@
 {
   "name": "unified-latex-util-to-typast",
-  "version": "0.0.1",
-  "dependencies": {
-    "@unified-latex/unified-latex-types": "^1.3.1",
-    "@unified-latex/unified-latex-util-arguments": "^1.3.1",
-    "@unified-latex/unified-latex-util-parse": "^1.3.1",
-    "@unified-latex/unified-latex-util-print-raw": "^1.3.1",
-    "tex2typst": "^0.6.2",
-    "typast": "0.0.1",
-    "unified": "^10.1.2",
-    "vfile": "^5.3.7"
-  },
+  "version": "0.0.0",
+  "description": "Convert a unified-latex tree (a JOTE LaTeX article) into a typast (Typst) tree for the jote-article Typst template.",
   "license": "GPL-3.0-or-later",
-  "repository": "https://github.com/TrialAndErrorOrg/parsers",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TrialAndErrorOrg/parsers.git",
+    "directory": "libs/unified-latex/unified-latex-util-to-typast"
+  },
+  "homepage": "https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/unified-latex/unified-latex-util-to-typast#readme",
   "author": "Thomas F. K. Jorna <hello@tefkah.com>",
   "type": "module",
-  "description": "Convert a unified-latex tree (a JOTE LaTeX article) into a typast (Typst) tree for the jote-article Typst template.",
   "keywords": [
     "unified",
     "unified-latex",
@@ -24,24 +19,40 @@
     "typast",
     "util"
   ],
+  "exports": {
+    ".": {
+      "@jote/source": "./src/index.ts",
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.lib.json",
+    "typecheck": "tsc -p tsconfig.json",
+    "test": "vitest run"
+  },
   "typedoc": {
     "entryPoint": "./src/index.ts",
     "readmeFile": "./README.md",
     "displayName": "unified-latex-util-to-typast",
     "tsconfig": "./tsconfig.lib.json"
   },
-  "exports": {
-    ".": {
-      "types": "./index.d.ts",
-      "import": "./index.js"
-    }
+  "dependencies": {
+    "@unified-latex/unified-latex-types": "catalog:",
+    "@unified-latex/unified-latex-util-arguments": "catalog:",
+    "@unified-latex/unified-latex-util-parse": "catalog:",
+    "@unified-latex/unified-latex-util-print-raw": "catalog:",
+    "tex2typst": "^0.6.2",
+    "typast": "workspace:^",
+    "unified": "catalog:",
+    "vfile": "catalog:"
   },
-  "main": "./index.js",
-  "module": "./index.js",
-  "types": "./index.d.ts",
-  "files": [
-    "index.d.ts",
-    "index.js",
-    "/lib"
-  ]
+  "devDependencies": {
+    "typast-util-to-typst": "workspace:^"
+  }
 }

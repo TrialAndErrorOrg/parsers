@@ -22,12 +22,12 @@ are documented there.
 ```ts
 import { unified } from 'unified'
 import reoffParse from 'reoff-parse'
-import reofftypast from 'reoff-typast'
+import reoffTypast from 'reoff-typast'
 import typastStringify from 'typast-stringify'
 
 const file = await unified()
   .use(reoffParse)
-  .use(reofftypast)
+  .use(reoffTypast)
   .use(typastStringify, { lineWidth: 100 })
   .process(docx)
 

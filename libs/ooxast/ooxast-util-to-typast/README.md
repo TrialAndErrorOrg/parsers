@@ -64,6 +64,10 @@ win.
 
 Returns a typast `Root`. With `document: false` only the body is returned (no `#import`/`#show`).
 
+The converter builds the document model of [`typast-builder`](../../typast/typast-builder)
+(paragraphs, lists, calls by name) and lowers it to typast; `toDocument(tree, file?, options?)`
+returns that model instead.
+
 Options (all optional):
 
 - `meta` (`JoteArticleMeta`) — template arguments (`articleType`, `title`, `authors`,

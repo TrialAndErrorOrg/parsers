@@ -24,6 +24,10 @@ environment the converter handles (`macroSignatures`, `environmentSignatures`). 
 yourself, pass those to `unifiedLatexFromString`; `toTypast` attaches missing macro arguments
 itself, but environment arguments are only gobbled for the environments it handles.
 
+The converter builds the document model of [`typast-builder`](../../typast/typast-builder)
+(paragraphs, lists, calls by name) and lowers it to typast; `toDocument(…)` takes the same
+arguments and returns that model instead.
+
 For a unified pipeline use [`unified-latex-typast`](../unified-latex-typast); for a ready-made
 LaTeX → Typst project converter use [`tex-to-typst`](../../processors/tex-to-typst).
 

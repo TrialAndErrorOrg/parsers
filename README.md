@@ -152,19 +152,43 @@ Deprecated packages that are still on npm live in [`deprecated/`](deprecated).
 ## Typst
 
 Typst output for JOTE articles, next to the LaTeX route: Word or LaTeX in, a `main.typ` for the
-`jote-article` Typst template out.
+`jote-article` Typst template out. Plus `retypst`, a unified ecosystem for Typst built on Typst's
+own parser.
 
-#### [`typast`](libs/typast/typast)
+### typast and retypst
 
-Type definitions for `typast` (Typst abstract syntax tree), a [`unist`](https://github.com/syntax-tree/unist) syntax for Typst documents.
+#### [`typast`](libs/typast/typast/README.md)
+
+A [`unist`](https://github.com/syntax-tree/unist) syntax tree for Typst that mirrors Typst's own
+(`typst_syntax::ast`): its node names, `parbreak`s instead of paragraph nodes, code as expressions.
+
+#### [`typast-util-from-string`](libs/typast/typast-util-from-string/README.md)
+
+Parse Typst into typast with Typst's parser (`typst-syntax` 0.15.1): a native addon in Node.js,
+WebAssembly in the browser.
+
+#### [`typast-syntax-node`](libs/typast/typast-syntax-node/README.md) / [`typast-syntax-wasm`](libs/typast/typast-syntax-wasm/README.md)
+
+The parser bindings (napi-rs and wasm-bindgen) around the Rust crate `crates/typast-syntax`.
 
 #### [`typast-util-to-typst`](libs/typast/typast-util-to-typst/README.md)
 
-Serialize a `typast` tree to Typst source, escaping text so it renders literally.
+Serialize a typast tree to Typst source, escaping text so it renders literally.
 
-#### [`typast-stringify`](libs/typast/typast-stringify/README.md)
+#### [`typast-util-visit`](libs/typast/typast-util-visit/README.md)
 
-unified compiler plugin that turns a `typast` tree into Typst source.
+Walk every node of a typast tree, code (call arguments, operands) included.
+
+#### [`typast-builder`](libs/typast/typast-builder/README.md)
+
+Node constructors, and the document model (paragraphs, lists, calls by name) the converters build
+and `lower()` turns into typast.
+
+#### [`retypst`](libs/retypst/retypst/README.md), [`retypst-parse`](libs/retypst/retypst-parse/README.md), [`retypst-stringify`](libs/retypst/retypst-stringify/README.md)
+
+unified processor and plugins for Typst, like rehype for HTML.
+
+### Converters
 
 #### [`ooxast-util-to-typast`](libs/ooxast/ooxast-util-to-typast/README.md)
 
@@ -193,6 +217,22 @@ Processor and CLI: JOTE LaTeX article (`main.tex`) → `main.typ`, with its imag
 #### [`templates/typst/jote-article`](templates/typst/jote-article/README.md)
 
 The Typst port of `jote-new-article.cls`. Converters emit `#import "jote-article/lib.typ": *` and `#show: jote-article.with(…)`.
+
+### Rust
+
+`crates/typast-syntax` (with the binding crates in `libs/typast/typast-syntax-{node,wasm}`) is a
+Cargo workspace (`Cargo.toml`, toolchain pinned in `rust-toolchain.toml`). Nothing else needs Rust:
+the WebAssembly build is checked in, and without a native binary the Node.js package falls back
+to it.
+
+```sh
+cargo test                                       # the crate's tests
+pnpm --filter typast-syntax-node build:native    # the Node.js addon for this machine
+pnpm --filter typast-syntax-wasm build:wasm      # rebuild the checked-in WebAssembly (needs wasm-bindgen-cli 0.2.129)
+```
+
+To follow a new Typst version, bump `typst-syntax` in `Cargo.toml` (and `TYPST_VERSION` in the
+crate and `typast-syntax-wasm`'s `api.ts`), rebuild both bindings and run the tests.
 
 ### How to produce a Typst article
 

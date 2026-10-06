@@ -1,7 +1,7 @@
 # retypst-stringify
 
 [unified](https://github.com/unifiedjs/unified) compiler plugin that turns a
-[`typast`](../typast) (Typst) syntax tree into Typst source.
+[`typast`](../../typast/typast) (Typst) syntax tree into Typst source.
 
 ## Contents
 
@@ -13,7 +13,7 @@
 
 ## What is this?
 
-A thin wrapper around [`typast-util-to-typst`](../typast-util-to-typst), the same way
+A thin wrapper around [`typast-util-to-typst`](../../typast/typast-util-to-typst), the same way
 `unified-latex-stringify` wraps `unified-latex-util-to-string`. All escaping and layout rules
 are documented there.
 
@@ -45,8 +45,8 @@ Sets the processor's compiler. `options` are passed to `toTypst`:
 
 ## Related
 
-- [`typast`](../typast) — the syntax tree types
-- [`typast-util-to-typst`](../typast-util-to-typst) — the serializer
+- [`typast`](../../typast/typast) — the syntax tree types
+- [`typast-util-to-typst`](../../typast/typast-util-to-typst) — the serializer
 
 ## License
 

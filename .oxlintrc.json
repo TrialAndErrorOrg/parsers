@@ -20,6 +20,7 @@
     "turbo/generators/templates/**",
     "libs/citations/parse-text-cite/**/apa.ts",
     "apps/converter/lib/generated/**",
+    "libs/typast/typast-syntax-wasm/pkg/**",
     "deprecated/**"
   ],
   "rules": {

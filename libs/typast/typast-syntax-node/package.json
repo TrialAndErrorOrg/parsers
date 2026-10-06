@@ -1,0 +1,62 @@
+{
+  "name": "typast-syntax-node",
+  "version": "0.0.0",
+  "description": "Typst's own parser (typst-syntax), compiled to a Node.js addon with napi-rs, producing typast trees. Falls back to typast-syntax-wasm when no prebuilt binary fits the platform.",
+  "license": "GPL-3.0-or-later",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TrialAndErrorOrg/parsers.git",
+    "directory": "libs/typast/typast-syntax-node"
+  },
+  "homepage": "https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/typast/typast-syntax-node#readme",
+  "author": "Thomas F. K. Jorna <hello@tefkah.com>",
+  "type": "module",
+  "keywords": [
+    "typst",
+    "typast",
+    "parser",
+    "napi-rs",
+    "typst-syntax"
+  ],
+  "exports": {
+    ".": {
+      "@jote/source": "./src/index.ts",
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist",
+    "*.node"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.lib.json",
+    "build:native": "napi build --platform --release --no-js --no-dts-header --dts native.d.ts --output-dir .",
+    "typecheck": "tsc -p tsconfig.json",
+    "test": "vitest run"
+  },
+  "napi": {
+    "binaryName": "typast-syntax",
+    "targets": [
+      "aarch64-apple-darwin",
+      "x86_64-apple-darwin",
+      "x86_64-unknown-linux-gnu",
+      "aarch64-unknown-linux-gnu",
+      "x86_64-pc-windows-msvc"
+    ]
+  },
+  "typedoc": {
+    "entryPoint": "./src/index.ts",
+    "readmeFile": "./README.md",
+    "displayName": "typast-syntax-node",
+    "tsconfig": "./tsconfig.lib.json"
+  },
+  "dependencies": {
+    "typast-syntax-wasm": "workspace:^"
+  },
+  "devDependencies": {
+    "@napi-rs/cli": "^3.10.7"
+  }
+}

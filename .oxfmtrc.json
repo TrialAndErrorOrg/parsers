@@ -22,6 +22,7 @@
     "turbo/generators/templates/**",
     "libs/book-converter/schema.json",
     "apps/converter/lib/generated/**",
+    "libs/typast/typast-syntax-wasm/pkg/**",
     "**/fixtures/**",
     "**/__snapshots__/**",
     "**/test/**/*.json",

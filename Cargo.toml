@@ -1,0 +1,29 @@
+# Rust crates behind the typast parser bindings (`libs/typast/typast-syntax-{node,wasm}`).
+[workspace]
+resolver = "3"
+members = [
+  "crates/typast-syntax",
+  "libs/typast/typast-syntax-node",
+  "libs/typast/typast-syntax-wasm",
+]
+
+[workspace.package]
+edition = "2024"
+license = "GPL-3.0-or-later"
+repository = "https://github.com/TrialAndErrorOrg/parsers"
+publish = false
+
+[workspace.dependencies]
+# Bump together with the Typst version the parser should follow.
+typst-syntax = "=0.15.1"
+serde_json = { version = "1", features = ["preserve_order"] }
+
+[profile.release]
+lto = true
+codegen-units = 1
+strip = "symbols"
+
+# Smaller code for the browser build.
+[profile.wasm-release]
+inherits = "release"
+opt-level = "s"

@@ -53,6 +53,6 @@
   "devDependencies": {
     "docx-to-vfile": "workspace:^",
     "reoff-parse": "workspace:^",
-    "typast-stringify": "workspace:^"
+    "retypst-stringify": "workspace:^"
   }
 }

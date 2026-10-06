@@ -4,10 +4,9 @@ import { describe, it, expect } from 'vitest'
  * that Typst (a) accepts it and (b) parses it into the content the tree
  * described. They are skipped when `typst` is not on the PATH.
  */
-import type { Content, Root } from 'typast'
+import type { Content, Root } from './doc.js'
 
-import { normalizeText, sanitizeLabel } from './escape.js'
-import { toTypst } from './to-typst.js'
+import { normalizeText, sanitizeLabel } from 'typast-util-to-typst'
 import {
   a,
   br,
@@ -28,7 +27,8 @@ import {
   t,
   term,
   ul,
-} from '../test/build.js'
+  toTypst,
+} from '../test/doc-build.js'
 import { compile, flatten, flattenAll, hasTypst, squash } from '../test/typst.js'
 
 /** What `dump.typ` should produce for a sequence of inline nodes. */

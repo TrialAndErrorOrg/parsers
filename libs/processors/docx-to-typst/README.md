@@ -6,7 +6,7 @@ Convert a Word manuscript (`.docx`) into Typst for the JOTE `jote-article` templ
 
 Pipeline: `docx-to-vfile` → `reoff-parse` → `reoff-clean` → `reoff-markup-to-style` →
 [`reoff-typast`](../../reoff/reoff-typast) ([`ooxast-util-to-typast`](../../ooxast/ooxast-util-to-typast))
-→ `typast-stringify`. The `reoff-clean` and `reoff-markup-to-style` settings are the ones the LaTeX
+→ `retypst-stringify`. The `reoff-clean` and `reoff-markup-to-style` settings are the ones the LaTeX
 route uses (fully bold paragraph → Heading 1, fully italic → Heading 2); both can be changed or
 switched off.
 

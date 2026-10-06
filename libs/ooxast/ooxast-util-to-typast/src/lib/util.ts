@@ -1,4 +1,4 @@
-import type { Content, PhrasingContent, Text } from 'typast'
+import type { Content, PhrasingContent, Text } from 'typast-builder/doc'
 import type { Element, Root } from 'xast'
 
 /** Any xast node we may meet while walking an ooxast tree. */

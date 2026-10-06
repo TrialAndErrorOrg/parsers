@@ -1,5 +1,5 @@
 import type * as Ast from '@unified-latex/unified-latex-types'
-import type { Content, Heading, Paragraph, Text } from 'typast'
+import type { Content, Heading, Paragraph, Text } from 'typast-builder/doc'
 import type { VFile } from 'vfile'
 import {
   arg,

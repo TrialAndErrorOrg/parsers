@@ -3,7 +3,7 @@
  * become links to the `<fig:N>`/`<tab:N>` labels, like `\ref` links in the LaTeX articles.
  * The text itself is kept as written (Word documents number by hand).
  */
-import type { Content, FunctionCall, PhrasingContent, Text, Value } from 'typast'
+import type { Content, FunctionCall, PhrasingContent, Text, Value } from 'typast-builder/doc'
 import { slug } from './util.js'
 
 const MENTION =

@@ -1,6 +1,6 @@
 import { describe, it, expect } from 'vitest'
 import { toTypst } from 'typast-util-to-typst'
-import type { FunctionCall, Root, ShowRule } from 'typast'
+import type { FieldAccess, FuncCall, Root, ShowRule } from 'typast'
 import { VFile } from 'vfile'
 import { parseLatex } from './parse.js'
 import { toTypast } from './to-typast.js'
@@ -522,13 +522,13 @@ As \textcite{key} said.
       templatePath: '@local/jote-article:0.1.0',
     })
     expect(root.children[0]).toEqual({
-      type: 'import',
-      source: '@local/jote-article:0.1.0',
-      items: '*',
+      type: 'moduleImport',
+      source: { type: 'str', value: '@local/jote-article:0.1.0' },
+      imports: '*',
     })
-    const show = root.children[1] as ShowRule
-    const call = show.transform as FunctionCall
-    expect(call.name).toBe('jote-article.with')
+    const show = root.children[2] as ShowRule
+    const call = show.transform as FuncCall
+    expect((call.callee as FieldAccess).field).toBe('with')
     const out = toTypst(root)
     expect(out).toContain('article-type: "Meta-Research"')
     expect(out).toContain('title: [A _Title_]')

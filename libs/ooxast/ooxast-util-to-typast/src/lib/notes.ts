@@ -1,4 +1,4 @@
-import type { BlockContent, FunctionCall, PhrasingContent } from 'typast'
+import type { BlockContent, FunctionCall, PhrasingContent } from 'typast-builder/doc'
 import type { Element, Root } from 'xast'
 import { blocks } from './blocks.js'
 import type { State } from './types.js'

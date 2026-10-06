@@ -1,5 +1,5 @@
 import type * as Ast from '@unified-latex/unified-latex-types'
-import type { Content, List, ListItem } from 'typast'
+import type { Content, List, ListItem } from 'typast-builder/doc'
 import { arg, asBlock, call, code, content, math, named, raw, str, text } from '../build.js'
 import { texToTypstMath } from '../math.js'
 import type { State } from '../state.js'

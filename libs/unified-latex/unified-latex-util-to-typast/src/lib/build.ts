@@ -16,7 +16,7 @@ import type {
   Text,
   Typst,
   Value,
-} from 'typast'
+} from 'typast-builder/doc'
 
 export const text = (value: string): Text => ({ type: 'text', value })
 

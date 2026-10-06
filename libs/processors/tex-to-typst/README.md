@@ -6,7 +6,7 @@ archive) into Typst for the `jote-article` template in `templates/typst/jote-art
 Pipeline: `parseLatex` ([`unified-latex-util-to-typast`](../../unified-latex/unified-latex-util-to-typast),
 unified-latex with the converter's macro signatures) → a unified processor running
 [`unified-latex-typast`](../../unified-latex/unified-latex-typast) and
-[`typast-stringify`](../../typast/typast-stringify). Serializer options go in `stringify`.
+[`retypst-stringify`](../../typast/retypst-stringify). Serializer options go in `stringify`.
 
 ## Library
 

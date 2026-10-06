@@ -60,7 +60,7 @@ describe('texToTypst', () => {
     expect(String(file.value)).toMatch(/^#import "@local\/jote-article:0.1.0": \*/)
   })
 
-  it('passes serializer options to typast-stringify', async () => {
+  it('passes serializer options to retypst-stringify', async () => {
     const file = await texToTypst(article, { stringify: { indent: '\t' } })
     expect(String(file.value)).toContain('\n\tarticle-type: "Empirical",')
   })

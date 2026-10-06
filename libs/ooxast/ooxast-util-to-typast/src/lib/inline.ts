@@ -2,7 +2,7 @@
  * Paragraph content (runs, fields, hyperlinks, notes, images, math) → typast phrasing content.
  */
 import type { Element } from 'xast'
-import type { FunctionCall, Math, PhrasingContent, Text } from 'typast'
+import type { FunctionCall, Math, PhrasingContent, Text } from 'typast-builder/doc'
 import type { Field, FormattingHandler, State } from './types.js'
 import { attr, child, find, isEl, kids, ownText, plainText, text, emuToPt, isOn } from './util.js'
 import { classifyField, citationNodes, hyperlinkTarget } from './citations.js'

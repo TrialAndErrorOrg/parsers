@@ -1,5 +1,5 @@
 import type * as Ast from '@unified-latex/unified-latex-types'
-import type { Content, FunctionCall, Value } from 'typast'
+import type { Content, FunctionCall, Value } from 'typast-builder/doc'
 import { arg, asBlock, call, code, content, named, str, text } from '../build.js'
 import type { State } from '../state.js'
 import type { EnvironmentHandler, LabelKind, MacroHandler } from '../types.js'

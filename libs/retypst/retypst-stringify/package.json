@@ -1,0 +1,51 @@
+{
+  "name": "retypst-stringify",
+  "version": "0.0.0",
+  "description": "retypst plugin (unified compiler) that serializes a typast tree to Typst source",
+  "license": "GPL-3.0-or-later",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TrialAndErrorOrg/parsers.git",
+    "directory": "libs/retypst/retypst-stringify"
+  },
+  "homepage": "https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/retypst/retypst-stringify#readme",
+  "author": "Thomas F. K. Jorna <hello@tefkah.com>",
+  "type": "module",
+  "keywords": [
+    "unified",
+    "unified-plugin",
+    "retypst",
+    "typast",
+    "typst",
+    "stringify",
+    "compile"
+  ],
+  "exports": {
+    ".": {
+      "@jote/source": "./src/index.ts",
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.lib.json",
+    "typecheck": "tsc -p tsconfig.json",
+    "test": "vitest run"
+  },
+  "typedoc": {
+    "entryPoint": "./src/index.ts",
+    "readmeFile": "./README.md",
+    "displayName": "retypst-stringify",
+    "tsconfig": "./tsconfig.lib.json"
+  },
+  "dependencies": {
+    "typast": "workspace:^",
+    "typast-util-to-typst": "workspace:^",
+    "unified": "catalog:"
+  }
+}

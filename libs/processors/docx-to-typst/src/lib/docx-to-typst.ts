@@ -5,7 +5,7 @@ import reoffParse from 'reoff-parse'
 import { reoffClean } from 'reoff-clean'
 import reoffMarkupToStyle, { type Options as MarkupToStyleOptions } from 'reoff-markup-to-style'
 import reoffTypast from 'reoff-typast'
-import typastStringify from 'typast-stringify'
+import retypstStringify from 'retypst-stringify'
 import type { Options as TypastOptions, TypastData } from 'ooxast-util-to-typast'
 import type { Options as StringifyOptions } from 'typast-util-to-typst'
 
@@ -77,7 +77,7 @@ export async function docxToTypst(
   let processor: any = unified().use(reoffParse)
   if (clean !== false) processor = processor.use(reoffClean, clean)
   if (markupToStyle !== false) processor = processor.use(reoffMarkupToStyle, markupToStyle)
-  processor = processor.use(reoffTypast, TypastOptions).use(typastStringify, stringify)
+  processor = processor.use(reoffTypast, TypastOptions).use(retypstStringify, stringify)
 
   const file: VFile = await processor.process(vfile)
   file.data.files = await outputFiles(file)

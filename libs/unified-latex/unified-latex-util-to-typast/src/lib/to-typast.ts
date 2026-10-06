@@ -1,6 +1,16 @@
 import type * as Ast from '@unified-latex/unified-latex-types'
 import { attachMacroArgs } from '@unified-latex/unified-latex-util-arguments'
-import type { Argument, Content, FunctionCall, Import, Root, ShowRule, Value } from 'typast'
+import type { Root as TypastRoot } from 'typast'
+import { lower } from 'typast-builder'
+import type {
+  Argument,
+  Content,
+  FunctionCall,
+  Import,
+  Root,
+  ShowRule,
+  Value,
+} from 'typast-builder/doc'
 import { VFile } from 'vfile'
 import { arg, arr, call, code, content, dict, label, named, str, text } from './build.js'
 import { environmentHandlers } from './handlers/environments.js'
@@ -30,7 +40,15 @@ export const ARTICLE_TYPES: Record<string, string> = {
  *
  * Never throws on unknown input: unknown macros keep their text and produce a warning on `file`.
  */
-export function toTypast(tree: Ast.Root, file?: VFile | Options, options?: Options): Root {
+export function toTypast(tree: Ast.Root, file?: VFile | Options, options?: Options): TypastRoot {
+  return lower(toDocument(tree, file, options))
+}
+
+/**
+ * Like {@link toTypast}, but returns the document model (`typast-builder/doc`: paragraphs,
+ * lists, calls by name) that `toTypast` lowers to typast.
+ */
+export function toDocument(tree: Ast.Root, file?: VFile | Options, options?: Options): Root {
   let vfile: VFile
   let opts: Options
   if (file instanceof VFile) {

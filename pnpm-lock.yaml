@@ -935,6 +935,9 @@ importers:
       typast:
         specifier: workspace:^
         version: link:../../typast/typast
+      typast-builder:
+        specifier: workspace:^
+        version: link:../../typast/typast-builder
       typast-util-to-typst:
         specifier: workspace:^
         version: link:../../typast/typast-util-to-typst
@@ -1050,9 +1053,9 @@ importers:
       reoff-typast:
         specifier: workspace:^
         version: link:../../reoff/reoff-typast
-      typast-stringify:
+      retypst-stringify:
         specifier: workspace:^
-        version: link:../../typast/typast-stringify
+        version: link:../../retypst/retypst-stringify
       typast-util-to-typst:
         specifier: workspace:^
         version: link:../../typast/typast-util-to-typst
@@ -1072,12 +1075,12 @@ importers:
 
   libs/processors/tex-to-typst:
     dependencies:
+      retypst-stringify:
+        specifier: workspace:^
+        version: link:../../retypst/retypst-stringify
       typast:
         specifier: workspace:^
         version: link:../../typast/typast
-      typast-stringify:
-        specifier: workspace:^
-        version: link:../../typast/typast-stringify
       typast-util-to-typst:
         specifier: workspace:^
         version: link:../../typast/typast-util-to-typst
@@ -1399,9 +1402,9 @@ importers:
       reoff-parse:
         specifier: workspace:^
         version: link:../reoff-parse
-      typast-stringify:
+      retypst-stringify:
         specifier: workspace:^
-        version: link:../../typast/typast-stringify
+        version: link:../../retypst/retypst-stringify
 
   libs/reoff/reoff-unified-latex:
     dependencies:
@@ -1418,23 +1421,71 @@ importers:
         specifier: 'catalog:'
         version: 11.0.5
 
+  libs/retypst/retypst:
+    dependencies:
+      retypst-parse:
+        specifier: workspace:^
+        version: link:../retypst-parse
+      retypst-stringify:
+        specifier: workspace:^
+        version: link:../retypst-stringify
+      unified:
+        specifier: 'catalog:'
+        version: 11.0.5
+    devDependencies:
+      typast:
+        specifier: workspace:^
+        version: link:../../typast/typast
+
+  libs/retypst/retypst-parse:
+    dependencies:
+      typast:
+        specifier: workspace:^
+        version: link:../../typast/typast
+      typast-util-from-string:
+        specifier: workspace:^
+        version: link:../../typast/typast-util-from-string
+      unified:
+        specifier: 'catalog:'
+        version: 11.0.5
+    devDependencies:
+      vfile:
+        specifier: 'catalog:'
+        version: 6.0.3
+
+  libs/retypst/retypst-stringify:
+    dependencies:
+      typast:
+        specifier: workspace:^
+        version: link:../../typast/typast
+      typast-util-to-typst:
+        specifier: workspace:^
+        version: link:../../typast/typast-util-to-typst
+      unified:
+        specifier: 'catalog:'
+        version: 11.0.5
+
   libs/typast/typast:
     dependencies:
       '@types/unist':
         specifier: 'catalog:'
         version: 3.0.3
 
-  libs/typast/typast-stringify:
+  libs/typast/typast-builder:
     dependencies:
+      '@types/unist':
+        specifier: 'catalog:'
+        version: 3.0.3
       typast:
         specifier: workspace:^
         version: link:../typast
+    devDependencies:
+      typast-util-from-string:
+        specifier: workspace:^
+        version: link:../typast-util-from-string
       typast-util-to-typst:
         specifier: workspace:^
         version: link:../typast-util-to-typst
-      unified:
-        specifier: 'catalog:'
-        version: 11.0.5
 
   libs/typast/typast-syntax-node:
     dependencies:
@@ -1452,11 +1503,37 @@ importers:
         specifier: workspace:^
         version: link:../typast
 
+  libs/typast/typast-util-from-string:
+    dependencies:
+      typast:
+        specifier: workspace:^
+        version: link:../typast
+      typast-syntax-node:
+        specifier: workspace:^
+        version: link:../typast-syntax-node
+      typast-syntax-wasm:
+        specifier: workspace:^
+        version: link:../typast-syntax-wasm
+    devDependencies:
+      typast-util-to-typst:
+        specifier: workspace:^
+        version: link:../typast-util-to-typst
+
   libs/typast/typast-util-to-typst:
     dependencies:
       typast:
         specifier: workspace:^
         version: link:../typast
+
+  libs/typast/typast-util-visit:
+    dependencies:
+      typast:
+        specifier: workspace:^
+        version: link:../typast
+    devDependencies:
+      typast-util-from-string:
+        specifier: workspace:^
+        version: link:../typast-util-from-string
 
   libs/unified-latex/unified-latex-stringify:
     dependencies:
@@ -1515,6 +1592,9 @@ importers:
       typast:
         specifier: workspace:^
         version: link:../../typast/typast
+      typast-builder:
+        specifier: workspace:^
+        version: link:../../typast/typast-builder
       unified:
         specifier: 'catalog:'
         version: 11.0.5

@@ -1,29 +1,35 @@
 {
-  "name": "typast-stringify",
+  "name": "typast-util-from-string",
   "version": "0.0.0",
-  "description": "unified compiler plugin that turns a `typast` tree into Typst source.",
+  "description": "Parse Typst source into a typast syntax tree, with Typst's own parser (typst-syntax)",
   "license": "GPL-3.0-or-later",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/TrialAndErrorOrg/parsers.git",
-    "directory": "libs/typast/typast-stringify"
+    "directory": "libs/typast/typast-util-from-string"
   },
-  "homepage": "https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/typast/typast-stringify#readme",
+  "homepage": "https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/typast/typast-util-from-string#readme",
   "author": "Thomas F. K. Jorna <hello@tefkah.com>",
   "type": "module",
   "keywords": [
-    "unified",
-    "unified-plugin",
+    "unist",
     "typast",
+    "typast-util",
     "typst",
-    "stringify",
-    "ast"
+    "parse",
+    "syntax tree"
   ],
   "exports": {
     ".": {
       "@jote/source": "./src/index.ts",
       "types": "./dist/index.d.ts",
       "default": "./dist/index.js"
+    }
+  },
+  "imports": {
+    "#parser": {
+      "node": "typast-syntax-node",
+      "default": "typast-syntax-wasm"
     }
   },
   "main": "./dist/index.js",
@@ -39,12 +45,15 @@
   "typedoc": {
     "entryPoint": "./src/index.ts",
     "readmeFile": "./README.md",
-    "displayName": "typast-stringify",
+    "displayName": "typast-util-from-string",
     "tsconfig": "./tsconfig.lib.json"
   },
   "dependencies": {
     "typast": "workspace:^",
-    "typast-util-to-typst": "workspace:^",
-    "unified": "catalog:"
+    "typast-syntax-node": "workspace:^",
+    "typast-syntax-wasm": "workspace:^"
+  },
+  "devDependencies": {
+    "typast-util-to-typst": "workspace:^"
   }
 }

@@ -1,4 +1,10 @@
-export { toTypast, ARTICLE_TYPES, macroHandlers, environmentHandlers } from './lib/to-typast.js'
+export {
+  toDocument,
+  toTypast,
+  ARTICLE_TYPES,
+  macroHandlers,
+  environmentHandlers,
+} from './lib/to-typast.js'
 export { parseLatex, preprocessLatex } from './lib/parse.js'
 export { macroSignatures, environmentSignatures } from './lib/signatures.js'
 export { State } from './lib/state.js'

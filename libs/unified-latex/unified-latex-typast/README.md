@@ -24,7 +24,7 @@ const tree = await processor.run(processor.parse(file), file)
 const typst = toTypst(tree)
 ```
 
-Add a typast compiler (e.g. `typast-stringify`) to use `processor.process()` directly.
+Add a typast compiler (e.g. `retypst-stringify`) to use `processor.process()` directly.
 
 - **mutate mode** — `.use(unifiedLatexTypast, options)`: the following plugins run on the typast tree.
 - **bridge mode** — `.use(unifiedLatexTypast, destination, options)`: runs the `destination`

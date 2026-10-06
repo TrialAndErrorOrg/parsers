@@ -47,7 +47,7 @@
     "reoff-markup-to-style": "workspace:^",
     "reoff-parse": "workspace:^",
     "reoff-typast": "workspace:^",
-    "typast-stringify": "workspace:^",
+    "retypst-stringify": "workspace:^",
     "typast-util-to-typst": "workspace:^",
     "unified": "catalog:",
     "vfile": "catalog:"

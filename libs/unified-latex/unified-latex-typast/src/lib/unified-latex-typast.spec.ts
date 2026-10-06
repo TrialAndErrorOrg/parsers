@@ -28,9 +28,9 @@ describe('unifiedLatexTypast', () => {
       ),
     )) as unknown as Root
     expect(tree.children[0]).toEqual({
-      type: 'import',
-      source: '@local/jote-article:0.1.0',
-      items: '*',
+      type: 'moduleImport',
+      source: { type: 'str', value: '@local/jote-article:0.1.0' },
+      imports: '*',
     })
   })
 

@@ -17,13 +17,17 @@ describe('escapeMarkup', () => {
       '#hash $dollar *star* _under_ `tick` @at <lt> [br] ~tilde',
       '\\#hash \\$dollar \\*star\\* \\_under\\_ \\`tick\\` \\@at \\<lt> \\[br\\] \\~tilde',
     ],
+    // `<` and `@` only start a label or reference before an identifier character
+    ['a < b @ c <', 'a < b @ c \\<'],
     ['it\'s "quoted" (paren) {brace} | ^ % & ? !', 'it\'s "quoted" (paren) {brace} | ^ % & ? !'],
     ['well-known e-mail 1-2 a-1', 'well-known e-mail 1-2 a-1'],
     ['en--dash em---dash soft-?hyphen', 'en\\--dash em\\-\\--dash soft\\-?hyphen'],
     ['minus -1 (-2)', 'minus \\-1 (\\-2)'],
     ['wait... ok.. ....', 'wait\\... ok.. \\.\\...'],
     ['a // b /* c */ d', 'a \\// b \\/\\* c \\*/ d'],
-    ['https://doi.org/10.1/x_y', 'https:\\//doi.org/10.1/x\\_y'],
+    // (`_` inside a word is not emphasis)
+    ['https://doi.org/10.1/x_y', 'https:\\//doi.org/10.1/x_y'],
+    ['snake_case _start end_', 'snake_case \\_start end\\_'],
     ['and/or 1/2', 'and/or 1/2'],
     ['ends with backslash\\', 'ends with backslash\\\\'],
     ['line\nbreak\r\nand\u2028more', 'line break and more'],
@@ -44,7 +48,10 @@ describe('escapeMarkup', () => {
     ['1.5 million', '1.5 million'],
     ['12.', '12\\.'],
     ['  - indented', '  \\- indented'],
-    ['-dash', '\\-dash'],
+    // markers need a space after them
+    ['-dash', '-dash'],
+    ['=x', '=x'],
+    ['-', '\\-'],
     ['plain', 'plain'],
   ])('at line start: %j', (input, expected) => {
     expect(escapeMarkup(input, { atLineStart: true })).toBe(expected)

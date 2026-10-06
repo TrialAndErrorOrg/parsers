@@ -23,7 +23,7 @@ rules and values are written in code mode (`#` in markup, none in code).
 ## When should I use this?
 
 When you build a `typast` tree yourself (e.g. in a docx → Typst or LaTeX → Typst converter) and
-need the Typst source. The unified plugin [`typast-stringify`](../typast-stringify) wraps this
+need the Typst source. The unified plugin [`retypst-stringify`](../retypst-stringify) wraps this
 utility.
 
 ## Use
@@ -137,7 +137,7 @@ it fuzzes random inline and block trees full of hazardous text; run longer with
 ## Related
 
 - [`typast`](../typast) — the syntax tree types
-- [`typast-stringify`](../typast-stringify) — unified compiler plugin
+- [`retypst-stringify`](../retypst-stringify) — unified compiler plugin
 
 ## License
 

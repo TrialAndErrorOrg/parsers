@@ -21,7 +21,7 @@ import type {
   Paragraph,
   PhrasingContent,
   Value,
-} from 'typast'
+} from 'typast-builder/doc'
 import type { Element } from 'xast'
 import { type ImageData, inlineContent, isImage, unwrapFull } from './inline.js'
 import { type ListInfo, listInfo } from './numbering.js'

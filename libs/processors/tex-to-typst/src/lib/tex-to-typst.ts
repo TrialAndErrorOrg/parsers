@@ -1,5 +1,5 @@
 import type { Root as TypastRoot } from 'typast'
-import typastStringify from 'typast-stringify'
+import retypstStringify from 'retypst-stringify'
 import type { Options as StringifyOptions } from 'typast-util-to-typst'
 import { unified } from 'unified'
 import unifiedLatexTypast from 'unified-latex-typast'
@@ -14,7 +14,7 @@ export interface Options extends Omit<ToTypastOptions, 'templatePath'> {
   templatePath?: string
   /** Path of the input, for messages. */
   path?: string
-  /** Options for the Typst serializer (`typast-stringify`). */
+  /** Options for the Typst serializer (`retypst-stringify`). */
   stringify?: StringifyOptions
 }
 
@@ -23,7 +23,7 @@ export interface Options extends Omit<ToTypastOptions, 'templatePath'> {
  * `jote-article` template.
  *
  * The LaTeX is parsed with the converter's macro signatures (`parseLatex`), then run through
- * `unified-latex-typast` and `typast-stringify`.
+ * `unified-latex-typast` and `retypst-stringify`.
  *
  * The returned file's `value` is the Typst source; `file.data.typast` holds the tree and
  * `file.messages` lists everything that couldn't be converted faithfully.
@@ -33,7 +33,7 @@ export async function texToTypst(input: string, options: Options = {}): Promise<
   const file = new VFile({ value: input, path })
   const processor = unified()
     .use(unifiedLatexTypast, { ...rest, templatePath: rest.templatePath ?? 'jote-article/lib.typ' })
-    .use(typastStringify, stringify)
+    .use(retypstStringify, stringify)
   const tree = (await processor.run(parseLatex(input), file)) as TypastRoot
   file.data.typast = tree
   file.value = processor.stringify(tree, file)

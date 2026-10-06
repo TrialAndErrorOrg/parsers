@@ -3,7 +3,14 @@
  * single-cell tables (the usual way manuscripts draw a box) → `#jote-box(…)[…]`.
  */
 import type { Element } from 'xast'
-import type { Argument, BlockContent, Content, FunctionCall, PhrasingContent, Value } from 'typast'
+import type {
+  Argument,
+  BlockContent,
+  Content,
+  FunctionCall,
+  PhrasingContent,
+  Value,
+} from 'typast-builder/doc'
 import type { State, Where } from './types.js'
 import { attr, child, isOn, kids, plainText } from './util.js'
 import { group, labelNode, noteBlock, paragraph, toItems, type Item } from './blocks.js'

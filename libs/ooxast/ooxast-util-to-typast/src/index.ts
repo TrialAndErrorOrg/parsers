@@ -5,7 +5,7 @@ export { ommlToTypst } from './lib/math.js'
 export type { JoteArticleMeta, JoteAuthor, Rich } from './lib/meta.js'
 export { familyName, mergeMeta, runningAuthorFor, templateShowRule } from './lib/meta.js'
 export { parseStyles, resolveStyle } from './lib/styles.js'
-export { defaultOptions, toTypast } from './lib/to-typast.js'
+export { defaultOptions, toDocument, toTypast } from './lib/to-typast.js'
 export type {
   FormattingHandler,
   MediaFile,

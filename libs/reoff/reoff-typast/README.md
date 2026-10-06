@@ -11,12 +11,12 @@ import { unified } from 'unified'
 import { docxToVFile } from 'docx-to-vfile'
 import reoffParse from 'reoff-parse'
 import reoffTypast from 'reoff-typast'
-import typastStringify from 'typast-stringify'
+import retypstStringify from 'retypst-stringify'
 
 const file = await unified()
   .use(reoffParse)
   .use(reoffTypast, { meta: { articleType: 'empirical' } })
-  .use(typastStringify)
+  .use(retypstStringify)
   .process(await docxToVFile(bytes))
 
 String(file) // main.typ

@@ -42,7 +42,7 @@
   },
   "dependencies": {
     "typast": "workspace:^",
-    "typast-stringify": "workspace:^",
+    "retypst-stringify": "workspace:^",
     "typast-util-to-typst": "workspace:^",
     "unified": "catalog:",
     "unified-latex-typast": "workspace:^",

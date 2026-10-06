@@ -43,7 +43,7 @@ const nextConfig = {
     'reoff-typast',
     'typast',
     'typast-util-to-typst',
-    'typast-stringify',
+    'retypst-stringify',
     'docx-to-typst',
   ],
   webpack: (config) => {

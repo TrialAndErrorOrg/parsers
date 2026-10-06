@@ -4,7 +4,7 @@ import { fileURLToPath } from 'node:url'
 import { unified } from 'unified'
 import { docxToVFile } from 'docx-to-vfile'
 import reoffParse from 'reoff-parse'
-import typastStringify from 'typast-stringify'
+import retypstStringify from 'retypst-stringify'
 import reoffTypast from './reoff-typast.js'
 
 const fixture = fileURLToPath(
@@ -21,7 +21,7 @@ describe('reoffTypast', () => {
       .use(reoffParse)
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
       .use(reoffTypast as any, { templatePath: 'template.typ' })
-      .use(typastStringify)
+      .use(retypstStringify)
       .process(vfile)
     const out = String(file)
     expect(out.startsWith('#import "template.typ": *\n#show: jote-article.with(')).toBe(true)

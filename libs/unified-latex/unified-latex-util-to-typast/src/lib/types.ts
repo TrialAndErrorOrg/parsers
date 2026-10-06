@@ -1,5 +1,5 @@
 import type * as Ast from '@unified-latex/unified-latex-types'
-import type { Content } from 'typast'
+import type { Content } from 'typast-builder/doc'
 import type { State } from './state.js'
 
 export type HandlerResult = Content | Content[] | undefined | null | void

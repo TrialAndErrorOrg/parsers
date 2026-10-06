@@ -2,7 +2,14 @@
  * Article metadata ↔ the arguments of `jote-article.with(…)` in
  * `templates/typst/jote-article/lib.typ`.
  */
-import type { Argument, BlockContent, DictEntry, PhrasingContent, ShowRule, Value } from 'typast'
+import type {
+  Argument,
+  BlockContent,
+  DictEntry,
+  PhrasingContent,
+  ShowRule,
+  Value,
+} from 'typast-builder/doc'
 
 /** Rich text: a plain string, or typast content (inline, or blocks for the abstract). */
 export type Rich = string | PhrasingContent[] | BlockContent[]

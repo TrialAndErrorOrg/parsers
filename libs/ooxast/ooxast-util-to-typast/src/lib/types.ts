@@ -1,5 +1,5 @@
 import type { Data as CSL } from 'csl-json'
-import type { BlockContent, Content, PhrasingContent } from 'typast'
+import type { BlockContent, Content, PhrasingContent } from 'typast-builder/doc'
 import type { VFile } from 'vfile'
 import type { Element, Root as XastRoot } from 'xast'
 import type { JoteArticleMeta } from './meta.js'

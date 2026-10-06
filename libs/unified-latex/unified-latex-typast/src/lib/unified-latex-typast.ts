@@ -30,7 +30,7 @@ const mutate: Plugin<[Options?], LatexRoot, TypastRoot> = function (options) {
  * unified plugin that turns a unified-latex tree into a typast (Typst) tree.
  *
  * With a destination processor, runs it on the typast tree (bridge-mode).
- * Without one, returns the typast tree so further plugins (e.g. `typast-stringify`) run on it
+ * Without one, returns the typast tree so further plugins (e.g. `retypst-stringify`) run on it
  * (mutate-mode).
  *
  * @param destination Optional unified processor, or the options.

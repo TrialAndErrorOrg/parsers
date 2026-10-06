@@ -1,4 +1,4 @@
-/** Tiny `typast` builders for tests. */
+/** Tiny builders for the document model, for tests. */
 import type {
   Argument,
   Content,
@@ -19,7 +19,10 @@ import type {
   TermItem,
   Text,
   Value,
-} from 'typast'
+  DocNode,
+} from '../lib/doc.js'
+import { toTypst as print } from 'typast-util-to-typst'
+import { lower, lowerValue } from '../lib/lower.js'
 
 export const root = (...children: Content[]): Root => ({ type: 'root', children })
 export const t = (value: string): Text => ({ type: 'text', value })
@@ -73,3 +76,28 @@ export const call = (name: string, args: Argument[] = [], ...body: Content[][]):
   args,
   ...(body.length ? { body } : {}),
 })
+
+/**
+ * Lower a document node (or nodes) and print it, the way the old `toTypst` took the document
+ * model directly.
+ */
+export function toTypst(tree: DocNode | Content[], options?: Parameters<typeof print>[1]): string {
+  if (Array.isArray(tree)) return print(lower(tree), options)
+  switch (tree.type) {
+    case 'root':
+      return print(lower(tree as Root), options)
+    case 'string':
+    case 'code':
+    case 'array':
+    case 'dict':
+    case 'contentBlock':
+      return print(lowerValue(tree as Value), options)
+    case 'argument': {
+      const arg = tree as Argument
+      const value = print(lowerValue(arg.value), options)
+      return arg.name ? `${arg.name}: ${value}` : value
+    }
+    default:
+      return print(lower([tree as Content]), options)
+  }
+}

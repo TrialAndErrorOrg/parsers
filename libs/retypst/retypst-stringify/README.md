@@ -1,4 +1,4 @@
-# typast-stringify
+# retypst-stringify
 
 [unified](https://github.com/unifiedjs/unified) compiler plugin that turns a
 [`typast`](../typast) (Typst) syntax tree into Typst source.
@@ -23,12 +23,12 @@ are documented there.
 import { unified } from 'unified'
 import reoffParse from 'reoff-parse'
 import reoffTypast from 'reoff-typast'
-import typastStringify from 'typast-stringify'
+import retypstStringify from 'retypst-stringify'
 
 const file = await unified()
   .use(reoffParse)
   .use(reoffTypast)
-  .use(typastStringify, { lineWidth: 100 })
+  .use(retypstStringify, { lineWidth: 100 })
   .process(docx)
 
 String(file) // Typst source
@@ -36,7 +36,7 @@ String(file) // Typst source
 
 ## API
 
-### `unified().use(typastStringify, options?)`
+### `unified().use(retypstStringify, options?)`
 
 Sets the processor's compiler. `options` are passed to `toTypst`:
 

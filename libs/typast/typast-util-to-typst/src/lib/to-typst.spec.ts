@@ -1,297 +1,327 @@
-import { describe, it, expect } from 'vitest'
+import { describe, expect, it } from 'vitest'
+import type { Expr, FuncCall, MarkupContent, MathArg, MathContent, Root } from 'typast'
+
+import { compile, flatten, hasTypst } from '../test/typst.js'
 import { toTypst } from './to-typst.js'
-import {
-  a,
-  br,
-  call,
-  code,
-  content,
-  emph,
-  h,
-  label,
-  li,
-  math,
-  ol,
-  p,
-  raw,
-  ref,
-  root,
-  str,
-  strong,
-  t,
-  term,
-  ul,
-} from '../test/build.js'
 
-describe('toTypst: blocks', () => {
-  it('separates paragraphs with blank lines and ends with a newline', () => {
-    expect(toTypst(root(p(t('One.')), p(t('Two.'))))).toBe('One.\n\nTwo.\n')
-  })
+const text = (value: string) => ({ type: 'text', value }) as const
+const space = (value = ' ') => ({ type: 'space', value }) as const
+const parbreak = { type: 'parbreak' } as const
+const ident = (name: string) => ({ type: 'ident', name }) as const
+const str = (value: string) => ({ type: 'str', value }) as const
+const content = (...children: MarkupContent[]) => ({ type: 'contentBlock', children }) as const
+const call = (name: string, ...args: MathArg[]): FuncCall => ({
+  type: 'funcCall',
+  callee: ident(name),
+  args,
+})
+const root = (...children: MarkupContent[]): Root => ({ type: 'root', children })
 
-  it('wraps loose inline content at block level in a paragraph', () => {
-    expect(toTypst(root(t('a '), strong(t('b')), p(t('c'))))).toBe('a *b*\n\nc\n')
-  })
-
-  it('renders headings with labels', () => {
-    expect(toTypst(root(h(1, [t('Intro')], 'sec:intro'), h(3, [emph(t('Deep'))])))).toBe(
-      '= Intro <sec:intro>\n\n=== _Deep_\n',
-    )
-  })
-
-  it('does not escape line-start markers inside headings', () => {
-    expect(toTypst(h(2, [t('1. Introduction - = x')]))).toBe('== 1. Introduction - = x')
-  })
-
-  it('renders unnumbered headings as calls', () => {
-    expect(toTypst({ type: 'heading', depth: 2, numbered: false, children: [t('X')] })).toBe(
-      '#heading(depth: 2, numbering: none)[X]',
-    )
-  })
-
-  it('attaches labels to the previous block', () => {
-    const fig = call('figure', [
-      a(call('image', [a(str('a.png'))])),
-      a(content(t('Cap')), 'caption'),
-    ])
-    expect(toTypst(root(fig, label('fig:a'), p(t('See '), ref('fig:a'), t('.'))))).toBe(
-      '#figure(image("a.png"), caption: [Cap]) <fig:a>\n\nSee @fig:a.\n',
-    )
-  })
-
-  it('puts statements on consecutive lines', () => {
+describe('toTypst: markup', () => {
+  it('writes what the tree says: spaces, newlines and paragraph breaks', () => {
     expect(
       toTypst(
         root(
-          { type: 'import', source: 'jote-article/lib.typ', items: '*' },
-          { type: 'set', name: 'text', args: [a(code('11pt'), 'size')] },
-          { type: 'show', selector: 'link', transform: 'underline' },
-          { type: 'show', transform: call('jote-article.with', [a(content(t('T')), 'title')]) },
-          { type: 'let', name: 'x', value: str('y') },
-          p(t('Body')),
+          text('One'),
+          space(),
+          text('two'),
+          space('\n  '),
+          text('three'),
+          parbreak,
+          text('Four'),
         ),
       ),
-    ).toBe(
-      [
-        '#import "jote-article/lib.typ": *',
-        '#set text(size: 11pt)',
-        '#show link: underline',
-        '#show: jote-article.with(title: [T])',
-        '#let x = "y"',
-        '',
-        'Body',
-        '',
-      ].join('\n'),
+    ).toBe('One two\nthree\n\nFour\n')
+  })
+
+  it('writes strong, emphasis, raw, links, labels and references', () => {
+    expect(
+      toTypst([
+        { type: 'strong', children: [text('b')] },
+        space(),
+        { type: 'emph', children: [text('i')] },
+        space(),
+        { type: 'raw', value: 'x', block: false },
+        space(),
+        { type: 'link', url: 'https://typst.app' },
+        space(),
+        { type: 'ref', target: 'fig:1' },
+        space(),
+        { type: 'label', name: 'here' },
+      ]),
+    ).toBe('*b* _i_ `x` https://typst.app @fig:1 <here>')
+  })
+
+  it('falls back to functions where markup would not parse', () => {
+    // `*` next to letters is not a delimiter
+    expect(toTypst([text('a'), { type: 'strong', children: [text('b')] }, text('c')])).toBe(
+      'a#strong[b]c',
     )
+    // `@a.b` would be the reference `a.b`, and `#ref(<a>).b` a field access
+    expect(toTypst([{ type: 'ref', target: 'a' }, text('.b')])).toBe('#ref(<a>);.b')
+    expect(toTypst([{ type: 'link', url: 'mailto:x@y.org' }])).toBe('#link("mailto:x@y.org")')
+  })
+
+  it('writes headings, list items and terms on lines of their own', () => {
+    expect(
+      toTypst(
+        root(
+          { type: 'heading', depth: 2, children: [text('Intro')] },
+          space(),
+          { type: 'label', name: 'intro' },
+          { type: 'listItem', children: [text('a')] },
+          { type: 'enumItem', number: 3, children: [text('b')] },
+          { type: 'termItem', term: [text('T')], children: [text('d')] },
+        ),
+      ),
+    ).toBe('== Intro <intro>\n- a\n3. b\n/ T: d\n')
+  })
+
+  it('indents what continues a list item', () => {
+    const item = (...children: MarkupContent[]) => ({ type: 'listItem', children }) as const
+    expect(
+      toTypst(
+        root(
+          item(text('a'), space('\n'), item(text('b')), parbreak, text('more')),
+          item(text('c')),
+        ),
+      ),
+    ).toBe('- a\n  - b\n\n  more\n- c\n')
+  })
+
+  it('separates statements from what follows', () => {
+    const set: Expr = { type: 'setRule', target: ident('text'), args: [ident('red')] }
+    expect(toTypst(root(set, text('Hi')))).toBe('#set text(red)\nHi\n')
+    expect(toTypst(root(set, space(), text('Hi')))).toBe('#set text(red); Hi\n')
+  })
+
+  it('ends embedded code where text would continue it', () => {
+    expect(toTypst([call('f'), text('(x)')])).toBe('#f();(x)')
+    expect(toTypst([ident('x'), text('-y')])).toBe('#x;-y')
+    expect(toTypst([ident('x'), text(' y')])).toBe('#x y')
+  })
+
+  it('parenthesizes code that cannot follow a hash', () => {
+    expect(
+      toTypst([
+        { type: 'binary', op: '+', lhs: { type: 'int', value: 1 }, rhs: { type: 'int', value: 2 } },
+      ]),
+    ).toBe('#(1 + 2)')
+  })
+
+  it('keeps comments out of the way', () => {
+    expect(
+      toTypst(root(text('a'), { type: 'comment', value: ' c', block: false }, text('b'))),
+    ).toBe('a // c\nb\n')
+    expect(toTypst([text('a'), { type: 'comment', value: ' c ', block: true }, text('b')])).toBe(
+      'a/* c */b',
+    )
+  })
+
+  it('writes escapes, shorthands and smart quotes', () => {
+    expect(
+      toTypst([
+        { type: 'escape', value: '#' },
+        { type: 'shorthand', value: '—' },
+        { type: 'smartQuote', double: true },
+        { type: 'escape', value: '\u{1F5FA}' },
+      ]),
+    ).toBe('\\#---"\\🗺')
   })
 })
 
-describe('toTypst: lists', () => {
-  it('renders tight bullet lists', () => {
-    expect(toTypst(ul(li(t('a')), li(p(t('b')))))).toBe('- a\n- b')
+describe('toTypst: math', () => {
+  const eq = (block: boolean, ...children: MathContent[]): MarkupContent => ({
+    type: 'equation',
+    block,
+    children,
+  })
+  const t = (value: string) => ({ type: 'mathText', value }) as const
+
+  it('writes equations', () => {
+    expect(
+      toTypst([
+        eq(false, {
+          type: 'mathAttach',
+          base: t('x'),
+          bottom: t('1'),
+          top: { type: 'math', children: [t('n'), t('+'), t('1')] },
+        }),
+      ]),
+    ).toBe('$x_1^(n+1)$')
+    expect(
+      toTypst([
+        eq(
+          true,
+          {
+            type: 'mathFrac',
+            num: {
+              type: 'math',
+              deparenthesized: true,
+              children: [t('a'), space(), t('+'), space(), t('b')],
+            },
+            denom: t('2'),
+          },
+          space(),
+          { type: 'mathShorthand', value: '≤' },
+          space(),
+          { type: 'mathRoot', index: 3, radicand: t('x') },
+        ),
+      ]),
+    ).toBe('$ (a + b)/2 <= ∛x $')
   })
 
-  it('renders loose lists with blank lines', () => {
-    expect(toTypst({ ...ul(li(t('a')), li(t('b'))), tight: false })).toBe('- a\n\n- b')
-  })
-
-  it('indents nested lists and extra paragraphs', () => {
-    const tree = ul(
-      li(p(t('one')), ul(li(t('one.a')), li(t('one.b')))),
-      li(p(t('two')), p(t('two, second paragraph'))),
-    )
-    expect(toTypst(tree)).toBe(
-      ['- one', '  - one.a', '  - one.b', '- two', '', '  two, second paragraph'].join('\n'),
-    )
-  })
-
-  it('renders enums, with explicit start numbers', () => {
-    expect(toTypst(ol({}, li(t('a')), li(t('b'))))).toBe('+ a\n+ b')
-    expect(toTypst(ol({ start: 3 }, li(t('a')), li(t('b'))))).toBe('3. a\n+ b')
-  })
-
-  it('uses #enum for numbering patterns', () => {
-    expect(toTypst(ol({ numbering: 'a)' }, li(t('a')), li(t('b'))))).toBe(
-      '#enum(numbering: "a)")[a][b]',
-    )
-  })
-
-  it('escapes markers at the start of item content', () => {
-    expect(toTypst(ul(li(t('- x')), li(t('= y'))))).toBe('- \\- x\n- \\= y')
-  })
-
-  it('handles empty items', () => {
-    expect(toTypst(ul(li(), li(t('b'))))).toBe('- #[]\n- b')
-  })
-
-  it('renders term lists, escaping colons in the term', () => {
-    expect(toTypst(root(term([t('Key: word')], t('desc: here')), term([t('B')], t('d'))))).toBe(
-      '/ Key\\: word: desc: here\n/ B: d\n',
-    )
-  })
-})
-
-describe('toTypst: inline', () => {
-  it('uses delimiters for strong and emphasis where unambiguous', () => {
-    expect(toTypst(p(t('a '), strong(t('b')), t(' '), emph(t('c')), t('.')))).toBe('a *b* _c_.')
-  })
-
-  it('falls back to functions inside words', () => {
-    expect(toTypst(p(t('foo'), emph(t('bar')), t('baz')))).toBe('foo#emph[bar]baz')
-    expect(toTypst(p(emph(t('bar')), t('baz')))).toBe('#emph[bar]baz')
-    expect(toTypst(p(t('x'), strong(t('y'))))).toBe('x#strong[y]')
-  })
-
-  it('falls back to functions for nested same-kind markup', () => {
-    expect(toTypst(p(emph(t('a '), emph(t('b')), t(' c'))))).toBe('_a #emph[b] c_')
-    expect(toTypst(p(strong(t('a '), emph(t('b '), strong(t('c'))))))).toBe('*a _b #strong[c]_*')
-  })
-
-  it('falls back for empty or whitespace-only markup', () => {
-    expect(toTypst(p(t('a '), emph(), t(' b')))).toBe('a #emph[] b')
-    expect(toTypst(p(t('a '), strong(t(' ')), t(' b')))).toBe('a #strong[ ] b')
-  })
-
-  it('terminates hash expressions that would swallow following text', () => {
-    expect(toTypst(p(emph(t('x')), t('.foo')))).toBe('_x_.foo')
-    expect(toTypst(p(t('a'), emph(t('x')), t('.foo')))).toBe('a#emph[x];.foo')
-    expect(toTypst(p(t('a'), emph(t('x')), t('(y)')))).toBe('a#emph[x];(y)')
-    expect(toTypst(p(t('a'), emph(t('x')), t('; y')))).toBe('a#emph[x];; y')
-    expect(toTypst(p(t('a'), emph(t('x')), t('[y]')))).toBe('a#emph[x]\\[y\\]')
-    expect(toTypst(p(t('a'), emph(t('x')), t('. Next')))).toBe('a#emph[x]. Next')
-    expect(toTypst(p(call('footnote', [], [t('n')]), t('.5')))).toBe('#footnote[n].5')
-  })
-
-  it('renders linebreaks', () => {
-    expect(toTypst(p(t('a'), br(), t('- b')))).toBe('a\\\n\\- b')
-    expect(toTypst(p(t('a'), br()))).toBe('a#linebreak()')
-    expect(toTypst(h(1, [t('a'), br(), t('b')]))).toBe('= a\\ b')
-  })
-
-  it('renders raw', () => {
-    expect(toTypst(p(raw('x = 1')))).toBe('`x = 1`')
-    expect(toTypst(p(raw('a`b')))).toBe('#raw("a`b")')
-    expect(toTypst(p(raw('fn', { lang: 'rust' })))).toBe('#raw("fn", lang: "rust")')
-    expect(toTypst(root(raw('let x = 1\n```', { block: true, lang: 'js' })))).toBe(
-      '````js\nlet x = 1\n```\n````\n',
-    )
-  })
-
-  it('renders math', () => {
-    expect(toTypst(p(t('so '), math('x^2'), t('.')))).toBe('so $x^2$.')
-    expect(toTypst(root(math('sum_i x_i', true)))).toBe('$ sum_i x_i $\n')
-  })
-
-  it('renders refs, falling back when the next character would extend the target', () => {
-    expect(toTypst(p(ref('fig:1'), t(', and')))).toBe('@fig:1, and')
-    expect(toTypst(p(ref('fig:1'), t('. Next')))).toBe('@fig:1. Next')
-    expect(toTypst(p(ref('fig'), t('s')))).toBe('#ref(<fig>)s')
-    expect(toTypst(p(ref('fig'), t('.a')))).toBe('#ref(<fig>);.a')
-    expect(toTypst(p(ref('fig'), t('-1')))).toBe('#ref(<fig>)\\-1')
-    expect(toTypst(p(ref('fig'), t('.'), emph(t('x'))))).toBe('#ref(<fig>);._x_')
-    expect(toTypst(p(ref('fig'), t(':'), emph(t('x'))))).toBe('#ref(<fig>):_x_')
-    expect(toTypst(p(ref('fig.'), t(' x')))).toBe('#ref(<fig.>) x')
-    expect(toTypst(p(ref('a b')))).toBe('@a-b')
-    expect(toTypst(p(ref('tab', [t('Table')])))).toBe('@tab[Table]')
-  })
-
-  it('renders labels inline', () => {
-    expect(toTypst(p(t('x'), label('a b')))).toBe('x<a-b>')
-  })
-
-  it('renders comments', () => {
-    expect(toTypst(p(t('a'), { type: 'comment', value: 'note' }, t('b')))).toBe('a // note\nb')
-    expect(toTypst(p(t('a'), { type: 'comment', value: 'x */ y', block: true }, t('b')))).toBe(
-      'a/* x * / y */b',
-    )
-    expect(toTypst(root({ type: 'comment', value: 'one\ntwo' }, p(t('x'))))).toBe(
-      '// one\n// two\nx\n',
-    )
-  })
-
-  it('emits raw typst verbatim', () => {
-    expect(toTypst(p(t('a '), { type: 'typst', value: '#sym.arrow' }, t('(b)')))).toBe(
-      'a #sym.arrow;(b)',
-    )
+  it('writes calls with rows and embedded code', () => {
+    expect(
+      toTypst([
+        eq(false, {
+          type: 'mathCall',
+          callee: { type: 'mathIdent', name: 'mat' },
+          args: [
+            { type: 'named', name: 'delim', expr: str('[') } as MathArg,
+            { ...t('1'), semicolon: true },
+            ident('x'),
+          ],
+        }),
+      ]),
+    ).toBe('$mat(delim: "[", 1; #x)$')
   })
 })
 
 describe('toTypst: code', () => {
-  it('renders calls with positional, named and body arguments', () => {
+  it('writes calls with trailing content blocks', () => {
     expect(
       toTypst(
-        p(
-          call(
-            'jote-box',
-            [a(content(t('Box 1')), 'title'), a(str('wide'), 'width')],
-            [t('Inside')],
-          ),
+        call(
+          'figure',
+          call('image', str('a.png')),
+          { type: 'named', name: 'caption', expr: content(text('A cat.')) },
+          content(text('x')),
         ),
       ),
-    ).toBe('#jote-box(title: [Box 1], width: "wide")[Inside]')
-    expect(toTypst(p(call('pagebreak')))).toBe('#pagebreak()')
-    expect(toTypst(call('footnote', [], [t('a')], [t('b')]))).toBe('#footnote[a][b]')
+    ).toBe('figure(image("a.png"), caption: [A cat.])[x]')
+    expect(toTypst(call('footnote', content(text('note'))))).toBe('footnote[note]')
   })
 
-  it('renders values', () => {
-    const v = (value: Parameters<typeof toTypst>[0]) => toTypst(value)
-    expect(v({ type: 'array', items: [] })).toBe('()')
-    expect(v({ type: 'array', items: [code('1')] })).toBe('(1,)')
-    expect(v({ type: 'array', items: [code('1'), str('a"b')] })).toBe('(1, "a\\"b")')
-    expect(v({ type: 'dict', entries: [] })).toBe('(:)')
+  it('writes literals', () => {
     expect(
-      v({
-        type: 'dict',
-        entries: [
-          { key: 'name', value: str('X') },
-          { key: 'with space', value: code('true') },
+      toTypst({
+        type: 'array',
+        items: [
+          { type: 'none' },
+          { type: 'auto' },
+          { type: 'bool', value: true },
+          { type: 'int', value: 3 },
+          { type: 'float', value: 2 },
+          { type: 'numeric', value: 1.5, unit: 'em' },
+          { type: 'numeric', value: 50, unit: '%' },
+          str('a "q"'),
         ],
       }),
-    ).toBe('(name: "X", "with space": true)')
-    expect(v(code(''))).toBe('none')
-    expect(v(content(t('#x')))).toBe('[\\#x]')
+    ).toBe('(none, auto, true, 3, 2.0, 1.5em, 50%, "a \\"q\\"")')
+    expect(toTypst({ type: 'array', items: [{ type: 'int', value: 1 }] })).toBe('(1,)')
+    expect(toTypst({ type: 'dict', items: [] })).toBe('(:)')
   })
 
-  it('breaks long argument lists over lines', () => {
-    const fig = call('figure', [
-      a(
-        call('image', [
-          a(str('media/a-very-long-file-name-for-an-image.png')),
-          a(code('100%'), 'width'),
-        ]),
-      ),
-      a(
-        content(t('A caption that is long enough to push this call past the line width.')),
-        'caption',
-      ),
-    ])
-    expect(toTypst(root(fig, label('fig:x')))).toBe(
-      [
-        '#figure(',
-        '  image("media/a-very-long-file-name-for-an-image.png", width: 100%),',
-        '  caption: [A caption that is long enough to push this call past the line width.],',
-        ') <fig:x>',
-        '',
-      ].join('\n'),
+  it('adds parentheses where precedence needs them', () => {
+    const n = (value: number) => ({ type: 'int', value }) as const
+    expect(
+      toTypst({
+        type: 'binary',
+        op: '*',
+        lhs: { type: 'binary', op: '+', lhs: n(1), rhs: n(2) },
+        rhs: n(3),
+      }),
+    ).toBe('(1 + 2) * 3')
+    expect(
+      toTypst({
+        type: 'binary',
+        op: '-',
+        lhs: n(1),
+        rhs: { type: 'binary', op: '-', lhs: n(2), rhs: n(3) },
+      }),
+    ).toBe('1 - (2 - 3)')
+    expect(
+      toTypst({
+        type: 'fieldAccess',
+        target: { type: 'unary', op: '-', expr: ident('x') },
+        field: 'abs',
+      }),
+    ).toBe('(-x).abs')
+  })
+
+  it('writes statements and control flow', () => {
+    expect(
+      toTypst({
+        type: 'letBinding',
+        pattern: ident('f'),
+        init: { type: 'closure', name: 'f', params: [ident('x')], body: ident('x') },
+      }),
+    ).toBe('let f(x) = x')
+    expect(
+      toTypst({
+        type: 'showRule',
+        selector: { type: 'fieldAccess', target: ident('heading'), field: 'where' },
+        transform: { type: 'closure', params: [ident('it')], body: content(text('x')) },
+      }),
+    ).toBe('show heading.where: it => [x]')
+    expect(
+      toTypst({
+        type: 'moduleImport',
+        source: str('@preview/cetz:0.4.0'),
+        imports: [
+          { type: 'importItem', path: ['canvas'] },
+          { type: 'importItem', path: ['draw'], newName: 'd' },
+        ],
+      }),
+    ).toBe('import "@preview/cetz:0.4.0": canvas, draw as d')
+    expect(
+      toTypst({
+        type: 'conditional',
+        condition: ident('x'),
+        ifBody: { type: 'codeBlock', children: [{ type: 'int', value: 1 }] },
+        elseBody: { type: 'int', value: 2 },
+      }),
+    ).toBe('if x { 1 } else { 2 }')
+  })
+
+  it('breaks long argument lists', () => {
+    const long = call('f', ...Array.from({ length: 12 }, (_, i) => str(`argument-${i}`)))
+    expect(toTypst(long)).toMatch(/^f\(\n {2}"argument-0",\n/)
+  })
+})
+
+describe.skipIf(!hasTypst)('toTypst output in typst', () => {
+  it('compiles and means what the tree says', () => {
+    const tree = root(
+      {
+        type: 'setRule',
+        target: ident('heading'),
+        args: [{ type: 'named', name: 'numbering', expr: str('1.') }],
+      },
+      { type: 'heading', depth: 1, children: [text('Methods & *Materials*')] },
+      space(),
+      { type: 'label', name: 'sec:m' },
+      parbreak,
+      text('See'),
+      space(),
+      { type: 'ref', target: 'sec:m' },
+      text('. Effects: d = 0.5 [95% CI]; p < .05'),
+      call('footnote', content(text('https://osf.io/abc_12/'))),
+      text('.'),
+      parbreak,
+      { type: 'listItem', children: [text('- not a sublist')] },
+      space('\n'),
+      { type: 'listItem', children: [text('= not a heading')] },
     )
-  })
-
-  it('lays out block content in content blocks', () => {
-    const box = call(
-      'jote-box',
-      [a(content(t('Box 1')), 'title')],
-      [p(t('One')), ul(li(t('a')), li(t('b')))],
+    const source = toTypst(tree)
+    expect(() => compile(source)).not.toThrow()
+    expect(
+      flatten(source)
+        .replace(/\s+/g, ' ')
+        .replace(/ ?¶ ?/g, '¶'),
+    ).toContain(
+      'H1{Methods & *Materials*}<sec:m>¶See @sec:m. Effects: d = 0.5 [95% CI]; p < .05footnote{https://osf.io/abc_12/}.¶-{- not a sublist} -{= not a heading}',
     )
-    expect(toTypst(root(box))).toBe(
-      ['#jote-box(title: [Box 1])[', '  One', '', '  - a', '  - b', ']', ''].join('\n'),
-    )
-  })
-
-  it('indents raw blocks inside content blocks consistently', () => {
-    const box = call('block', [], [p(t('x')), raw('a\n  b', { block: true })])
-    expect(toTypst(box)).toBe('#block[\n  x\n\n  ```\n  a\n    b\n  ```\n]')
-  })
-
-  it('escapes text in content blocks from line start', () => {
-    expect(toTypst(p(call('footnote', [], [t('- not a list')])))).toBe('#footnote[\\- not a list]')
   })
 })

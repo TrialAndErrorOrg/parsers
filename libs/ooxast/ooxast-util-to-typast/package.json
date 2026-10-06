@@ -50,6 +50,7 @@
     "csl-to-biblatex": "workspace:^",
     "tex2typst": "^0.6.2",
     "typast": "workspace:^",
+    "typast-builder": "workspace:^",
     "typast-util-to-typst": "workspace:^",
     "vfile": "catalog:",
     "xast-util-from-xml": "catalog:"

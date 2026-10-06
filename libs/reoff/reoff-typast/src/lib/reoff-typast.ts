@@ -31,10 +31,10 @@ function mutate(options?: Options): Transformer<OoxastRoot, TypastRoot> {
  * `reoff` plugin to go from Word (`ooxast`) to Typst (`typast`).
  *
  * Use it after `reoff-parse` (and optionally `reoff-clean`, `reoff-markup-to-style`) and
- * before `typast-stringify`:
+ * before `retypst-stringify`:
  *
  * ```ts
- * unified().use(reoffParse).use(reoffTypast, options).use(typastStringify).process(vfile)
+ * unified().use(reoffParse).use(reoffTypast, options).use(retypstStringify).process(vfile)
  * ```
  *
  * Given a processor as first argument it runs that processor on the typast tree instead

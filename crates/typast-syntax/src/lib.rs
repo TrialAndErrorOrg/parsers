@@ -93,6 +93,18 @@ pub fn parse_cst_to_json(text: &str, options: Options) -> String {
     cx.cst(&root).to_string()
 }
 
+/// How many content blocks follow the parentheses of an argument list (`f(x)[a][b]`: 2).
+fn trailing_blocks(args: &SyntaxNode) -> usize {
+    let after_parens = args
+        .children()
+        .rposition(|c| c.kind() == SyntaxKind::RightParen)
+        .map_or(0, |i| i + 1);
+    args.children()
+        .skip(after_parens)
+        .filter(|c| c.kind() == SyntaxKind::ContentBlock)
+        .count()
+}
+
 struct Cx<'a> {
     lines: Lines<&'a str>,
     /// Byte offset of every node in the tree, keyed by address (the tree is immutable here).
@@ -166,9 +178,10 @@ impl<'a> Cx<'a> {
         let mut map = Map::new();
         map.insert("type".into(), kind.into());
         if self.positions
-            && let Some(position) = self.position(source) {
-                map.insert("position".into(), position);
-            }
+            && let Some(position) = self.position(source)
+        {
+            map.insert("position".into(), position);
+        }
         map
     }
 
@@ -412,9 +425,10 @@ impl<'a> Cx<'a> {
                     .map(|item| {
                         let mut arg = self.arg(item.arg);
                         if item.ends_in_semicolon
-                            && let Value::Object(map) = &mut arg {
-                                map.insert("semicolon".into(), true.into());
-                            }
+                            && let Value::Object(map) = &mut arg
+                        {
+                            map.insert("semicolon".into(), true.into());
+                        }
                         arg
                     })
                     .collect();
@@ -573,7 +587,16 @@ impl<'a> Cx<'a> {
             Expr::FuncCall(v) => {
                 let callee = self.expr(v.callee());
                 let args = self.args(v.args());
-                self.with("funcCall", n, vec![("callee", callee), ("args", args)])
+                let trailing = trailing_blocks(v.args().to_untyped());
+                self.with(
+                    "funcCall",
+                    n,
+                    vec![
+                        ("callee", callee),
+                        ("args", args),
+                        ("trailing", trailing.into()),
+                    ],
+                )
             }
             Expr::Closure(v) => {
                 let name = v.name().map_or(Value::Null, |i| i.get().as_str().into());
@@ -841,9 +864,10 @@ impl<'a> Cx<'a> {
             );
         }
         if self.positions
-            && let Some(position) = self.position(node) {
-                map.insert("position".into(), position);
-            }
+            && let Some(position) = self.position(node)
+        {
+            map.insert("position".into(), position);
+        }
         Value::Object(map)
     }
 }
@@ -892,6 +916,7 @@ mod tests {
         // the newline after the statement is not a space
         assert_eq!(t["children"][1]["type"], "funcCall");
         assert_eq!(t["children"][1]["args"][0]["type"], "contentBlock");
+        assert_eq!(t["children"][1]["trailing"], 1);
     }
 
     #[test]

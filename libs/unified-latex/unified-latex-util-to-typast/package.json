@@ -49,6 +49,7 @@
     "@unified-latex/unified-latex-util-print-raw": "catalog:",
     "tex2typst": "^0.6.2",
     "typast": "workspace:^",
+    "typast-builder": "workspace:^",
     "unified": "catalog:",
     "vfile": "catalog:"
   },

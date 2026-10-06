@@ -12,7 +12,7 @@
  * acknowledgments and other author-note text move to an "Acknowledgments" section at the end.
  * Anything not recognised stays where it is.
  */
-import type { BlockContent, PhrasingContent } from 'typast'
+import type { BlockContent, PhrasingContent } from 'typast-builder/doc'
 import type { Item, ParaItem } from './blocks.js'
 import { paragraph } from './blocks.js'
 import { stringify, unwrapFull } from './inline.js'

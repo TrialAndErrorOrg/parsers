@@ -16,7 +16,15 @@
  */
 
 /** Characters that are always escaped in markup text. */
-const ALWAYS = new Set(['\\', '#', '$', '*', '_', '`', '@', '<', '[', ']', '~'])
+const ALWAYS = new Set(['\\', '#', '$', '`', '[', ']', '~'])
+
+/** Letters and numbers as Typst's lexer sees them around `*` and `_` (CJK scripts excluded). */
+const WORDY = /[\p{Alphabetic}\p{N}]/u
+const CJK = /[\p{Script=Han}\p{Script=Hiragana}\p{Script=Katakana}\p{Script=Hangul}]/u
+
+function isWordy(c: string | undefined): boolean {
+  return !!c && WORDY.test(c) && !CJK.test(c)
+}
 
 /** Characters that start a block element at the start of a line. */
 const LINE_START = new Set(['=', '-', '+', '/'])
@@ -135,6 +143,17 @@ export interface EscapeTextOptions {
 }
 
 /**
+ * Is `chars[i]` a heading, list, enum or term marker? They need whitespace (or the end, or a
+ * comment) after them; `==` is one heading marker.
+ */
+function isMarker(chars: string[], i: number, nextChar: string | undefined): boolean {
+  let j = i + 1
+  if (chars[i] === '=') while (chars[j] === '=') j++
+  const after = j < chars.length ? chars[j] : nextChar
+  return after === undefined || WHITESPACE.test(after) || after === '/'
+}
+
+/**
  * Escape a (normalised) string so Typst markup renders it literally.
  */
 export function escapeMarkup(value: string, options: EscapeTextOptions = {}): string {
@@ -167,7 +186,13 @@ export function escapeMarkup(value: string, options: EscapeTextOptions = {}): st
     let escape = false
     if (ALWAYS.has(c)) {
       escape = true
-    } else if (i === lineStartIndex && LINE_START.has(c)) {
+    } else if (c === '*' || c === '_') {
+      // strong/emphasis delimiters, except inside a word (`snake_case`)
+      escape = !(isWordy(prev) && isWordy(next))
+    } else if (c === '<' || c === '@') {
+      // labels and references
+      escape = next === undefined || isIdContinue(next)
+    } else if (i === lineStartIndex && LINE_START.has(c) && isMarker(chars, i, options.nextChar)) {
       escape = true
     } else if (i === enumDot) {
       escape = true
@@ -177,7 +202,12 @@ export function escapeMarkup(value: string, options: EscapeTextOptions = {}): st
       escape = next === '/' || next === '*' || (i === 0 && prev === '*')
     } else if (c === '-') {
       // `--` / `---` dashes, `-?` soft hyphen, `-1` minus sign
-      escape = next === '-' || next === '?' || (DIGIT.test(next ?? '') && !isAlnum(prev))
+      // (and a `-` right after a `-` that came before this text, such as a `--` shorthand)
+      escape =
+        next === '-' ||
+        next === '?' ||
+        (i === 0 && prev === '-') ||
+        (DIGIT.test(next ?? '') && !isAlnum(prev))
     } else if (c === '.') {
       // `...` ellipsis
       escape = chars[i + 1] === '.' && chars[i + 2] === '.'

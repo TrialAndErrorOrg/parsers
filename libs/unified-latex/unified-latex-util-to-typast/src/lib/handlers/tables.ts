@@ -1,5 +1,5 @@
 import type * as Ast from '@unified-latex/unified-latex-types'
-import type { Argument, Content, Value } from 'typast'
+import type { Argument, Content, Value } from 'typast-builder/doc'
 import { arg, arr, asBlock, call, code, content, dict, named, text } from '../build.js'
 import type { State } from '../state.js'
 import { fontSizes } from '../symbols.js'

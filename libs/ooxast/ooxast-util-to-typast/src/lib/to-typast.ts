@@ -1,5 +1,7 @@
 import type { Element, Root as XastRoot } from 'xast'
-import type { Content, FunctionCall, PhrasingContent, Root, Value } from 'typast'
+import type { Root as TypastRoot } from 'typast'
+import { lower } from 'typast-builder'
+import type { Content, FunctionCall, PhrasingContent, Root, Value } from 'typast-builder/doc'
 import { VFile } from 'vfile'
 import type { Data as CSL } from 'csl-json'
 import type { Options, State, TypastData } from './types.js'
@@ -43,9 +45,21 @@ type Tree = XastRoot | Element
  * (hyperlinks, images), styles and numbering. Information for writing the output directory
  * (images, `bibliography.bib`) is left on `file.data.typast`.
  */
-export function toTypast(tree: Tree, file: VFile, options?: Options): Root
-export function toTypast(tree: Tree, options?: Options): Root
+export function toTypast(tree: Tree, file: VFile, options?: Options): TypastRoot
+export function toTypast(tree: Tree, options?: Options): TypastRoot
 export function toTypast(
+  tree: Tree,
+  fileOrOptions?: VFile | Options,
+  maybeOptions?: Options,
+): TypastRoot {
+  return lower(toDocument(tree, fileOrOptions, maybeOptions))
+}
+
+/**
+ * Like {@link toTypast}, but returns the document model (`typast-builder/doc`: paragraphs,
+ * lists, calls by name) that `toTypast` lowers to typast.
+ */
+export function toDocument(
   tree: Tree,
   fileOrOptions?: VFile | Options,
   maybeOptions?: Options,

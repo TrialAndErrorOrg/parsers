@@ -6,7 +6,7 @@
  * Heights are estimated in lines of the box's `\small` text from character counts; this is a
  * deliberately rough model that errs on the side of splitting early.
  */
-import type { Argument, BlockContent, Content, FunctionCall, List, Value } from 'typast'
+import type { Argument, BlockContent, Content, FunctionCall, List, Value } from 'typast-builder/doc'
 
 /** Box width → characters per line of `\small` Open Sans */
 const CHARS_PER_LINE = { column: 48, wide: 70, full: 112 } as const

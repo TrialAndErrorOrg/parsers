@@ -4,7 +4,7 @@
  */
 import type { Data as CSL } from 'csl-json'
 import { cslToBiblatex } from 'csl-to-biblatex'
-import type { FunctionCall, PhrasingContent } from 'typast'
+import type { FunctionCall, PhrasingContent } from 'typast-builder/doc'
 import { isValidLabel } from 'typast-util-to-typst'
 import type { State } from './types.js'
 import { slug, text } from './util.js'

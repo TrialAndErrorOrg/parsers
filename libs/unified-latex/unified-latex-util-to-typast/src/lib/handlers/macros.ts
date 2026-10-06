@@ -1,5 +1,5 @@
 import type * as Ast from '@unified-latex/unified-latex-types'
-import type { Content, Heading } from 'typast'
+import type { Content, Heading } from 'typast-builder/doc'
 import {
   arg,
   asBlock,

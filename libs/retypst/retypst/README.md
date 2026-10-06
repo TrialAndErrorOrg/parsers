@@ -31,6 +31,7 @@ String(file) // '== Title\n\nSome *text*.\n'
 | [`typast-util-from-string`](../../typast/typast-util-from-string)                   | Typst → typast (Typst's own parser)                  |
 | [`typast-util-to-typst`](../../typast/typast-util-to-typst)                         | typast → Typst                                       |
 | [`typast-util-visit`](../../typast/typast-util-visit)                               | walk every node, code included                       |
+| [`typast-util-to-string`](../../typast/typast-util-to-string)                       | text content, content in calls included              |
 | [`typast-builder`](../../typast/typast-builder)                                     | build trees; document model for converters           |
 | [`reoff-typast`](../../reoff/reoff-typast)                                          | bridge: Word (`ooxast`) → typast                     |
 | [`unified-latex-typast`](../../unified-latex/unified-latex-typast)                  | bridge: LaTeX (unified-latex) → typast               |

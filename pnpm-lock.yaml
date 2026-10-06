@@ -1545,6 +1545,19 @@ importers:
         specifier: workspace:^
         version: link:../typast-util-to-typst
 
+  libs/typast/typast-util-to-string:
+    dependencies:
+      typast:
+        specifier: workspace:^
+        version: link:../typast
+      typast-util-visit:
+        specifier: workspace:^
+        version: link:../typast-util-visit
+    devDependencies:
+      typast-util-from-string:
+        specifier: workspace:^
+        version: link:../typast-util-from-string
+
   libs/typast/typast-util-to-typst:
     dependencies:
       typast:

@@ -100,6 +100,7 @@ than inside them (`args`). Typst's own tree has one argument list for both.
 - [`typast-util-from-string`](../typast-util-from-string): Typst → typast
 - [`typast-util-to-typst`](../typast-util-to-typst): typast → Typst
 - [`typast-util-visit`](../typast-util-visit): walk every node, code included
+- [`typast-util-to-string`](../typast-util-to-string): text content
 - [`typast-builder`](../typast-builder): build trees
 - [`retypst`](../../retypst/retypst): unified processor for Typst
 

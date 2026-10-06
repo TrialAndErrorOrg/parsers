@@ -179,6 +179,10 @@ Serialize a typast tree to Typst source, escaping text so it renders literally.
 
 Walk every node of a typast tree, code (call arguments, operands) included.
 
+#### [`typast-util-to-string`](libs/typast/typast-util-to-string/README.md)
+
+The text content of a typast tree, including footnotes, captions and other content in calls.
+
 #### [`typast-builder`](libs/typast/typast-builder/README.md)
 
 Node constructors, and the document model (paragraphs, lists, calls by name) the converters build

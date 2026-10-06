@@ -586,15 +586,18 @@ impl<'a> Cx<'a> {
             }
             Expr::FuncCall(v) => {
                 let callee = self.expr(v.callee());
-                let args = self.args(v.args());
-                let trailing = trailing_blocks(v.args().to_untyped());
+                // what is in the parentheses is `args`, the content blocks after them `children`
+                let items: Vec<Arg> = v.args().items().collect();
+                let split = items.len() - trailing_blocks(v.args().to_untyped()).min(items.len());
+                let args: Vec<Value> = items[..split].iter().map(|a| self.arg(*a)).collect();
+                let children: Vec<Value> = items[split..].iter().map(|a| self.arg(*a)).collect();
                 self.with(
                     "funcCall",
                     n,
                     vec![
                         ("callee", callee),
-                        ("args", args),
-                        ("trailing", trailing.into()),
+                        ("args", args.into()),
+                        ("children", children.into()),
                     ],
                 )
             }
@@ -915,8 +918,23 @@ mod tests {
         );
         // the newline after the statement is not a space
         assert_eq!(t["children"][1]["type"], "funcCall");
-        assert_eq!(t["children"][1]["args"][0]["type"], "contentBlock");
-        assert_eq!(t["children"][1]["trailing"], 1);
+        assert_eq!(t["children"][1]["args"], json!([]));
+        assert_eq!(t["children"][1]["children"][0]["type"], "contentBlock");
+    }
+
+    #[test]
+    fn call_arguments_and_trailing_content() {
+        let t = tree("#f(a, [b])[c][d]");
+        let call = &t["children"][0];
+        assert_eq!(call["args"].as_array().unwrap().len(), 2);
+        assert_eq!(call["args"][1]["type"], "contentBlock");
+        let children: Vec<&str> = call["children"]
+            .as_array()
+            .unwrap()
+            .iter()
+            .map(|c| c["children"][0]["value"].as_str().unwrap())
+            .collect();
+        assert_eq!(children, ["c", "d"]);
     }
 
     #[test]

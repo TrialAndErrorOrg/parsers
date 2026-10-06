@@ -117,8 +117,8 @@ Layout comes from the tree, with a few rules where Typst needs them:
 - A `space` that holds a newline is written as a newline, without its indentation: list items
   indent what continues them by the width of their marker, content blocks that start on a line of
   their own (`[⏎…⏎]`) and code blocks by `indent`.
-- Calls write their last `trailing` content blocks after the parentheses (`#figure(img)[…]`);
-  without `trailing`, every content block at the end of the arguments.
+- Calls write `args` in the parentheses and their `children` (content blocks) after them
+  (`#figure(img)[…]`); without arguments, the parentheses are left out (`#footnote[…]`).
 - Raw blocks are indented as a whole (Typst dedents them); inline raw and verbatim `typst` nodes
   are written as they are.
 

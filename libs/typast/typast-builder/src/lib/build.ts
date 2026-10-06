@@ -275,9 +275,9 @@ export const spread = (expr: Expr): Spread => ({ type: 'spread', expr })
 
 /**
  * `call('figure', [named('placement', none())], [body])`: a function call. A string callee may be
- * a dotted path (`table.cell`); each trailing list of markup becomes a content block argument
- * (`[…]` after the parentheses). Falsy arguments are dropped, which keeps optional arguments
- * free of conditionals.
+ * a dotted path (`table.cell`); each trailing list of markup becomes a content block after the
+ * parentheses (the call's `children`). Falsy arguments are dropped, which keeps optional
+ * arguments free of conditionals.
  */
 export function call(
   callee: string | Expr,
@@ -287,8 +287,8 @@ export function call(
   return {
     type: 'funcCall',
     callee: typeof callee === 'string' ? path(callee) : callee,
-    args: [...args.filter((a): a is Arg => !!a), ...trailing.map((t) => content(...t))],
-    trailing: trailing.length,
+    args: args.filter((a): a is Arg => !!a),
+    children: trailing.map((t) => content(...t)),
   }
 }
 

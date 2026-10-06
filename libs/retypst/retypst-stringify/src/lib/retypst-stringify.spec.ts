@@ -37,6 +37,7 @@ describe('retypstStringify', () => {
             { type: 'str', value: 'aaaaaaaaaa' },
             { type: 'str', value: 'bbbbbbbbbb' },
           ],
+          children: [],
         },
       ],
     }

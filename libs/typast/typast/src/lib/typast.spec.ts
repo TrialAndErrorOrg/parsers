@@ -7,7 +7,8 @@ describe('typast types', () => {
     const footnote: FuncCall = {
       type: 'funcCall',
       callee: { type: 'ident', name: 'footnote' },
-      args: [{ type: 'contentBlock', children: [{ type: 'text', value: 'a note' }] }],
+      args: [],
+      children: [{ type: 'contentBlock', children: [{ type: 'text', value: 'a note' }] }],
     }
     const tree: Root = {
       type: 'root',

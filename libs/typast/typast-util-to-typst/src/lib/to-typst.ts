@@ -1122,15 +1122,11 @@ function params(node: Closure, st: State): string {
 }
 
 function funcCall(node: FuncCall, st: State): string {
-  // trailing content blocks: `f(a)[b][c]`
-  let split = node.args.length
-  const min = node.trailing === undefined ? 0 : Math.max(0, node.args.length - node.trailing)
-  while (split > min && node.args[split - 1].type === 'contentBlock') split--
-  const inner = node.args.slice(0, split)
-  const trailing = node.args.slice(split) as ContentBlock[]
+  // `f(a)[b][c]`: arguments in the parentheses, content blocks after them
+  const children = node.children ?? []
   let out = postfixTarget(node.callee, st)
-  if (inner.length || !trailing.length) out += argList(inner, st)
-  return out + trailing.map((b) => contentBlock(b.children, st)).join('')
+  if (node.args.length || !children.length) out += argList(node.args, st)
+  return out + children.map((b) => contentBlock(b.children, st)).join('')
 }
 
 function argList(args: Arg[], st: State): string {

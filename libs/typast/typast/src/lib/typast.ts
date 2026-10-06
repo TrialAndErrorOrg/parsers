@@ -420,19 +420,17 @@ export interface FieldAccess extends Node {
 export type Arg = Expr | Named | Spread
 
 /**
- * A function or method call: `f(x, y)`, `footnote[text]`. Trailing content blocks are
- * positional arguments, like in Typst.
+ * A function or method call: `f(x, y)`, `footnote[text]`, `figure(img, caption: [A cat.])[…]`.
+ *
+ * Like a JSX element in MDX: what is in the parentheses is `args`, the content blocks after
+ * them (`[…][…]`) are `children`, so tools that follow `children` (`unist-util-visit`) reach a
+ * footnote's or a figure's body. (Typst's own tree has both in one argument list; trailing
+ * blocks come after the others.)
  */
-export interface FuncCall extends Node {
+export interface FuncCall extends Parent<ContentBlock> {
   type: 'funcCall'
   callee: Expr
   args: Arg[]
-  /**
-   * How many of the last arguments (content blocks) are written after the parentheses:
-   * `figure(img)[x]` has 1, `table([a], [b])` 0. Without it, the serializer writes every
-   * content block at the end of the arguments that way.
-   */
-  trailing?: number
 }
 
 /** A parameter: positional (a pattern), named with a default (`draw: false`) or a sink (`..args`). */

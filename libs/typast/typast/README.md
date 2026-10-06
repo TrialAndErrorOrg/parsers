@@ -43,8 +43,8 @@ Some *bold* text, see #footnote[a note].
     {
       type: 'funcCall',
       callee: { type: 'ident', name: 'footnote' },
-      args: [{ type: 'contentBlock', children: [{ type: 'text', value: 'a note' }] }],
-      trailing: 1,
+      args: [],
+      children: [{ type: 'contentBlock', children: [{ type: 'text', value: 'a note' }] }],
     },
     { type: 'text', value: '.' },
   ],
@@ -60,8 +60,10 @@ Some *bold* text, see #footnote[a note].
   `space` nodes, and list items are consecutive siblings, the way Typst parses them. Typst groups
   them when it lays the document out.
 - **Markup and math are `children`, code is fields.** Sequences of markup or math (a strong's
-  content, an equation, a content block) are a node's `children`, so `unist-util-visit` walks the
-  document's text. Sub-expressions of code are named fields; `nodeFields` lists them and
+  content, an equation, a content block) are a node's `children`, and so are the content blocks
+  after a call's parentheses (`#footnote[…]`, `#figure(…)[…]`), like a JSX element's children in
+  MDX. So `unist-util-visit` walks the document's text. Sub-expressions of code (a callee, the
+  arguments in parentheses, operands) are named fields, as in esast; `nodeFields` lists them and
   [`typast-util-visit`](../typast-util-visit) walks them.
 - **Three extra nodes.** `comment` (Typst's comments are trivia), `error` (source the parser could
   not make sense of, kept verbatim) and `typst` (verbatim source for generated trees; the parser
@@ -83,8 +85,9 @@ Each type has an interface (`FuncCall`, `Heading`, …) and an entry in `NodeMap
 `MarkupContent` (what a markup sequence holds), `MathContent`, `CodeContent`, `Expr` and
 `TypastNode` (every node).
 
-Two fields are syntax rather than meaning, kept so a tree prints the way it was written:
-`raw.block` and `funcCall.trailing` (how many content blocks follow the parentheses).
+Two things are syntax rather than meaning, kept so a tree prints the way it was written:
+`raw.block`, and which content blocks of a call come after the parentheses (`children`) rather
+than inside them (`args`). Typst's own tree has one argument list for both.
 
 ## Utilities
 

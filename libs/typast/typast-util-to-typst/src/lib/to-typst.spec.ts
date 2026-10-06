@@ -10,11 +10,17 @@ const parbreak = { type: 'parbreak' } as const
 const ident = (name: string) => ({ type: 'ident', name }) as const
 const str = (value: string) => ({ type: 'str', value }) as const
 const content = (...children: MarkupContent[]) => ({ type: 'contentBlock', children }) as const
-const call = (name: string, ...args: MathArg[]): FuncCall => ({
-  type: 'funcCall',
-  callee: ident(name),
-  args,
-})
+/** `name(args…)`; content blocks at the end go after the parentheses */
+const call = (name: string, ...args: MathArg[]): FuncCall => {
+  let split = args.length
+  while (split > 0 && args[split - 1].type === 'contentBlock') split--
+  return {
+    type: 'funcCall',
+    callee: ident(name),
+    args: args.slice(0, split),
+    children: args.slice(split) as FuncCall['children'],
+  }
+}
 const root = (...children: MarkupContent[]): Root => ({ type: 'root', children })
 
 describe('toTypst: markup', () => {
@@ -189,6 +195,18 @@ describe('toTypst: math', () => {
 })
 
 describe('toTypst: code', () => {
+  it('writes content blocks in the arguments inside the parentheses', () => {
+    expect(
+      toTypst({
+        type: 'funcCall',
+        callee: ident('table'),
+        args: [content(text('a')), content(text('b'))],
+        children: [],
+      }),
+    ).toBe('table([a], [b])')
+    expect(toTypst({ type: 'funcCall', callee: ident('f'), args: [], children: [] })).toBe('f()')
+  })
+
   it('writes calls with trailing content blocks', () => {
     expect(
       toTypst(

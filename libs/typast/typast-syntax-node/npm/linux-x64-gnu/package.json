@@ -1,0 +1,34 @@
+{
+  "name": "typast-syntax-node-linux-x64-gnu",
+  "version": "0.0.0",
+  "cpu": [
+    "x64"
+  ],
+  "main": "typast-syntax.linux-x64-gnu.node",
+  "files": [
+    "typast-syntax.linux-x64-gnu.node"
+  ],
+  "description": "The linux-x64-gnu binary of typast-syntax-node (Typst's parser as a Node.js addon). Installed by typast-syntax-node; not used directly.",
+  "keywords": [
+    "typst",
+    "typast",
+    "napi-rs"
+  ],
+  "author": "Thomas F. K. Jorna <hello@tefkah.com>",
+  "homepage": "https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/typast/typast-syntax-node#readme",
+  "license": "GPL-3.0-or-later",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TrialAndErrorOrg/parsers.git",
+    "directory": "libs/typast/typast-syntax-node/npm/linux-x64-gnu"
+  },
+  "os": [
+    "linux"
+  ],
+  "libc": [
+    "glibc"
+  ],
+  "engines": {
+    "node": ">= 18"
+  }
+}

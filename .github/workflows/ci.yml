@@ -54,3 +54,49 @@ jobs:
         if: github.event_name == 'pull_request'
         continue-on-error: true
         run: pnpm changeset status --since="origin/${{ github.base_ref }}"
+
+  # The Typst parser bindings (crates/typast-syntax, libs/typast/typast-syntax-{node,wasm}).
+  rust:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+
+      # reads rust-toolchain.toml (channel, wasm32 target)
+      - uses: actions-rust-lang/setup-rust-toolchain@v2
+        with:
+          components: rustfmt, clippy
+
+      - uses: taiki-e/install-action@v2
+        with:
+          tool: wasm-bindgen@0.2.129
+
+      - uses: pnpm/action-setup@v6
+        with:
+          version: 11.3.0
+
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 24
+          cache: pnpm
+
+      - run: pnpm install --frozen-lockfile
+
+      - run: cargo fmt --all --check
+
+      - run: cargo clippy --workspace -- -D warnings
+
+      - run: cargo test --workspace
+
+      # the WebAssembly build is checked in: it must match the sources
+      - name: Rebuild typast-syntax-wasm
+        run: |
+          pnpm --filter typast-syntax-wasm build:wasm
+          git diff --exit-code -- libs/typast/typast-syntax-wasm/pkg
+
+      # the native addon must agree with the WebAssembly build (see its spec)
+      - name: Test typast-syntax-node
+        run: |
+          pnpm --filter typast-syntax-node build:native
+          pnpm --filter typast-syntax-node test

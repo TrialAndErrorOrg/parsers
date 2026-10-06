@@ -44,7 +44,7 @@
   ],
   "scripts": {
     "build": "tsc -p tsconfig.lib.json",
-    "build:wasm": "cargo build -p typast-syntax-wasm --target wasm32-unknown-unknown --profile wasm-release && wasm-bindgen --target web --out-dir pkg ../../../target/wasm32-unknown-unknown/wasm-release/typast_syntax_wasm.wasm",
+    "build:wasm": "RUSTFLAGS=\"--remap-path-prefix=${CARGO_HOME:-$HOME/.cargo}=/cargo\" cargo build -p typast-syntax-wasm --target wasm32-unknown-unknown --profile wasm-release && wasm-bindgen --target web --out-dir pkg ../../../target/wasm32-unknown-unknown/wasm-release/typast_syntax_wasm.wasm",
     "typecheck": "tsc -p tsconfig.json",
     "test": "vitest run"
   },

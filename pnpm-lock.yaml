@@ -1494,8 +1494,34 @@ importers:
         version: link:../typast-syntax-wasm
     devDependencies:
       '@napi-rs/cli':
-        specifier: ^3.10.7
-        version: 3.10.7(@emnapi/core@1.11.2)(@emnapi/runtime@1.11.2)(@types/node@26.6.4)
+        specifier: ^3.10.6
+        version: 3.10.6(@emnapi/core@1.11.2)(@emnapi/runtime@1.11.2)(@types/node@26.6.4)
+    optionalDependencies:
+      typast-syntax-node-darwin-arm64:
+        specifier: workspace:*
+        version: link:npm/darwin-arm64
+      typast-syntax-node-darwin-x64:
+        specifier: workspace:*
+        version: link:npm/darwin-x64
+      typast-syntax-node-linux-arm64-gnu:
+        specifier: workspace:*
+        version: link:npm/linux-arm64-gnu
+      typast-syntax-node-linux-x64-gnu:
+        specifier: workspace:*
+        version: link:npm/linux-x64-gnu
+      typast-syntax-node-win32-x64-msvc:
+        specifier: workspace:*
+        version: link:npm/win32-x64-msvc
+
+  libs/typast/typast-syntax-node/npm/darwin-arm64: {}
+
+  libs/typast/typast-syntax-node/npm/darwin-x64: {}
+
+  libs/typast/typast-syntax-node/npm/linux-arm64-gnu: {}
+
+  libs/typast/typast-syntax-node/npm/linux-x64-gnu: {}
+
+  libs/typast/typast-syntax-node/npm/win32-x64-msvc: {}
 
   libs/typast/typast-syntax-wasm:
     dependencies:
@@ -2715,8 +2741,8 @@ packages:
     resolution: {integrity: sha512-6QEf6yqFbETdwGITKq57aYoPfX/3K8XFNwsAlx0C1M7o8cb79sv1M3w+tWuWvIcSbNqrLF7OD7YpZMVVz335hQ==}
     engines: {node: '>=20.0.0'}
 
-  '@napi-rs/cli@3.10.7':
-    resolution: {integrity: sha512-wTocvxyQeqqvKVOzocHMUs2X27Nc2EcRnpH0ojK8uSnzUAYSehfGSYgRheZNcU1ltY2yqJ/R18Zt2YbKXqYMmw==}
+  '@napi-rs/cli@3.10.6':
+    resolution: {integrity: sha512-8Vj+XgPHtHWiPjyj+RXKKdAiC/rSpSrzT7OabrS4xGKu6yEnj6sVJ2Bqzmg3xHYqopXCE6P3ylcuek7wV4zFWA==}
     engines: {node: ^20.17.0 || ^22.13.0 || >= 23.5.0}
     hasBin: true
     peerDependencies:
@@ -6330,7 +6356,7 @@ snapshots:
     dependencies:
       '@simple-libs/child-process-utils': 2.0.0
       '@simple-libs/stream-utils': 2.0.0
-      semver: 7.7.3
+      semver: 7.8.5
     optionalDependencies:
       conventional-commits-parser: 7.1.2
 
@@ -6957,7 +6983,7 @@ snapshots:
       tinyglobby: 0.2.17
       yaml: 2.9.1
 
-  '@napi-rs/cli@3.10.7(@emnapi/core@1.11.2)(@emnapi/runtime@1.11.2)(@types/node@26.6.4)':
+  '@napi-rs/cli@3.10.6(@emnapi/core@1.11.2)(@emnapi/runtime@1.11.2)(@types/node@26.6.4)':
     dependencies:
       '@inquirer/prompts': 8.7.3(@types/node@26.6.4)
       '@napi-rs/cross-toolchain': 1.0.3

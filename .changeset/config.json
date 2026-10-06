@@ -2,12 +2,15 @@
   "$schema": "https://unpkg.com/@changesets/config@4.0.1/schema.json",
   "changelog": ["@changesets/changelog-github", { "repo": "TrialAndErrorOrg/trialanderror" }],
   "commit": false,
-  "fixed": [],
+  "fixed": [["typast-syntax-node", "typast-syntax-node-*"]],
   "linked": [],
   "access": "public",
   "baseBranch": "main",
   "updateInternalDependencies": "patch",
   "bumpVersionsWithWorkspaceProtocolOnly": true,
-  "privatePackages": { "version": false, "tag": false },
+  "privatePackages": {
+    "version": false,
+    "tag": false
+  },
   "ignore": ["converter", "converter-frontend"]
 }

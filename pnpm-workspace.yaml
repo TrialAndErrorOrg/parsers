@@ -2,6 +2,8 @@ packages:
   - apps/*
   - libs/*
   - libs/*/*
+  # prebuilt binaries of typast-syntax-node, one package per platform
+  - libs/typast/typast-syntax-node/npm/*
   # Superseded by apps/converter; kept out of the workspace until someone decides its fate.
   - '!apps/converter-frontend'
 

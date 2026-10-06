@@ -57,6 +57,13 @@
     "typast-syntax-wasm": "workspace:^"
   },
   "devDependencies": {
-    "@napi-rs/cli": "^3.10.7"
+    "@napi-rs/cli": "^3.10.6"
+  },
+  "optionalDependencies": {
+    "typast-syntax-node-darwin-arm64": "workspace:*",
+    "typast-syntax-node-darwin-x64": "workspace:*",
+    "typast-syntax-node-linux-arm64-gnu": "workspace:*",
+    "typast-syntax-node-linux-x64-gnu": "workspace:*",
+    "typast-syntax-node-win32-x64-msvc": "workspace:*"
   }
 }

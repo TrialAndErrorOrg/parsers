@@ -23,6 +23,7 @@
     "changeset": "changeset",
     "npm-status": "node scripts/npm-status.ts",
     "npm-trust": "node scripts/npm-trust.ts",
+    "split": "node scripts/split.ts",
     "readme": "node scripts/readme.ts",
     "gen:lib": "turbo gen lib",
     "ruby": "ruby scripts/server.rb",

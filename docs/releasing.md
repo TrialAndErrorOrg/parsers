@@ -74,7 +74,8 @@ pnpm readme <dir> | --all   # regenerate the generated parts of package READMEs
 
 - **Settings → Actions → General → Workflow permissions**: tick _Allow GitHub Actions to create and
   approve pull requests_ (needed for the version PR).
-- Delete the old `NPM_TOKEN` and `ACCESS_TOKEN` repository secrets; nothing uses them anymore.
+- Delete the old `NPM_TOKEN` and `ACCESS_TOKEN` repository secrets; nothing uses them anymore. (The
+  split workflow uses a GitHub App instead, see [Standalone split repos](#standalone-split-repos).)
 - Delete the old `last-release` tag if you like (`git push origin :refs/tags/last-release`).
 
 ### 2. npm: a trusted publisher per package
@@ -134,7 +135,34 @@ switch the publish tool to npm.
 
 ## Standalone split repos
 
-The old `split.yml` mirrored each lib into its own `TrialAndErrorOrg/<lib>` repo. It has been
-removed: those mirrors' last content commits are from 2023 (e.g. `reoff-parse` stops at 0.2.7 while
-npm is at 0.6.0), the workflow needed a personal `ACCESS_TOKEN`, and npm/GitHub releases now
-point here. Consider archiving the ~50 mirror repos with a note pointing at this monorepo.
+After every release, the [split workflow](../.github/workflows/split.yml) mirrors each released
+package into its own read-only repo, `TrialAndErrorOrg/<name>` (scope dropped, so
+`@trialanderror/converter-cli` → `converter-cli`). Each release adds one commit to the mirror: a
+snapshot of the package's directory at its `<name>@<version>` tag, tagged `v<version>`. The
+snapshot goes on top of the mirror's existing history, so nothing is force-pushed. Missing repos
+are created. Each snapshot also syncs the repo's description (from `description`), topics (from
+`keywords`) and homepage (the package's directory here), and turns off issues, projects and wiki.
+
+`scripts/split.ts` skips every version already tagged in its mirror, so it can be rerun at any time:
+
+```sh
+pnpm split --dry-run        # what would be mirrored (needs `gh auth login`)
+pnpm split [<name>...]      # mirror, with your own GitHub credentials
+```
+
+Or run the workflow by hand: Actions → split → Run workflow.
+
+### Setup: the split GitHub App
+
+`GITHUB_TOKEN` can't create or push to other repos, so the workflow uses a GitHub App:
+
+1. Create an app owned by the TrialAndErrorOrg organization (Settings → Developer settings →
+   GitHub Apps → New). Turn off the webhook. Repository permissions: **Administration: write**,
+   **Contents: write** (Metadata: read is added automatically).
+2. Install it on the org with access to **all repositories**, so it can push to repos the script
+   creates.
+3. In this repo, add a variable `SPLIT_APP_ID` (the app's ID) and a secret `SPLIT_APP_PRIVATE_KEY`
+   (a private key generated on the app's page).
+
+Mirrors of packages that were removed or made private are archived by hand (`gh repo archive
+TrialAndErrorOrg/<name>`). The script skips archived repos with a warning.

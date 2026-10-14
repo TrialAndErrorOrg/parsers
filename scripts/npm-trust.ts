@@ -16,7 +16,7 @@ import { setTimeout as sleep } from 'node:timers/promises'
 import { promisify } from 'node:util'
 import { publishablePackages } from './workspace-packages.ts'
 
-const REPOSITORY = 'TrialAndErrorOrg/parsers'
+const REPOSITORY = 'TrialAndErrorOrg/trialanderror'
 const WORKFLOW = 'release.yml'
 
 const run = promisify(execFile)

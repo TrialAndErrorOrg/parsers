@@ -197,20 +197,32 @@ see its README):
 - `/admin/config.yml` is generated from `src/admin/config.yml` and points the
   CMS at those routes. Commit messages carry the editor's name.
 
-To set it up:
+To set it up (done for trialanderror.org on 2026-10-14):
 
-1. **Entra:** register an app (single tenant) with the redirect URI
-   `https://trialanderror.org/admin/callback` and a client secret. Under
-   Enterprise applications, set "Assignment required" to yes and assign the
-   editors or a group: that is who can sign in. Set `ENTRA_TENANT_ID`,
-   `ENTRA_CLIENT_ID` and `ENTRA_CLIENT_SECRET`.
-2. **GitHub:** create a GitHub App in the TrialAndErrorOrg organisation with
+1. **Entra app** ("trialanderror admin", entra.microsoft.com, App registrations):
+   - Supported account types: this organisational directory only.
+   - Redirect URIs, type Web: `https://trialanderror.org/admin/callback`, plus
+     `http://localhost:4321/admin/callback` to test with `pnpm dev`. Every other
+     address the site runs on needs its own entry.
+   - A client secret. It expires (the current one on 2028-10-11): make a new
+     one before then and update 1Password.
+   - API permissions: the default `User.Read` is enough. No implicit grant, no
+     public client flows.
+   - Who can sign in: Enterprise applications, the app, Properties,
+     **Assignment required** yes, then Users and groups. A new editor has to
+     be added there. Assigning a group instead of people needs Entra ID P1.
+2. **GitHub App** (`admin-cms-write`) in the TrialAndErrorOrg organisation:
    repository permissions Contents and Pull requests (read and write), no
-   webhook, and install it only on `TrialAndErrorOrg/site-content`. Set
-   `GITHUB_APP_ID` and `GITHUB_APP_PRIVATE_KEY` (the .pem as downloaded,
-   newlines may be written as `\n`).
-3. Set `ADMIN_SESSION_SECRET` to 32 or more random characters and
-   `ADMIN_AUTH=microsoft`. These are read when the server runs, not at build.
+   webhook, installed only on `TrialAndErrorOrg/site-content`.
+3. **1Password**, Website vault (`.env.schema` reads them):
+   - "trialanderror admin Entra app": `username` is the client ID,
+     `credential` the client secret, `tenant id`, and `session secret` (32 or
+     more random characters, e.g. `openssl rand -base64 48`; changing it signs
+     everyone out).
+   - "Admin CMS Write Github App": `username` is the app ID, `credential` the
+     private key (the .pem as downloaded, newlines may be written as `\n`).
+4. **Where the site runs:** `ADMIN_AUTH=microsoft`. The rest is read from
+   1Password when the server starts (see *Deploying*).
 
 Behind a proxy the server only learns its public address from the proxy's
 headers for the domains in `security.allowedDomains` (`astro.config.mjs`:
@@ -255,25 +267,29 @@ production dependencies, and the image copies that in.
 
 Setup:
 
-- **1Password:** a vault named Website holding only what the site's CI needs
-  (the items `.env.schema` names: `Strapi TrialAndError CI Read Token`, `Underlay`,
-  `Coolify deploy`, `Site rebuild token`, and `Website admin` for the Microsoft
-  sign-in), and a service account that can read that vault and nothing else.
-- **GitHub:** one secret, `OP_TOKEN`, the service account's token, for this
-  repository and site-content (an organisation secret shared with both works).
+- **1Password:** a vault named Website holding only what the site needs (the
+  items `.env.schema` names), and a service account that can read that vault
+  and nothing else. Its token, `OP_TOKEN`, is the only secret anywhere else.
+- **GitHub:** `OP_TOKEN` as an organisation secret shared with this repository
+  and site-content.
   varlock reads the rest and hides the values in the log. `Site rebuild token`
   is a fine-grained token that may only start workflows here (Actions: read
   and write on `trialanderror` only), used by site-content.
 - **Coolify deploys** once `COOLIFY_DEPLOY_URL` is filled in `.env.schema` (the
-  app's deploy webhook, not secret). Until then the image is only published.
+  app's deploy webhook, not secret), with the token in "Coolify Website Deploy
+  Token" (a Coolify API token with only the deploy permission). Until then the
+  image is only published.
 - The first push creates the package on GitHub, private. Make it public under
   the organisation's Packages, or give Coolify a token to pull it.
 - In Coolify: a "Docker Image" application for `ghcr.io/trialanderrororg/site:latest`,
-  port 4321, with the runtime variables from `.env.schema` (`DRAFT_SECRET`,
-  `STRAPI_TOKEN` for previews, the `ADMIN_*`, `ENTRA_*` and `GITHUB_APP_*` ones).
+  port 4321, with the environment variables `OP_TOKEN` and `ADMIN_AUTH=microsoft`,
+  and a health check on `/`.
 
-The image holds no secrets: Astro reads them from the environment when the
-server runs.
+The image holds no secrets. It starts the server through `varlock run`, which
+reads them from 1Password with `OP_TOKEN`, so a changed secret only needs a
+restart. If 1Password can't be reached the new container doesn't start, and
+with the health check Coolify keeps the old one running. Anything set in
+Coolify's environment wins over 1Password.
 
 Elsewhere: any host that runs Node or Docker works, and so does any host with
 an Astro adapter (replace `@astrojs/node` in `astro.config.mjs`).

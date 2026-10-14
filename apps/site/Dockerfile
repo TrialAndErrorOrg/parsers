@@ -8,10 +8,13 @@
 #                    docker build -f apps/site/Dockerfile /tmp/site
 # then run `pnpm install` again: the deploy leaves the workspace's own install
 # marked as production-only.
+#
+# The image holds no secrets. It starts the server through varlock, which reads
+# them from 1Password (.env.schema) with the OP_TOKEN it is given.
 FROM node:24-slim
 ENV NODE_ENV=production HOST=0.0.0.0 PORT=4321
 WORKDIR /app
 COPY --chown=node:node . .
 USER node
 EXPOSE 4321
-CMD ["node", "dist/server/entry.mjs"]
+CMD ["node_modules/.bin/varlock", "run", "--", "node", "dist/server/entry.mjs"]

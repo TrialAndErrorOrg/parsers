@@ -4,13 +4,14 @@
   "private": true,
   "type": "module",
   "files": [
-    "dist"
+    "dist",
+    ".env.schema"
   ],
   "scripts": {
     "dev": "varlock run -- astro dev",
     "build": "varlock run -- astro build",
     "preview": "astro preview",
-    "start": "node dist/server/entry.mjs",
+    "start": "varlock run -- node dist/server/entry.mjs",
     "typecheck": "astro check"
   },
   "dependencies": {
@@ -19,6 +20,7 @@
     "@astrojs/sitemap": "^3.7.4",
     "@iconify-json/lucide": "^1.2.143",
     "@iconify-json/simple-icons": "^1.2.100",
+    "@varlock/1password-plugin": "^2.0.5",
     "astro": "^7.3.8",
     "astro-icon": "^1.2.0",
     "github-slugger": "^2.0.0",
@@ -26,6 +28,7 @@
     "satori": "^0.51.0",
     "sharp": "^0.35.5",
     "sveltia-gateway": "workspace:^",
+    "varlock": "^1.22.0",
     "yaml": "^2.9.1"
   },
   "devDependencies": {
@@ -33,10 +36,8 @@
     "@tailwindcss/typography": "^0.5.20",
     "@tailwindcss/vite": "^4.3.3",
     "@types/node": "^24.19.2",
-    "@varlock/1password-plugin": "^2.0.5",
     "pagefind": "^1.5.2",
     "tailwindcss": "^4.3.3",
-    "typescript": "~5.9.3",
-    "varlock": "^1.22.0"
+    "typescript": "~5.9.3"
   }
 }

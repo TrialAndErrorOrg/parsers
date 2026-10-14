@@ -363,6 +363,7 @@ graph
 # typedoc scratch output (scripts/readme.ts); hand-written docs/*.md are tracked
 **/docs/*
 !/docs/*.md
+!/apps/site/docs/*.md
 
 .sveltekit
 

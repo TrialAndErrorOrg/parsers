@@ -1,0 +1,4 @@
+# Pinned so the committed WebAssembly build (libs/typast/typast-syntax-wasm/pkg) is reproducible.
+[toolchain]
+channel = "1.97.1"
+targets = ["wasm32-unknown-unknown"]

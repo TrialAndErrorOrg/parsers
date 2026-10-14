@@ -1,0 +1,59 @@
+{
+  "name": "docx-to-typst",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Convert a Word manuscript (.docx) to Typst for the JOTE jote-article template",
+  "license": "GPL-3.0-or-later",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TrialAndErrorOrg/parsers.git",
+    "directory": "libs/processors/docx-to-typst"
+  },
+  "homepage": "https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/processors/docx-to-typst#readme",
+  "author": "Thomas F. K. Jorna <hello@tefkah.com>",
+  "type": "module",
+  "keywords": [
+    "unified",
+    "typst",
+    "ast"
+  ],
+  "exports": {
+    ".": {
+      "@jote/source": "./src/index.ts",
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.lib.json",
+    "typecheck": "tsc -p tsconfig.json",
+    "test": "vitest run"
+  },
+  "typedoc": {
+    "entryPoint": "./src/index.ts",
+    "readmeFile": "./README.md",
+    "displayName": "docx-to-typst",
+    "tsconfig": "./tsconfig.lib.json"
+  },
+  "dependencies": {
+    "docx-to-vfile": "workspace:^",
+    "ooxast-util-to-typast": "workspace:^",
+    "reoff-clean": "workspace:^",
+    "reoff-markup-to-style": "workspace:^",
+    "reoff-parse": "workspace:^",
+    "reoff-typast": "workspace:^",
+    "retypst-stringify": "workspace:^",
+    "typast-util-to-typst": "workspace:^",
+    "unified": "catalog:",
+    "vfile": "catalog:"
+  },
+  "devDependencies": {
+    "@types/xast": "catalog:",
+    "xast-util-from-xml": "catalog:"
+  }
+}

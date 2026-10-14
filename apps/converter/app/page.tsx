@@ -2,18 +2,22 @@
 
 import { useState } from 'react'
 import Image from 'next/image'
-import { useCredentialsStore } from '../lib/store'
+import { useConversionStore, useCredentialsStore } from '../lib/store'
 import { SettingsSheet } from '../components/settings-sheet'
 import { CredentialsPrompt } from '../components/credentials-prompt'
 import { OjsSearch } from '../components/ojs-search'
 import { SubmissionPanel } from '../components/submission-panel'
 import { ConversionDropzone } from '../components/conversion-dropzone'
 import { LatexOutput } from '../components/latex-output'
+import { TypstOutput } from '../components/typst-output'
 import { Separator } from '../components/ui/separator'
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '../components/ui/tabs'
 
 export default function Page() {
   const { token, endpoint } = useCredentialsStore()
+  const { input } = useConversionStore()
   const [skippedSetup, setSkippedSetup] = useState(false)
+  const [outputFormat, setOutputFormat] = useState('latex')
   const hasCredentials = Boolean(token && endpoint)
 
   return (
@@ -24,7 +28,9 @@ export default function Page() {
             <Image src="/favicon.png" alt="JOTE" width={28} height={28} />
             <div className="flex items-baseline gap-2">
               <h1 className="text-lg font-semibold tracking-tight">JOTE Converter</h1>
-              <span className="hidden text-xs text-muted-foreground sm:inline">DOCX to LaTeX</span>
+              <span className="hidden text-xs text-muted-foreground sm:inline">
+                DOCX to LaTeX &amp; Typst
+              </span>
             </div>
           </div>
           <SettingsSheet />
@@ -53,7 +59,20 @@ export default function Page() {
               <ConversionDropzone />
             </section>
 
-            <LatexOutput />
+            {input && (
+              <Tabs value={outputFormat} onValueChange={setOutputFormat} className="space-y-3">
+                <TabsList>
+                  <TabsTrigger value="latex">LaTeX</TabsTrigger>
+                  <TabsTrigger value="typst">Typst</TabsTrigger>
+                </TabsList>
+                <TabsContent value="latex">
+                  <LatexOutput />
+                </TabsContent>
+                <TabsContent value="typst">
+                  <TypstOutput />
+                </TabsContent>
+              </Tabs>
+            )}
           </>
         )}
       </main>

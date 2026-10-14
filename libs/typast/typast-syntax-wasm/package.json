@@ -1,0 +1,60 @@
+{
+  "name": "typast-syntax-wasm",
+  "version": "0.0.0",
+  "description": "Typst's own parser (typst-syntax), compiled to WebAssembly, producing typast trees. Runs in browsers and Node.js.",
+  "license": "GPL-3.0-or-later",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TrialAndErrorOrg/parsers.git",
+    "directory": "libs/typast/typast-syntax-wasm"
+  },
+  "homepage": "https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/typast/typast-syntax-wasm#readme",
+  "author": "Thomas F. K. Jorna <hello@tefkah.com>",
+  "type": "module",
+  "keywords": [
+    "typst",
+    "typast",
+    "parser",
+    "wasm",
+    "typst-syntax"
+  ],
+  "exports": {
+    ".": {
+      "node": {
+        "@jote/source": "./src/node.ts",
+        "types": "./dist/node.d.ts",
+        "default": "./dist/node.js"
+      },
+      "default": {
+        "@jote/source": "./src/browser.ts",
+        "types": "./dist/browser.d.ts",
+        "default": "./dist/browser.js"
+      }
+    }
+  },
+  "main": "./dist/node.js",
+  "types": "./dist/node.d.ts",
+  "files": [
+    "dist",
+    "pkg"
+  ],
+  "sideEffects": [
+    "./src/browser.ts",
+    "./dist/browser.js"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.lib.json",
+    "build:wasm": "RUSTFLAGS=\"--remap-path-prefix=${CARGO_HOME:-$HOME/.cargo}=/cargo\" cargo build -p typast-syntax-wasm --target wasm32-unknown-unknown --profile wasm-release && wasm-bindgen --target web --out-dir pkg ../../../target/wasm32-unknown-unknown/wasm-release/typast_syntax_wasm.wasm",
+    "typecheck": "tsc -p tsconfig.json",
+    "test": "vitest run"
+  },
+  "typedoc": {
+    "entryPoint": "./src/node.ts",
+    "readmeFile": "./README.md",
+    "displayName": "typast-syntax-wasm",
+    "tsconfig": "./tsconfig.lib.json"
+  },
+  "dependencies": {
+    "typast": "workspace:^"
+  }
+}

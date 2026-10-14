@@ -149,6 +149,125 @@ Packages marked _private_ are not published.
 
 Deprecated packages that are still on npm live in [`deprecated/`](deprecated).
 
+## Typst
+
+Typst output for JOTE articles, next to the LaTeX route: Word or LaTeX in, a `main.typ` for the
+`jote-article` Typst template out. Plus `retypst`, a unified ecosystem for Typst built on Typst's
+own parser.
+
+### typast and retypst
+
+#### [`typast`](libs/typast/typast/README.md)
+
+A [`unist`](https://github.com/syntax-tree/unist) syntax tree for Typst that mirrors Typst's own
+(`typst_syntax::ast`): its node names, `parbreak`s instead of paragraph nodes, code as expressions.
+
+#### [`typast-util-from-string`](libs/typast/typast-util-from-string/README.md)
+
+Parse Typst into typast with Typst's parser (`typst-syntax` 0.15.1): a native addon in Node.js,
+WebAssembly in the browser.
+
+#### [`typast-syntax-node`](libs/typast/typast-syntax-node/README.md) / [`typast-syntax-wasm`](libs/typast/typast-syntax-wasm/README.md)
+
+The parser bindings (napi-rs and wasm-bindgen) around the Rust crate `crates/typast-syntax`.
+
+#### [`typast-util-to-typst`](libs/typast/typast-util-to-typst/README.md)
+
+Serialize a typast tree to Typst source, escaping text so it renders literally.
+
+#### [`typast-util-visit`](libs/typast/typast-util-visit/README.md)
+
+Walk every node of a typast tree, code (call arguments, operands) included.
+
+#### [`typast-util-to-string`](libs/typast/typast-util-to-string/README.md)
+
+The text content of a typast tree, including footnotes, captions and other content in calls.
+
+#### [`typast-builder`](libs/typast/typast-builder/README.md)
+
+Node constructors, and the document model (paragraphs, lists, calls by name) the converters build
+and `lower()` turns into typast.
+
+#### [`retypst`](libs/retypst/retypst/README.md), [`retypst-parse`](libs/retypst/retypst-parse/README.md), [`retypst-stringify`](libs/retypst/retypst-stringify/README.md)
+
+unified processor and plugins for Typst, like rehype for HTML.
+
+### Converters
+
+#### [`ooxast-util-to-typast`](libs/ooxast/ooxast-util-to-typast/README.md)
+
+Convert an `ooxast` (Word document) tree to `typast` for the `jote-article` template, including the title page, figures, tables, boxes, footnotes and citation fields.
+
+#### [`reoff-typast`](libs/reoff/reoff-typast/README.md)
+
+reoff plugin to go from Word (`ooxast`) to Typst (`typast`).
+
+#### [`unified-latex-util-to-typast`](libs/unified-latex/unified-latex-util-to-typast/README.md)
+
+Convert a unified-latex tree (a `main.tex` written against `jote-new-article.cls`) to `typast`.
+
+#### [`unified-latex-typast`](libs/unified-latex/unified-latex-typast/README.md)
+
+unified plugin to go from unified-latex (LaTeX) to `typast` (Typst).
+
+#### [`docx-to-typst`](libs/processors/docx-to-typst/README.md)
+
+Processor and CLI: Word manuscript (`.docx`) → `main.typ` + `media/` + `bibliography.bib`.
+
+#### [`tex-to-typst`](libs/processors/tex-to-typst/README.md)
+
+Processor and CLI: JOTE LaTeX article (`main.tex`) → `main.typ`, with its images and `.bib` files.
+
+#### [`templates/typst/jote-article`](templates/typst/jote-article/README.md)
+
+The Typst port of `jote-new-article.cls`. Converters emit `#import "jote-article/lib.typ": *` and `#show: jote-article.with(…)`.
+
+### Rust
+
+`crates/typast-syntax` (with the binding crates in `libs/typast/typast-syntax-{node,wasm}`) is a
+Cargo workspace (`Cargo.toml`, toolchain pinned in `rust-toolchain.toml`). Nothing else needs Rust:
+the WebAssembly build is checked in, and without a native binary the Node.js package falls back
+to it.
+
+```sh
+cargo test                                       # the crate's tests
+pnpm --filter typast-syntax-node build:native    # the Node.js addon for this machine
+pnpm --filter typast-syntax-wasm build:wasm      # rebuild the checked-in WebAssembly (needs wasm-bindgen-cli 0.2.129)
+```
+
+To follow a new Typst version, bump `typst-syntax` in `Cargo.toml` (and `TYPST_VERSION` in the
+crate and `typast-syntax-wasm`'s `api.ts`), rebuild both bindings and run the tests.
+
+### How to produce a Typst article
+
+From a Word manuscript (`--meta` takes template arguments or a converter metadata form as JSON):
+
+```sh
+npx tsx --conditions=@jote/source libs/processors/docx-to-typst/src/cli.ts \
+  Manuscript.docx out/article [--meta meta.json]
+```
+
+From a LaTeX article:
+
+```sh
+npx tsx --conditions=@jote/source libs/processors/tex-to-typst/src/cli.ts \
+  "path/to/article/main.tex" out/article
+```
+
+Both write `out/article/main.typ` and `media/`, and link the template as `out/article/jote-article`
+(`--copy-template` copies it instead). Then compile with the JOTE fonts:
+
+```sh
+typst compile \
+  --font-path ~/JOTE/archive/fonts \
+  --font-path ~/JOTE/archive/OverpassFonts \
+  --font-path ~/JOTE/archive \
+  out/article/main.typ
+```
+
+Or pass `--compile --font-path …` to either CLI to do it in one go. The converter app
+(`apps/converter`) has a Typst tab that downloads the same output, template included, as a zip.
+
 <!--
 
 ## Projects

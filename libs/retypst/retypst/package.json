@@ -1,0 +1,52 @@
+{
+  "name": "retypst",
+  "version": "0.0.0",
+  "description": "unified processor to parse and serialize Typst (typast), like rehype for HTML",
+  "license": "GPL-3.0-or-later",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TrialAndErrorOrg/parsers.git",
+    "directory": "libs/retypst/retypst"
+  },
+  "homepage": "https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/retypst/retypst#readme",
+  "author": "Thomas F. K. Jorna <hello@tefkah.com>",
+  "type": "module",
+  "keywords": [
+    "unified",
+    "retypst",
+    "typast",
+    "typst",
+    "processor"
+  ],
+  "exports": {
+    ".": {
+      "@jote/source": "./src/index.ts",
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.lib.json",
+    "typecheck": "tsc -p tsconfig.json",
+    "test": "vitest run"
+  },
+  "typedoc": {
+    "entryPoint": "./src/index.ts",
+    "readmeFile": "./README.md",
+    "displayName": "retypst",
+    "tsconfig": "./tsconfig.lib.json"
+  },
+  "dependencies": {
+    "retypst-parse": "workspace:^",
+    "retypst-stringify": "workspace:^",
+    "unified": "catalog:"
+  },
+  "devDependencies": {
+    "typast": "workspace:^"
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "name": "typast-util-to-string",
+  "version": "0.0.0",
+  "description": "Get the text content of a typast (Typst) tree, including content in calls (footnotes, captions, cells)",
+  "license": "GPL-3.0-or-later",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TrialAndErrorOrg/parsers.git",
+    "directory": "libs/typast/typast-util-to-string"
+  },
+  "homepage": "https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/typast/typast-util-to-string#readme",
+  "author": "Thomas F. K. Jorna <hello@tefkah.com>",
+  "type": "module",
+  "keywords": [
+    "unist",
+    "typast",
+    "typast-util",
+    "typst",
+    "string",
+    "text"
+  ],
+  "exports": {
+    ".": {
+      "@jote/source": "./src/index.ts",
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.lib.json",
+    "typecheck": "tsc -p tsconfig.json",
+    "test": "vitest run"
+  },
+  "typedoc": {
+    "entryPoint": "./src/index.ts",
+    "readmeFile": "./README.md",
+    "displayName": "typast-util-to-string",
+    "tsconfig": "./tsconfig.lib.json"
+  },
+  "dependencies": {
+    "typast": "workspace:^",
+    "typast-util-visit": "workspace:^"
+  },
+  "devDependencies": {
+    "typast-util-from-string": "workspace:^"
+  }
+}

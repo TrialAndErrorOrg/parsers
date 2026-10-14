@@ -74,9 +74,51 @@ jobs:
           # read by @changesets/changelog-github to link PRs/authors in the changelogs
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-  pack:
+  # Prebuilt binaries of typast-syntax-node, one per platform package
+  # (libs/typast/typast-syntax-node/npm/<platform>). Without one, the package falls back to
+  # WebAssembly, so a platform missing here still works.
+  native:
     if: needs.select-mode.outputs.mode == 'publish'
     needs: select-mode
+    permissions:
+      contents: read
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - { os: macos-latest, target: aarch64-apple-darwin, platform: darwin-arm64 }
+          - { os: macos-latest, target: x86_64-apple-darwin, platform: darwin-x64 }
+          - { os: ubuntu-latest, target: x86_64-unknown-linux-gnu, platform: linux-x64-gnu }
+          - { os: ubuntu-24.04-arm, target: aarch64-unknown-linux-gnu, platform: linux-arm64-gnu }
+          - { os: windows-latest, target: x86_64-pc-windows-msvc, platform: win32-x64-msvc }
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+      - uses: actions-rust-lang/setup-rust-toolchain@v2
+        with:
+          target: ${{ matrix.target }}
+      - uses: pnpm/action-setup@v6
+        with:
+          version: ${{ env.PNPM_VERSION }}
+      - uses: actions/setup-node@v7
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          package-manager-cache: false
+      - run: pnpm install --frozen-lockfile
+      - name: Build
+        working-directory: libs/typast/typast-syntax-node
+        run: pnpm exec napi build --platform --release --target ${{ matrix.target }} --no-js --output-dir npm/${{ matrix.platform }}
+      - uses: actions/upload-artifact@v7
+        with:
+          name: typast-syntax-node-${{ matrix.platform }}
+          path: libs/typast/typast-syntax-node/npm/${{ matrix.platform }}/*.node
+          if-no-files-found: error
+
+  pack:
+    if: needs.select-mode.outputs.mode == 'publish'
+    needs: [select-mode, native]
     runs-on: ubuntu-latest
     permissions:
       contents: read
@@ -94,6 +136,15 @@ jobs:
           node-version: ${{ env.NODE_VERSION }}
           package-manager-cache: false
       - run: pnpm install --frozen-lockfile
+      - name: Put the native binaries into their platform packages
+        uses: actions/download-artifact@v8
+        with:
+          pattern: typast-syntax-node-*
+          path: native
+      - run: |
+          for dir in native/typast-syntax-node-*; do
+            cp "$dir"/*.node "libs/typast/typast-syntax-node/npm/${dir#native/typast-syntax-node-}/"
+          done
       - name: Build
         run: pnpm build
       # `pnpm pack` per package: rewrites workspace:^ ranges to real versions

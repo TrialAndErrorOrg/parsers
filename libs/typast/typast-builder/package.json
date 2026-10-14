@@ -1,0 +1,57 @@
+{
+  "name": "typast-builder",
+  "version": "0.0.0",
+  "description": "Build typast (Typst) trees: node constructors, and a document model (paragraphs, lists, calls by name) that lowers to typast, for converters",
+  "license": "GPL-3.0-or-later",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TrialAndErrorOrg/parsers.git",
+    "directory": "libs/typast/typast-builder"
+  },
+  "homepage": "https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/typast/typast-builder#readme",
+  "author": "Thomas F. K. Jorna <hello@tefkah.com>",
+  "type": "module",
+  "keywords": [
+    "unist",
+    "typast",
+    "typast-util",
+    "typst",
+    "builder"
+  ],
+  "exports": {
+    ".": {
+      "@jote/source": "./src/index.ts",
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    },
+    "./doc": {
+      "@jote/source": "./src/doc.ts",
+      "types": "./dist/doc.d.ts",
+      "default": "./dist/doc.js"
+    }
+  },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.lib.json",
+    "typecheck": "tsc -p tsconfig.json",
+    "test": "vitest run"
+  },
+  "typedoc": {
+    "entryPoint": "./src/index.ts",
+    "readmeFile": "./README.md",
+    "displayName": "typast-builder",
+    "tsconfig": "./tsconfig.lib.json"
+  },
+  "dependencies": {
+    "@types/unist": "catalog:",
+    "typast": "workspace:^"
+  },
+  "devDependencies": {
+    "typast-util-from-string": "workspace:^",
+    "typast-util-to-typst": "workspace:^"
+  }
+}

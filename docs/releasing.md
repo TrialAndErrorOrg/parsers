@@ -124,6 +124,22 @@ for the first release written (`.changeset/*.md`: `minor` for the unified 11 mov
 LaTeX output, `patch` for every other published package). `pnpm changeset status --verbose` shows
 the resulting versions.
 
+### 4. `typast-syntax-node` and its binaries
+
+The Node.js addon is published as `typast-syntax-node` plus one package per platform
+(`libs/typast/typast-syntax-node/npm/<platform>`: `typast-syntax-node-darwin-arm64`, `-darwin-x64`,
+`-linux-x64-gnu`, `-linux-arm64-gnu`, `-win32-x64-msvc`), which it lists as optional dependencies.
+They are one `fixed` group in `.changeset/config.json`, so they always share a version.
+
+On a publish run the `native` job of the release workflow builds each platform's
+`typast-syntax.<platform>.node` on a runner of that platform, and the `pack` job copies them into
+the platform packages before packing. A platform without a binary still works: the package falls
+back to `typast-syntax-wasm`.
+
+The platform packages need step 3 too, but their binaries only exist in CI: publish a placeholder
+first (`cd libs/typast/typast-syntax-node/npm/<platform> && pnpm publish --access public` publishes
+`0.0.0` with no binary), then add the trusted publisher. The next release publishes the real ones.
+
 ## How OIDC works here
 
 The `publish` job is the only one with `id-token: write`. `changesets/action/publish` runs

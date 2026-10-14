@@ -1,0 +1,20 @@
+[package]
+name = "typast-syntax-node"
+version = "0.0.0"
+description = "Node.js (napi-rs) bindings for typast-syntax"
+edition.workspace = true
+license.workspace = true
+repository.workspace = true
+publish.workspace = true
+
+[lib]
+crate-type = ["cdylib"]
+path = "rust/lib.rs"
+
+[dependencies]
+typast-syntax = { path = "../../../crates/typast-syntax" }
+napi = { version = "3", default-features = false, features = ["napi4"] }
+napi-derive = "3"
+
+[build-dependencies]
+napi-build = "2"

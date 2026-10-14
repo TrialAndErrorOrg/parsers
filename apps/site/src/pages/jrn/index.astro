@@ -1,0 +1,45 @@
+---
+import ArticleCard from "~/components/ArticleCard.astro";
+import JournalList from "~/layouts/JournalList.astro";
+import { journal } from "~/lib/sources/journal";
+
+/*
+ * The Journal for Reproducibility in Neuroscience, kept as an archive: every
+ * article, grouped by volume, with the ones outside a volume at the end.
+ */
+
+const jrn = journal("jrn");
+const articles = await jrn.getArticles();
+const volumes = (await jrn.getIssues()).toSorted((a, b) => Number(b.volume ?? 0) - Number(a.volume ?? 0));
+const loose = articles.filter((article) => article.issues.length === 0);
+const groups = [...volumes, ...(loose.length ? [{ slug: "other-articles", title: "Other articles", articles: loose }] : [])];
+
+const years = (list: { date: string }[]) => {
+	const all = list.map((a) => a.date.slice(0, 4)).sort();
+	return all[0] === all.at(-1) ? all[0] : `${all[0]} to ${all.at(-1)}`;
+};
+const count = (n: number) => `${n} ${n === 1 ? "article" : "articles"}`;
+---
+
+<JournalList title={jrn.config.title} kicker="Archive" description={jrn.config.description} articles={[]} journal={jrn}>
+	<p class="mb-12 font-heading text-2xl font-bold">{count(articles.length)}, published {years(articles)}</p>
+	<div class="flex flex-col gap-16">
+		{
+			groups.map((group) => (
+				<section id={group.slug} class="scroll-mt-28" aria-labelledby={`${group.slug}-title`}>
+					<h2 id={`${group.slug}-title`} class="section-title text-journal after:bg-journal">
+						{group.title}
+					</h2>
+					<p class="mt-2 mb-8 font-semibold text-muted">
+						{years(group.articles)} · {count(group.articles.length)}
+					</p>
+					<div class="grid gap-8 md:grid-cols-2 xl:grid-cols-3">
+						{group.articles.map((article) => (
+							<ArticleCard article={article} />
+						))}
+					</div>
+				</section>
+			))
+		}
+	</div>
+</JournalList>

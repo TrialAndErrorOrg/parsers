@@ -1,0 +1,32 @@
+---
+import PersonCard from "~/components/PersonCard.astro";
+import Base from "~/layouts/Base.astro";
+import { getPeople } from "~/lib/people";
+
+const people = await getPeople();
+const groups = [
+	{ title: "Team", people: people.filter((p) => p.person.kind === "team") },
+	{ title: "Authors", people: people.filter((p) => p.person.kind !== "team") },
+].filter((group) => group.people.length > 0);
+---
+
+<Base title="People" description="The team of the Center of Trial and Error and everyone who wrote for the blog.">
+	<div class="border-b-frame border-ink bg-accent">
+		<div class="page flex flex-col gap-4 py-12 md:py-20">
+			<h1 class="font-heading text-5xl font-black tracking-tighter md:text-8xl">People</h1>
+			<p class="max-w-3xl text-lg font-medium md:text-xl">The team of the Center of Trial and Error and everyone who wrote for the blog.</p>
+		</div>
+	</div>
+	{
+		groups.map((group) => (
+			<section class="page py-12">
+				<h2 class="section-title mb-10">{group.title}</h2>
+				<div class="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+					{group.people.map((p) => (
+						<PersonCard person={p.person} />
+					))}
+				</div>
+			</section>
+		))
+	}
+</Base>

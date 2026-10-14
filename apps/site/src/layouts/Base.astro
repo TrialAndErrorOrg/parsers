@@ -1,0 +1,71 @@
+---
+import { Font } from "astro:assets";
+import Footer from "~/components/Footer.astro";
+import Header from "~/components/Header.astro";
+import { site } from "~/lib/settings";
+import "~/styles/global.css";
+
+interface Props {
+	title?: string;
+	description?: string;
+	/** Absolute or site-relative URL of the share image */
+	image?: string;
+	type?: "website" | "article";
+	/** Extra <meta name=... content=...> tags, for example citation metadata */
+	meta?: Record<string, string | string[] | undefined>;
+	noindex?: boolean;
+	/** Classes for <main>, for example to recolour a section */
+	class?: string;
+}
+
+const { title, description = site.description, image, type = "website", meta = {}, noindex = false, class: className } = Astro.props;
+const fullTitle = title && title !== site.name ? `${title} | ${site.name}` : site.name;
+const canonical = new URL(Astro.url.pathname, Astro.site);
+const shareImage = image ? new URL(image, Astro.site).href : new URL("/og/default.png", Astro.site).href;
+const extraMeta = Object.entries(meta).flatMap(([name, value]) =>
+	value === undefined ? [] : (Array.isArray(value) ? value : [value]).map((content) => ({ name, content })),
+);
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>{fullTitle}</title>
+		<meta name="description" content={description} />
+		<link rel="canonical" href={canonical} />
+		{noindex && <meta name="robots" content="noindex" />}
+
+		<meta property="og:type" content={type} />
+		<meta property="og:site_name" content={site.name} />
+		<meta property="og:title" content={title ?? site.name} />
+		<meta property="og:description" content={description} />
+		<meta property="og:url" content={canonical} />
+		<meta property="og:image" content={shareImage} />
+		<meta name="twitter:card" content="summary_large_image" />
+		{extraMeta.map(({ name, content }) => <meta name={name} content={content} />)}
+
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+		<link rel="manifest" href="/site.webmanifest" />
+		<link rel="alternate" type="application/rss+xml" title={site.blog.title} href="/rss.xml" />
+		<link rel="alternate" type="application/rss+xml" title={site.journal.title} href="/journal/rss.xml" />
+		<meta name="theme-color" content="#ffffff" />
+
+		<Font cssVariable="--font-overpass" preload />
+		<Font cssVariable="--font-open-sans" preload />
+
+		{site.analytics && <script is:inline defer src={site.analytics.script} data-website-id={site.analytics.websiteId} />}
+		<slot name="head" />
+	</head>
+	<body class="flex min-h-screen flex-col">
+		<a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:z-50 focus:bg-accent focus:p-4">Skip to content</a>
+		<Header />
+		<main id="main" class:list={["flex-grow", className]}>
+			<slot />
+		</main>
+		<Footer />
+	</body>
+</html>

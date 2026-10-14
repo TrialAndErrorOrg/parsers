@@ -1,0 +1,19 @@
+---
+import Post from "~/layouts/Post.astro";
+import { canPreview } from "~/lib/preview";
+import { getDraft } from "~/lib/sources/blog";
+
+export const prerender = false;
+
+Astro.response.headers.set("Cache-Control", "no-store");
+Astro.response.headers.set("X-Robots-Tag", "noindex");
+
+if (!canPreview(Astro.cookies)) {
+	return new Response("Open this preview from Strapi", { status: 401 });
+}
+
+const post = await getDraft(Astro.params.slug!);
+if (!post) return new Response("Draft not found", { status: 404 });
+---
+
+<Post post={post} draft />

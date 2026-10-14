@@ -1,0 +1,231 @@
+# Editing interface for the site, served at /admin (through src/pages/admin/config.yml.ts,
+# which points sign-in at Microsoft when ADMIN_AUTH=microsoft). Editors can only change the
+# folders named here (src/lib/admin.ts).
+# Every save is a commit to the repository, which triggers a rebuild.
+# Field definitions here mirror src/content.config.ts and src/lib/settings.ts.
+
+backend:
+  name: github
+  repo: TrialAndErrorOrg/trialanderror
+  branch: main
+  # Who made a change. With Microsoft sign-in every commit is made by the GitHub App, so the
+  # editor's name is only in the message.
+  commit_messages:
+    create: "Create {{collection}} “{{slug}}” (by {{author-name}})"
+    update: "Update {{collection}} “{{slug}}” (by {{author-name}})"
+    delete: "Delete {{collection}} “{{slug}}” (by {{author-name}})"
+    uploadMedia: "Upload “{{path}}” (by {{author-name}})"
+    deleteMedia: "Delete “{{path}}” (by {{author-name}})"
+
+site_url: https://trialanderror.org
+display_url: https://trialanderror.org
+logo_url: /favicon.svg
+
+media_folder: apps/site/public/uploads
+public_folder: /uploads
+
+collections:
+  - name: pages
+    label: Pages
+    label_singular: Page
+    description: Pages built from sections. "index" is the homepage. Free-text pages (donate, events) still live in Strapi.
+    folder: apps/site/src/content/pages
+    extension: yaml
+    format: yaml
+    create: true
+    slug: "{{slug}}"
+    identifier_field: title
+    fields:
+      - { name: title, label: Title, widget: string }
+      - { name: description, label: Description (for search engines and link previews), widget: text, required: false }
+      - { name: showTitle, label: Show the title as a big heading, widget: boolean, default: false }
+      - name: sections
+        label: Sections
+        label_singular: Section
+        widget: list
+        typeKey: type
+        types:
+          - name: hero
+            label: Big intro
+            widget: object
+            summary: "{{title}}"
+            fields:
+              - { name: title, label: Title (each line gets its own box), widget: text }
+              - { name: subtitle, label: Subtitle, widget: string, required: false }
+              - { name: text, label: Text, widget: markdown, required: false }
+              - &buttons
+                name: buttons
+                label: Buttons
+                widget: list
+                required: false
+                fields:
+                  - { name: label, label: Label, widget: string }
+                  - { name: url, label: Link, widget: string }
+                  - { name: style, label: Style, widget: select, options: [accent, plain], default: accent }
+          - name: text
+            label: Text
+            widget: object
+            summary: "{{title}}"
+            fields:
+              - { name: title, label: Title, widget: string, required: false }
+              - { name: id, label: Anchor (for links like /about#mission), widget: string, required: false }
+              - { name: body, label: Text, widget: markdown }
+              - { name: background, label: Background, widget: select, options: [paper, accent, accent-soft, journal, journal-soft], default: paper }
+          - name: features
+            label: Columns
+            widget: object
+            summary: "{{title}}"
+            fields:
+              - { name: title, label: Title, widget: string, required: false }
+              - { name: id, label: Anchor, widget: string, required: false }
+              - name: items
+                label: Columns
+                widget: list
+                fields:
+                  - { name: title, label: Title, widget: string }
+                  - { name: body, label: Text, widget: markdown }
+                  - name: link
+                    label: Link
+                    widget: object
+                    required: false
+                    fields:
+                      - { name: label, label: Label, widget: string }
+                      - { name: url, label: Link, widget: string }
+          - name: latest-posts
+            label: Latest blog posts
+            widget: object
+            summary: "{{title}}"
+            fields:
+              - { name: title, label: Title, widget: string, default: From the Blog }
+              - { name: count, label: How many, widget: number, value_type: int, default: 4, min: 1 }
+          - name: latest-articles
+            label: Latest journal articles
+            widget: object
+            summary: "{{title}}"
+            fields:
+              - { name: title, label: Title, widget: string, default: From the Journal }
+              - { name: count, label: How many, widget: number, value_type: int, default: 4, min: 1 }
+          - name: team
+            label: Team
+            widget: object
+            summary: "{{title}}"
+            fields:
+              - { name: title, label: Title, widget: string, default: Meet the Team }
+              - { name: id, label: Anchor, widget: string, required: false }
+          - name: newsletter
+            label: Newsletter sign-up
+            widget: object
+            fields: []
+          - name: buttons
+            label: Buttons
+            widget: object
+            fields:
+              - *buttons
+
+  - name: settings
+    label: Settings
+    editor:
+      preview: false
+    files:
+      - name: site
+        label: Site
+        file: apps/site/src/config/site.yaml
+        fields:
+          - { name: name, label: Site name, widget: string }
+          - { name: description, label: Description, widget: text }
+          - { name: url, label: Address, widget: string }
+          - { name: email, label: Contact email, widget: string }
+          - name: blog
+            label: Blog
+            widget: object
+            fields:
+              - { name: title, label: Title, widget: string }
+              - { name: description, label: Description, widget: text }
+              - { name: postsPerPage, label: Posts per page, widget: number, value_type: int }
+              - { name: pitchEmail, label: Email for blog pitches, widget: string, required: false }
+          - name: journal
+            label: Journal
+            widget: object
+            fields:
+              - { name: title, label: Title, widget: string }
+              - { name: description, label: Description, widget: text }
+              - { name: url, label: Address, widget: string }
+          - name: newsletter
+            label: Newsletter
+            widget: object
+            fields:
+              - { name: title, label: Title, widget: string }
+              - { name: text, label: Text, widget: text }
+              - { name: action, label: Mailchimp form address, widget: string }
+          - name: analytics
+            label: Analytics
+            widget: object
+            required: false
+            fields:
+              - { name: script, label: Script address, widget: string }
+              - { name: websiteId, label: Website ID, widget: string }
+          - name: adTracking
+            label: Google Ads conversion tracking
+            widget: object
+            required: false
+            fields:
+              - { name: id, label: Google Ads ID, widget: string }
+              - { name: pages, label: Pages (slugs) that track, widget: list }
+      - name: navigation
+        label: Menus
+        file: apps/site/src/config/navigation.yaml
+        fields:
+          - name: header
+            label: Header menu
+            widget: list
+            summary: "{{title}}"
+            fields:
+              - { name: title, label: Title, widget: string }
+              - { name: url, label: Link (leave empty for a dropdown), widget: string, required: false }
+              - { name: description, label: Description, widget: string, required: false }
+              - { name: color, label: Tab colour, widget: select, options: [{ label: Orange, value: accent }, { label: Light orange, value: accent-soft }, { label: Journal blue, value: journal }], required: false }
+              - name: children
+                label: Dropdown links
+                widget: list
+                required: false
+                summary: "{{title}}"
+                fields:
+                  - { name: title, label: Title, widget: string }
+                  - { name: url, label: Link, widget: string }
+                  - { name: description, label: Description, widget: string, required: false }
+          - name: journal
+            label: Journal menu
+            widget: list
+            summary: "{{title}}"
+            fields:
+              - { name: title, label: Title, widget: string }
+              - { name: url, label: Link (leave empty for a dropdown), widget: string, required: false }
+              - { name: button, label: Show as a button, widget: boolean, required: false }
+              - name: children
+                label: Dropdown links
+                widget: list
+                required: false
+                summary: "{{title}}"
+                fields:
+                  - { name: title, label: Title, widget: string }
+                  - { name: url, label: Link, widget: string }
+          - name: footer
+            label: Footer columns
+            widget: list
+            summary: "{{title}}"
+            fields:
+              - { name: title, label: Column title, widget: string }
+              - name: children
+                label: Links
+                widget: list
+                summary: "{{title}}"
+                fields:
+                  - { name: title, label: Title, widget: string }
+                  - { name: url, label: Link, widget: string }
+          - name: socials
+            label: Social links
+            widget: list
+            summary: "{{icon}}"
+            fields:
+              - { name: icon, label: Icon, widget: select, options: [bluesky, github, mastodon, linkedin, instagram, facebook, email, rss, substack, twitter] }
+              - { name: url, label: Link, widget: string }

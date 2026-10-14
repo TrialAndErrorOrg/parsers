@@ -356,6 +356,8 @@ thebiggestfile.ts
 
 .env
 .env.*
+# Examples of the variables, without values, belong in the repository
+!.env.example
 graph
 # typedoc scratch output (scripts/readme.ts); hand-written docs/*.md are tracked
 **/docs/*

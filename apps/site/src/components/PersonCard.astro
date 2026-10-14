@@ -1,0 +1,69 @@
+---
+import { personHref } from "~/lib/people";
+import type { Person } from "~/lib/types";
+import Picture from "./Picture.astro";
+import SocialIcon from "./SocialIcon.astro";
+
+interface Props {
+	person: Person;
+	/** Show the full bio rather than a short one */
+	full?: boolean;
+	link?: boolean;
+}
+
+const { person, full = false, link = true } = Astro.props;
+const href = link ? await personHref(person, Astro.isPrerendered) : undefined;
+const initials = person.name
+	.split(" ")
+	.map((part) => part[0])
+	.slice(0, 2)
+	.join("");
+---
+
+<div class="card flex-row gap-4 p-4">
+	<div class="size-20 shrink-0 overflow-hidden rounded-full border-frame border-ink bg-accent md:size-24">
+		{
+			person.image ? (
+				<Picture image={person.image} width={200} class="size-full object-cover" alt={person.name} />
+			) : (
+				<span class="flex size-full items-center justify-center font-heading text-2xl font-black">{initials}</span>
+			)
+		}
+	</div>
+	<div class="flex min-w-0 flex-col gap-1">
+		<h3 class="font-heading text-xl font-bold">
+			{href ? <a href={href} class="card-link">{person.name}</a> : person.name}
+		</h3>
+		{person.position && <p class="text-sm font-semibold text-muted">{person.position}</p>}
+		{person.summary && <div class:list={["prose prose-sm", !full && "line-clamp-4"]} set:html={person.summary} />}
+		<ul class="relative z-10 mt-1 flex flex-wrap gap-3">
+			{
+				person.orcid && (
+					<li>
+						<a href={person.orcid} aria-label="ORCID" class="text-orcid">
+							<SocialIcon icon="orcid" />
+						</a>
+					</li>
+				)
+			}
+			{
+				person.links.map((l) => (
+					<li>
+						<a href={l.url} aria-label={l.icon} class="hover:text-accent">
+							<SocialIcon icon={l.icon} />
+						</a>
+					</li>
+				))
+			}
+			{
+				person.email && (
+					<li>
+						<a href={`mailto:${person.email}`} aria-label="Email" class="hover:text-accent">
+							<SocialIcon icon="email" />
+						</a>
+					</li>
+				)
+			}
+		</ul>
+	</div>
+</div>

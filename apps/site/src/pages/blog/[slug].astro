@@ -1,0 +1,21 @@
+---
+import type { GetStaticPaths } from "astro";
+import Post from "~/layouts/Post.astro";
+import { getPosts } from "~/lib/sources/blog";
+
+export const getStaticPaths = (async () => {
+	const posts = await getPosts();
+	return posts.map((post, i) => ({
+		params: { slug: post.slug },
+		props: {
+			post,
+			prev: posts[i - 1],
+			next: posts[i + 1],
+			related: posts.filter((p) => post.related.includes(p.slug)),
+			latest: posts.filter((p) => p.slug !== post.slug && !post.related.includes(p.slug)).slice(0, 4),
+		},
+	}));
+}) satisfies GetStaticPaths;
+---
+
+<Post {...Astro.props} />

@@ -1,0 +1,28 @@
+---
+import { Icon } from "astro-icon/components";
+
+interface Props {
+	icon: string;
+	class?: string;
+}
+
+// Maps the names used in navigation.yaml and on people to icon sets
+const names: Record<string, string> = {
+	bluesky: "simple-icons:bluesky",
+	github: "simple-icons:github",
+	mastodon: "simple-icons:mastodon",
+	linkedin: "simple-icons:linkedin",
+	instagram: "simple-icons:instagram",
+	facebook: "simple-icons:facebook",
+	twitter: "simple-icons:x",
+	orcid: "simple-icons:orcid",
+	substack: "simple-icons:substack",
+	email: "lucide:mail",
+	rss: "lucide:rss",
+	website: "lucide:globe",
+};
+
+const { icon, class: className = "size-5" } = Astro.props;
+---
+
+<Icon name={names[icon] ?? "lucide:link"} class={className} aria-hidden="true" />

@@ -1,0 +1,48 @@
+---
+import JournalNav from "~/components/JournalNav.astro";
+import { getRichBody } from "~/lib/journal-article";
+import { type Journal, type JournalPage, journal as defaultJournal } from "~/lib/sources/journal";
+import "~/styles/journal.css";
+import Base from "./Base.astro";
+
+interface Props {
+	page: JournalPage;
+	/** The Journal of Trial and Error unless given */
+	journal?: Journal;
+}
+
+/* A page of the journal's PubPub site (For Authors, Editorial Board...), from the Underlay export */
+const { page, journal = defaultJournal() } = Astro.props;
+const { config } = journal;
+const { body, headings } = await getRichBody(page, journal);
+---
+
+<Base title={`${page.title} | ${config.title}`} description={page.description} class={config.theme}>
+	<JournalNav journal={journal} />
+	<div class="border-b-frame border-ink bg-journal text-paper">
+		<div class="page flex flex-col gap-4 py-12 md:py-16">
+			<a href={config.path} class="label self-start bg-paper text-ink hover:bg-journal-soft">{config.title}</a>
+			<h1 class="font-heading text-5xl leading-[1.05] font-black tracking-tighter md:text-7xl">{page.title}</h1>
+			{page.description && <p class="max-w-3xl text-lg font-medium md:text-xl">{page.description}</p>}
+		</div>
+	</div>
+	<div class="page grid gap-x-16 py-12 lg:grid-cols-[minmax(0,48rem)_1fr]">
+		<div class="journal-body prose-site" data-pagefind-body data-pagefind-filter={`section:${config.section}`} set:html={body} />
+		{
+			headings.length > 2 && (
+				<nav aria-label="Table of contents" class="hidden h-max max-h-[70vh] overflow-y-auto border-frame border-ink bg-paper p-5 shadow-hard lg:sticky lg:top-28 lg:block">
+					<p class="mb-3 font-heading text-lg font-black">Contents</p>
+					<ol class="flex flex-col gap-2 text-sm">
+						{headings.map((h) => (
+							<li class:list={[h.depth === 3 && "ml-4"]}>
+								<a href={`#${h.slug}`} class="hover:underline">
+									{h.text}
+								</a>
+							</li>
+						))}
+					</ol>
+				</nav>
+			)
+		}
+	</div>
+</Base>

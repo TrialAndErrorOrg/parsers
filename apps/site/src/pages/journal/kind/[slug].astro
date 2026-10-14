@@ -1,0 +1,11 @@
+---
+import type { GetStaticPaths } from "astro";
+import JournalList from "~/layouts/JournalList.astro";
+import { getKinds } from "~/lib/sources/journal";
+
+export const getStaticPaths = (async () => (await getKinds()).map((kind) => ({ params: { slug: kind.slug }, props: { kind } }))) satisfies GetStaticPaths;
+
+const { kind } = Astro.props;
+---
+
+<JournalList title={kind.title} kicker="Article type" articles={kind.articles} current={`/journal/kind/${kind.slug}`} />

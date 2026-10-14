@@ -1,0 +1,63 @@
+@reference "./global.css";
+
+/* PubPub's HTML exports (articles, pages, issue intros), inside .prose-site */
+.journal-body {
+	figure {
+		@apply mx-auto;
+	}
+	figure[data-align="left"] {
+		@apply ml-0;
+	}
+	figure[data-align="right"] {
+		@apply mr-0;
+	}
+	figure img {
+		@apply my-0 h-auto w-full;
+	}
+	figcaption {
+		@apply text-sm text-muted;
+	}
+	.tableWrapper {
+		@apply overflow-x-auto;
+	}
+	table caption {
+		@apply mb-2 text-left font-bold;
+	}
+	a.footnote {
+		@apply align-super text-xs leading-none no-underline;
+	}
+	a.citation {
+		@apply font-normal;
+	}
+	/* KaTeX output: browsers render the MathML half, the styled half needs KaTeX's CSS */
+	.katex-html {
+		@apply hidden;
+	}
+	.katex-display {
+		@apply my-4 block overflow-x-auto text-center;
+	}
+	.embed-missing {
+		@apply border-frame border-dashed border-ink bg-subtle p-4 text-sm;
+	}
+	figure[data-node-type="file"] {
+		@apply flex flex-wrap items-center gap-x-4 border-frame border-ink bg-paper p-4 shadow-hard;
+	}
+	.pub-notes {
+		@apply mt-16 border-t-frame border-ink pt-4 text-base;
+	}
+	.pub-notes :where(ol, ul) {
+		@apply list-none pl-0;
+	}
+	.pub-notes li {
+		@apply pl-0;
+	}
+	.pub-notes :where(.pub-note-content-component, .csl-bib-body, .csl-entry, p) {
+		@apply inline;
+	}
+	.return-link {
+		@apply ml-1 font-normal no-underline;
+	}
+	:target {
+		@apply bg-accent-soft;
+	}
+}

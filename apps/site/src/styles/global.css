@@ -1,0 +1,159 @@
+@import "tailwindcss";
+@import "./theme.css";
+@plugin "@tailwindcss/typography";
+
+/*
+ * Reusable building blocks. Components use these instead of long class
+ * lists, so a change here restyles every card, button and heading at once.
+ */
+
+@layer base {
+	html {
+		@apply bg-paper text-ink antialiased;
+		font-family: var(--font-sans);
+		scroll-padding-top: 6rem;
+	}
+
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		font-family: var(--font-heading);
+		@apply tracking-tighter;
+	}
+
+	::selection {
+		@apply bg-accent-soft;
+	}
+
+	a,
+	button {
+		@apply focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent;
+	}
+}
+
+@layer components {
+	/* The page grid: a centred column with side padding */
+	.page {
+		@apply mx-auto w-full max-w-page px-5 md:px-10;
+	}
+
+	/* A box with a black frame that lifts on hover, used for every card */
+	.card {
+		@apply relative flex flex-col border-frame border-ink bg-paper text-ink transition-all duration-200 ease-out;
+		border-radius: var(--radius-box);
+	}
+	.card:has(a.card-link:hover),
+	.card:has(a.card-link:focus-visible) {
+		@apply -translate-x-2 -translate-y-2 shadow-hard-lg;
+	}
+	.card-link::after {
+		content: "";
+		@apply absolute inset-0 z-0;
+	}
+
+	/* Two copies peeking out behind an issue's cover */
+	.issue-stack {
+		box-shadow:
+			6px 6px 0 calc(-1 * var(--frame)) var(--color-paper),
+			6px 6px 0 0 var(--color-ink),
+			12px 12px 0 calc(-1 * var(--frame)) var(--color-paper),
+			12px 12px 0 0 var(--color-ink);
+	}
+
+	/* Labels sitting on a card or above a title */
+	.label {
+		@apply inline-block border-frame border-ink bg-accent px-3 py-0.5 font-heading text-sm font-bold text-ink;
+	}
+	.label-journal {
+		@apply bg-journal text-paper;
+	}
+	.tag {
+		@apply inline-block border border-ink bg-paper px-2 py-0.5 text-xs font-semibold;
+	}
+
+	.button {
+		@apply inline-flex items-center gap-2 border-frame border-ink bg-accent px-5 py-2 font-heading text-lg font-bold text-ink shadow-hard transition-all hover:-translate-x-0.5 hover:-translate-y-0.5 hover:shadow-hard-lg active:translate-x-0 active:translate-y-0 active:shadow-none;
+	}
+	.button-plain {
+		@apply bg-paper;
+	}
+	.button-journal {
+		@apply bg-journal text-paper;
+	}
+
+	/* Header tabs, each in its section's colour (data-color). Hovering shows
+	   the tab; the current one also drops over the header's bottom line, so it
+	   opens into the page below */
+	.tab {
+		@apply relative -mb-(--frame) flex h-[calc(100%-0.75rem+var(--frame))] items-center gap-1 self-end border-frame border-b-0 border-transparent px-4 font-heading text-lg font-bold transition-colors duration-150;
+		--tab: var(--color-accent);
+		--tab-text: var(--color-ink);
+	}
+	.tab[data-color="accent-soft"] {
+		--tab: var(--color-accent-soft);
+	}
+	.tab[data-color="journal"] {
+		--tab: var(--color-journal);
+		--tab-text: var(--color-paper);
+	}
+	.tab:hover,
+	.tab:focus-visible,
+	.group:focus-within > .tab,
+	.tab[aria-current="page"] {
+		@apply border-ink;
+		background: var(--tab);
+		color: var(--tab-text);
+		box-shadow: var(--shadow-tab);
+	}
+	/* Not current: keep the header's line visible under the tab */
+	.tab:not([aria-current="page"]) {
+		@apply mb-0 h-[calc(100%-0.75rem)];
+	}
+
+	/* Underline that grows on hover */
+	.sleek-underline {
+		@apply relative after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-ink after:transition-all after:duration-200 hover:after:w-full;
+	}
+
+	/* Big section title with a rule running to the edge */
+	.section-title {
+		@apply flex items-center gap-6 font-heading text-4xl font-black tracking-tighter md:text-6xl;
+	}
+	.section-title::after {
+		content: "";
+		@apply h-[6px] flex-grow bg-ink;
+	}
+
+	/* Long-form text: blog posts, pages, journal articles */
+	.prose-site {
+		@apply prose max-w-prose md:prose-lg;
+		--tw-prose-body: var(--color-ink);
+		--tw-prose-headings: var(--color-ink);
+		--tw-prose-links: var(--color-ink);
+		--tw-prose-bold: var(--color-ink);
+		--tw-prose-quotes: var(--color-ink);
+		--tw-prose-quote-borders: var(--color-ink);
+		--tw-prose-bullets: var(--color-ink);
+		--tw-prose-counters: var(--color-ink);
+	}
+	.prose-site :where(h2, h3, h4) {
+		@apply scroll-mt-24 font-black leading-tight;
+	}
+	.prose-site :where(a) {
+		@apply font-semibold decoration-accent decoration-2 underline-offset-4 hover:decoration-ink;
+	}
+	.prose-site :where(img) {
+		@apply border-frame border-ink;
+	}
+	.prose-site :where(iframe) {
+		@apply w-full border-frame border-ink;
+	}
+
+	/* Drop cap on the first paragraph of a blog post */
+	.lettrine {
+		@apply float-left mt-2 mr-2 border-frame border-ink bg-paper px-2 font-heading text-6xl leading-none font-bold md:text-8xl;
+	}
+}

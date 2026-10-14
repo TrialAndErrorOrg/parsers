@@ -1,0 +1,46 @@
+---
+import { Icon } from "astro-icon/components";
+import type { Download } from "~/lib/journal-article";
+
+interface Props {
+	downloads: Download[];
+	/** Which edge the formats menu lines up with */
+	align?: "left" | "right";
+	class?: string;
+}
+
+/* The PDF as the main button, every other format in a menu next to it */
+const { downloads, align = "left", class: className } = Astro.props;
+const pdf = downloads.find((d) => d.format === "pdf");
+const others = downloads.filter((d) => d !== pdf);
+---
+
+{
+	downloads.length > 0 && (
+		<div class:list={["flex flex-wrap items-start gap-3", className]}>
+			{pdf && (
+				<a href={pdf.url} class="button button-journal text-base">
+					<Icon name="lucide:file-down" class="size-5" aria-hidden="true" /> Download PDF
+				</a>
+			)}
+			{others.length > 0 && (
+				<details class="group/formats relative">
+					<summary class="button button-plain cursor-pointer list-none text-base [&::-webkit-details-marker]:hidden">
+						{pdf ? "More formats" : "Download"}
+						<Icon name="lucide:chevron-down" class="size-4 transition-transform group-open/formats:rotate-180" aria-hidden="true" />
+					</summary>
+					<ul class:list={["absolute z-20 mt-2 w-48 border-frame border-ink bg-paper shadow-hard", align === "right" ? "right-0" : "left-0"]}>
+						{others.map((d) => (
+							<li class="border-b border-ink last:border-b-0">
+								<a href={d.url} class="flex items-center gap-2 px-4 py-2 font-semibold hover:bg-journal-soft">
+									<Icon name="lucide:download" class="size-4" aria-hidden="true" />
+									{d.label}
+								</a>
+							</li>
+						))}
+					</ul>
+				</details>
+			)}
+		</div>
+	)
+}

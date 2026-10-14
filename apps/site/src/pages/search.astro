@@ -1,0 +1,114 @@
+---
+import Base from "~/layouts/Base.astro";
+
+// The index in /pagefind is written after the build, see src/integrations/pagefind.ts
+---
+
+<Base title="Search" description="Search the blog, the journal and the pages of the Center of Trial & Error.">
+	<link slot="head" rel="stylesheet" href="/pagefind/pagefind-ui.css" />
+	<div class="border-b-frame border-ink bg-accent">
+		<div class="page py-12 md:py-20">
+			<h1 class="font-heading text-5xl font-black tracking-tighter md:text-8xl">Search</h1>
+		</div>
+	</div>
+	<div class="page py-12">
+		<div id="search" class="max-w-5xl">
+			<noscript>Search needs JavaScript. You can also browse the <a href="/blog" class="underline">blog</a>.</noscript>
+		</div>
+	</div>
+	<script is:inline src="/pagefind/pagefind-ui.js"></script>
+	<script>
+		const PagefindUI = (window as any).PagefindUI;
+		const element = document.querySelector("#search")!;
+		if (PagefindUI) {
+			const ui = new PagefindUI({
+				element,
+				showSubResults: true,
+				showImages: false,
+				autofocus: true,
+				translations: { placeholder: "Search the blog, journal and pages" },
+				// Keep the query in the address bar, so a search can be shared
+				processTerm: (term: string) => {
+					const url = new URL(location.href);
+					if (term) url.searchParams.set("q", term);
+					else url.searchParams.delete("q");
+					history.replaceState(null, "", url);
+					return term;
+				},
+			});
+			const query = new URLSearchParams(location.search).get("q");
+			if (query) ui.triggerSearch(query);
+		} else {
+			element.textContent = "The search index is only available on the built site.";
+		}
+	</script>
+</Base>
+
+<style is:global>
+	@reference "../styles/global.css";
+
+	#search {
+		--pagefind-ui-scale: 1;
+		--pagefind-ui-primary: var(--color-ink);
+		--pagefind-ui-text: var(--color-ink);
+		--pagefind-ui-background: var(--color-paper);
+		--pagefind-ui-border: var(--color-ink);
+		--pagefind-ui-tag: var(--color-accent-soft);
+		--pagefind-ui-border-width: var(--frame);
+		--pagefind-ui-border-radius: 0;
+		--pagefind-ui-font: var(--font-sans);
+
+		.pagefind-ui__search-input {
+			@apply border-frame border-ink font-heading font-bold shadow-hard outline-none placeholder:text-muted placeholder:opacity-100 focus:shadow-hard-lg;
+			transition: all 150ms ease-out;
+		}
+		.pagefind-ui__search-clear {
+			@apply font-heading font-bold text-ink;
+		}
+		.pagefind-ui__message {
+			@apply font-heading text-xl font-bold;
+		}
+		.pagefind-ui__result {
+			@apply mb-6 border-frame border-solid border-ink bg-paper p-6 transition-all duration-200 ease-out;
+		}
+		.pagefind-ui__result:has(a:hover) {
+			@apply -translate-x-1 -translate-y-1 shadow-hard;
+		}
+		.pagefind-ui__result-inner {
+			@apply mt-0;
+		}
+		.pagefind-ui__result-title {
+			@apply font-heading text-2xl leading-tight font-black tracking-tight;
+		}
+		.pagefind-ui__result-link {
+			@apply decoration-accent decoration-2 underline-offset-4 hover:underline;
+		}
+		.pagefind-ui__result-nested {
+			@apply border-0 border-l-heavy border-solid border-accent pt-0 pb-0 pl-4;
+		}
+		.pagefind-ui__result-nested .pagefind-ui__result-link {
+			@apply font-heading text-lg font-bold;
+		}
+		.pagefind-ui__result-nested .pagefind-ui__result-link::before {
+			content: none;
+		}
+		.pagefind-ui__result-excerpt {
+			@apply text-base;
+		}
+		.pagefind-ui__result-tag {
+			@apply border border-solid border-ink px-2 py-0.5 text-xs font-semibold;
+		}
+		mark {
+			@apply bg-accent-soft text-ink;
+		}
+		.pagefind-ui__filter-name {
+			@apply font-heading font-bold;
+		}
+		.pagefind-ui__filter-checkbox {
+			@apply border-ink accent-accent;
+		}
+		.pagefind-ui__button {
+			@apply h-auto border-frame border-solid border-ink bg-accent px-5 py-2 font-heading text-lg font-bold text-ink shadow-hard transition-all hover:-translate-x-0.5 hover:-translate-y-0.5 hover:shadow-hard-lg;
+		}
+	}
+</style>

@@ -1,0 +1,24 @@
+{
+  "$schema": "https://turborepo.com/schema.json",
+  "extends": ["//"],
+  "tasks": {
+    // The site's pages come from Strapi, Underlay and site-content, which turbo can't see, so a
+    // cached build would serve stale pages. Its own caches (images, share images, article HTML)
+    // live in node_modules/.astro and node_modules/.cache and are kept by CI instead.
+    "build": {
+      "dependsOn": ["^build"],
+      "outputs": ["dist/**"],
+      "cache": false
+    },
+    // Astro reads workspace packages from their built dist
+    "typecheck": {
+      "dependsOn": ["^build"],
+      "outputs": []
+    },
+    "dev": {
+      "dependsOn": ["^build"],
+      "persistent": true,
+      "cache": false
+    }
+  }
+}

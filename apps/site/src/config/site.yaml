@@ -1,0 +1,34 @@
+# General settings for the whole site.
+# Edit through /admin, or straight in this file.
+
+name: Center of Trial and Error
+description: Creating transparent and responsible scholarship.
+url: https://trialanderror.org
+email: info@trialanderror.org
+
+blog:
+  title: A Blog of Trial and Error
+  description: A blog by the Center of Trial and Error exploring failure in academia, open science and what it takes to be an Open Access publisher.
+  postsPerPage: 12
+  pitchEmail: hobma@trialanderror.org
+
+journal:
+  title: Journal of Trial and Error
+  description: An independent, diamond open-access journal redefining failure.
+  url: https://journal.trialanderror.org
+
+newsletter:
+  title: Subscribe to our newsletter!
+  text: Keep up to date with the Blog, the Center and the Journal of Trial & Error.
+  # Mailchimp form action, copied from the embedded form Mailchimp gives you
+  action: https://trialanderror.us21.list-manage.com/subscribe/post?u=3b2e720baa7621e1bde91b1a2&id=13b78e80c7&f_id=0099c0e1f0
+
+analytics:
+  # Umami, self-hosted
+  script: https://analytics.trialanderror.org/script.js
+  websiteId: 60d1573a-ec6c-43e7-88cb-2fdaae0701b1
+
+# Google Ads conversion tracking, only on these pages and only after consent
+adTracking:
+  id: AW-17647432404
+  pages: [donate, thankyou]

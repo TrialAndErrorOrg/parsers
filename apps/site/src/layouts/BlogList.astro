@@ -1,0 +1,34 @@
+---
+import Pagination from "~/components/Pagination.astro";
+import PostList from "~/components/PostList.astro";
+import type { Post } from "~/lib/types";
+import Base from "./Base.astro";
+
+interface Props {
+	title: string;
+	/** Small label above the title, e.g. "Category" */
+	kicker?: string;
+	description?: string;
+	posts: Post[];
+	page?: { current: number; total: number; href: (n: number) => string };
+	featureFirst?: boolean;
+}
+
+const { title, kicker, description, posts, page, featureFirst = false } = Astro.props;
+---
+
+<Base title={title} description={description}>
+	<div class="border-b-frame border-ink bg-accent">
+		<div class="page flex flex-col gap-4 py-12 md:py-20">
+			{kicker && <p class="label self-start bg-paper">{kicker}</p>}
+			<h1 class="font-heading text-5xl font-black tracking-tighter md:text-8xl">{title}</h1>
+			{description && <p class="max-w-3xl text-lg font-medium md:text-xl">{description}</p>}
+			<slot name="header" />
+		</div>
+	</div>
+	<div class="page py-12">
+		<slot />
+		<PostList posts={posts} featureFirst={featureFirst} />
+		{page && <Pagination {...page} />}
+	</div>
+</Base>

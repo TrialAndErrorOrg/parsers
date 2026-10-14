@@ -1,0 +1,104 @@
+# Builds the website (apps/site), publishes it as ghcr.io/trialanderrororg/site and asks Coolify
+# to deploy it. Fast because it keeps every cache between runs: pnpm's store, turbo's cache (the
+# libraries the site uses) and the site's own caches of resized images, share images and journal
+# article HTML. The image only packages the built site, see apps/site/Dockerfile.
+#
+# Secrets: STRAPI_TOKEN and UNDERLAY_TOKEN (read-only, for the build), COOLIFY_DEPLOY_URL and
+# COOLIFY_TOKEN (optional, to deploy). See apps/site/README.md, "Deploying".
+name: site
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - apps/site/**
+      - libs/sveltia-gateway/**
+      - pnpm-lock.yaml
+      - .github/workflows/site.yml
+  # Sent by site-content when an editor saves in /admin, and by Strapi when something is published
+  repository_dispatch:
+    types: [content-updated]
+  # New journal articles reach Underlay without telling anyone
+  schedule:
+    - cron: '17 4 * * *'
+  workflow_dispatch:
+
+permissions: {}
+
+# Only the newest content matters: a save cancels the build of the one before
+concurrency:
+  group: site
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
+    env:
+      IMAGE: ghcr.io/trialanderrororg/site
+      # Read here so the Deploy step can skip itself when it isn't set
+      COOLIFY_DEPLOY_URL: ${{ secrets.COOLIFY_DEPLOY_URL }}
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+
+      - uses: pnpm/action-setup@v6
+        with:
+          version: 11.3.0
+
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 24
+          cache: pnpm
+
+      - run: pnpm install --frozen-lockfile
+
+      - name: Restore turbo cache
+        uses: actions/cache@v6
+        with:
+          path: .turbo/cache
+          key: turbo-site-${{ runner.os }}-${{ github.sha }}
+          restore-keys: |
+            turbo-site-${{ runner.os }}-
+            turbo-${{ runner.os }}-main-
+
+      # Content-addressed, so restoring the newest copy is always safe; each run saves a fresh one
+      - name: Restore the site's image and article caches
+        uses: actions/cache@v6
+        with:
+          path: |
+            apps/site/node_modules/.astro
+            apps/site/node_modules/.cache
+          key: site-assets-${{ github.run_id }}
+          restore-keys: site-assets-
+
+      - name: Build
+        run: pnpm turbo run build --filter=site... --cache-dir=.turbo/cache
+        env:
+          STRAPI_TOKEN: ${{ secrets.STRAPI_TOKEN }}
+          UNDERLAY_TOKEN: ${{ secrets.UNDERLAY_TOKEN }}
+
+      # The built site plus only its production dependencies
+      - name: Package
+        run: pnpm --filter site deploy --prod --legacy "$RUNNER_TEMP/site"
+
+      - name: Build and push the image
+        run: |
+          echo "$GITHUB_TOKEN" | docker login ghcr.io -u "$GITHUB_ACTOR" --password-stdin
+          docker build "$RUNNER_TEMP/site" -f apps/site/Dockerfile \
+            --label org.opencontainers.image.source=https://github.com/${{ github.repository }} \
+            --label org.opencontainers.image.revision=${{ github.sha }} \
+            -t "$IMAGE:latest" -t "$IMAGE:${{ github.sha }}"
+          docker push --all-tags "$IMAGE"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Deploy
+        if: env.COOLIFY_DEPLOY_URL != ''
+        run: |
+          curl --fail --silent --show-error -H "Authorization: Bearer $COOLIFY_TOKEN" "$COOLIFY_DEPLOY_URL"
+        env:
+          COOLIFY_TOKEN: ${{ secrets.COOLIFY_TOKEN }}

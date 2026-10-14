@@ -1,0 +1,58 @@
+---
+import { site } from "~/lib/settings";
+
+// Asks for consent, then loads Google Ads conversion tracking. Used only on
+// the pages listed under adTracking in src/config/site.yaml.
+const id = site.adTracking?.id;
+---
+
+{
+	id && (
+		<div id="ad-consent" hidden class="fixed inset-x-4 bottom-4 z-50 max-w-lg border-frame border-ink bg-paper p-6 shadow-hard-lg md:left-auto">
+			<h2 class="font-heading text-xl font-black">Cookie notice</h2>
+			<p class="mt-2 text-sm">
+				We use cookies to track conversions from our advertising campaigns. This helps us understand which ads are effective. This only applies to pages
+				related to donations, such as this one.
+			</p>
+			<div class="mt-4 flex gap-3">
+				<button type="button" data-consent="rejected" class="button button-plain">
+					Reject
+				</button>
+				<button type="button" data-consent="accepted" class="button">
+					Accept
+				</button>
+			</div>
+		</div>
+		<script is:inline define:vars={{ id }}>
+			const KEY = "cookie-consent";
+			const load = () => {
+				const s = document.createElement("script");
+				s.async = true;
+				s.src = `https://www.googletagmanager.com/gtag/js?id=${id}`;
+				document.head.append(s);
+				window.dataLayer = window.dataLayer || [];
+				window.gtag = function () {
+					window.dataLayer.push(arguments);
+				};
+				window.gtag("js", new Date());
+				window.gtag("config", id);
+			};
+			let consent = null;
+			try {
+				consent = localStorage.getItem(KEY);
+			} catch {}
+			const banner = document.getElementById("ad-consent");
+			if (consent === "accepted") load();
+			else if (!consent) banner.hidden = false;
+			banner.addEventListener("click", (event) => {
+				const choice = event.target.closest("[data-consent]")?.dataset.consent;
+				if (!choice) return;
+				try {
+					localStorage.setItem(KEY, choice);
+				} catch {}
+				banner.hidden = true;
+				if (choice === "accepted") load();
+			});
+		</script>
+	)
+}

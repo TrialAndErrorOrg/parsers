@@ -1,0 +1,43 @@
+---
+import type { Issue } from "~/lib/sources/journal";
+import Picture from "./Picture.astro";
+
+interface Props {
+	issue: Issue;
+	/** Where the issue's page is */
+	href: string;
+}
+
+/*
+ * An issue, drawn as its cover on a small stack of printed copies, with the
+ * title underneath like on a shelf. Rolling issues get a plain blue cover.
+ */
+const { issue, href } = Astro.props;
+const count = `${issue.articles.length} ${issue.articles.length === 1 ? "article" : "articles"}`;
+---
+
+<article class="group relative flex flex-col gap-5">
+	<div class="issue-stack relative aspect-[3/4] overflow-hidden border-frame border-ink bg-journal transition-transform duration-200 group-hover:-translate-y-1">
+		{
+			issue.image ? (
+				<Picture image={issue.image} width={600} class="size-full object-cover" />
+			) : (
+				<p class="flex size-full flex-col items-center justify-center gap-2 p-6 text-center font-heading text-paper">
+					<span class="text-5xl font-black tracking-tighter">{issue.rolling ? "Rolling" : issue.title}</span>
+					{issue.rolling && <span class="font-bold">Articles as they're ready</span>}
+				</p>
+			)
+		}
+		{issue.rolling && <span class="label label-journal absolute top-4 right-0 border-r-0">Ongoing</span>}
+	</div>
+	<div class="flex flex-col gap-1 pr-3">
+		<p class="text-sm font-semibold text-muted">
+			{issue.rolling ? "Ongoing" : issue.date.slice(0, 4)} · {count}
+		</p>
+		<h2 class="font-heading text-2xl leading-tight font-black tracking-tighter">
+			<a href={href} class="after:absolute after:inset-0 group-hover:underline">
+				{issue.title}
+			</a>
+		</h2>
+	</div>
+</article>

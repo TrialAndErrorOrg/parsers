@@ -1,0 +1,55 @@
+/*
+ * THEME
+ *
+ * Every colour, font, border and shadow on the site comes from this file.
+ * Change a value here and the whole site follows. Each token also becomes a
+ * Tailwind class: `--color-accent` gives `bg-accent`, `text-accent`,
+ * `border-accent`, and so on.
+ */
+
+/* Border thickness, used by the border-frame and border-heavy classes */
+:root {
+	--frame: 2px;
+	--heavy: 4px;
+}
+
+@theme {
+	/* Colours */
+	--color-ink: #000000; /* text, borders, shadows */
+	--color-paper: #ffffff; /* page background */
+	--color-accent: oklch(81.08% 0.195 75.53); /* the Center's orange */
+	--color-accent-soft: #ffe7a3;
+	--color-journal: oklch(26.03% 0.085 245.86); /* the Journal's blue */
+	--color-journal-soft: #dfe4ea;
+	--color-jrn: #4d4d4d; /* the archived Journal for Reproducibility in Neuroscience, grey as on its PubPub site */
+	--color-jrn-soft: #ececec;
+	--color-muted: #4b5563; /* secondary text */
+	--color-subtle: #f3f4f6; /* placeholder backgrounds */
+	--color-orcid: #a6ce39;
+
+	/* Fonts. The families themselves are loaded in astro.config.mjs */
+	--font-heading: var(--font-overpass), "Overpass", sans-serif;
+	--font-sans: var(--font-open-sans), "Open Sans", sans-serif;
+
+	/* Neubrutalist shape: thick borders, hard offset shadows, no rounding */
+	--shadow-hard-sm: 2px 2px 0 var(--color-ink);
+	--shadow-hard: 4px 4px 0 var(--color-ink);
+	--shadow-hard-lg: 8px 8px 0 var(--color-ink);
+	/* Header tabs: up and to the right, ending flush with the tab's bottom */
+	--shadow-tab: 4px 0 0 var(--color-ink), 4px -4px 0 var(--color-ink);
+	--radius-box: 0;
+
+	/* Layout */
+	--container-page: 100rem;
+	--container-prose: 48rem;
+}
+
+@utility border-frame { border-width: var(--frame); }
+@utility border-t-frame { border-top-width: var(--frame); }
+@utility border-b-frame { border-bottom-width: var(--frame); }
+@utility border-l-frame { border-left-width: var(--frame); }
+@utility border-r-frame { border-right-width: var(--frame); }
+@utility border-heavy { border-width: var(--heavy); }
+@utility border-t-heavy { border-top-width: var(--heavy); }
+@utility border-b-heavy { border-bottom-width: var(--heavy); }
+@utility border-l-heavy { border-left-width: var(--heavy); }

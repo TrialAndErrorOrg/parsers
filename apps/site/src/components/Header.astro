@@ -1,0 +1,110 @@
+---
+import { Icon } from "astro-icon/components";
+import { navigation } from "~/lib/settings";
+import Logo from "./Logo.astro";
+
+const path = Astro.url.pathname;
+const isCurrent = (url?: string) => !!url && url.startsWith("/") && url !== "/" && path.startsWith(url.split("#")[0]);
+---
+
+<header class="sticky top-0 z-40 border-b-frame border-ink bg-paper">
+	<div class="flex h-16 items-stretch justify-between md:h-20">
+		<a href="/" class="group flex items-center gap-3 border-r-frame border-ink bg-ink pr-4 text-paper transition-colors hover:bg-accent hover:text-ink">
+			<span class="flex h-full w-16 items-center justify-center p-3 md:w-20 md:p-4">
+				<Logo class="size-full" />
+			</span>
+			<span class="font-heading text-lg leading-none font-black tracking-tighter md:max-lg:hidden lg:text-xl">
+				Center of<br />Trial & Error
+			</span>
+		</a>
+
+		<nav aria-label="Main" class="flex items-stretch">
+			<!-- Desktop -->
+			<ul class="hidden items-stretch gap-1 md:flex">
+				{
+					navigation.header.map((item) => (
+						<li class="group relative flex items-stretch">
+							{item.children?.length ? (
+								<>
+									<button
+										type="button"
+										class="tab"
+										aria-haspopup="true"
+									>
+										{item.title}
+										<Icon name="lucide:chevron-down" class="size-4" aria-hidden="true" />
+									</button>
+									<ul class="invisible absolute top-full right-0 w-80 border-frame border-ink bg-paper opacity-0 shadow-hard transition-opacity group-focus-within:visible group-focus-within:opacity-100 group-hover:visible group-hover:opacity-100">
+										{item.children.map((child) => (
+											<li>
+												<a href={child.url} class="block border-b border-ink px-4 py-3 last:border-b-0 hover:bg-accent-soft">
+													<span class="font-heading font-bold">{child.title}</span>
+													{child.description && <span class="block text-sm text-muted">{child.description}</span>}
+												</a>
+											</li>
+										))}
+									</ul>
+								</>
+							) : (
+								<a
+									href={item.url}
+									class="tab"
+									data-color={item.color}
+									aria-current={isCurrent(item.url) ? "page" : undefined}
+								>
+									{item.title}
+								</a>
+							)}
+						</li>
+					))
+				}
+				<li class="ml-3 flex items-stretch border-l-frame border-ink">
+					<a href="/search" class="flex items-center px-5 hover:bg-accent-soft" aria-label="Search">
+						<Icon name="lucide:search" class="size-6" aria-hidden="true" />
+					</a>
+				</li>
+			</ul>
+
+			<!-- Mobile: a <details> menu, works without JavaScript -->
+			<details class="group/menu flex md:hidden">
+				<summary class="flex h-full cursor-pointer list-none items-center border-l-frame border-ink px-5 [&::-webkit-details-marker]:hidden" aria-label="Menu">
+					<Icon name="lucide:menu" class="size-7 group-open/menu:hidden" aria-hidden="true" />
+					<Icon name="lucide:x" class="hidden size-7 group-open/menu:block" aria-hidden="true" />
+				</summary>
+				<div class="fixed inset-x-0 top-16 bottom-0 overflow-y-auto border-t-frame border-ink bg-paper p-6">
+					<ul class="flex flex-col gap-6">
+						{
+							navigation.header.map((item) => (
+								<li>
+									{item.url ? (
+										<a href={item.url} class="font-heading text-3xl font-black">
+											{item.title}
+										</a>
+									) : (
+										<span class="font-heading text-3xl font-black">{item.title}</span>
+									)}
+									{item.children?.length && (
+										<ul class="mt-2 flex flex-col gap-2 border-l-heavy border-accent pl-4">
+											{item.children.map((child) => (
+												<li>
+													<a href={child.url} class="text-lg font-semibold">
+														{child.title}
+													</a>
+												</li>
+											))}
+										</ul>
+									)}
+								</li>
+							))
+						}
+						<li>
+							<a href="/search" class="button">
+								<Icon name="lucide:search" class="size-5" aria-hidden="true" /> Search
+							</a>
+						</li>
+					</ul>
+				</div>
+			</details>
+		</nav>
+	</div>
+</header>

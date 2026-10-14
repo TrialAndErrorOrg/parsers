@@ -1,0 +1,41 @@
+---
+import { Image, inferRemoteSize } from "astro:assets";
+import { Icon } from "astro-icon/components";
+import type { Picture } from "~/lib/types";
+
+interface Props {
+	image?: Picture;
+	/** Width to render at; the file is resized to this at build time */
+	width: number;
+	class?: string;
+	eager?: boolean;
+	alt?: string;
+}
+
+const { image, width, class: className, eager = false, alt } = Astro.props;
+// Measure the image when its source didn't say how big it is, so it keeps its proportions
+const size = image && !(image.width && image.height) ? await inferRemoteSize(image.url).catch(() => undefined) : image;
+const height = size?.width && size?.height ? Math.round((size.height / size.width) * width) : undefined;
+---
+
+{
+	image ? (
+		height ? (
+			<Image
+				src={image.url}
+				alt={alt ?? image.alt ?? ""}
+				width={width}
+				height={height}
+				class={className}
+				loading={eager ? "eager" : "lazy"}
+				fetchpriority={eager ? "high" : undefined}
+			/>
+		) : (
+			<Image src={image.url} alt={alt ?? image.alt ?? ""} width={width} inferSize class={className} loading={eager ? "eager" : "lazy"} />
+		)
+	) : (
+		<div class:list={["flex items-center justify-center bg-subtle", className]}>
+			<Icon name="lucide:image" class="size-12 text-ink/20" aria-hidden="true" />
+		</div>
+	)
+}

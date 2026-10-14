@@ -1,0 +1,223 @@
+---
+import { Icon } from "astro-icon/components";
+import Picture from "~/components/Picture.astro";
+import PersonCard from "~/components/PersonCard.astro";
+import PostCard from "~/components/PostCard.astro";
+import SocialIcon from "~/components/SocialIcon.astro";
+import { formatDate, readingMinutes } from "~/lib/format";
+import { prepareBody } from "~/lib/html";
+import { personHref } from "~/lib/people";
+import { site } from "~/lib/settings";
+import type { Post } from "~/lib/types";
+import Base from "./Base.astro";
+
+interface Props {
+	post: Post;
+	prev?: Post;
+	next?: Post;
+	related?: Post[];
+	latest?: Post[];
+	/** Rendering an unpublished draft */
+	draft?: boolean;
+}
+
+const { post, prev, next, related = [], latest = [], draft = false } = Astro.props;
+const { body, headings } = prepareBody(post.body ?? "", { dropCap: true });
+const url = new URL(`/blog/${post.slug}`, Astro.site).href;
+const share = [
+	{ icon: "bluesky", label: "Share on Bluesky", href: `https://bsky.app/intent/compose?text=${encodeURIComponent(`${post.title} ${url}`)}` },
+	{ icon: "linkedin", label: "Share on LinkedIn", href: `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(url)}` },
+	{ icon: "email", label: "Share by email", href: `mailto:?subject=${encodeURIComponent(post.title)}&body=${encodeURIComponent(url)}` },
+];
+
+// Drafts render on request, so link to the author's own slug rather than look everyone up
+const authorLinks = await Promise.all(post.authors.map((author) => personHref(author, Astro.isPrerendered)));
+
+// Scholarly metadata, read by Google Scholar and Zotero
+const names = post.authors.map((a) => a.name);
+const meta = {
+	citation_title: post.title,
+	citation_author: names,
+	citation_publication_date: post.date.slice(0, 10).replaceAll("-", "/"),
+	citation_journal_title: site.blog.title,
+	citation_publisher: site.name,
+	citation_fulltext_html_url: url,
+	citation_doi: post.doi,
+	citation_keywords: post.tags.map((t) => t.title),
+	"dc.title": post.title,
+	"dc.creator": names,
+	"dc.date": post.date,
+	"dc.identifier": post.doi,
+	"dc.rights": "https://creativecommons.org/licenses/by/4.0/",
+	"article:published_time": post.date,
+};
+---
+
+<Base title={post.title} description={post.description} image={`/og/blog/${post.slug}.png`} type="article" meta={meta} noindex={draft}>
+	{
+		draft && (
+			<div class="sticky top-16 z-30 border-b-frame border-ink bg-journal px-5 py-2 text-center font-heading font-bold text-paper md:top-20">
+				Draft preview. This is not published yet.
+			</div>
+		)
+	}
+	{
+		post.image && (
+			<div class="max-h-[60vh] overflow-hidden border-b-frame border-ink">
+				<Picture image={post.image} width={1800} class="size-full max-h-[60vh] object-cover" eager />
+			</div>
+		)
+	}
+
+	<article class="page grid grid-cols-1 gap-x-10 py-10 lg:grid-cols-[4rem_minmax(0,48rem)_1fr]">
+		<header class="flex flex-col gap-4 lg:col-start-2">
+			<div class="flex flex-wrap items-center gap-3 text-sm font-semibold">
+				{post.category && <a href={`/blog/category/${post.category.slug}`} class="label">{post.category.title}</a>}
+				<time datetime={post.date}>{formatDate(post.date)}</time>
+				<span aria-hidden="true">·</span>
+				<span>{readingMinutes(post.body ?? "")} min read</span>
+			</div>
+			<h1 class="font-heading text-4xl leading-[1.05] font-black tracking-tighter md:text-6xl" data-pagefind-meta="title">{post.title}</h1>
+			{
+				post.authors.length > 0 && (
+					<p class="text-lg">
+						By{" "}
+						{post.authors.map((author, i) => (
+							<>
+								<a href={authorLinks[i]} class="sleek-underline font-bold">
+									{author.name}
+								</a>
+								{author.orcid && (
+									<a href={author.orcid} class="ml-1 inline-block align-middle text-orcid" aria-label={`ORCID of ${author.name}`}>
+										<SocialIcon icon="orcid" class="size-4" />
+									</a>
+								)}
+								{i < post.authors.length - 2 ? ", " : i === post.authors.length - 2 ? " & " : ""}
+							</>
+						))}
+					</p>
+				)
+			}
+			{
+				post.doi && (
+					<p class="text-sm">
+						DOI:{" "}
+						<a href={`https://doi.org/${post.doi}`} class="font-mono font-semibold underline">
+							https://doi.org/{post.doi}
+						</a>
+					</p>
+				)
+			}
+			{
+				post.tags.length > 0 && (
+					<ul class="flex flex-wrap gap-2">
+						{post.tags.map((tag) => (
+							<li>
+								<a href={`/blog/tag/${tag.slug}`} class="tag hover:bg-accent-soft">
+									#{tag.title}
+								</a>
+							</li>
+						))}
+					</ul>
+				)
+			}
+		</header>
+
+		<aside class="order-first mt-0 flex gap-3 lg:sticky lg:top-28 lg:col-start-1 lg:row-span-2 lg:row-start-1 lg:mt-2 lg:h-max lg:flex-col" aria-label="Share">
+			{
+				share.map((s) => (
+					<a href={s.href} class="flex size-10 items-center justify-center border-frame border-ink bg-paper transition-all hover:-translate-y-0.5 hover:bg-accent hover:shadow-hard" aria-label={s.label}>
+						<SocialIcon icon={s.icon} />
+					</a>
+				))
+			}
+		</aside>
+
+		<div class="prose-site mt-10 lg:col-start-2" data-pagefind-body={draft ? undefined : ""} data-pagefind-filter="section:Blog" set:html={body} />
+
+		{
+			headings.length > 2 && (
+				<nav aria-label="Table of contents" class="hidden lg:col-start-3 lg:row-span-3 lg:row-start-1 lg:block">
+					<div class="sticky top-28 border-frame border-ink bg-paper p-5 shadow-hard">
+						<p class="mb-3 font-heading text-lg font-black">Contents</p>
+						<ol class="flex flex-col gap-2 text-sm">
+							{headings.map((h) => (
+								<li class:list={[h.depth === 3 && "ml-4"]}>
+									<a href={`#${h.slug}`} class="hover:underline">
+										{h.text}
+									</a>
+								</li>
+							))}
+						</ol>
+					</div>
+				</nav>
+			)
+		}
+
+		<footer class="mt-16 flex flex-col gap-10 lg:col-start-2">
+			{
+				post.authors.length > 0 && (
+					<section>
+						<h2 class="mb-4 font-heading text-3xl font-black">About the {post.authors.length > 1 ? "authors" : "author"}</h2>
+						<div class="grid gap-4">
+							{post.authors.map((person) => (
+								<PersonCard person={person} />
+							))}
+						</div>
+					</section>
+				)
+			}
+			<section class="border-frame border-ink bg-subtle p-6">
+				<h2 class="mb-2 font-heading text-2xl font-black">License</h2>
+				<p>
+					<em>{post.title}</em> by {names.join(", ")} is licensed under a{" "}
+					<a rel="license" href="https://creativecommons.org/licenses/by/4.0/" class="font-semibold underline">
+						Creative Commons Attribution 4.0 International License
+					</a>.
+				</p>
+			</section>
+			{
+				(prev || next) && (
+					<nav aria-label="More posts" class="grid gap-4 md:grid-cols-2">
+						{prev ? (
+							<a href={`/blog/${prev.slug}`} class="card p-5 hover:-translate-y-1 hover:shadow-hard">
+								<span class="flex items-center gap-1 text-sm font-semibold text-muted">
+									<Icon name="lucide:arrow-left" class="size-4" aria-hidden="true" /> Newer
+								</span>
+								<span class="font-heading text-lg font-bold">{prev.title}</span>
+							</a>
+						) : (
+							<span />
+						)}
+						{next && (
+							<a href={`/blog/${next.slug}`} class="card p-5 text-right hover:-translate-y-1 hover:shadow-hard">
+								<span class="flex items-center justify-end gap-1 text-sm font-semibold text-muted">
+									Older <Icon name="lucide:arrow-right" class="size-4" aria-hidden="true" />
+								</span>
+								<span class="font-heading text-lg font-bold">{next.title}</span>
+							</a>
+						)}
+					</nav>
+				)
+			}
+		</footer>
+	</article>
+
+	{
+		[
+			{ title: "Related", posts: related },
+			{ title: "Latest", posts: latest },
+		]
+			.filter((list) => list.posts.length > 0)
+			.map((list) => (
+				<section class="page py-12">
+					<h2 class="section-title mb-8">{list.title}</h2>
+					<div class="grid gap-8 md:grid-cols-2 xl:grid-cols-4">
+						{list.posts.map((p) => (
+							<PostCard post={p} />
+						))}
+					</div>
+				</section>
+			))
+	}
+</Base>

@@ -1,0 +1,108 @@
+# Menus. A link with `children` becomes a dropdown in the header
+# and a column in the footer. `color` sets a header tab's colour:
+# accent (orange, the default), accent-soft (light orange) or journal (blue).
+
+header:
+  - title: Blog
+    url: /blog
+  - title: Journal
+    url: /journal
+    color: journal
+  - title: Donate
+    url: /donate
+    color: accent-soft
+  - title: About
+    url: /about
+    children:
+      - title: Our Mission
+        url: /about#mission
+      - title: Meet the Team
+        url: /about#team
+      - title: Non-profit Status
+        url: /legal-status
+  - title: Projects
+    children:
+      - title: Journal of Trial & Error
+        url: /journal
+        description: An independent, diamond open-access journal redefining failure
+      - title: GRAIL
+        url: https://eosc.eu/horizon-europe-projects/grail
+        description: The Grant Reuse and Abandoned Ideas Library, a repository for rejected grant applications and more.
+
+# The journal's own menu, in the blue bar on every /journal page.
+# The pages it links to still live on PubPub for now.
+journal:
+  - title: Articles
+    url: /journal
+  - title: Issues
+    url: /journal/issues
+  - title: Publish with us
+    children:
+      - title: For Authors
+        url: https://journal.trialanderror.org/for-authors
+      - title: Aims & Scope
+        url: https://journal.trialanderror.org/aims-and-scope
+      - title: Open Access Policy
+        url: https://journal.trialanderror.org/open-access
+      - title: Retractions and Corrections
+        url: https://journal.trialanderror.org/retractions-and-corrections
+  - title: About
+    children:
+      - title: Editorial Board
+        url: https://journal.trialanderror.org/editorial-board
+      - title: FAQ
+        url: https://journal.trialanderror.org/faq
+  - title: Other journals
+    children:
+      - title: Journal for Reproducibility in Neuroscience (archive)
+        url: /jrn
+  - title: Submit
+    url: https://submit.trialanderror.org/jote
+    button: true
+
+footer:
+  - title: About
+    children:
+      - title: About Us
+        url: /about
+      - title: Meet the Team
+        url: /about#team
+      - title: Manifesto
+        url: https://doi.org/10.36850/ed1
+      - title: Contact
+        url: mailto:info@trialanderror.org
+  - title: Projects
+    children:
+      - title: Journal
+        url: /journal
+      - title: Blog
+        url: /blog
+      - title: Development
+        url: https://github.com/TrialAndErrorOrg
+      - title: GRAIL
+        url: https://eosc.eu/horizon-europe-projects/grail
+      - title: Reproducibility in Neuroscience (archive)
+        url: /jrn
+  - title: Legal
+    children:
+      - title: Non-profit Status
+        url: /legal-status
+      - title: Privacy
+        url: /privacy-policy
+
+# Icons exist for: bluesky, github, mastodon, linkedin, instagram, facebook, email, rss
+socials:
+  - icon: bluesky
+    url: https://bsky.app/profile/trialanderror.org
+  - icon: mastodon
+    url: https://akademienl.social/@trialanderror
+  - icon: linkedin
+    url: https://www.linkedin.com/company/jtrialanderror/
+  - icon: instagram
+    url: https://instagram.com/journaltrialerror
+  - icon: github
+    url: https://github.com/TrialAndErrorOrg
+  - icon: email
+    url: mailto:info@trialanderror.org
+  - icon: rss
+    url: /rss.xml

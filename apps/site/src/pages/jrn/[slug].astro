@@ -1,0 +1,36 @@
+---
+import type { GetStaticPaths } from "astro";
+import JournalArticle from "~/layouts/JournalArticle.astro";
+import JournalPage from "~/layouts/JournalPage.astro";
+import { getArticleDetails, prefetchArticles } from "~/lib/journal-article";
+import { ARTICLE_PAGES, journal } from "~/lib/sources/journal";
+
+/*
+ * An article of the Journal for Reproducibility in Neuroscience, in the same
+ * layout as the Journal of Trial and Error's, or one of its PubPub pages.
+ */
+
+export const getStaticPaths = (async () => {
+	const jrn = journal("jrn");
+	const pages = (await jrn.getPages()).map((page) => ({ params: { slug: page.slug }, props: { page } }));
+	if (!ARTICLE_PAGES) return pages;
+	const articles = await jrn.getArticles();
+	await prefetchArticles(articles, jrn);
+	return [
+		...pages,
+		...articles.map((article) => {
+			const issue = article.issues[0]?.slug;
+			const related = issue
+				? articles.filter((a) => a.id !== article.id && a.issues.some((i) => i.slug === issue)).slice(0, 3)
+				: [];
+			return { params: { slug: article.slug }, props: { article, related } };
+		}),
+	];
+}) satisfies GetStaticPaths;
+
+const { page, article, related } = Astro.props;
+const jrn = journal("jrn");
+const details = article && (await getArticleDetails(article, jrn));
+---
+
+{page ? <JournalPage page={page} journal={jrn} /> : article && details && <JournalArticle article={article} details={details} related={related} journal={jrn} />}

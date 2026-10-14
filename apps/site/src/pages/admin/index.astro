@@ -1,0 +1,18 @@
+---
+// The editing interface. Sveltia CMS edits the files in the repository
+// directly, so it needs no database. Fields: src/admin/config.yml
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="robots" content="noindex" />
+		<title>Edit the site | Center of Trial and Error</title>
+		<link href="/admin/config.yml" type="application/yaml" rel="cms-config-url" />
+	</head>
+	<body>
+		<script is:inline src="https://unpkg.com/@sveltia/cms@0.227.0/dist/sveltia-cms.js"></script>
+	</body>
+</html>

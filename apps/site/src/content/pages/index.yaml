@@ -1,0 +1,49 @@
+title: Center of Trial and Error
+description: Creating transparent and responsible scholarship.
+sections:
+  - type: hero
+    # Each line becomes its own box
+    title: |-
+      Center of
+      Trial & Error.
+    subtitle: Creating transparent and responsible scholarship.
+    text: >-
+      We are a non-profit organization experimenting with innovative publishing activities.
+      The Center provides a space for independent reflection on academic practice and
+      stimulates students and early career researchers to disrupt existing scholarly
+      infrastructures.
+    buttons:
+      - label: Read the blog
+        url: /blog
+      - label: Read the journal
+        url: /journal
+        style: plain
+
+  - type: latest-posts
+    title: From the Blog
+    count: 5
+
+  - type: latest-articles
+    title: From the Journal
+    count: 6
+
+  - type: features
+    title: What do we do?
+    items:
+      - title: Discussing
+        body: >-
+          We define “trial and error” as methodological flaws and conceptual errors in research.
+          The Center facilitates a reflective discussion on these issues with [our blog](/blog)
+          and by encouraging empirical research and cross-disciplinary conceptual work.
+      - title: Publishing
+        body: >-
+          We aim to publicize the lessons of research struggles, publish answers to the question
+          “what went wrong?”, and independently host non-profit pre-press services. The
+          [Journal of Trial and Error](/journal) is dedicated to this mission.
+      - title: Training
+        body: >-
+          Institutional change results from well-equipped young people, creating a mass from
+          below. We focus efforts to educate students on the systemic and organisational
+          structures of science and scholarship to make change a practical reality.
+
+  - type: newsletter

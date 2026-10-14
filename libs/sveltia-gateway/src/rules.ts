@@ -72,6 +72,13 @@ export function checkRest(
     ['POST', 'PUT', 'DELETE'].includes(method)
   )
     return undefined
+  // Moving a draft between the workflow's columns sets the pull request's labels, and nothing else
+  if (
+    method === 'PATCH' &&
+    /^\/issues\/\d+$/.test(rest) &&
+    Object.keys(data).every((key) => key === 'labels')
+  )
+    return undefined
 
   // "Publish" button that triggers a deploy
   if (method === 'POST' && rest === '/dispatches' && rules.dispatches) return undefined
@@ -81,6 +88,7 @@ export function checkRest(
 
 const ALLOWED_MUTATIONS = new Set([
   'createCommitOnBranch',
+  'createRef',
   'markPullRequestReadyForReview',
   'convertPullRequestToDraft',
 ])
@@ -120,6 +128,10 @@ export function checkGraphql(rules: Rules, body: unknown): string | undefined {
       const reason = checkCommit(rules, variables.input)
       if (reason) return reason
     }
+    if (field === 'createRef') {
+      const reason = checkCreateRef(rules, variables.input)
+      if (reason) return reason
+    }
   }
   return undefined
 }
@@ -147,6 +159,21 @@ function checkCommit(rules: Rules, input: any): string | undefined {
     )
     if (outside !== undefined) return `"${outside}" is outside the folders open for editing`
   }
+  return undefined
+}
+
+/**
+ * A new branch through `createRef`, which Sveltia uses for each draft in the
+ * editorial workflow. Only its name is checked: the input names the repository
+ * by node ID, and the app's token reaches the content repository and no other.
+ */
+function checkCreateRef(rules: Rules, input: any): string | undefined {
+  if (typeof input?.name !== 'string')
+    return 'Branches must pass their input as the $input variable'
+  if (!input.name.startsWith('refs/heads/')) return `"${input.name}" is not a branch`
+  const branchName = input.name.slice('refs/heads/'.length)
+  if (!matchesAny(branchName, rules.branches))
+    return `Branch "${branchName}" is not open for editing`
   return undefined
 }
 

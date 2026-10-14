@@ -131,8 +131,11 @@ Everything else is refused with a 403 and a reason.
   The repository's `permissions` say editors may push (GitHub gives an app token none, and
   Sveltia won't open without them); the rules below decide each write.
 - Commit with `createCommitOnBranch` to an open branch, changing only open paths.
-- Create, update and delete open branches, open and merge pull requests and set their labels,
-  for the editorial workflow.
+- Create, update and delete open branches, open and merge pull requests and set their labels and
+  draft status, for the editorial workflow. Sveltia creates a draft's branch with GraphQL
+  `createRef`, which names the repository by node ID. Only the branch name is checked: the app's
+  token reaches the content repository and nothing else (a `GITHUB_TOKEN` of your own may reach
+  more).
 - Trigger `repository_dispatch`, unless `dispatches: false`.
 
 ## Try it locally

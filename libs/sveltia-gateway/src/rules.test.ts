@@ -51,6 +51,12 @@ describe('checkRest', () => {
     expect(
       checkRest(rules, 'POST', '/repos/acme/site/issues/4/labels', { labels: ['x'] }),
     ).toBeUndefined()
+    expect(
+      checkRest(rules, 'PATCH', '/repos/acme/site/issues/4', { labels: ['x'] }),
+    ).toBeUndefined()
+    expect(
+      checkRest(rules, 'PATCH', '/repos/acme/site/issues/4', { labels: ['x'], state: 'closed' }),
+    ).toBeTruthy()
   })
 
   it('refuses everything else that writes', () => {
@@ -80,6 +86,11 @@ const commit = (branchName: string, paths: string[], repositoryNameWithOwner = '
   },
 })
 
+const createRef = (name: string) => ({
+  query: 'mutation($input: CreateRefInput!) { createRef(input: $input) { ref { name } } }',
+  variables: { input: { repositoryId: 'R_1', name, oid: 'abc' } },
+})
+
 describe('checkGraphql', () => {
   it('allows queries about the repository', () => {
     expect(
@@ -105,6 +116,20 @@ describe('checkGraphql', () => {
     expect(
       checkGraphql({ ...rules, readOnly: true }, commit('main', ['content/a.md'])),
     ).toBeTruthy()
+  })
+
+  it('allows new branches only where editing is open', () => {
+    expect(checkGraphql(rules, createRef('refs/heads/cms/posts/hello'))).toBeUndefined()
+    expect(checkGraphql(rules, createRef('refs/heads/release'))).toMatch(/release/)
+    expect(checkGraphql(rules, createRef('refs/tags/cms/v1'))).toBeTruthy()
+    expect(
+      checkGraphql({ ...rules, readOnly: true }, createRef('refs/heads/cms/posts/hello')),
+    ).toBeTruthy()
+    expect(
+      checkGraphql(rules, {
+        query: 'mutation { createRef(input: {name: "refs/heads/release"}) { ref { name } } }',
+      }),
+    ).toMatch(/\$input/)
   })
 
   it('refuses other mutations, also when hidden behind an alias or a query', () => {

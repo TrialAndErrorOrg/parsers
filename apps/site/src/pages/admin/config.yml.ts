@@ -17,7 +17,14 @@ export const GET: APIRoute = ({ url }) => {
 
 	const config = parse(configYaml);
 	const origin = url.origin;
-	config.backend = { ...config.backend, base_url: origin, auth_endpoint: "admin/auth", api_root: `${origin}/admin/api` };
+	config.backend = {
+		...config.backend,
+		base_url: origin,
+		auth_endpoint: "admin/auth",
+		api_root: `${origin}/admin/api`,
+		// Only the sign-in button: a GitHub access token means nothing here
+		auth_methods: ["oauth"],
+	};
 	return yaml(stringify(config));
 };
 

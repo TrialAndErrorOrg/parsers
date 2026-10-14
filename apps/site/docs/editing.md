@@ -33,9 +33,8 @@ Saving in `/admin` makes a commit to site-content, which triggers a rebuild.
 ## Signing in to /admin
 
 With `ADMIN_AUTH=microsoft`, editors sign in with their Center Microsoft
-account and need no GitHub account. The button still says **Sign In with
-GitHub** (that's Sveltia's), but it opens a Microsoft sign-in in a popup.
-Editors have to be assigned to the "trialanderror admin" Entra app first
+account and need no GitHub account: **Sign in with Microsoft** opens a
+Microsoft sign-in in a popup. Editors have to be assigned to the "trialanderror admin" Entra app first
 ([admin-sign-in.md](admin-sign-in.md#adding-an-editor)), or Microsoft refuses
 with `AADSTS50105`.
 

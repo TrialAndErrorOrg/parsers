@@ -1,6 +1,15 @@
 ---
+import { ADMIN_AUTH } from "astro:env/server";
+
 // The editing interface. Sveltia CMS edits the files in the repository
 // directly, so it needs no database. Fields: src/admin/config.yml
+
+// Rendered on request, so ADMIN_AUTH is read where the site runs
+export const prerender = false;
+
+// Sveltia names the button after its backend ("Sign In with GitHub") and has
+// no setting for it, so with Microsoft sign-in the text is swapped
+const relabel = ADMIN_AUTH !== "github";
 ---
 
 <!doctype html>
@@ -13,6 +22,20 @@
 		<link href="/admin/config.yml" type="application/yaml" rel="cms-config-url" />
 	</head>
 	<body>
+		{
+			relabel && (
+				<script is:inline>
+					new MutationObserver(() => {
+						const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT);
+						while (walker.nextNode()) {
+							const node = walker.currentNode;
+							// Sveltia wraps the name in Unicode isolation marks: "Sign In with \u2068GitHub\u2069"
+							if (/^Sign In with \u2068?GitHub\u2069?$/.test(node.nodeValue.trim())) node.nodeValue = "Sign in with Microsoft";
+						}
+					}).observe(document.body, { childList: true, subtree: true, characterData: true });
+				</script>
+			)
+		}
 		<script is:inline src="https://unpkg.com/@sveltia/cms@0.227.0/dist/sveltia-cms.js"></script>
 	</body>
 </html>

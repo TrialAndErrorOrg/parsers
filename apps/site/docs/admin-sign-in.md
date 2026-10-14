@@ -12,7 +12,11 @@ see its README):
   only commit to the branch in `src/admin/config.yml` and only change the
   folders the CMS edits (`src/lib/admin.ts` reads them from that file).
 - `/admin/config.yml` is generated from `src/admin/config.yml` and points the
-  CMS at those routes. Commit messages carry the editor's name.
+  CMS at those routes, with only the sign-in button (`auth_methods: [oauth]`).
+  Commit messages carry the editor's name.
+- Sveltia calls the button "Sign In with GitHub" and has no setting for it, so
+  `src/pages/admin/index.astro` swaps the text for "Sign in with Microsoft".
+  Check it still does after updating Sveltia.
 
 ## What it needs
 

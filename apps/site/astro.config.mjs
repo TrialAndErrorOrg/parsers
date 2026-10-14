@@ -9,6 +9,14 @@ import pagefind from "./src/integrations/pagefind";
 export default defineConfig({
 	site: "https://trialanderror.org",
 	trailingSlash: "ignore",
+	// Behind a proxy (Coolify), trust its Host and X-Forwarded-* headers for these domains only, so
+	// the server knows its public address. /admin's sign-in and the CMS config are built from it.
+	security: {
+		allowedDomains: [
+			{ hostname: "trialanderror.org", protocol: "https" },
+			{ hostname: "*.trialanderror.org", protocol: "https" },
+		],
+	},
 	// Lets parallel builds write to separate folders
 	outDir: process.env.ASTRO_OUT_DIR ?? "./dist",
 	// Every page is prebuilt. Only routes that set `prerender = false` (the

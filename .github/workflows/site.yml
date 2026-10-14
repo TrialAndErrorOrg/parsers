@@ -16,7 +16,7 @@ on:
       - libs/sveltia-gateway/**
       - pnpm-lock.yaml
       - .github/workflows/site.yml
-  # Sent by site-content when an editor saves in /admin, and by Strapi when something is published
+  # Sent by Strapi when something is published. site-content starts the workflow directly instead
   repository_dispatch:
     types: [content-updated]
   # New journal articles reach Underlay without telling anyone

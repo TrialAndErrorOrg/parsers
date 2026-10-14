@@ -212,6 +212,11 @@ To set it up:
 3. Set `ADMIN_SESSION_SECRET` to 32 or more random characters and
    `ADMIN_AUTH=microsoft`. These are read when the server runs, not at build.
 
+Behind a proxy the server only learns its public address from the proxy's
+headers for the domains in `security.allowedDomains` (`astro.config.mjs`:
+trialanderror.org and its subdomains). On any other domain, add it there, or
+the sign-in sends Microsoft the wrong callback address.
+
 To try it locally without either: `ADMIN_AUTH=dev` signs everyone in as a test
 editor (only in `pnpm dev`), `GITHUB_CONTENT_TOKEN=$(gh auth token)` stands in
 for the app, and `ADMIN_READ_ONLY=true` refuses every write.
@@ -226,7 +231,7 @@ changes:
   `POST /repos/TrialAndErrorOrg/trialanderror/dispatches`, with a token that may
   trigger workflows).
 - `/admin`: every save is a commit to site-content, whose `rebuild` workflow
-  sends the same dispatch.
+  starts `site.yml` directly (`gh workflow run`).
 - Journal: the daily run picks up new articles from Underlay.
 
 All three start `.github/workflows/site.yml` (see *Deploying*).
@@ -235,9 +240,10 @@ All three start `.github/workflows/site.yml` (see *Deploying*).
 
 `.github/workflows/site.yml` builds the site on GitHub Actions and publishes
 the image `ghcr.io/trialanderrororg/site` (`:latest` and `:<commit>`), then
-calls Coolify's deploy webhook. It checks out site-content next to the code. It runs on pushes that touch the
-site, on a `content-updated` repository dispatch (from site-content or Strapi),
-daily for new journal articles, and by hand. A newer run cancels an older one.
+calls Coolify's deploy webhook. It checks out site-content next to the code.
+It runs on pushes that touch the site, when site-content changes, on a
+`content-updated` repository dispatch (from Strapi), daily for new journal
+articles, and by hand. A newer run cancels an older one.
 
 It is quick because it keeps every cache between runs: pnpm's store, turbo's
 cache for the workspace packages, and the site's own caches of resized images,
@@ -251,14 +257,13 @@ Setup:
 
 - **1Password:** a vault named Website holding only what the site's CI needs
   (the items `.env.schema` names: `Strapi read token`, `Underlay token`,
-  `Coolify deploy`, `Site rebuild token`, and `Website admin` for local tests of
-  the Microsoft sign-in), and a service account that can read that vault and
-  nothing else.
+  `Coolify deploy`, `Site rebuild token`, and `Website admin` for the Microsoft
+  sign-in), and a service account that can read that vault and nothing else.
 - **GitHub:** one secret, `OP_TOKEN`, the service account's token, for this
   repository and site-content (an organisation secret shared with both works).
   varlock reads the rest and hides the values in the log. `Site rebuild token`
-  is a fine-grained token that may send dispatches to this repository
-  (Contents: read and write on `trialanderror` only), used by site-content.
+  is a fine-grained token that may only start workflows here (Actions: read
+  and write on `trialanderror` only), used by site-content.
 - **Coolify deploys** once `COOLIFY_DEPLOY_URL` is filled in `.env.schema` (the
   app's deploy webhook, not secret). Until then the image is only published.
 - The first push creates the package on GitHub, private. Make it public under

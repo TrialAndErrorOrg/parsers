@@ -6,6 +6,8 @@
 # Locally, the same: pnpm turbo run build --filter=site...
 #                    pnpm --filter site deploy --prod --legacy /tmp/site
 #                    docker build -f apps/site/Dockerfile /tmp/site
+# then run `pnpm install` again: the deploy leaves the workspace's own install
+# marked as production-only.
 FROM node:24-slim
 ENV NODE_ENV=production HOST=0.0.0.0 PORT=4321
 WORKDIR /app

@@ -328,7 +328,8 @@ async function main() {
 		const folder = `blog/${p.slug}`;
 		const frontmatter = clean({
 			title: p.title.trim(),
-			date: new Date(p.publishDate ?? p.publishedAt).toISOString(),
+			// To the minute, as /admin's date field writes it, so opening a post doesn't change it
+			date: `${new Date(p.publishDate ?? p.publishedAt).toISOString().slice(0, 16)}:00Z`,
 			excerpt: p.excerpt?.trim(),
 			description: p.seo?.metaDescription?.trim(),
 			image: p.image?.url ? await copy(p.image.url, folder, p.image.name) : undefined,

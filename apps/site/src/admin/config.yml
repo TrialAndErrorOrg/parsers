@@ -26,6 +26,11 @@ logo_url: /favicon.svg
 # published (merged into main, which rebuilds the site) from the Workflow view
 publish_mode: editorial_workflow
 
+# Leave empty optional fields out of the files, rather than writing `doi: ""` and the like.
+# An empty description would otherwise replace the excerpt the site falls back on.
+output:
+  omit_empty_optional_fields: true
+
 media_folder: uploads
 public_folder: /uploads
 media_libraries:
@@ -152,7 +157,9 @@ collections:
     public_folder: /uploads/blog
     fields:
       - { name: title, label: Title, widget: string }
-      - { name: date, label: Publish date, widget: datetime }
+      # Picked in the editor's own time, stored in UTC to the minute (2019-09-30T11:44:00Z).
+      # Without output_utc it would store local time with no zone, which the server reads as UTC
+      - { name: date, label: Publish date, widget: datetime, output_utc: true }
       - name: authors
         label: Authors
         widget: relation

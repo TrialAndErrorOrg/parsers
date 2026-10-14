@@ -5,7 +5,8 @@ blog.trialanderror.org) and the Journal of Trial and Error's articles, in one
 Astro site.
 
 Everything is built into plain HTML files ahead of time. The only parts that run
-on a server are draft previews (`/preview/...` and `/api/draft`).
+on a server are draft previews (`/preview/...`, `/api/draft`) and `/admin`'s
+sign-in.
 
 ## Where things come from
 
@@ -26,75 +27,19 @@ site-content is its own repository,
 saving in `/admin` doesn't add commits to this one. A page in site-content wins
 over a Strapi page with the same slug.
 
-## For editors
+## Docs
 
-### Publishing a blog post
+| | |
+| --- | --- |
+| [docs/editing.md](docs/editing.md) | For editors: blog posts, pages, signing in to `/admin` |
+| [docs/development.md](docs/development.md) | Running it, secrets, restyling, new section types, previews |
+| [docs/admin-sign-in.md](docs/admin-sign-in.md) | Microsoft sign-in for `/admin`: how it works, the Entra app and GitHub App, adding editors |
+| [docs/deploying.md](docs/deploying.md) | GitHub Actions, rebuilds, 1Password, Coolify, redirects |
 
-Write and publish it in Strapi as before. The site rebuilds when Strapi tells it
-something changed (see *Rebuilding* below), which takes a minute or two.
+Quick start, from the repository root, with site-content cloned next to it:
+`pnpm install && pnpm turbo run dev --filter=site`.
 
-To see a draft before publishing, use the **Preview** button in Strapi. It opens
-the post as it will look, with a "Draft preview" bar on top. Preview links work
-for an hour.
-
-### Changing the homepage or another page
-
-Go to `/admin` and sign in. Pages are lists of **sections**, drawn top to
-bottom. You can add, remove, reorder and edit sections:
-
-- **Big intro**: the large title block. Each line of the title gets its own box.
-- **Text**: a block of text, optionally with a title and a coloured background.
-- **Columns**: two or three boxes side by side (like "What do we do?").
-- **Latest blog posts** / **Latest journal articles**: filled in automatically.
-- **Team**: everyone in Strapi's team list who has a photo.
-- **Newsletter sign-up**
-- **Buttons**
-
-Text fields take Markdown: `**bold**`, `*italic*`, `[a link](https://...)`.
-
-To make a new page, click **New Page** in `/admin`. Its address is its title
-in lowercase with dashes (`Open Positions` becomes `/open-positions`).
-
-Saving in `/admin` makes a commit to site-content, which triggers a rebuild.
-
-### Signing in to /admin
-
-With `ADMIN_AUTH=microsoft`, editors sign in with their Center Microsoft
-account and need no GitHub account. Otherwise (`ADMIN_AUTH=github`, the
-default) they need a GitHub account with write access to
-`TrialAndErrorOrg/site-content` and sign in with a
-[personal access token](https://github.com/settings/tokens) (fine-grained,
-repository contents read and write).
-
-## For developers
-
-The site is `apps/site` in the `trialanderror` monorepo. Its content is in
-site-content, checked out next to it:
-
-```sh
-git clone https://github.com/TrialAndErrorOrg/site-content ../site-content   # or set CONTENT_DIR
-pnpm install
-pnpm turbo run dev --filter=site           # http://localhost:4321
-pnpm turbo run build --filter=site...      # into apps/site/dist, then `pnpm --filter site start`
-```
-
-Turbo builds the workspace packages the site uses (`sveltia-gateway`) first.
-
-**Secrets** come from 1Password. `dev` and `build` run through
-[varlock](https://varlock.dev), which reads `.env.schema`: plain settings with
-their defaults, and the tokens as references to the Website vault. The
-1Password desktop app asks once per session. Without access to the vault, put
-`ONEPASSWORD=false` and your own values in `apps/site/.env.local`; most tokens
-are optional (published content is public). `pnpm exec varlock load` in
-`apps/site` shows what was resolved, with secrets hidden.
-
-**Content** (`src/integrations/content.ts`): pages are read from
-`<site-content>/pages`, settings are imported as `@content/settings/*.yaml`,
-and `uploads/` is served at `/uploads` in dev and copied into the build.
-The site is not formatted by the repository's `oxfmt`, which can't read
-`.astro` files; it keeps its own style (tabs, double quotes).
-
-### Layout
+## Layout
 
 ```
 src/
@@ -105,30 +50,19 @@ src/
   components/        Header, Footer, cards; sections/ holds one component per section type
   layouts/           Base (every page), Post (blog post), Page (CMS page), BlogList
   lib/sources/       one module per content source: blog (Strapi), journal (Underlay), pages
+  lib/admin.ts       /admin's sign-in (sveltia-gateway), pages/admin/ its routes
   pages/             routes
-admin/config.yml  the /admin editing interface (src/admin/config.yml)
-.env.schema       every environment variable, with secrets as 1Password references
+  admin/config.yml   the /admin editing interface
+.env.schema          every environment variable, secrets as 1Password references
+Dockerfile           packages the built site, see docs/deploying.md
 ```
 
 site-content holds `pages/` (section-built pages, `index.yaml` is the
 homepage), `settings/` (`site.yaml`, `navigation.yaml`) and `uploads/`.
 
-### Restyling
+## What's where
 
-Change the values in `src/styles/theme.css`. Components only use those tokens
-(`bg-accent`, `border-ink`, `shadow-hard`, `font-heading`) and the classes in
-`global.css`, so a new palette or font is a one-file change. To change how all
-cards or buttons look, edit `.card` or `.button` in `global.css`.
-
-### Adding a section type
-
-1. Make `src/components/sections/MySection.astro`.
-2. Add its fields to the `section` union in `src/content.config.ts`.
-3. Register it in `src/components/Sections.astro`.
-4. Describe its fields under `sections.types` in `src/admin/config.yml`, so
-   editors can use it.
-
-### The journal
+### Journal
 
 `/journal` lists the articles from Underlay, filtered by type
 (`/journal/kind/...`) and issue (`/journal/issue/...`). `/journal/<slug>` renders
@@ -162,143 +96,9 @@ there from every slug a person had.
   (`src/integrations/pagefind.ts`) and searched in the browser at `/search`.
   Only elements marked `data-pagefind-body` are indexed.
 
-Keep `node_modules/.astro` and `node_modules/.cache` between builds if the host
-allows it. A cold build downloads and resizes every image and draws every share
-image again.
+### Secrets and hosting
 
-### Switching content sources
-
-Components only see the types in `src/lib/types.ts`. Each source converts its
-data into those. To read the blog from somewhere else, write a module like
-`lib/sources/blog-strapi.ts` and select it in `lib/sources/blog.ts`
-(`BLOG_SOURCE=underlay` is already wired to `blog-underlay.ts`).
-
-### Previews
-
-`/api/draft?secret=...&slug=...` is what Strapi's preview button calls. It
-checks the secret against `DRAFT_SECRET`, sets a cookie for an hour and
-redirects to `/preview/blog/<slug>` or `/preview/page/<slug>`, which render
-the draft from Strapi on request. To preview another kind of content later, add
-a `src/pages/preview/<kind>/[slug].astro` with `export const prerender = false`.
-
-### Microsoft sign-in for /admin
-
-Sveltia CMS normally talks to GitHub straight from the browser, with the
-editor's own GitHub token. With `ADMIN_AUTH=microsoft` the site stands in
-between, through `sveltia-gateway` (`libs/sveltia-gateway` in this repository,
-see its README):
-
-- `/admin/auth` sends the editor to Microsoft and `/admin/callback` takes them
-  back, then hands the CMS a signed session instead of a GitHub token.
-- `/admin/api/...` is what the CMS uses as GitHub's API. It answers "who am I"
-  from the session and passes the rest to GitHub as a GitHub App. Editors can
-  only commit to the branch in `src/admin/config.yml` and only change the
-  folders the CMS edits (`src/lib/admin.ts` reads them from that file).
-- `/admin/config.yml` is generated from `src/admin/config.yml` and points the
-  CMS at those routes. Commit messages carry the editor's name.
-
-To set it up (done for trialanderror.org on 2026-10-14):
-
-1. **Entra app** ("trialanderror admin", entra.microsoft.com, App registrations):
-   - Supported account types: this organisational directory only.
-   - Redirect URIs, type Web: `https://trialanderror.org/admin/callback`, plus
-     `http://localhost:4321/admin/callback` to test with `pnpm dev`. Every other
-     address the site runs on needs its own entry.
-   - A client secret. It expires (the current one on 2028-10-11): make a new
-     one before then and update 1Password.
-   - API permissions: the default `User.Read` is enough. No implicit grant, no
-     public client flows.
-   - Who can sign in: Enterprise applications, the app, Properties,
-     **Assignment required** yes, then Users and groups. A new editor has to
-     be added there. Assigning a group instead of people needs Entra ID P1.
-2. **GitHub App** (`admin-cms-write`) in the TrialAndErrorOrg organisation:
-   repository permissions Contents and Pull requests (read and write), no
-   webhook, installed only on `TrialAndErrorOrg/site-content`.
-3. **1Password**, Website vault (`.env.schema` reads them):
-   - "trialanderror admin Entra app": `username` is the client ID,
-     `credential` the client secret, `tenant id`, and `session secret` (32 or
-     more random characters, e.g. `openssl rand -base64 48`; changing it signs
-     everyone out).
-   - "Admin CMS Write Github App": `username` is the app ID, `credential` the
-     private key (the .pem as downloaded, newlines may be written as `\n`).
-4. **Where the site runs:** `ADMIN_AUTH=microsoft`. The rest is read from
-   1Password when the server starts (see *Deploying*).
-
-Behind a proxy the server only learns its public address from the proxy's
-headers for the domains in `security.allowedDomains` (`astro.config.mjs`:
-trialanderror.org and its subdomains). On any other domain, add it there, or
-the sign-in sends Microsoft the wrong callback address.
-
-To try it locally without either: `ADMIN_AUTH=dev` signs everyone in as a test
-editor (only in `pnpm dev`), `GITHUB_CONTENT_TOKEN=$(gh auth token)` stands in
-for the app, and `ADMIN_READ_ONLY=true` refuses every write.
-
-### Rebuilding
-
-Content is fetched at build time, so the site has to rebuild when content
-changes:
-
-- Strapi: a webhook on entry publish, unpublish, update and delete that sends
-  a `content-updated` repository dispatch to this repository (GitHub's
-  `POST /repos/TrialAndErrorOrg/trialanderror/dispatches`, with a token that may
-  trigger workflows).
-- `/admin`: every save is a commit to site-content, whose `rebuild` workflow
-  starts `site.yml` directly (`gh workflow run`).
-- Journal: the daily run picks up new articles from Underlay.
-
-All three start `.github/workflows/site.yml` (see *Deploying*).
-
-### Deploying
-
-`.github/workflows/site.yml` builds the site on GitHub Actions and publishes
-the image `ghcr.io/trialanderrororg/site` (`:latest` and `:<commit>`), then
-calls Coolify's deploy webhook. It checks out site-content next to the code.
-It runs on pushes that touch the site, when site-content changes, on a
-`content-updated` repository dispatch (from Strapi), daily for new journal
-articles, and by hand. A newer run cancels an older one.
-
-It is quick because it keeps every cache between runs: pnpm's store, turbo's
-cache for the workspace packages, and the site's own caches of resized images,
-share images and journal article HTML (`node_modules/.astro`,
-`node_modules/.cache`). The site's turbo `build` task is never cached itself,
-since its pages come from services turbo can't see. The `Dockerfile` only
-packages the build: `pnpm deploy --prod` leaves the built site with just its
-production dependencies, and the image copies that in.
-
-Setup:
-
-- **1Password:** a vault named Website holding only what the site needs (the
-  items `.env.schema` names), and a service account that can read that vault
-  and nothing else. Its token, `OP_TOKEN`, is the only secret anywhere else.
-- **GitHub:** `OP_TOKEN` as an organisation secret shared with this repository
-  and site-content.
-  varlock reads the rest and hides the values in the log. `Site rebuild token`
-  is a fine-grained token that may only start workflows here (Actions: read
-  and write on `trialanderror` only), used by site-content.
-- **Coolify deploys** once `COOLIFY_DEPLOY_URL` is filled in `.env.schema` (the
-  app's deploy webhook, not secret), with the token in "Coolify Website Deploy
-  Token" (a Coolify API token with only the deploy permission). Until then the
-  image is only published.
-- The first push creates the package on GitHub, private. Make it public under
-  the organisation's Packages, or give Coolify a token to pull it.
-- In Coolify: a "Docker Image" application for `ghcr.io/trialanderrororg/site:latest`,
-  port 4321, with the environment variables `OP_TOKEN` and `ADMIN_AUTH=microsoft`,
-  and a health check on `/`.
-
-The image holds no secrets. It starts the server through `varlock run`, which
-reads them from 1Password with `OP_TOKEN`, so a changed secret only needs a
-restart. If 1Password can't be reached the new container doesn't start, and
-with the health check Coolify keeps the old one running. Anything set in
-Coolify's environment wins over 1Password.
-
-Elsewhere: any host that runs Node or Docker works, and so does any host with
-an Astro adapter (replace `@astrojs/node` in `astro.config.mjs`).
-
-### Redirects to set up when this goes live
-
-- `blog.trialanderror.org/*` → `trialanderror.org/blog/*` (keeps old links and
-  blog DOIs working; `/blog/api/draft` exists for the old preview URL).
-- `blog.trialanderror.org/author/*` → `trialanderror.org/blog/author/*` falls
-  out of the rule above.
-- The old blog's page list (`blog.trialanderror.org/blog/2`) would land on
-  `/blog/blog/2`; redirect `/blog/blog/*` to `/blog/page/*` if that matters.
+Secrets live in the 1Password Website vault. varlock reads them for `dev`,
+`build` and the running server (`.env.schema`), so `OP_TOKEN` is the only
+secret GitHub or Coolify hold. GitHub Actions builds the image, Coolify runs
+it ([docs/deploying.md](docs/deploying.md)).

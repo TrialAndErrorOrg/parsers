@@ -5,7 +5,7 @@
 # site, see apps/site/Dockerfile.
 #
 # Secret: OP_TOKEN, a 1Password service account token. varlock reads everything else from the
-# Website vault (apps/site/.env.schema). See apps/site/README.md, "Deploying".
+# Website vault (apps/site/.env.schema). See apps/site/docs/deploying.md.
 name: site
 
 on:

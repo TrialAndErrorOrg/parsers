@@ -17,4 +17,7 @@ WORKDIR /app
 COPY --chown=node:node . .
 USER node
 EXPOSE 4321
+# The image has no curl or wget, so Node asks
+HEALTHCHECK --interval=30s --timeout=5s --start-period=30s \
+  CMD ["node", "-e", "fetch('http://127.0.0.1:4321/').then(r=>process.exit(r.ok?0:1),()=>process.exit(1))"]
 CMD ["node_modules/.bin/varlock", "run", "--", "node", "dist/server/entry.mjs"]

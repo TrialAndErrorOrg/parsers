@@ -1287,6 +1287,8 @@ importers:
         specifier: 'catalog:'
         version: 11.0.5
 
+  libs/sveltia-gateway: {}
+
   libs/unified-latex/unified-latex-stringify:
     dependencies:
       '@unified-latex/unified-latex-types':

@@ -1,0 +1,45 @@
+{
+  "name": "sveltia-gateway",
+  "version": "0.1.0",
+  "description": "Single sign-on for Sveltia CMS: editors sign in with Microsoft Entra ID, Google or any OpenID Connect provider, no GitHub account needed. Runs on Cloudflare Workers, Node, Deno or Bun, without a database.",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TrialAndErrorOrg/trialanderror.git",
+    "directory": "libs/sveltia-gateway"
+  },
+  "homepage": "https://github.com/TrialAndErrorOrg/trialanderror/tree/main/libs/sveltia-gateway#readme",
+  "author": "Thomas F. K. Jorna <hello@tefkah.com>",
+  "type": "module",
+  "keywords": [
+    "sveltia",
+    "sveltia-cms",
+    "decap-cms",
+    "cms",
+    "oidc",
+    "sso",
+    "entra",
+    "github-app",
+    "cloudflare-workers"
+  ],
+  "exports": {
+    ".": {
+      "@jote/source": "./src/index.ts",
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.lib.json",
+    "typecheck": "tsc -p tsconfig.json",
+    "test": "vitest run"
+  }
+}

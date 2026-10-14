@@ -307,39 +307,12 @@ importers:
 
   apps/site:
     dependencies:
-      '@astrojs/node':
-        specifier: ^11.1.7
-        version: 11.1.7(astro@7.3.8(@types/node@24.19.2)(esbuild@0.28.2)(jiti@2.7.0)(yaml@2.9.1))
-      '@astrojs/rss':
-        specifier: ^4.0.19
-        version: 4.0.19
-      '@astrojs/sitemap':
-        specifier: ^3.7.4
-        version: 3.7.4
-      '@iconify-json/lucide':
-        specifier: ^1.2.143
-        version: 1.2.143
-      '@iconify-json/simple-icons':
-        specifier: ^1.2.100
-        version: 1.2.100
       '@varlock/1password-plugin':
         specifier: ^2.0.5
         version: 2.0.5(varlock@1.22.0)
-      astro:
-        specifier: ^7.3.8
-        version: 7.3.8(@types/node@24.19.2)(esbuild@0.28.2)(jiti@2.7.0)(yaml@2.9.1)
-      astro-icon:
-        specifier: ^1.2.0
-        version: 1.2.0
       github-slugger:
         specifier: ^2.0.0
         version: 2.0.0
-      marked:
-        specifier: ^18.1.1
-        version: 18.1.1
-      satori:
-        specifier: ^0.51.0
-        version: 0.51.0
       sharp:
         specifier: ^0.35.5
         version: 0.35.5(@types/node@24.19.2)
@@ -356,6 +329,21 @@ importers:
       '@astrojs/check':
         specifier: ^0.9.10
         version: 0.9.10(@emnapi/runtime@1.11.3)(prettier@3.9.9)(typescript@5.9.3)
+      '@astrojs/node':
+        specifier: ^11.1.7
+        version: 11.1.7(astro@7.3.8(@types/node@24.19.2)(esbuild@0.28.2)(jiti@2.7.0)(yaml@2.9.1))
+      '@astrojs/rss':
+        specifier: ^4.0.19
+        version: 4.0.19
+      '@astrojs/sitemap':
+        specifier: ^3.7.4
+        version: 3.7.4
+      '@iconify-json/lucide':
+        specifier: ^1.2.143
+        version: 1.2.143
+      '@iconify-json/simple-icons':
+        specifier: ^1.2.100
+        version: 1.2.100
       '@tailwindcss/typography':
         specifier: ^0.5.20
         version: 0.5.20(tailwindcss@4.3.3)
@@ -365,9 +353,21 @@ importers:
       '@types/node':
         specifier: ^24.19.2
         version: 24.19.2
+      astro:
+        specifier: ^7.3.8
+        version: 7.3.8(@types/node@24.19.2)(esbuild@0.28.2)(jiti@2.7.0)(yaml@2.9.1)
+      astro-icon:
+        specifier: ^1.2.0
+        version: 1.2.0
+      marked:
+        specifier: ^18.1.1
+        version: 18.1.1
       pagefind:
         specifier: ^1.5.2
         version: 1.5.2
+      satori:
+        specifier: ^0.51.0
+        version: 0.51.0
       tailwindcss:
         specifier: ^4.3.3
         version: 4.3.3
@@ -3345,9 +3345,6 @@ packages:
 
   '@types/estree-jsx@1.0.5':
     resolution: {integrity: sha512-52CcUVNFyfb1A2ALocQw/Dd1BQFNmSdkuC3BkZ6iqhdMfQz7JWOFRuJFloOzjk+6WijU56m9oKXFAXc7o3Towg==}
-
-  '@types/estree@1.0.8':
-    resolution: {integrity: sha512-dWHzHa2WqEXI/O1E9OjrocMTKJl2mSrEolh1Iomrv6U+JuNwaHXsXx9bLu5gG7BUWFIN0skIQJQ/L1rIex4X6w==}
 
   '@types/estree@1.0.9':
     resolution: {integrity: sha512-GhdPgy1el4/ImP05X05Uw4cw2/M93BCUmnEvWZNStlCzEKME4Fkk+YpoA5OiHNQmoS7Cafb8Xa3Pya8m1Qrzeg==}
@@ -7850,8 +7847,6 @@ snapshots:
     dependencies:
       '@types/estree': 1.0.9
 
-  '@types/estree@1.0.8': {}
-
   '@types/estree@1.0.9': {}
 
   '@types/extend@3.0.4': {}
@@ -8848,7 +8843,7 @@ snapshots:
 
   estree-walker@3.0.3:
     dependencies:
-      '@types/estree': 1.0.8
+      '@types/estree': 1.0.9
 
   esutils@2.0.3: {}
 

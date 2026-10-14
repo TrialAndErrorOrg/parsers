@@ -20,7 +20,14 @@ share images and journal article HTML (`node_modules/.astro`,
 `node_modules/.cache`). The site's turbo `build` task is never cached itself,
 since its pages come from services turbo can't see. The `Dockerfile` only
 packages the build: `pnpm deploy --prod` leaves the built site with just its
-production dependencies, and the image copies that in.
+production dependencies, and the image (Alpine, about 300 MB) copies that in.
+
+Production dependencies are only what the server loads while it runs: Astro
+bundles itself into `dist/server`, so `astro` and everything used only while
+building are `devDependencies`. A package the server does import at runtime
+must be in `dependencies`. If one is missing, the workflow's smoke test fails:
+it runs the image and requests every route the server renders itself, before
+anything is pushed.
 
 ## Rebuilding
 
@@ -75,9 +82,9 @@ to GitHub.
    - `OP_TOKEN`: the service account token (1Password IT).
    - `ADMIN_AUTH=microsoft`.
 5. **Healthcheck**: enabled, type command,
-   `node -e "fetch('http://127.0.0.1:4321/').then(r=>process.exit(r.ok?0:1),()=>process.exit(1))"`.
-   The image has `HEALTHCHECK` with the same command, but Coolify's HTTP check
-   needs `curl` or `wget`, which the image doesn't have. With a health check,
+   `node -e "fetch('http://127.0.0.1:4321/').then(r=>process.exit(r.ok?0:1),()=>process.exit(1))"`
+   (the image's own `HEALTHCHECK` is the same). An HTTP check on `/`, port
+   4321, works too: Alpine has `wget`. With a health check,
    Coolify keeps the old container until the new one answers: if 1Password
    can't be reached, the new one never starts and the site stays up.
 6. **Deploy** once by hand and check the site, `/admin` and a save.

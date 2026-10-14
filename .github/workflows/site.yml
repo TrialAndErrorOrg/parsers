@@ -89,17 +89,42 @@ jobs:
         env:
           OP_TOKEN: ${{ secrets.OP_TOKEN }}
 
-      # The built site plus only its production dependencies
+      # The built site plus only its production dependencies, with the musl builds of native
+      # packages for the Alpine image
       - name: Package
-        run: pnpm --filter site deploy --prod --legacy "$RUNNER_TEMP/site"
+        run: pnpm --filter site deploy --prod --legacy --os=linux --cpu=x64 --libc=musl "$RUNNER_TEMP/site"
 
-      - name: Build and push the image
+      - name: Build the image
         run: |
-          echo "$GITHUB_TOKEN" | docker login ghcr.io -u "$GITHUB_ACTOR" --password-stdin
           docker build "$RUNNER_TEMP/site" -f apps/site/Dockerfile \
             --label org.opencontainers.image.source=https://github.com/${{ github.repository }} \
             --label org.opencontainers.image.revision=${{ github.sha }} \
             -t "$IMAGE:latest" -t "$IMAGE:${{ github.sha }}"
+
+      # Every route the server renders itself, so a runtime package missing from the image's
+      # dependencies fails here instead of on the live site
+      - name: Smoke test the image
+        run: |
+          docker run -d --name smoke -p 4321:4321 -e ONEPASSWORD=false -e ADMIN_AUTH=microsoft \
+            -e ADMIN_SESSION_SECRET="$(openssl rand -hex 32)" "$IMAGE:${{ github.sha }}"
+          trap 'docker logs smoke; docker rm -f smoke >/dev/null' EXIT
+          for _ in $(seq 1 30); do curl -sf -o /dev/null localhost:4321/ && break; sleep 1; done
+          expect() {
+            status=$(curl -s -o /dev/null -w '%{http_code}' "localhost:4321$2")
+            [ "$status" = "$1" ] || { echo "::error::$2 answered $status, expected $1"; exit 1; }
+          }
+          expect 200 /
+          expect 200 /admin/
+          expect 200 /admin/config.yml
+          expect 401 /admin/api/v3/user
+          expect 401 /preview/blog/x
+          expect 401 /preview/page/x
+          expect 401 '/api/draft?secret=x&slug=x'
+          expect 200 '/_image?href=%2Ffavicon-32x32.png&w=16&h=16&f=webp'
+
+      - name: Push the image
+        run: |
+          echo "$GITHUB_TOKEN" | docker login ghcr.io -u "$GITHUB_ACTOR" --password-stdin
           docker push --all-tags "$IMAGE"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

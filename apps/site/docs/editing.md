@@ -10,6 +10,10 @@ Ready. Someone else can read and edit a draft there. **Publish** puts it on
 the site, which rebuilds in a few minutes. Changing a published post goes the
 same way: the change is a draft until it's published.
 
+The preview next to the fields shows the post as it will look on the site and
+follows along as you type. It leaves out what the post page adds around it,
+like the table of contents and the author bios.
+
 Authors are picked from **People**. Someone new writes for the blog? Add them
 under People first (Team member off).
 

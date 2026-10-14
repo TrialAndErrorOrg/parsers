@@ -14,11 +14,8 @@ import type { AstroIntegration } from "astro";
  *   settings/   site.yaml and navigation.yaml (src/lib/settings.ts), imported as @content/...
  *   uploads/    images and files from /admin, served at /uploads
  */
-export const contentDir = resolve(
-	dirname(fileURLToPath(import.meta.url)),
-	"../..",
-	process.env.CONTENT_DIR ?? "../../../site-content",
-);
+const siteDir = resolve(dirname(fileURLToPath(import.meta.url)), "../..");
+export const contentDir = resolve(siteDir, process.env.CONTENT_DIR ?? "../../../site-content");
 
 const TYPES: Record<string, string> = {
 	".avif": "image/avif",
@@ -46,7 +43,8 @@ export default function content(): AstroIntegration {
 				updateConfig({
 					vite: {
 						resolve: { alias: { "@content": contentDir } },
-						server: { fs: { allow: [contentDir] } },
+						// Listing a folder replaces Vite's default, the monorepo's root, so that is listed too
+						server: { fs: { allow: [resolve(siteDir, "../.."), contentDir] } },
 						plugins: [
 							{
 								name: "site-content-uploads",

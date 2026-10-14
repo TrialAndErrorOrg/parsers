@@ -1,4 +1,5 @@
 ---
+import { Font } from "astro:assets";
 import { ADMIN_AUTH, UNSPLASH_ACCESS_KEY } from "astro:env/server";
 
 // The editing interface. Sveltia CMS edits the files in the repository
@@ -50,5 +51,13 @@ const relabel = ADMIN_AUTH !== "github";
 			)
 		}
 		<script is:inline src="https://unpkg.com/@sveltia/cms@0.227.0/dist/sveltia-cms.js"></script>
+		{/* The site's fonts, for the live preview (src/admin/preview.ts). Only the preview pane loads them */}
+		<template id="preview-setup">
+			<Font cssVariable="--font-overpass" />
+			<Font cssVariable="--font-open-sans" />
+		</template>
+		<script>
+			import "~/admin/preview";
+		</script>
 	</body>
 </html>

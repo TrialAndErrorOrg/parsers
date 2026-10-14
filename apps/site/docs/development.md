@@ -63,6 +63,10 @@ into one file per person, and made the images WebP. The 170 MB lecture video in
 `video_professor_peter_bergeijk_economics` was too large and still plays from
 Strapi.
 
+The live preview in `/admin` is `src/admin/preview.ts`: a copy of the top of
+`layouts/Post.astro`, drawn with React (which Sveltia provides) and the site's
+CSS. A change to the post page's header belongs in both.
+
 Components only see the types in `src/lib/types.ts`. Each source converts its
 data into those. `BLOG_SOURCE=strapi` reads Strapi again, and `underlay` reads
 `blog-underlay.ts`.

@@ -1,4 +1,7 @@
-@import 'tailwindcss';
+/* Only the converter's own classes, not those of the site that hosts it */
+@import 'tailwindcss' source(none);
+@source './components';
+@source './lib';
 
 @plugin 'tailwindcss-animate';
 

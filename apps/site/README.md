@@ -5,8 +5,12 @@ blog.trialanderror.org) and the Journal of Trial and Error's articles, in one
 Astro site.
 
 Everything is built into plain HTML files ahead of time. The only parts that run
-on a server are draft previews (`/preview/...`, `/api/draft`) and `/admin`'s
-sign-in.
+on a server are draft previews (`/preview/...`, `/api/draft`), `/admin`'s
+sign-in and the converter's way into OJS (`/admin/ojs/...`).
+
+`/admin/convert` is the JOTE converter (`apps/converter`): a `.docx` manuscript
+to LaTeX and Typst, converted in the browser. Editors signed in with Microsoft
+can also search OJS with their own OJS API key.
 
 ## Where things come from
 
@@ -51,6 +55,7 @@ src/
   layouts/           Base (every page), Post (blog post), Page (CMS page), BlogList
   lib/sources/       one module per content source: blog (site-content, or Strapi), journal (Underlay), pages
   lib/admin.ts       /admin's sign-in (sveltia-gateway), pages/admin/ its routes
+  admin/convert/     the converter (apps/converter) with the site's sign-in, pages/admin/ojs/ its OJS proxy
   pages/             routes
   admin/config.yml   the /admin editing interface
 .env.schema          every environment variable, secrets as 1Password references

@@ -1,0 +1,27 @@
+---
+import { OJS_API_URL } from "astro:env/server";
+import Converter from "~/admin/convert/Converter";
+import { siteSignIn } from "~/lib/admin";
+
+// The JOTE converter (apps/converter): a .docx manuscript to LaTeX and Typst,
+// converted in the browser. With Microsoft sign-in it also searches OJS.
+
+// Rendered on request, so ADMIN_AUTH is read where the site runs
+export const prerender = false;
+
+const ojsUrl = OJS_API_URL.replace(/\/api\/v1\/?$/, "");
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="robots" content="noindex" />
+		<title>Converter | Journal of Trial and Error</title>
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+	</head>
+	<body>
+		<Converter client:only="react" ojsUrl={ojsUrl} ojs={siteSignIn} />
+	</body>
+</html>

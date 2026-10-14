@@ -14,6 +14,9 @@ on:
     paths:
       - apps/site/**
       - libs/sveltia-gateway/**
+      # The converter at /admin/convert and the Typst template it puts in its downloads
+      - apps/converter/**
+      - templates/typst/**
       - pnpm-lock.yaml
       - .github/workflows/site.yml
   # Sent by Strapi when something is published. site-content starts the workflow directly instead

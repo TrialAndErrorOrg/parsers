@@ -1,4 +1,5 @@
 import node from "@astrojs/node";
+import react from "@astrojs/react";
 import sitemap from "@astrojs/sitemap";
 import tailwindcss from "@tailwindcss/vite";
 import { defineConfig, envField, fontProviders } from "astro/config";
@@ -23,8 +24,8 @@ export default defineConfig({
 	// draft previews) need the server. Swap this adapter for another host's
 	// (netlify, vercel, cloudflare) without touching anything else.
 	adapter: node({ mode: "standalone" }),
-	// /blog/author/* only redirects to /people/*
-	integrations: [content(), icon(), sitemap({ filter: (page) => !page.includes("/preview/") && !page.includes("/blog/author/") }), pagefind()],
+	// /blog/author/* only redirects to /people/*. React is only for the converter at /admin/convert
+	integrations: [content(), icon(), react(), sitemap({ filter: (page) => !page.includes("/preview/") && !page.includes("/blog/author/") }), pagefind()],
 	vite: {
 		plugins: [tailwindcss()],
 	},
@@ -71,6 +72,8 @@ export default defineConfig({
 			GITHUB_CONTENT_TOKEN: envField.string({ context: "server", access: "secret", optional: true }),
 			// Unsplash in /admin's image picker. The Access Key, which Unsplash means for browsers
 			UNSPLASH_ACCESS_KEY: envField.string({ context: "server", access: "secret", optional: true }),
+			// The journal's OJS API, for the converter at /admin/convert
+			OJS_API_URL: envField.string({ context: "server", access: "secret", default: "https://submit.trialanderror.org/index.php/jote/api/v1" }),
 		},
 	},
 });

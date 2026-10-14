@@ -18,7 +18,7 @@ Additionally, there are a few other tools:
 - `unified-latex`: Utilities for working with [unified-latex](https://github.com/siefkenj/unified-latex) trees.
 - `book-converter`: a CLI to turn a `.docx` book into LaTeX.
 
-`apps/converter` is the web converter (Next.js) that uses the parsers to turn `.docx` manuscripts into LaTeX.
+`apps/converter` is the web converter, a React component that uses the parsers to turn `.docx` manuscripts into LaTeX and Typst in the browser. The website (`apps/site`) shows it at `/admin/convert`, where editors signed in with Microsoft can also search OJS.
 
 See below for more info.
 
@@ -265,8 +265,8 @@ typst compile \
   out/article/main.typ
 ```
 
-Or pass `--compile --font-path …` to either CLI to do it in one go. The converter app
-(`apps/converter`) has a Typst tab that downloads the same output, template included, as a zip.
+Or pass `--compile --font-path …` to either CLI to do it in one go. The converter
+(`apps/converter`, on the site at `/admin/convert`) has a Typst tab that downloads the same output, template included, as a zip.
 
 <!--
 

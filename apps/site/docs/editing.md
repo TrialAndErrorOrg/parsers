@@ -61,3 +61,16 @@ Otherwise (`ADMIN_AUTH=github`) they need a GitHub account with write access to
 `TrialAndErrorOrg/site-content` and sign in with a
 [personal access token](https://github.com/settings/tokens) (fine-grained,
 repository contents read and write).
+
+## Converting a manuscript
+
+`/admin/convert` turns a `.docx` manuscript into LaTeX and Typst, with a zip of
+each to download. The conversion happens in your browser, so the file goes
+nowhere.
+
+To pick a submission from OJS instead of uploading a file, sign in with
+Microsoft (the same sign-in as `/admin`) and paste your own OJS API key, which
+the page explains how to get: in OJS, your profile, the **API Key** tab. The key
+stays in your browser, and OJS records what you do with it under your name. The
+converter only reads from OJS. It needs `ADMIN_AUTH=microsoft`. With GitHub
+sign-in the page only converts uploaded files.

@@ -31,6 +31,9 @@ export const editablePaths: string[] = [
 	),
 ];
 
+/** Whether editors sign in through the site (Microsoft, or a test editor in development) rather than with GitHub */
+export const siteSignIn = ADMIN_AUTH === "microsoft" || (ADMIN_AUTH === "dev" && import.meta.env.DEV);
+
 let gateway: Gateway | undefined;
 
 export function adminGateway() {

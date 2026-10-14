@@ -42,7 +42,7 @@ correspondence from the first author, running author ("A", "A & B", "A, B, & C",
 dates in the class' "July 24, 2026" format, volume/issue/pages. Form values are made plain
 text first: the form's LaTeX (`Journal of Trial \& Error`, `--`, `~`) and OJS's HTML abstracts
 (tags, entities) are undone, and the form's initial empty author row is ignored. The converter
-app (`apps/converter`) uses this for its Typst tab.
+app (`apps/converter`, at `/admin/convert` on the website) uses this for its Typst tab.
 
 ## CLI
 

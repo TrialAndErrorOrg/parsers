@@ -38,7 +38,7 @@
       "files": ["apps/converter/**"],
       "options": {
         "sortTailwindcss": {
-          "stylesheet": "apps/converter/app/globals.css"
+          "stylesheet": "apps/converter/styles.css"
         }
       }
     }

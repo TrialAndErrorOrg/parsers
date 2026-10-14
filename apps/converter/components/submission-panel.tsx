@@ -1,5 +1,3 @@
-'use client'
-
 import { useConversionStore } from '../lib/store'
 import { MetadataForm } from './metadata-form'
 import { FilePicker } from './file-picker'

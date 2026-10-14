@@ -1,5 +1,3 @@
-'use client'
-
 import { useCallback, useEffect, useState } from 'react'
 import { useConversionStore } from '../lib/store'
 import { docxToTexConverter } from '../lib/converters/docx-to-tex'

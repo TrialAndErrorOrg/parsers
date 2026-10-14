@@ -77,4 +77,53 @@ const pages = defineCollection({
 	}),
 });
 
-export const collections = { pages };
+/*
+ * The blog, edited in /admin (Blog, People, Categories). Images are paths
+ * under /uploads (site-content's uploads/) or links to Unsplash; authors,
+ * category and related posts are file names in the other collections.
+ */
+
+const blog = defineCollection({
+	loader: glob({ pattern: "**/*.md", base: `${contentDir}/blog` }),
+	schema: z.object({
+		title: z.string(),
+		date: z.coerce.date(),
+		excerpt: z.string().optional(),
+		/** For search engines and link previews, when the excerpt won't do */
+		description: z.string().optional(),
+		image: z.string().optional(),
+		imageAlt: z.string().optional(),
+		category: z.string().optional(),
+		tags: z.array(z.string()).default([]),
+		authors: z.array(z.string()).default([]),
+		doi: z.string().optional(),
+		related: z.array(z.string()).default([]),
+	}),
+});
+
+const people = defineCollection({
+	loader: glob({ pattern: "**/*.yaml", base: `${contentDir}/people` }),
+	schema: z.object({
+		firstName: z.string().optional(),
+		lastName: z.string(),
+		/** A member of the Center, shown in the team. Everyone else is a guest author */
+		team: z.boolean().default(false),
+		position: z.string().optional(),
+		pronouns: z.string().optional(),
+		/** Markdown */
+		summary: z.string().optional(),
+		image: z.string().optional(),
+		email: z.string().optional(),
+		orcid: z.string().optional(),
+		links: z.array(z.object({ icon: z.string(), url: z.string() })).default([]),
+		/** Old slugs, which keep redirecting to this person */
+		aliases: z.array(z.string()).default([]),
+	}),
+});
+
+const categories = defineCollection({
+	loader: glob({ pattern: "**/*.yaml", base: `${contentDir}/categories` }),
+	schema: z.object({ title: z.string() }),
+});
+
+export const collections = { pages, blog, people, categories };

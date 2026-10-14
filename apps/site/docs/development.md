@@ -49,14 +49,28 @@ cards or buttons look, edit `.card` or `.button` in `global.css`.
 4. Describe its fields under `sections.types` in `src/admin/config.yml`, so
    editors can use it.
 
-## Switching content sources
+## The blog
+
+Posts, people and categories are content collections (`src/content.config.ts`)
+read from site-content by `lib/sources/blog-content.ts`. Images under
+`/uploads` are found with an `import.meta.glob` over `@content/uploads`, so
+Astro resizes them like remote ones. Links to Unsplash are remote images.
+
+They came out of Strapi with `scripts/blog-to-content.ts` (2026-10-14), which
+only reads Strapi and can be run again to start over. It turned the HTML, much
+of it pasted from Word, into Markdown, merged team members and guest authors
+into one file per person, and made the images WebP. The 170 MB lecture video in
+`video_professor_peter_bergeijk_economics` was too large and still plays from
+Strapi.
 
 Components only see the types in `src/lib/types.ts`. Each source converts its
-data into those. To read the blog from somewhere else, write a module like
-`lib/sources/blog-strapi.ts` and select it in `lib/sources/blog.ts`
-(`BLOG_SOURCE=underlay` is already wired to `blog-underlay.ts`).
+data into those. `BLOG_SOURCE=strapi` reads Strapi again, and `underlay` reads
+`blog-underlay.ts`.
 
 ## Previews
+
+Blog drafts are previewed in `/admin` for now. The routes below are for
+Strapi's preview button, and only matter while something is still in Strapi.
 
 `/api/draft?secret=...&slug=...` is what Strapi's preview button calls. It
 checks the secret against `DRAFT_SECRET`, sets a cookie for an hour and

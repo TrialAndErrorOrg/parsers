@@ -22,8 +22,23 @@ site_url: https://trialanderror.org
 display_url: https://trialanderror.org
 logo_url: /favicon.svg
 
+# Saving makes a draft: a branch with a pull request, which goes Draft, In Review, Ready, and is
+# published (merged into main, which rebuilds the site) from the Workflow view
+publish_mode: editorial_workflow
+
 media_folder: uploads
 public_folder: /uploads
+media_libraries:
+  default:
+    config:
+      max_file_size: 26214400
+      slugify_filename: true
+      # Photos become WebP of at most 2400 pixels before they are committed, so the repository stays small
+      transformations:
+        raster_image: { format: webp, quality: 82, width: 2400, height: 2400 }
+  # Unsplash photos are linked, not copied (Unsplash's rules). The key is filled in by src/pages/admin/index.astro
+  stock_assets:
+    providers: [unsplash]
 
 collections:
   - name: pages
@@ -122,6 +137,85 @@ collections:
             widget: object
             fields:
               - *buttons
+
+  - name: blog
+    label: Blog
+    label_singular: Post
+    folder: blog
+    extension: md
+    format: frontmatter
+    create: true
+    slug: "{{slug}}"
+    summary: "{{title}}"
+    sortable_fields: [date, title]
+    media_folder: /uploads/blog
+    public_folder: /uploads/blog
+    fields:
+      - { name: title, label: Title, widget: string }
+      - { name: date, label: Publish date, widget: datetime }
+      - name: authors
+        label: Authors
+        widget: relation
+        collection: people
+        value_field: "{{slug}}"
+        search_fields: [firstName, lastName]
+        display_fields: ["{{firstName}} {{lastName}}"]
+        multiple: true
+      - { name: category, label: Category, widget: relation, collection: categories, value_field: "{{slug}}", search_fields: [title], display_fields: [title], required: false }
+      - { name: tags, label: Tags, widget: list, required: false, hint: "Lowercase, like: open science" }
+      - { name: excerpt, label: Excerpt (shown on cards and at the top of the post), widget: text, required: false }
+      - { name: image, label: Cover image, widget: image, required: false }
+      - { name: imageAlt, label: Cover image description (for screen readers), widget: string, required: false }
+      - { name: body, label: Text, widget: markdown }
+      - { name: doi, label: DOI, widget: string, required: false, hint: "Only the DOI, like 10.36850/abcd-1234" }
+      - { name: related, label: Related posts, widget: relation, collection: blog, value_field: "{{slug}}", search_fields: [title], display_fields: [title], multiple: true, required: false }
+      - { name: description, label: Description for search engines (if not the excerpt), widget: text, required: false }
+
+  - name: people
+    label: People
+    label_singular: Person
+    description: Team members and blog authors. "Team" puts someone in the team list.
+    folder: people
+    extension: yaml
+    format: yaml
+    create: true
+    slug: "{{firstName}}-{{lastName}}"
+    identifier_field: lastName
+    summary: "{{firstName}} {{lastName}}"
+    sortable_fields: [lastName, firstName]
+    media_folder: /uploads/people
+    public_folder: /uploads/people
+    fields:
+      - { name: firstName, label: First name, widget: string, required: false }
+      - { name: lastName, label: Last name, widget: string }
+      - { name: team, label: Team member, widget: boolean, default: false }
+      - { name: position, label: Position, widget: string, required: false }
+      - { name: pronouns, label: Pronouns (only if they want them shown), widget: string, required: false }
+      - { name: summary, label: About, widget: markdown, required: false }
+      - { name: image, label: Photo, widget: image, required: false }
+      - { name: email, label: Email (shown for team members), widget: string, required: false }
+      - { name: orcid, label: ORCID iD, widget: string, required: false, hint: "Like https://orcid.org/0000-0002-1825-0097" }
+      - name: links
+        label: Links
+        widget: list
+        required: false
+        summary: "{{icon}}"
+        fields:
+          - { name: icon, label: Kind, widget: select, options: [website, bluesky, mastodon, linkedin, github, twitter] }
+          - { name: url, label: Link, widget: string }
+      - { name: aliases, label: Old addresses (leave as they are), widget: list, required: false, hint: "Earlier /people/... names, which keep redirecting here" }
+
+  - name: categories
+    label: Blog categories
+    label_singular: Category
+    folder: categories
+    extension: yaml
+    format: yaml
+    create: true
+    slug: "{{title}}"
+    identifier_field: title
+    fields:
+      - { name: title, label: Name, widget: string }
 
   - name: settings
     label: Settings

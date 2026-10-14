@@ -1,5 +1,5 @@
 ---
-import { ADMIN_AUTH } from "astro:env/server";
+import { ADMIN_AUTH, UNSPLASH_ACCESS_KEY } from "astro:env/server";
 
 // The editing interface. Sveltia CMS edits the files in the repository
 // directly, so it needs no database. Fields: src/admin/config.yml
@@ -33,6 +33,19 @@ const relabel = ADMIN_AUTH !== "github";
 							if (/^Sign In with \u2068?GitHub\u2069?$/.test(node.nodeValue.trim())) node.nodeValue = "Sign in with Microsoft";
 						}
 					}).observe(document.body, { childList: true, subtree: true, characterData: true });
+				</script>
+			)
+		}
+		{
+			// Sveltia asks each editor for an Unsplash key and keeps it in their browser's preferences.
+			// Putting it there first means nobody has to. Signing out clears it, the next visit puts it back
+			UNSPLASH_ACCESS_KEY && (
+				<script is:inline define:vars={{ key: UNSPLASH_ACCESS_KEY }}>
+					try {
+						const prefs = JSON.parse(localStorage.getItem("sveltia-cms.prefs") ?? "{}") ?? {};
+						prefs.apiKeys = { ...prefs.apiKeys, unsplash: key };
+						localStorage.setItem("sveltia-cms.prefs", JSON.stringify(prefs));
+					} catch {}
 				</script>
 			)
 		}

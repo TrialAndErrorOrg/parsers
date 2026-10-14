@@ -6,6 +6,8 @@
 
 export interface Picture {
 	url: string;
+	/** A local image (site-content's uploads), which Astro resizes like a remote one */
+	src?: ImageMetadata;
 	width?: number;
 	height?: number;
 	alt?: string;
@@ -25,6 +27,8 @@ export interface Person {
 	email?: string;
 	orcid?: string;
 	links: { icon: string; url: string }[];
+	/** Old slugs, which redirect to this person's page */
+	aliases?: string[];
 }
 
 export interface Term {

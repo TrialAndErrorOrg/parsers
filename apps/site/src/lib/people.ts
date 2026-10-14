@@ -130,9 +130,10 @@ async function build() {
 		// Team members keep Strapi's order (by last name)
 		.sort((a, b) => team(b.person) - team(a.person) || (team(a.person) ? 0 : a.person.name.localeCompare(b.person.name)));
 	for (const { records, person, posts, articles } of sorted) {
-		const slugs = [...new Set(records.map(slugOf))];
+		const own = [...new Set(records.map(slugOf))];
 		// The shortest slug, so `hobma` wins over Strapi's de-duplicated `hobma-1`
-		const slug = [...slugs].sort((a, b) => a.length - b.length).find((s) => !bySlug.has(s)) ?? slugify(person.name);
+		const slug = [...own].sort((a, b) => a.length - b.length).find((s) => !bySlug.has(s)) ?? slugify(person.name);
+		const slugs = [...new Set([...own, ...records.flatMap((r) => r.aliases ?? [])])];
 		const profile: Profile = { slug, person: { ...person, slug }, aliases: slugs.filter((s) => s !== slug && !bySlug.has(s)), posts, articles };
 		for (const s of [slug, ...profile.aliases]) bySlug.set(s, profile);
 		for (const record of records) profileByRecord.set(recordKey(record), profile);

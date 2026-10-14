@@ -31,13 +31,20 @@
     "@iconify-json/simple-icons": "^1.2.100",
     "@tailwindcss/typography": "^0.5.20",
     "@tailwindcss/vite": "^4.3.3",
+    "@types/hast": "catalog:",
     "@types/node": "^24.19.2",
     "astro": "^7.3.8",
     "astro-icon": "^1.2.0",
+    "hast-util-to-html": "^9.0.5",
     "marked": "^18.1.1",
     "pagefind": "^1.5.2",
+    "rehype-parse": "catalog:",
+    "rehype-remark": "catalog:",
+    "remark-gfm": "catalog:",
+    "remark-stringify": "catalog:",
     "satori": "^0.51.0",
     "tailwindcss": "^4.3.3",
-    "typescript": "~5.9.3"
+    "typescript": "~5.9.3",
+    "unified": "catalog:"
   }
 }

@@ -2,13 +2,28 @@
 
 ## Publishing a blog post
 
-Write and publish it in Strapi as before. The site rebuilds when Strapi tells it
-something changed ([deploying.md](deploying.md#rebuilding)), which takes a few
-minutes.
+In `/admin`, **Blog**, **New Post**. Fill in the title, date and authors, write
+the text, and **Save**. Saving makes a draft: nothing changes on the site yet.
 
-To see a draft before publishing, use the **Preview** button in Strapi. It opens
-the post as it will look, with a "Draft preview" bar on top. Preview links work
-for an hour.
+Drafts move through **Workflow** (the icon in the top bar): Draft, In Review,
+Ready. Someone else can read and edit a draft there. **Publish** puts it on
+the site, which rebuilds in a few minutes. Changing a published post goes the
+same way: the change is a draft until it's published.
+
+Authors are picked from **People**. Someone new writes for the blog? Add them
+under People first (Team member off).
+
+### Images
+
+Upload photos as they are: they are turned into WebP of at most 2400 pixels
+before they are saved, so a 15 MB camera photo becomes a few hundred KB. The
+image picker can also search **Unsplash**; those photos are linked, not copied.
+Give the cover image a description for people who can't see it.
+
+Everything uploaded is public, on the site and in site-content's history, the
+moment it's saved. Deleting a file in `/admin` takes it off the site, but its
+history stays: to remove something for good, ask someone who manages the
+repository.
 
 ## Changing the homepage or another page
 
@@ -19,7 +34,7 @@ bottom. You can add, remove, reorder and edit sections:
 - **Text**: a block of text, optionally with a title and a coloured background.
 - **Columns**: two or three boxes side by side (like "What do we do?").
 - **Latest blog posts** / **Latest journal articles**: filled in automatically.
-- **Team**: everyone in Strapi's team list who has a photo.
+- **Team**: everyone under People marked as team member who has a photo.
 - **Newsletter sign-up**
 - **Buttons**
 

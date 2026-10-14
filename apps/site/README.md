@@ -17,8 +17,8 @@ sign-in.
 | Site name, newsletter, analytics | site-content: `settings/site.yaml` | `/admin` → Settings → Site |
 | Images and files uploaded in `/admin` | site-content: `uploads/` | `/admin` |
 | Colours, fonts, borders, shadows | `src/styles/theme.css` | edit the file |
-| Blog posts, authors, categories, tags | Strapi (cms.trialanderror.org) | Strapi |
-| Team members | Strapi | Strapi |
+| Blog posts, categories, tags | site-content: `blog/*.md`, `categories/` | `/admin` → Blog |
+| Team members and blog authors | site-content: `people/*.yaml` | `/admin` → People |
 | Free-text pages (donate, events, award calls) | Strapi → Pages | Strapi |
 | Journal articles | Underlay ([centeroftrialanderror/jote](https://www.underlay.org/centeroftrialanderror/jote)), exported from PubPub | PubPub |
 
@@ -49,7 +49,7 @@ src/
   styles/global.css  shared component classes (.card, .button, .label, .prose-site...)
   components/        Header, Footer, cards; sections/ holds one component per section type
   layouts/           Base (every page), Post (blog post), Page (CMS page), BlogList
-  lib/sources/       one module per content source: blog (Strapi), journal (Underlay), pages
+  lib/sources/       one module per content source: blog (site-content, or Strapi), journal (Underlay), pages
   lib/admin.ts       /admin's sign-in (sveltia-gateway), pages/admin/ its routes
   pages/             routes
   admin/config.yml   the /admin editing interface
@@ -58,7 +58,8 @@ Dockerfile           packages the built site, see docs/deploying.md
 ```
 
 site-content holds `pages/` (section-built pages, `index.yaml` is the
-homepage), `settings/` (`site.yaml`, `navigation.yaml`) and `uploads/`.
+homepage), `blog/` (posts, Markdown), `people/`, `categories/`, `settings/`
+(`site.yaml`, `navigation.yaml`) and `uploads/`.
 
 ## What's where
 
@@ -81,11 +82,10 @@ its loaders.
 ### People
 
 `/people/<slug>` has a page for every team member and blog author, with their
-posts and journal articles (`src/lib/people.ts`). Strapi keeps team members and
-guest authors apart, so records with the same ORCID iD, or else the same full
-name, become one person. Journal articles join a person on ORCID iD, or on the
-exact full name when the iDs don't conflict. `/blog/author/<slug>` redirects
-there from every slug a person had.
+posts and journal articles (`src/lib/people.ts`). Journal articles join a
+person on ORCID iD, or on the exact full name when the iDs don't conflict.
+`/blog/author/<slug>` redirects there, from a person's slug and their old ones
+(`aliases`).
 
 ### Built at build time, not by services
 

@@ -45,7 +45,8 @@ export function adminGateway() {
 		// A test editor's sessions only need to last until the dev server restarts
 		sessionSecret: ADMIN_SESSION_SECRET ?? (testing ? `${crypto.randomUUID()}${crypto.randomUUID()}` : ""),
 		basePath: "/admin",
-		branches: [config.backend.branch ?? "main"],
+		// The editorial workflow saves drafts on cms/... branches and publishes by merging them
+		branches: [config.backend.branch ?? "main", ...(config.publish_mode === "editorial_workflow" ? ["cms/**"] : [])],
 		paths: editablePaths,
 		readOnly: ADMIN_READ_ONLY,
 		onRefused: (reason, request) => console.warn(`[admin] refused ${request.method} ${new URL(request.url).pathname}: ${reason}`),

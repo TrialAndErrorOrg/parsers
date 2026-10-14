@@ -31,7 +31,7 @@ export default defineConfig({
 	image: {
 		// Remote images from these hosts are downloaded and optimised at build
 		// time, so the built site does not depend on them at runtime.
-		domains: ["cms.trialanderror.org", "assets.pubpub.org", "www.underlay.org"],
+		domains: ["cms.trialanderror.org", "assets.pubpub.org", "www.underlay.org", "images.unsplash.com"],
 	},
 	fonts: [
 		{
@@ -58,7 +58,7 @@ export default defineConfig({
 			UNDERLAY_URL: envField.string({ context: "server", access: "secret", default: "https://www.underlay.org" }),
 			UNDERLAY_TOKEN: envField.string({ context: "server", access: "secret", optional: true }),
 			UNDERLAY_BLOG_COLLECTION: envField.string({ context: "server", access: "secret", default: "centeroftrialanderror/blog" }),
-			BLOG_SOURCE: envField.enum({ context: "server", access: "secret", values: ["strapi", "underlay"], default: "strapi" }),
+			BLOG_SOURCE: envField.enum({ context: "server", access: "secret", values: ["content", "strapi", "underlay"], default: "content" }),
 			// How editors sign in to /admin: their own GitHub account, or Microsoft (see src/lib/admin)
 			ADMIN_AUTH: envField.enum({ context: "server", access: "secret", values: ["github", "microsoft", "dev"], default: "github" }),
 			ADMIN_SESSION_SECRET: envField.string({ context: "server", access: "secret", optional: true }),
@@ -69,6 +69,8 @@ export default defineConfig({
 			GITHUB_APP_ID: envField.string({ context: "server", access: "secret", optional: true }),
 			GITHUB_APP_PRIVATE_KEY: envField.string({ context: "server", access: "secret", optional: true }),
 			GITHUB_CONTENT_TOKEN: envField.string({ context: "server", access: "secret", optional: true }),
+			// Unsplash in /admin's image picker. The Access Key, which Unsplash means for browsers
+			UNSPLASH_ACCESS_KEY: envField.string({ context: "server", access: "secret", optional: true }),
 		},
 	},
 });

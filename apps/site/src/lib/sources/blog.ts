@@ -3,18 +3,27 @@ import type { Person, Post } from "../types";
 import * as strapiSource from "./blog-strapi";
 
 /*
- * Where blog content comes from. Strapi today, set BLOG_SOURCE=underlay once
- * the blog is published there (see blog-underlay.ts). Drafts always come from
- * Strapi, since Underlay only holds published versions.
+ * Where blog content comes from: site-content (BLOG_SOURCE=content, the
+ * default, see blog-content.ts), Strapi, or Underlay. Strapi's preview button
+ * still shows Strapi drafts.
  */
 
-const source = BLOG_SOURCE === "underlay" ? await import("./blog-underlay") : strapiSource;
+const sources = {
+	content: () => import("./blog-content"),
+	strapi: async () => strapiSource,
+	underlay: () => import("./blog-underlay"),
+};
+// Loaded when posts are asked for, so the routes rendered on request (Strapi's
+// draft previews) never load the others, or their build-only packages
+const source = () => sources[BLOG_SOURCE]();
 
 let posts: Promise<Post[]> | undefined;
 
 /** All published posts, newest first. Fetched once per build */
 export function getPosts(): Promise<Post[]> {
-	posts ??= source.getPosts().then((all) => all.sort((a, b) => b.date.localeCompare(a.date)));
+	posts ??= source()
+		.then((s) => s.getPosts())
+		.then((all) => all.sort((a, b) => b.date.localeCompare(a.date)));
 	return posts;
 }
 
@@ -26,7 +35,7 @@ export const getDraft = strapiSource.getDraft;
 
 let team: Promise<Person[]> | undefined;
 export function getTeam(): Promise<Person[]> {
-	team ??= source.getTeam();
+	team ??= source().then((s) => s.getTeam());
 	return team;
 }
 

@@ -42,7 +42,7 @@
   "dependencies": {
     "@types/unist": "catalog:",
     "@types/xast": "catalog:",
-    "bcp-47-match": "^2.0.1",
+    "bcp-47-match": "^2.0.3",
     "comma-separated-tokens": "^2.0.2",
     "css-selector-parser": "^1.4.1",
     "direction": "^2.0.1",

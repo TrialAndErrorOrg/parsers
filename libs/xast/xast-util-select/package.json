@@ -5,10 +5,10 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/TrialAndErrorOrg/parsers.git",
+    "url": "git+https://github.com/TrialAndErrorOrg/trialanderror.git",
     "directory": "libs/xast/xast-util-select"
   },
-  "homepage": "https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/xast/xast-util-select#readme",
+  "homepage": "https://github.com/TrialAndErrorOrg/trialanderror/tree/main/libs/xast/xast-util-select#readme",
   "author": "Thomas F. K. Jorna <hello@tefkah.com>",
   "type": "module",
   "keywords": [

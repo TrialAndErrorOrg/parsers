@@ -4,7 +4,7 @@
   "private": true,
   "description": "Plugin for `rehype` to turn HTML into Notion blocks",
   "license": "GPL-3.0-or-later",
-  "repository": "https://github.com/TrialAndErrorOrg/parsers",
+  "repository": "https://github.com/TrialAndErrorOrg/trialanderror",
   "author": "Thomas F. K. Jorna <hello@tefkah.com>",
   "type": "module",
   "keywords": [

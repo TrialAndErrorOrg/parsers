@@ -256,7 +256,7 @@ production dependencies, and the image copies that in.
 Setup:
 
 - **1Password:** a vault named Website holding only what the site's CI needs
-  (the items `.env.schema` names: `Strapi read token`, `Underlay token`,
+  (the items `.env.schema` names: `Strapi TrialAndError CI Read Token`, `Underlay`,
   `Coolify deploy`, `Site rebuild token`, and `Website admin` for the Microsoft
   sign-in), and a service account that can read that vault and nothing else.
 - **GitHub:** one secret, `OP_TOKEN`, the service account's token, for this

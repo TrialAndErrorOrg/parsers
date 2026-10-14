@@ -39,9 +39,9 @@ const exec = promisify(execFile)
 // in CI the token is the only git credential; locally the user's own credential helper is used
 const auth = process.env.GH_TOKEN
   ? [
-    '-c',
-    `http.https://github.com/.extraheader=AUTHORIZATION: basic ${Buffer.from(`x-access-token:${token}`).toString('base64')}`,
-  ]
+      '-c',
+      `http.https://github.com/.extraheader=AUTHORIZATION: basic ${Buffer.from(`x-access-token:${token}`).toString('base64')}`,
+    ]
   : []
 const git = async (gitArgs: string[], env?: Record<string, string>) =>
   (
@@ -165,11 +165,11 @@ for (const p of plans) {
     const branch = p.existing?.default_branch ?? 'main'
     const head = p.existing
       ? (
-        await api<{ object: { sha: string } }>(
-          'GET',
-          `repos/${ORG}/${p.repo}/git/ref/heads/${branch}`,
-        )
-      )?.object.sha
+          await api<{ object: { sha: string } }>(
+            'GET',
+            `repos/${ORG}/${p.repo}/git/ref/heads/${branch}`,
+          )
+        )?.object.sha
       : undefined
     if (head) await git(['fetch', '--quiet', '--no-tags', '--depth=1', url, head])
 

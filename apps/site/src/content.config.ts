@@ -1,9 +1,10 @@
 import { glob } from "astro/loaders";
 import { defineCollection } from "astro:content";
 import { z } from "astro/zod";
+import { contentDir } from "./integrations/content";
 
 /*
- * Pages built from sections. Each file in src/content/pages is one page:
+ * Pages built from sections. Each file in pages/ of site-content is one page:
  * index.yaml is the homepage, about.yaml is /about, and so on. A page is a
  * list of sections, drawn top to bottom. Each section type is a component in
  * src/components/sections. Text fields accept Markdown.
@@ -66,7 +67,7 @@ const section = z.discriminatedUnion("type", [
 export type Section = z.infer<typeof section>;
 
 const pages = defineCollection({
-	loader: glob({ pattern: "**/*.yaml", base: "./src/content/pages" }),
+	loader: glob({ pattern: "**/*.yaml", base: `${contentDir}/pages` }),
 	schema: z.object({
 		title: z.string(),
 		description: z.string().optional(),

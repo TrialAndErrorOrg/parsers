@@ -3,6 +3,7 @@ import sitemap from "@astrojs/sitemap";
 import tailwindcss from "@tailwindcss/vite";
 import { defineConfig, envField, fontProviders } from "astro/config";
 import icon from "astro-icon";
+import content from "./src/integrations/content";
 import pagefind from "./src/integrations/pagefind";
 
 export default defineConfig({
@@ -15,7 +16,7 @@ export default defineConfig({
 	// (netlify, vercel, cloudflare) without touching anything else.
 	adapter: node({ mode: "standalone" }),
 	// /blog/author/* only redirects to /people/*
-	integrations: [icon(), sitemap({ filter: (page) => !page.includes("/preview/") && !page.includes("/blog/author/") }), pagefind()],
+	integrations: [content(), icon(), sitemap({ filter: (page) => !page.includes("/preview/") && !page.includes("/blog/author/") }), pagefind()],
 	vite: {
 		plugins: [tailwindcss()],
 	},

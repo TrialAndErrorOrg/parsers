@@ -7,8 +7,8 @@
     "dist"
   ],
   "scripts": {
-    "dev": "astro dev",
-    "build": "astro build",
+    "dev": "varlock run -- astro dev",
+    "build": "varlock run -- astro build",
     "preview": "astro preview",
     "start": "node dist/server/entry.mjs",
     "typecheck": "astro check"
@@ -33,8 +33,10 @@
     "@tailwindcss/typography": "^0.5.20",
     "@tailwindcss/vite": "^4.3.3",
     "@types/node": "^24.19.2",
+    "@varlock/1password-plugin": "^2.0.5",
     "pagefind": "^1.5.2",
     "tailwindcss": "^4.3.3",
-    "typescript": "~5.9.3"
+    "typescript": "~5.9.3",
+    "varlock": "^1.22.0"
   }
 }

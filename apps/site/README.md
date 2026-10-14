@@ -11,16 +11,20 @@ on a server are draft previews (`/preview/...` and `/api/draft`).
 
 | What | Where it lives | How to change it |
 | --- | --- | --- |
-| Homepage, About and other section-built pages | `src/content/pages/*.yaml` | `/admin`, or edit the file |
-| Menus, footer, social links | `src/config/navigation.yaml` | `/admin` → Settings → Menus |
-| Site name, newsletter, analytics | `src/config/site.yaml` | `/admin` → Settings → Site |
+| Homepage, About and other section-built pages | site-content: `pages/*.yaml` | `/admin`, or edit the file |
+| Menus, footer, social links | site-content: `settings/navigation.yaml` | `/admin` → Settings → Menus |
+| Site name, newsletter, analytics | site-content: `settings/site.yaml` | `/admin` → Settings → Site |
+| Images and files uploaded in `/admin` | site-content: `uploads/` | `/admin` |
 | Colours, fonts, borders, shadows | `src/styles/theme.css` | edit the file |
 | Blog posts, authors, categories, tags | Strapi (cms.trialanderror.org) | Strapi |
 | Team members | Strapi | Strapi |
 | Free-text pages (donate, events, award calls) | Strapi → Pages | Strapi |
 | Journal articles | Underlay ([centeroftrialanderror/jote](https://www.underlay.org/centeroftrialanderror/jote)), exported from PubPub | PubPub |
 
-A page in `src/content/pages` wins over a Strapi page with the same slug.
+site-content is its own repository,
+[TrialAndErrorOrg/site-content](https://github.com/TrialAndErrorOrg/site-content), so
+saving in `/admin` doesn't add commits to this one. A page in site-content wins
+over a Strapi page with the same slug.
 
 ## For editors
 
@@ -51,29 +55,42 @@ Text fields take Markdown: `**bold**`, `*italic*`, `[a link](https://...)`.
 To make a new page, click **New Page** in `/admin`. Its address is its title
 in lowercase with dashes (`Open Positions` becomes `/open-positions`).
 
-Saving in `/admin` makes a commit to the repository, which triggers a rebuild.
+Saving in `/admin` makes a commit to site-content, which triggers a rebuild.
 
 ### Signing in to /admin
 
 With `ADMIN_AUTH=microsoft`, editors sign in with their Center Microsoft
 account and need no GitHub account. Otherwise (`ADMIN_AUTH=github`, the
 default) they need a GitHub account with write access to
-`TrialAndErrorOrg/trialanderror` and sign in with a
+`TrialAndErrorOrg/site-content` and sign in with a
 [personal access token](https://github.com/settings/tokens) (fine-grained,
 repository contents read and write).
 
 ## For developers
 
-The site is `apps/site` in the `trialanderror` monorepo. From the repository root:
+The site is `apps/site` in the `trialanderror` monorepo. Its content is in
+site-content, checked out next to it:
 
 ```sh
-cp apps/site/.env.example apps/site/.env   # fill in the tokens
+git clone https://github.com/TrialAndErrorOrg/site-content ../site-content   # or set CONTENT_DIR
 pnpm install
 pnpm turbo run dev --filter=site           # http://localhost:4321
 pnpm turbo run build --filter=site...      # into apps/site/dist, then `pnpm --filter site start`
 ```
 
 Turbo builds the workspace packages the site uses (`sveltia-gateway`) first.
+
+**Secrets** come from 1Password. `dev` and `build` run through
+[varlock](https://varlock.dev), which reads `.env.schema`: plain settings with
+their defaults, and the tokens as references to the Website vault. The
+1Password desktop app asks once per session. Without access to the vault, put
+`ONEPASSWORD=false` and your own values in `apps/site/.env.local`; most tokens
+are optional (published content is public). `pnpm exec varlock load` in
+`apps/site` shows what was resolved, with secrets hidden.
+
+**Content** (`src/integrations/content.ts`): pages are read from
+`<site-content>/pages`, settings are imported as `@content/settings/*.yaml`,
+and `uploads/` is served at `/uploads` in dev and copied into the build.
 The site is not formatted by the repository's `oxfmt`, which can't read
 `.astro` files; it keeps its own style (tabs, double quotes).
 
@@ -81,9 +98,8 @@ The site is not formatted by the repository's `oxfmt`, which can't read
 
 ```
 src/
-  config/          site.yaml, navigation.yaml: settings editors can change
-  content/pages/   section-built pages (index.yaml is the homepage)
   content.config.ts  the section types and their fields
+  integrations/      content.ts (reads site-content), pagefind.ts (search index)
   styles/theme.css   every colour, font and size token
   styles/global.css  shared component classes (.card, .button, .label, .prose-site...)
   components/        Header, Footer, cards; sections/ holds one component per section type
@@ -91,7 +107,11 @@ src/
   lib/sources/       one module per content source: blog (Strapi), journal (Underlay), pages
   pages/             routes
 admin/config.yml  the /admin editing interface (src/admin/config.yml)
+.env.schema       every environment variable, with secrets as 1Password references
 ```
+
+site-content holds `pages/` (section-built pages, `index.yaml` is the
+homepage), `settings/` (`site.yaml`, `navigation.yaml`) and `uploads/`.
 
 ### Restyling
 
@@ -186,7 +206,7 @@ To set it up:
    `ENTRA_CLIENT_ID` and `ENTRA_CLIENT_SECRET`.
 2. **GitHub:** create a GitHub App in the TrialAndErrorOrg organisation with
    repository permissions Contents and Pull requests (read and write), no
-   webhook, and install it only on the repository the CMS edits. Set
+   webhook, and install it only on `TrialAndErrorOrg/site-content`. Set
    `GITHUB_APP_ID` and `GITHUB_APP_PRIVATE_KEY` (the .pem as downloaded,
    newlines may be written as `\n`).
 3. Set `ADMIN_SESSION_SECRET` to 32 or more random characters and
@@ -205,9 +225,8 @@ changes:
   a `content-updated` repository dispatch to this repository (GitHub's
   `POST /repos/TrialAndErrorOrg/trialanderror/dispatches`, with a token that may
   trigger workflows).
-- `/admin`: every save is a commit. While the content lives in this repository,
-  the push itself starts the build. Once it moves to site-content, that
-  repository sends the same dispatch.
+- `/admin`: every save is a commit to site-content, whose `rebuild` workflow
+  sends the same dispatch.
 - Journal: the daily run picks up new articles from Underlay.
 
 All three start `.github/workflows/site.yml` (see *Deploying*).
@@ -216,9 +235,9 @@ All three start `.github/workflows/site.yml` (see *Deploying*).
 
 `.github/workflows/site.yml` builds the site on GitHub Actions and publishes
 the image `ghcr.io/trialanderrororg/site` (`:latest` and `:<commit>`), then
-calls Coolify's deploy webhook. It runs on pushes that touch the site, on a
-`content-updated` repository dispatch (from site-content or Strapi), daily for
-new journal articles, and by hand. A newer run cancels an older one.
+calls Coolify's deploy webhook. It checks out site-content next to the code. It runs on pushes that touch the
+site, on a `content-updated` repository dispatch (from site-content or Strapi),
+daily for new journal articles, and by hand. A newer run cancels an older one.
 
 It is quick because it keeps every cache between runs: pnpm's store, turbo's
 cache for the workspace packages, and the site's own caches of resized images,
@@ -230,14 +249,22 @@ production dependencies, and the image copies that in.
 
 Setup:
 
-- Repository secrets: `STRAPI_TOKEN` and `UNDERLAY_TOKEN` (read-only, used at
-  build), `COOLIFY_DEPLOY_URL` and `COOLIFY_TOKEN` (Coolify, the app's deploy
-  webhook and an API token). Without the Coolify ones the image is only
-  published.
+- **1Password:** a vault named Website holding only what the site's CI needs
+  (the items `.env.schema` names: `Strapi read token`, `Underlay token`,
+  `Coolify deploy`, `Site rebuild token`, and `Website admin` for local tests of
+  the Microsoft sign-in), and a service account that can read that vault and
+  nothing else.
+- **GitHub:** one secret, `OP_TOKEN`, the service account's token, for this
+  repository and site-content (an organisation secret shared with both works).
+  varlock reads the rest and hides the values in the log. `Site rebuild token`
+  is a fine-grained token that may send dispatches to this repository
+  (Contents: read and write on `trialanderror` only), used by site-content.
+- **Coolify deploys** once `COOLIFY_DEPLOY_URL` is filled in `.env.schema` (the
+  app's deploy webhook, not secret). Until then the image is only published.
 - The first push creates the package on GitHub, private. Make it public under
   the organisation's Packages, or give Coolify a token to pull it.
 - In Coolify: a "Docker Image" application for `ghcr.io/trialanderrororg/site:latest`,
-  port 4321, with the runtime variables from `.env.example` (`DRAFT_SECRET`,
+  port 4321, with the runtime variables from `.env.schema` (`DRAFT_SECRET`,
   `STRAPI_TOKEN` for previews, the `ADMIN_*`, `ENTRA_*` and `GITHUB_APP_*` ones).
 
 The image holds no secrets: Astro reads them from the environment when the

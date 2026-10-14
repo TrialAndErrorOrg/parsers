@@ -2,7 +2,7 @@ import { strapiAll, strapi } from "../strapi";
 
 /*
  * Free-form pages kept in Strapi (donate, events, award calls). They are
- * plain rich text. Pages built from sections live in src/content/pages.
+ * plain rich text. Pages built from sections live in site-content (pages/).
  */
 
 export interface CmsPage {

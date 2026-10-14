@@ -356,8 +356,9 @@ thebiggestfile.ts
 
 .env
 .env.*
-# Examples of the variables, without values, belong in the repository
+# Examples and varlock schemas hold no values, so they belong in the repository
 !.env.example
+!.env.schema
 graph
 # typedoc scratch output (scripts/readme.ts); hand-written docs/*.md are tracked
 **/docs/*

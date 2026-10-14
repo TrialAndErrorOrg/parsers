@@ -359,6 +359,9 @@ importers:
       '@types/node':
         specifier: ^24.19.2
         version: 24.19.2
+      '@varlock/1password-plugin':
+        specifier: ^2.0.5
+        version: 2.0.5(varlock@1.22.0)
       pagefind:
         specifier: ^1.5.2
         version: 1.5.2
@@ -368,6 +371,9 @@ importers:
       typescript:
         specifier: ~5.9.3
         version: 5.9.3
+      varlock:
+        specifier: ^1.22.0
+        version: 1.22.0
 
   libs/ast-stringify:
     dependencies:
@@ -3541,6 +3547,30 @@ packages:
   '@unified-latex/unified-latex-util-visit@1.8.4':
     resolution: {integrity: sha512-m5O9evxr/kiX1awZAcwUQL+8slVvlWlkbZoKFDP1agrp3dpk7+69npqyoapKKJEK0B4uRYmv93Ho31oHgNoJrg==}
 
+  '@varlock/1password-plugin@2.0.5':
+    resolution: {integrity: sha512-QmthT9YxOocsp6J/EerOdeIwsm4DzKgnDoF7RdSiL8vDBy8Y0O0wSL0TWwp+3VxRfWjA7V7qGIzQkWRabu1e1Q==}
+    engines: {node: '>=22'}
+    peerDependencies:
+      varlock: ^1.22.0
+
+  '@varlock/native-helper-darwin@1.22.0':
+    resolution: {integrity: sha512-SseBFiqO9kugEc8Key8QsthdzrfUwj/vBRJeH4oC+gmT97I/aqmVjG6UH5a3n4RyLE2As2V+Es4aJoeNGav8dA==}
+    os: [darwin]
+
+  '@varlock/native-helper-linux-arm64@1.22.0':
+    resolution: {integrity: sha512-n4xymSJvI3cw7ggGvaiqaVU0+/md3DinB14C7oYGQMMOHbw90XcM0rXTPM79xQRseBwEm5XOX3P8H6m6Lb1rkw==}
+    cpu: [arm64]
+    os: [linux]
+
+  '@varlock/native-helper-linux-x64@1.22.0':
+    resolution: {integrity: sha512-tWKekf01VSq3/1xrqEAZVUjGkw2gntR1oLOH6Djz9cZTYJ/WD8tB2yX6WbiFQicbMokJt5nxA2v67O+2UZTT+A==}
+    cpu: [x64]
+    os: [linux]
+
+  '@varlock/native-helper-win32-x64@1.22.0':
+    resolution: {integrity: sha512-vtoa2TDL45vGw7IFanI6FMPJDz2Brth8hOWeAttNW+NqGJiToOPX3NxCE/kFyXpSMtferuyp8rmsY7Q/cY8qZw==}
+    os: [win32, linux]
+
   '@vitest/mocker@5.0.3':
     resolution: {integrity: sha512-T8sWAIbkSyAjkwTcaEc3Iu0o9A27X1/kdXrizhZkGuSKScRQtRzclfAMpOTcGdXCsqxeWlpGy3XjqaW8CpLORg==}
     peerDependencies:
@@ -5876,6 +5906,11 @@ packages:
     resolution: {integrity: sha512-6Z7Ma2aVEWisaL6TvBCy7P8rm2LQoPv6dJ7ecIaIixHcwfbJ0x7mWdbcwlIM5IGQxPZSFYeqRCqlOOeKoJYMkw==}
     engines: {node: '>= 4'}
 
+  varlock@1.22.0:
+    resolution: {integrity: sha512-xpGiBtpmk3mfbLfJWqR1yEiopcXdUMzWLyidiT2slTktB/LPQuWk3+zvhjO0jSL7pn0MiX8qt1F/hjEQD4E/WA==}
+    engines: {bun: '>=1.3.3', node: '>=22.3.0'}
+    hasBin: true
+
   verkit@0.5.0:
     resolution: {integrity: sha512-u4J1hr6Y+C/hit34GwL3eIcUf3wngT8TlYUjK7tk0jxydKLAq3sYvifjdTDA6U3KCKRcQCQDGf/srjxfZF3l7g==}
     engines: {node: '>=18.12.0'}
@@ -8085,6 +8120,22 @@ snapshots:
     dependencies:
       '@unified-latex/unified-latex-types': 1.8.4
       '@unified-latex/unified-latex-util-match': 1.8.4
+
+  '@varlock/1password-plugin@2.0.5(varlock@1.22.0)':
+    dependencies:
+      varlock: 1.22.0
+
+  '@varlock/native-helper-darwin@1.22.0':
+    optional: true
+
+  '@varlock/native-helper-linux-arm64@1.22.0':
+    optional: true
+
+  '@varlock/native-helper-linux-x64@1.22.0':
+    optional: true
+
+  '@varlock/native-helper-win32-x64@1.22.0':
+    optional: true
 
   '@vitest/mocker@5.0.3(vite@8.3.4(@types/node@24.19.1)(esbuild@0.28.2)(jiti@2.7.0)(yaml@2.9.1))':
     dependencies:
@@ -10695,6 +10746,13 @@ snapshots:
   util-deprecate@1.0.2: {}
 
   utility-types@3.11.0: {}
+
+  varlock@1.22.0:
+    optionalDependencies:
+      '@varlock/native-helper-darwin': 1.22.0
+      '@varlock/native-helper-linux-arm64': 1.22.0
+      '@varlock/native-helper-linux-x64': 1.22.0
+      '@varlock/native-helper-win32-x64': 1.22.0
 
   verkit@0.5.0: {}
 

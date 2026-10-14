@@ -1,12 +1,13 @@
 # Editing interface for the site, served at /admin (through src/pages/admin/config.yml.ts,
 # which points sign-in at Microsoft when ADMIN_AUTH=microsoft). Editors can only change the
 # folders named here (src/lib/admin.ts).
-# Every save is a commit to the repository, which triggers a rebuild.
+# Every save is a commit to TrialAndErrorOrg/site-content, which asks this repository to rebuild
+# the site (site-content's .github/workflows/rebuild.yml).
 # Field definitions here mirror src/content.config.ts and src/lib/settings.ts.
 
 backend:
   name: github
-  repo: TrialAndErrorOrg/trialanderror
+  repo: TrialAndErrorOrg/site-content
   branch: main
   # Who made a change. With Microsoft sign-in every commit is made by the GitHub App, so the
   # editor's name is only in the message.
@@ -21,7 +22,7 @@ site_url: https://trialanderror.org
 display_url: https://trialanderror.org
 logo_url: /favicon.svg
 
-media_folder: apps/site/public/uploads
+media_folder: uploads
 public_folder: /uploads
 
 collections:
@@ -29,7 +30,7 @@ collections:
     label: Pages
     label_singular: Page
     description: Pages built from sections. "index" is the homepage. Free-text pages (donate, events) still live in Strapi.
-    folder: apps/site/src/content/pages
+    folder: pages
     extension: yaml
     format: yaml
     create: true
@@ -129,7 +130,7 @@ collections:
     files:
       - name: site
         label: Site
-        file: apps/site/src/config/site.yaml
+        file: settings/site.yaml
         fields:
           - { name: name, label: Site name, widget: string }
           - { name: description, label: Description, widget: text }
@@ -173,7 +174,7 @@ collections:
               - { name: pages, label: Pages (slugs) that track, widget: list }
       - name: navigation
         label: Menus
-        file: apps/site/src/config/navigation.yaml
+        file: settings/navigation.yaml
         fields:
           - name: header
             label: Header menu

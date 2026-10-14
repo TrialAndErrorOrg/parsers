@@ -1,7 +1,8 @@
 import { z } from "astro/zod";
 import { parse } from "yaml";
-import navigationYaml from "../config/navigation.yaml?raw";
-import siteYaml from "../config/site.yaml?raw";
+// From site-content, see src/integrations/content.ts
+import navigationYaml from "@content/settings/navigation.yaml?raw";
+import siteYaml from "@content/settings/site.yaml?raw";
 
 const link = z.object({
 	title: z.string(),

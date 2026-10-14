@@ -1,10 +1,11 @@
-# Builds the website (apps/site), publishes it as ghcr.io/trialanderrororg/site and asks Coolify
-# to deploy it. Fast because it keeps every cache between runs: pnpm's store, turbo's cache (the
-# libraries the site uses) and the site's own caches of resized images, share images and journal
-# article HTML. The image only packages the built site, see apps/site/Dockerfile.
+# Builds the website (apps/site) with the content from TrialAndErrorOrg/site-content, publishes it
+# as ghcr.io/trialanderrororg/site and asks Coolify to deploy it. Fast because it keeps every cache
+# between runs: pnpm's store, turbo's cache (the libraries the site uses) and the site's own caches
+# of resized images, share images and journal article HTML. The image only packages the built
+# site, see apps/site/Dockerfile.
 #
-# Secrets: STRAPI_TOKEN and UNDERLAY_TOKEN (read-only, for the build), COOLIFY_DEPLOY_URL and
-# COOLIFY_TOKEN (optional, to deploy). See apps/site/README.md, "Deploying".
+# Secret: OP_TOKEN, a 1Password service account token. varlock reads everything else from the
+# Website vault (apps/site/.env.schema). See apps/site/README.md, "Deploying".
 name: site
 
 on:
@@ -38,11 +39,17 @@ jobs:
       packages: write
     env:
       IMAGE: ghcr.io/trialanderrororg/site
-      # Read here so the Deploy step can skip itself when it isn't set
-      COOLIFY_DEPLOY_URL: ${{ secrets.COOLIFY_DEPLOY_URL }}
+      CONTENT_DIR: ${{ github.workspace }}/site-content
     steps:
       - uses: actions/checkout@v7
         with:
+          persist-credentials: false
+
+      # What editors change in /admin, see apps/site/src/integrations/content.ts
+      - uses: actions/checkout@v7
+        with:
+          repository: TrialAndErrorOrg/site-content
+          path: site-content
           persist-credentials: false
 
       - uses: pnpm/action-setup@v6
@@ -75,11 +82,12 @@ jobs:
           key: site-assets-${{ github.run_id }}
           restore-keys: site-assets-
 
+      # The site's build script runs through varlock, which reads the Strapi and Underlay tokens
+      # from 1Password and hides them in the log
       - name: Build
         run: pnpm turbo run build --filter=site... --cache-dir=.turbo/cache
         env:
-          STRAPI_TOKEN: ${{ secrets.STRAPI_TOKEN }}
-          UNDERLAY_TOKEN: ${{ secrets.UNDERLAY_TOKEN }}
+          OP_TOKEN: ${{ secrets.OP_TOKEN }}
 
       # The built site plus only its production dependencies
       - name: Package
@@ -96,9 +104,14 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
+      # Skipped until COOLIFY_DEPLOY_URL is set in apps/site/.env.schema
       - name: Deploy
-        if: env.COOLIFY_DEPLOY_URL != ''
+        working-directory: apps/site
         run: |
-          curl --fail --silent --show-error -H "Authorization: Bearer $COOLIFY_TOKEN" "$COOLIFY_DEPLOY_URL"
+          # shellcheck disable=SC2016 # expanded by the inner shell, after varlock has filled them in
+          pnpm exec varlock run -- sh -c '
+            if [ -z "$COOLIFY_DEPLOY_URL" ]; then echo "No COOLIFY_DEPLOY_URL, not deploying"; exit 0; fi
+            curl --fail --silent --show-error -H "Authorization: Bearer $COOLIFY_TOKEN" "$COOLIFY_DEPLOY_URL"
+          '
         env:
-          COOLIFY_TOKEN: ${{ secrets.COOLIFY_TOKEN }}
+          OP_TOKEN: ${{ secrets.OP_TOKEN }}

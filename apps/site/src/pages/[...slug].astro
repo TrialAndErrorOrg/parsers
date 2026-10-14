@@ -10,7 +10,7 @@ import { getCmsPages, type CmsPage } from "~/lib/sources/pages";
 
 type Props = { local: CollectionEntry<"pages"> } | { cms: CmsPage };
 
-// Pages in src/content/pages win over Strapi pages with the same slug
+// Pages in site-content win over Strapi pages with the same slug
 export const getStaticPaths = (async () => {
 	const local = (await getCollection("pages")).filter((p) => p.id !== "index");
 	const localSlugs = new Set(local.map((p) => p.id));

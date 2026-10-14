@@ -8,7 +8,9 @@
     "build": {
       "dependsOn": ["^build"],
       "outputs": ["dist/**"],
-      "cache": false
+      "cache": false,
+      // varlock fills the rest from 1Password (.env.schema)
+      "passThroughEnv": ["OP_*", "ONEPASSWORD", "CONTENT_DIR"]
     },
     // Astro reads workspace packages from their built dist
     "typecheck": {
@@ -18,7 +20,8 @@
     "dev": {
       "dependsOn": ["^build"],
       "persistent": true,
-      "cache": false
+      "cache": false,
+      "passThroughEnv": ["OP_*", "ONEPASSWORD", "CONTENT_DIR"]
     }
   }
 }

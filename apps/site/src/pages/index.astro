@@ -4,7 +4,7 @@ import Sections from "~/components/Sections.astro";
 import Base from "~/layouts/Base.astro";
 
 const page = await getEntry("pages", "index");
-if (!page) throw new Error("src/content/pages/index.yaml is missing");
+if (!page) throw new Error("pages/index.yaml is missing from site-content");
 ---
 
 <Base title={page.data.title} description={page.data.description}>

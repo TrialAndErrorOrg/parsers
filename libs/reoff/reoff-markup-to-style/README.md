@@ -1,5 +1,5 @@
 > **Note**
-> This repository is automatically generated from the [main parser monorepo](https://github.com/TrialAndErrorOrg/parsers). Please submit any issues or pull requests there.
+> This repository is automatically generated from the [main parser monorepo](https://github.com/TrialAndErrorOrg/trialanderror). Please submit any issues or pull requests there.
 
 # reoff-markup-to-style
 [![npm version](https://badge.fury.io/js/reoff-markup-to-style.svg)](https://badge.fury.io/js/reoff-markup-to-style) [![npm downloads](https://img.shields.io/npm/dm/reoff-markup-to-style.svg)](https://www.npmjs.com/package/reoff-markup-to-style)
@@ -102,7 +102,7 @@ default(options: Options = ...): ReturnType<Plugin<[Options?] | void[], Root, Ro
 
 A reoff plugin.
 
-Defined in:  [reoff/reoff-markup-to-style/src/lib/reoff-markup-to-style.ts:35](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/reoff/reoff-markup-to-style/src/lib/reoff-markup-to-style.ts#L35)
+Defined in:  [reoff/reoff-markup-to-style/src/lib/reoff-markup-to-style.ts:35](https://github.com/TrialAndErrorOrg/trialanderror/blob/main/libs/reoff/reoff-markup-to-style/src/lib/reoff-markup-to-style.ts#L35)
 
 ***
 
@@ -127,7 +127,7 @@ const options: Options = [
 ]
 ```
 
-Defined in:  [ooxast/ooxast-util-markup-to-style/src/lib/ooxast-util-markup-to-style.ts:80](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/ooxast/ooxast-util-markup-to-style/src/lib/ooxast-util-markup-to-style.ts#L80)
+Defined in:  [ooxast/ooxast-util-markup-to-style/src/lib/ooxast-util-markup-to-style.ts:80](https://github.com/TrialAndErrorOrg/trialanderror/blob/main/libs/ooxast/ooxast-util-markup-to-style/src/lib/ooxast-util-markup-to-style.ts#L80)
 
 ## Syntax tree
 
@@ -153,31 +153,31 @@ Uses the `[ooxast][ooxast]` syntax tree.
 
 [rehype]: https://github.com/rehypejs/rehype
 
-[rejour]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/rejour
+[rejour]: https://github.com/TrialAndErrorOrg/trialanderror/tree/main/libs/rejour
 
-[rejour-parse]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/rejour/rejour-parse
+[rejour-parse]: https://github.com/TrialAndErrorOrg/trialanderror/tree/main/libs/rejour/rejour-parse
 
-[rejour-stringify]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/rejour/rejour-stringify
+[rejour-stringify]: https://github.com/TrialAndErrorOrg/trialanderror/tree/main/libs/rejour/rejour-stringify
 
-[rejour-move-abstract]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/rejour/rejour-move-abstract
+[rejour-move-abstract]: https://github.com/TrialAndErrorOrg/trialanderror/tree/main/libs/rejour/rejour-move-abstract
 
-[rejour-meta]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/rejour/rejour-meta
+[rejour-meta]: https://github.com/TrialAndErrorOrg/trialanderror/tree/main/libs/rejour/rejour-meta
 
-[rejour-relatex]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/rejour/rejour-relatex
+[rejour-relatex]: https://github.com/TrialAndErrorOrg/trialanderror/tree/main/libs/rejour/rejour-relatex
 
-[relatex]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/relatex
+[relatex]: https://github.com/TrialAndErrorOrg/trialanderror/tree/main/libs/relatex
 
-[relatex-parse]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/relatex/relatex-parse
+[relatex-parse]: https://github.com/TrialAndErrorOrg/trialanderror/tree/main/libs/relatex/relatex-parse
 
-[jast]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/rejour/jast
+[jast]: https://github.com/TrialAndErrorOrg/trialanderror/tree/main/libs/rejour/jast
 
-[jast-util-to-texast]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/rejour/jast-util-to-texast
+[jast-util-to-texast]: https://github.com/TrialAndErrorOrg/trialanderror/tree/main/libs/rejour/jast-util-to-texast
 
-[jastscript]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/rejour/jastscript
+[jastscript]: https://github.com/TrialAndErrorOrg/trialanderror/tree/main/libs/rejour/jastscript
 
-[texast]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/relatex/texast
+[texast]: https://github.com/TrialAndErrorOrg/trialanderror/tree/main/libs/relatex/texast
 
-[texast-util-to-latex]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/relatex/texast-util-to-latex
+[texast-util-to-latex]: https://github.com/TrialAndErrorOrg/trialanderror/tree/main/libs/relatex/texast-util-to-latex
 
 [hast]: https://github.com/syntax-tree/hast
 
@@ -191,14 +191,14 @@ Uses the `[ooxast][ooxast]` syntax tree.
 
 [latexjs]: https://github.com/latexjs/latexjs
 
-[reoff]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/reoff
+[reoff]: https://github.com/TrialAndErrorOrg/trialanderror/tree/main/libs/reoff
 
-[reoff-parse]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/reoff/reoff-parse
+[reoff-parse]: https://github.com/TrialAndErrorOrg/trialanderror/tree/main/libs/reoff/reoff-parse
 
-[reoff-rejour]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/reoff/reoff-rejour
+[reoff-rejour]: https://github.com/TrialAndErrorOrg/trialanderror/tree/main/libs/reoff/reoff-rejour
 
-[ooxast]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/ooxast/ooxast
+[ooxast]: https://github.com/TrialAndErrorOrg/trialanderror/tree/main/libs/ooxast/ooxast
 
-[ooxast]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/ooxast/ooxast-util-to-jast
+[ooxast]: https://github.com/TrialAndErrorOrg/trialanderror/tree/main/libs/ooxast/ooxast-util-to-jast
 
-[reoff-markup-to-style]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/reoff-markup-to-style
+[reoff-markup-to-style]: https://github.com/TrialAndErrorOrg/trialanderror/tree/main/libs/reoff-markup-to-style

@@ -2,14 +2,14 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
-## [0.4.1](https://github.com/TrialAndErrorOrg/parsers/compare/ooxast-util-get-style-0.4.0...ooxast-util-get-style-0.4.1) (2024-06-28)
+## [0.4.1](https://github.com/TrialAndErrorOrg/trialanderror/compare/ooxast-util-get-style-0.4.0...ooxast-util-get-style-0.4.1) (2024-06-28)
 
 ### Dependency Updates
 
 * `ooxast` updated to version `0.4.0`
 * `xast-util-select` updated to version `0.4.0`
 * `xast-util-is-element` updated to version `0.4.0`
-## [0.4.0](https://github.com/TrialAndErrorOrg/parsers/compare/ooxast-util-get-style-0.3.0...ooxast-util-get-style-0.4.0) (2023-09-29)
+## [0.4.0](https://github.com/TrialAndErrorOrg/trialanderror/compare/ooxast-util-get-style-0.3.0...ooxast-util-get-style-0.4.0) (2023-09-29)
 
 ### Dependency Updates
 
@@ -19,9 +19,9 @@ This file was generated using [@jscutlery/semver](https://github.com/jscutlery/s
 
 ### Features
 
-* update all package.json ([d4070e5](https://github.com/TrialAndErrorOrg/parsers/commit/d4070e53ab3389db11fed978f3f74bcfe6808f5e))
+* update all package.json ([d4070e5](https://github.com/TrialAndErrorOrg/trialanderror/commit/d4070e53ab3389db11fed978f3f74bcfe6808f5e))
 
-## [0.3.0](https://github.com/TrialAndErrorOrg/parsers/compare/ooxast-util-get-style-0.2.2...ooxast-util-get-style-0.3.0) (2023-09-22)
+## [0.3.0](https://github.com/TrialAndErrorOrg/trialanderror/compare/ooxast-util-get-style-0.2.2...ooxast-util-get-style-0.3.0) (2023-09-22)
 
 ### Dependency Updates
 
@@ -31,9 +31,9 @@ This file was generated using [@jscutlery/semver](https://github.com/jscutlery/s
 
 ### Features
 
-* giant prettier + eslint run ([6becd94](https://github.com/TrialAndErrorOrg/parsers/commit/6becd9492006b9a7f7f91b60db440bb31d9140c8))
+* giant prettier + eslint run ([6becd94](https://github.com/TrialAndErrorOrg/trialanderror/commit/6becd9492006b9a7f7f91b60db440bb31d9140c8))
 
-## [0.2.2](https://github.com/TrialAndErrorOrg/parsers/compare/ooxast-util-get-style-0.2.1...ooxast-util-get-style-0.2.2) (2023-09-21)
+## [0.2.2](https://github.com/TrialAndErrorOrg/trialanderror/compare/ooxast-util-get-style-0.2.1...ooxast-util-get-style-0.2.2) (2023-09-21)
 
 ### Dependency Updates
 
@@ -43,23 +43,23 @@ This file was generated using [@jscutlery/semver](https://github.com/jscutlery/s
 
 ### Bug Fixes
 
-- don't use shady custom builder, just run a script that fixes the package.json ([def3c18](https://github.com/TrialAndErrorOrg/parsers/commit/def3c1844ae0a0d547de2b0a01689a302b58ab61))
-- **ooxast-util-get-style:** correct tsconfig.lib.json include ([203f185](https://github.com/TrialAndErrorOrg/parsers/commit/203f18532c1142f6c425d057ce71eda90112b974))
-- **ooxast-util-to-unified-latex:** just give up on infer heading for now ([4709f1c](https://github.com/TrialAndErrorOrg/parsers/commit/4709f1cbe5fe8bb3e6fbc3ade8f5c92c8c71afb1))
+- don't use shady custom builder, just run a script that fixes the package.json ([def3c18](https://github.com/TrialAndErrorOrg/trialanderror/commit/def3c1844ae0a0d547de2b0a01689a302b58ab61))
+- **ooxast-util-get-style:** correct tsconfig.lib.json include ([203f185](https://github.com/TrialAndErrorOrg/trialanderror/commit/203f18532c1142f6c425d057ce71eda90112b974))
+- **ooxast-util-to-unified-latex:** just give up on infer heading for now ([4709f1c](https://github.com/TrialAndErrorOrg/trialanderror/commit/4709f1cbe5fe8bb3e6fbc3ade8f5c92c8c71afb1))
 
-## [0.2.1](https://github.com/TrialAndErrorOrg/parsers/compare/ooxast-util-get-style-0.2.0...ooxast-util-get-style-0.2.1) (2023-05-30)
+## [0.2.1](https://github.com/TrialAndErrorOrg/trialanderror/compare/ooxast-util-get-style-0.2.0...ooxast-util-get-style-0.2.1) (2023-05-30)
 
 ### Bug Fixes
 
-- **ooxast-util-get-style:** change 'w:val' property type from boolean to string in RPrJSON ([bb93a1f](https://github.com/TrialAndErrorOrg/parsers/commit/bb93a1f9b5b5d4ea216a04d80514fe1c80d54001))
+- **ooxast-util-get-style:** change 'w:val' property type from boolean to string in RPrJSON ([bb93a1f](https://github.com/TrialAndErrorOrg/trialanderror/commit/bb93a1f9b5b5d4ea216a04d80514fe1c80d54001))
 
-## [0.2.0](https://github.com/TrialAndErrorOrg/parsers/compare/ooxast-util-get-style-0.1.2...ooxast-util-get-style-0.2.0) (2023-03-27)
+## [0.2.0](https://github.com/TrialAndErrorOrg/trialanderror/compare/ooxast-util-get-style-0.1.2...ooxast-util-get-style-0.2.0) (2023-03-27)
 
 ### Features
 
-- **ooxast-util-get-style:** improve ([27612f2](https://github.com/TrialAndErrorOrg/parsers/commit/27612f22da9f25a3c6a120b7b1d929f3da6bc28e))
+- **ooxast-util-get-style:** improve ([27612f2](https://github.com/TrialAndErrorOrg/trialanderror/commit/27612f22da9f25a3c6a120b7b1d929f3da6bc28e))
 
-## [0.1.2](https://github.com/TrialAndErrorOrg/parsers/compare/ooxast-util-get-style-0.1.1...ooxast-util-get-style-0.1.2) (2023-03-14)
+## [0.1.2](https://github.com/TrialAndErrorOrg/trialanderror/compare/ooxast-util-get-style-0.1.1...ooxast-util-get-style-0.1.2) (2023-03-14)
 
 ### Dependency Updates
 
@@ -67,7 +67,7 @@ This file was generated using [@jscutlery/semver](https://github.com/jscutlery/s
 - `xast-util-select` updated to version `0.1.2`
 - `xast-util-is-element` updated to version `0.1.4`
 
-## [0.1.1](https://github.com/TrialAndErrorOrg/parsers/compare/ooxast-util-get-style-0.1.0...ooxast-util-get-style-0.1.1) (2023-03-09)
+## [0.1.1](https://github.com/TrialAndErrorOrg/trialanderror/compare/ooxast-util-get-style-0.1.0...ooxast-util-get-style-0.1.1) (2023-03-09)
 
 ### Dependency Updates
 
@@ -79,8 +79,8 @@ This file was generated using [@jscutlery/semver](https://github.com/jscutlery/s
 
 ### Patch Changes
 
-- [#134](https://github.com/TrialAndErrorOrg/parsers/pull/134) [`721606c`](https://github.com/TrialAndErrorOrg/parsers/commit/721606cdc14277e234da470475048bddad80be5e) Thanks [@tefkah](https://github.com/tefkah)! - Published from the `TrialAndErrorOrg/parsers` monorepo with npm provenance: `repository` points at the package's directory there, and the build is plain TypeScript (`tsc`) to `dist`. Dependencies are updated to their latest versions.
-- Updated dependencies [[`721606c`](https://github.com/TrialAndErrorOrg/parsers/commit/721606cdc14277e234da470475048bddad80be5e), [`721606c`](https://github.com/TrialAndErrorOrg/parsers/commit/721606cdc14277e234da470475048bddad80be5e)]:
+- [#134](https://github.com/TrialAndErrorOrg/trialanderror/pull/134) [`721606c`](https://github.com/TrialAndErrorOrg/trialanderror/commit/721606cdc14277e234da470475048bddad80be5e) Thanks [@tefkah](https://github.com/tefkah)! - Published from the `TrialAndErrorOrg/trialanderror` monorepo with npm provenance: `repository` points at the package's directory there, and the build is plain TypeScript (`tsc`) to `dist`. Dependencies are updated to their latest versions.
+- Updated dependencies [[`721606c`](https://github.com/TrialAndErrorOrg/trialanderror/commit/721606cdc14277e234da470475048bddad80be5e), [`721606c`](https://github.com/TrialAndErrorOrg/trialanderror/commit/721606cdc14277e234da470475048bddad80be5e)]:
   - ooxast@0.5.0
   - xast-util-is-element@0.4.1
   - xast-util-select@0.4.1
@@ -95,11 +95,11 @@ This file was generated using [@jscutlery/semver](https://github.com/jscutlery/s
 
 ### Features
 
-- brand spanking new project.json ([32e19eb](https://github.com/TrialAndErrorOrg/parsers/commit/32e19ebf3f71c80336f637297d8f4db274d098bf))
-- **reoff:** parse bibliography through api ([c14ffc5](https://github.com/TrialAndErrorOrg/parsers/commit/c14ffc579f7e9b52b8d72697cd8560920387671e))
+- brand spanking new project.json ([32e19eb](https://github.com/TrialAndErrorOrg/trialanderror/commit/32e19ebf3f71c80336f637297d8f4db274d098bf))
+- **reoff:** parse bibliography through api ([c14ffc5](https://github.com/TrialAndErrorOrg/trialanderror/commit/c14ffc579f7e9b52b8d72697cd8560920387671e))
 
 ### Bug Fixes
 
-- enter a new era ([9c2a0e5](https://github.com/TrialAndErrorOrg/parsers/commit/9c2a0e505472c43d384f3cc78543ad90877b7c3d))
-- **jest:** allow jest to be run even if there is a .swcrc ([6f188f2](https://github.com/TrialAndErrorOrg/parsers/commit/6f188f2a06922ee00d9367b29e666894e48c6c1e))
-- properly set all package.jsons ([5af9c17](https://github.com/TrialAndErrorOrg/parsers/commit/5af9c177be9910511844c481ca59cfcc7bd9b0f6))
+- enter a new era ([9c2a0e5](https://github.com/TrialAndErrorOrg/trialanderror/commit/9c2a0e505472c43d384f3cc78543ad90877b7c3d))
+- **jest:** allow jest to be run even if there is a .swcrc ([6f188f2](https://github.com/TrialAndErrorOrg/trialanderror/commit/6f188f2a06922ee00d9367b29e666894e48c6c1e))
+- properly set all package.jsons ([5af9c17](https://github.com/TrialAndErrorOrg/trialanderror/commit/5af9c177be9910511844c481ca59cfcc7bd9b0f6))

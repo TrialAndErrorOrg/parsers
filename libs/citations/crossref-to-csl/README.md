@@ -1,5 +1,5 @@
 > **Note**
-> This repository is automatically generated from the [main parser monorepo](https://github.com/TrialAndErrorOrg/parsers). Please submit any issues or pull requests there.
+> This repository is automatically generated from the [main parser monorepo](https://github.com/TrialAndErrorOrg/trialanderror). Please submit any issues or pull requests there.
 
 ## API
 
@@ -23,7 +23,7 @@ crossrefToCsl(item: CrossrefJSON): CSL;
 
 `CSL`
 
-Defined in: [lib/crossref-to-csl.ts:52](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/citations/crossref-to-csl/src/lib/crossref-to-csl.ts#L52)
+Defined in: [lib/crossref-to-csl.ts:52](https://github.com/TrialAndErrorOrg/trialanderror/blob/main/libs/citations/crossref-to-csl/src/lib/crossref-to-csl.ts#L52)
 
 ## Install
 

@@ -1,11 +1,11 @@
 > **Note**
-> This repository is automatically generated from the [main parser monorepo](https://github.com/TrialAndErrorOrg/parsers). Please submit any issues or pull requests there.
+> This repository is automatically generated from the [main parser monorepo](https://github.com/TrialAndErrorOrg/trialanderror). Please submit any issues or pull requests there.
 
 # docx-to-vfile
 
 [![npm version](https://badge.fury.io/js/docx-to-vfile.svg)](https://badge.fury.io/js/docx-to-vfile) [![npm downloads](https://img.shields.io/npm/dm/docx-to-vfile.svg)](https://www.npmjs.com/package/docx-to-vfile)
 
-Reads a `.docx` file and stores its components in vfile format to be processed by other tools, like [`reoff-parse`](https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/reoff/reoff-parse).
+Reads a `.docx` file and stores its components in vfile format to be processed by other tools, like [`reoff-parse`](https://github.com/TrialAndErrorOrg/trialanderror/tree/main/libs/reoff/reoff-parse).
 
 Currently extremely dumb and just stores it all in memory, no streams for you.
 File reading does happen in streams.
@@ -244,7 +244,7 @@ docxToVFile(file: string | Blob | ArrayBuffer | File | Buffer, userOptions?: Opt
 
 A VFile with the contents of the document.xml file as the root, and the contents of the other xml files as data.
 
-Defined in:  [lib/docx-to-vfile-unzipit.ts:91](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/reoff/docx-to-vfile/src/lib/docx-to-vfile-unzipit.ts#L91)
+Defined in:  [lib/docx-to-vfile-unzipit.ts:91](https://github.com/TrialAndErrorOrg/trialanderror/blob/main/libs/reoff/docx-to-vfile/src/lib/docx-to-vfile-unzipit.ts#L91)
 
 ***
 
@@ -275,7 +275,7 @@ Possibly undefined only to be compatible with the VFile interface
 
 ###### Type declaration
 
-Defined in:  [lib/docx-to-vfile-unzipit.ts:53](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/reoff/docx-to-vfile/src/lib/docx-to-vfile-unzipit.ts#L53)
+Defined in:  [lib/docx-to-vfile-unzipit.ts:53](https://github.com/TrialAndErrorOrg/trialanderror/blob/main/libs/reoff/docx-to-vfile/src/lib/docx-to-vfile-unzipit.ts#L53)
 
 ##### `parsed?`
 
@@ -291,7 +291,7 @@ Usually added by `reoff-parse`
 
 ###### Type declaration
 
-Defined in:  [lib/docx-to-vfile-unzipit.ts:72](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/reoff/docx-to-vfile/src/lib/docx-to-vfile-unzipit.ts#L72)
+Defined in:  [lib/docx-to-vfile-unzipit.ts:72](https://github.com/TrialAndErrorOrg/trialanderror/blob/main/libs/reoff/docx-to-vfile/src/lib/docx-to-vfile-unzipit.ts#L72)
 
 ##### `relations?`
 
@@ -323,7 +323,7 @@ Possibly undefined only to be compatible with the VFile interface
 | `endnotes`? | {  } |
 | `footnotes`? | {  } |
 
-Defined in:  [lib/docx-to-vfile-unzipit.ts:61](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/reoff/docx-to-vfile/src/lib/docx-to-vfile-unzipit.ts#L61)
+Defined in:  [lib/docx-to-vfile-unzipit.ts:61](https://github.com/TrialAndErrorOrg/trialanderror/blob/main/libs/reoff/docx-to-vfile/src/lib/docx-to-vfile-unzipit.ts#L61)
 
 ***
 
@@ -353,7 +353,7 @@ You should keep it at the default value if you intend to use 'reoff-stringify' t
 
 'all'
 
-Defined in:  [lib/docx-to-vfile-unzipit.ts:29](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/reoff/docx-to-vfile/src/lib/docx-to-vfile-unzipit.ts#L29)
+Defined in:  [lib/docx-to-vfile-unzipit.ts:29](https://github.com/TrialAndErrorOrg/trialanderror/blob/main/libs/reoff/docx-to-vfile/src/lib/docx-to-vfile-unzipit.ts#L29)
 
 ##### `withoutMedia?`
 
@@ -367,7 +367,7 @@ By default, images are included on the `data.media` attribute of the VFile as an
 
 false
 
-Defined in:  [lib/docx-to-vfile-unzipit.ts:15](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/reoff/docx-to-vfile/src/lib/docx-to-vfile-unzipit.ts#L15)
+Defined in:  [lib/docx-to-vfile-unzipit.ts:15](https://github.com/TrialAndErrorOrg/trialanderror/blob/main/libs/reoff/docx-to-vfile/src/lib/docx-to-vfile-unzipit.ts#L15)
 
 ***
 
@@ -385,7 +385,7 @@ Defined in:  [lib/docx-to-vfile-unzipit.ts:15](https://github.com/TrialAndErrorO
 
 The config to pass to fetch, for e.g. authorization headers.
 
-Defined in:  [lib/docx-to-vfile-unzipit.ts:36](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/reoff/docx-to-vfile/src/lib/docx-to-vfile-unzipit.ts#L36)
+Defined in:  [lib/docx-to-vfile-unzipit.ts:36](https://github.com/TrialAndErrorOrg/trialanderror/blob/main/libs/reoff/docx-to-vfile/src/lib/docx-to-vfile-unzipit.ts#L36)
 
 ##### `include?`
 
@@ -407,7 +407,7 @@ You should keep it at the default value if you intend to use 'reoff-stringify' t
 
 Inherited from: [Options](modules.md#options).[include](modules.md#include)
 
-Defined in:  [lib/docx-to-vfile-unzipit.ts:29](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/reoff/docx-to-vfile/src/lib/docx-to-vfile-unzipit.ts#L29)
+Defined in:  [lib/docx-to-vfile-unzipit.ts:29](https://github.com/TrialAndErrorOrg/trialanderror/blob/main/libs/reoff/docx-to-vfile/src/lib/docx-to-vfile-unzipit.ts#L29)
 
 ##### `withoutMedia?`
 
@@ -423,7 +423,7 @@ false
 
 Inherited from: [Options](modules.md#options).[withoutMedia](modules.md#withoutmedia)
 
-Defined in:  [lib/docx-to-vfile-unzipit.ts:15](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/reoff/docx-to-vfile/src/lib/docx-to-vfile-unzipit.ts#L15)
+Defined in:  [lib/docx-to-vfile-unzipit.ts:15](https://github.com/TrialAndErrorOrg/trialanderror/blob/main/libs/reoff/docx-to-vfile/src/lib/docx-to-vfile-unzipit.ts#L15)
 
 ***
 
@@ -431,7 +431,7 @@ Defined in:  [lib/docx-to-vfile-unzipit.ts:15](https://github.com/TrialAndErrorO
 
 > `${string}.xml` | `${string}.rels`
 
-Defined in:  [lib/docx-to-vfile-unzipit.ts:82](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/reoff/docx-to-vfile/src/lib/docx-to-vfile-unzipit.ts#L82)
+Defined in:  [lib/docx-to-vfile-unzipit.ts:82](https://github.com/TrialAndErrorOrg/trialanderror/blob/main/libs/reoff/docx-to-vfile/src/lib/docx-to-vfile-unzipit.ts#L82)
 
 ## Compatibility
 
@@ -459,31 +459,31 @@ It does not however do any other security checks, so it is possible that malicio
 
 [rehype]: https://github.com/rehypejs/rehype
 
-[rejour]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/rejour
+[rejour]: https://github.com/TrialAndErrorOrg/trialanderror/tree/main/libs/rejour
 
-[rejour-parse]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/rejour/rejour-parse
+[rejour-parse]: https://github.com/TrialAndErrorOrg/trialanderror/tree/main/libs/rejour/rejour-parse
 
-[rejour-stringify]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/rejour/rejour-stringify
+[rejour-stringify]: https://github.com/TrialAndErrorOrg/trialanderror/tree/main/libs/rejour/rejour-stringify
 
-[rejour-move-abstract]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/rejour/rejour-move-abstract
+[rejour-move-abstract]: https://github.com/TrialAndErrorOrg/trialanderror/tree/main/libs/rejour/rejour-move-abstract
 
-[rejour-meta]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/rejour/rejour-meta
+[rejour-meta]: https://github.com/TrialAndErrorOrg/trialanderror/tree/main/libs/rejour/rejour-meta
 
-[rejour-relatex]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/rejour/rejour-relatex
+[rejour-relatex]: https://github.com/TrialAndErrorOrg/trialanderror/tree/main/libs/rejour/rejour-relatex
 
-[relatex]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/relatex
+[relatex]: https://github.com/TrialAndErrorOrg/trialanderror/tree/main/libs/relatex
 
-[reoff-parse]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/relatex/reoff-parse
+[reoff-parse]: https://github.com/TrialAndErrorOrg/trialanderror/tree/main/libs/relatex/reoff-parse
 
-[jast]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/rejour/jast
+[jast]: https://github.com/TrialAndErrorOrg/trialanderror/tree/main/libs/rejour/jast
 
-[jast-util-to-texast]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/rejour/jast-util-to-texast
+[jast-util-to-texast]: https://github.com/TrialAndErrorOrg/trialanderror/tree/main/libs/rejour/jast-util-to-texast
 
-[jastscript]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/rejour/jastscript
+[jastscript]: https://github.com/TrialAndErrorOrg/trialanderror/tree/main/libs/rejour/jastscript
 
-[texast]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/relatex/texast
+[texast]: https://github.com/TrialAndErrorOrg/trialanderror/tree/main/libs/relatex/texast
 
-[texast-util-to-latex]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/relatex/texast-util-to-latex
+[texast-util-to-latex]: https://github.com/TrialAndErrorOrg/trialanderror/tree/main/libs/relatex/texast-util-to-latex
 
 [hast]: https://github.com/syntax-tree/hast
 
@@ -497,12 +497,12 @@ It does not however do any other security checks, so it is possible that malicio
 
 [latexjs]: https://github.com/latexjs/latexjs
 
-[reoff]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/reoff
+[reoff]: https://github.com/TrialAndErrorOrg/trialanderror/tree/main/libs/reoff
 
-[reoff-parse]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/reoff/reoff-parse
+[reoff-parse]: https://github.com/TrialAndErrorOrg/trialanderror/tree/main/libs/reoff/reoff-parse
 
-[reoff-rejour]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/reoff/reoff-rejour
+[reoff-rejour]: https://github.com/TrialAndErrorOrg/trialanderror/tree/main/libs/reoff/reoff-rejour
 
-[ooxast]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/ooxast/ooxast
+[ooxast]: https://github.com/TrialAndErrorOrg/trialanderror/tree/main/libs/ooxast/ooxast
 
-[ooxast]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/ooxast/ooxast-util-to-jast
+[ooxast]: https://github.com/TrialAndErrorOrg/trialanderror/tree/main/libs/ooxast/ooxast-util-to-jast

@@ -1,5 +1,5 @@
 > **Note**
-> This repository is automatically generated from the [main parser monorepo](https://github.com/TrialAndErrorOrg/parsers). Please submit any issues or pull requests there.
+> This repository is automatically generated from the [main parser monorepo](https://github.com/TrialAndErrorOrg/trialanderror). Please submit any issues or pull requests there.
 
 ## API
 
@@ -23,7 +23,7 @@ all(node: Bold | FixedCase | Italic | Monospace | NamedContent | Overline | Roma
 
 `any`[]
 
-Defined in: [lib/jast-util-to-csl.ts:252](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast-util-to-csl/src/lib/jast-util-to-csl.ts#L252)
+Defined in: [lib/jast-util-to-csl.ts:252](https://github.com/TrialAndErrorOrg/trialanderror/blob/main/libs/jast/jast-util-to-csl/src/lib/jast-util-to-csl.ts#L252)
 
 ---
 
@@ -45,7 +45,7 @@ one(node: Text | Bold | FixedCase | Italic | Monospace | NamedContent | Overline
 
 `any`
 
-Defined in: [lib/jast-util-to-csl.ts:266](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast-util-to-csl/src/lib/jast-util-to-csl.ts#L266)
+Defined in: [lib/jast-util-to-csl.ts:266](https://github.com/TrialAndErrorOrg/trialanderror/blob/main/libs/jast/jast-util-to-csl/src/lib/jast-util-to-csl.ts#L266)
 
 ---
 
@@ -67,7 +67,7 @@ refListToCSL(list: RefList): CSL[];
 
 `CSL`[]
 
-Defined in: [lib/jast-util-to-csl.ts:31](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast-util-to-csl/src/lib/jast-util-to-csl.ts#L31)
+Defined in: [lib/jast-util-to-csl.ts:31](https://github.com/TrialAndErrorOrg/trialanderror/blob/main/libs/jast/jast-util-to-csl/src/lib/jast-util-to-csl.ts#L31)
 
 ---
 
@@ -90,7 +90,7 @@ refToCSL(citation: ElementCitation, id: string): CSL;
 
 `CSL`
 
-Defined in: [lib/jast-util-to-csl.ts:45](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast-util-to-csl/src/lib/jast-util-to-csl.ts#L45)
+Defined in: [lib/jast-util-to-csl.ts:45](https://github.com/TrialAndErrorOrg/trialanderror/blob/main/libs/jast/jast-util-to-csl/src/lib/jast-util-to-csl.ts#L45)
 
 ---
 
@@ -118,7 +118,7 @@ toCSL<T>(root: T): CSLConditional<T>;
 
 `CSLConditional`<`T`>
 
-Defined in: [lib/jast-util-to-csl.ts:220](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast-util-to-csl/src/lib/jast-util-to-csl.ts#L220)
+Defined in: [lib/jast-util-to-csl.ts:220](https://github.com/TrialAndErrorOrg/trialanderror/blob/main/libs/jast/jast-util-to-csl/src/lib/jast-util-to-csl.ts#L220)
 
 ---
 
@@ -140,7 +140,7 @@ toCSLBack(node: Back): CSL[] | undefined;
 
 `CSL`[] | `undefined`
 
-Defined in: [lib/jast-util-to-csl.ts:192](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast-util-to-csl/src/lib/jast-util-to-csl.ts#L192)
+Defined in: [lib/jast-util-to-csl.ts:192](https://github.com/TrialAndErrorOrg/trialanderror/blob/main/libs/jast/jast-util-to-csl/src/lib/jast-util-to-csl.ts#L192)
 
 ---
 
@@ -162,7 +162,7 @@ toCSLFront(node: Front): CSL | undefined;
 
 `CSL` | `undefined`
 
-Defined in: [lib/jast-util-to-csl.ts:184](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast-util-to-csl/src/lib/jast-util-to-csl.ts#L184)
+Defined in: [lib/jast-util-to-csl.ts:184](https://github.com/TrialAndErrorOrg/trialanderror/blob/main/libs/jast/jast-util-to-csl/src/lib/jast-util-to-csl.ts#L184)
 
 ## Install
 

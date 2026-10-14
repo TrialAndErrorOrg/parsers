@@ -1,5 +1,5 @@
 > **Note**
-> This repository is automatically generated from the [main parser monorepo](https://github.com/TrialAndErrorOrg/parsers). Please submit any issues or pull requests there.
+> This repository is automatically generated from the [main parser monorepo](https://github.com/TrialAndErrorOrg/trialanderror). Please submit any issues or pull requests there.
 
 # xast-util-is-element
 
@@ -68,7 +68,7 @@ convertElement<T>(test: T["name"] | TestFunctionPredicate<T>): AssertPredicate<T
 
 [`AssertPredicate`](modules.md#assertpredicate)<`T`>
 
-Defined in:  [lib/xast-util-is-element.ts:174](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/xast/xast-util-is-element/src/lib/xast-util-is-element.ts#L174)
+Defined in:  [lib/xast-util-is-element.ts:174](https://github.com/TrialAndErrorOrg/trialanderror/blob/main/libs/xast/xast-util-is-element/src/lib/xast-util-is-element.ts#L174)
 
 #### Signature
 
@@ -86,7 +86,7 @@ convertElement(test?: Test): AssertAnything;
 
 [`AssertAnything`](modules.md#assertanything)
 
-Defined in:  [lib/xast-util-is-element.ts:177](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/xast/xast-util-is-element/src/lib/xast-util-is-element.ts#L177)
+Defined in:  [lib/xast-util-is-element.ts:177](https://github.com/TrialAndErrorOrg/trialanderror/blob/main/libs/xast/xast-util-is-element/src/lib/xast-util-is-element.ts#L177)
 
 ***
 
@@ -102,7 +102,7 @@ isElement(): false;
 
 `false`
 
-Defined in:  [lib/xast-util-is-element.ts:123](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/xast/xast-util-is-element/src/lib/xast-util-is-element.ts#L123)
+Defined in:  [lib/xast-util-is-element.ts:123](https://github.com/TrialAndErrorOrg/trialanderror/blob/main/libs/xast/xast-util-is-element/src/lib/xast-util-is-element.ts#L123)
 
 #### Signature
 
@@ -133,7 +133,7 @@ isElement<T>(
 
 `node is T`
 
-Defined in:  [lib/xast-util-is-element.ts:124](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/xast/xast-util-is-element/src/lib/xast-util-is-element.ts#L124)
+Defined in:  [lib/xast-util-is-element.ts:124](https://github.com/TrialAndErrorOrg/trialanderror/blob/main/libs/xast/xast-util-is-element/src/lib/xast-util-is-element.ts#L124)
 
 #### Signature
 
@@ -160,7 +160,7 @@ isElement(
 
 `boolean`
 
-Defined in:  [lib/xast-util-is-element.ts:131](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/xast/xast-util-is-element/src/lib/xast-util-is-element.ts#L131)
+Defined in:  [lib/xast-util-is-element.ts:131](https://github.com/TrialAndErrorOrg/trialanderror/blob/main/libs/xast/xast-util-is-element/src/lib/xast-util-is-element.ts#L131)
 
 ***
 
@@ -190,7 +190,7 @@ Check if a node is an element and passes a certain node test
 
 `boolean`
 
-Defined in:  [lib/xast-util-is-element.ts:40](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/xast/xast-util-is-element/src/lib/xast-util-is-element.ts#L40)
+Defined in:  [lib/xast-util-is-element.ts:40](https://github.com/TrialAndErrorOrg/trialanderror/blob/main/libs/xast/xast-util-is-element/src/lib/xast-util-is-element.ts#L40)
 
 ***
 
@@ -224,7 +224,7 @@ Check if a node is an element and passes a certain node test
 
 `node is Y`
 
-Defined in:  [lib/xast-util-is-element.ts:50](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/xast/xast-util-is-element/src/lib/xast-util-is-element.ts#L50)
+Defined in:  [lib/xast-util-is-element.ts:50](https://github.com/TrialAndErrorOrg/trialanderror/blob/main/libs/xast/xast-util-is-element/src/lib/xast-util-is-element.ts#L50)
 
 ***
 
@@ -232,7 +232,7 @@ Defined in:  [lib/xast-util-is-element.ts:50](https://github.com/TrialAndErrorOr
 
 > `string`
 
-Defined in:  [lib/xast-util-is-element.ts:4](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/xast/xast-util-is-element/src/lib/xast-util-is-element.ts#L4)
+Defined in:  [lib/xast-util-is-element.ts:4](https://github.com/TrialAndErrorOrg/trialanderror/blob/main/libs/xast/xast-util-is-element/src/lib/xast-util-is-element.ts#L4)
 
 ***
 
@@ -244,7 +244,7 @@ Defined in:  [lib/xast-util-is-element.ts:4](https://github.com/TrialAndErrorOrg
 
 *   `T` *extends* `Element`
 
-Defined in:  [lib/xast-util-is-element.ts:12](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/xast/xast-util-is-element/src/lib/xast-util-is-element.ts#L12)
+Defined in:  [lib/xast-util-is-element.ts:12](https://github.com/TrialAndErrorOrg/trialanderror/blob/main/libs/xast/xast-util-is-element/src/lib/xast-util-is-element.ts#L12)
 
 ***
 
@@ -252,7 +252,7 @@ Defined in:  [lib/xast-util-is-element.ts:12](https://github.com/TrialAndErrorOr
 
 > `null` | `undefined` | [`Name`](modules.md#name) | [`TestFunctionAnything`](modules.md#testfunctionanything) | ([`Name`](modules.md#name) | [`TestFunctionAnything`](modules.md#testfunctionanything))[]
 
-Defined in:  [lib/xast-util-is-element.ts:5](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/xast/xast-util-is-element/src/lib/xast-util-is-element.ts#L5)
+Defined in:  [lib/xast-util-is-element.ts:5](https://github.com/TrialAndErrorOrg/trialanderror/blob/main/libs/xast/xast-util-is-element/src/lib/xast-util-is-element.ts#L5)
 
 ***
 
@@ -282,7 +282,7 @@ Check if an element passes a test
 
 `boolean` | `void`
 
-Defined in:  [lib/xast-util-is-element.ts:22](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/xast/xast-util-is-element/src/lib/xast-util-is-element.ts#L22)
+Defined in:  [lib/xast-util-is-element.ts:22](https://github.com/TrialAndErrorOrg/trialanderror/blob/main/libs/xast/xast-util-is-element/src/lib/xast-util-is-element.ts#L22)
 
 ***
 
@@ -316,7 +316,7 @@ Check if an element passes a certain node test
 
 `element is X`
 
-Defined in:  [lib/xast-util-is-element.ts:31](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/xast/xast-util-is-element/src/lib/xast-util-is-element.ts#L31)
+Defined in:  [lib/xast-util-is-element.ts:31](https://github.com/TrialAndErrorOrg/trialanderror/blob/main/libs/xast/xast-util-is-element/src/lib/xast-util-is-element.ts#L31)
 
 ## Syntax tree
 
@@ -342,31 +342,31 @@ Defined in:  [lib/xast-util-is-element.ts:31](https://github.com/TrialAndErrorOr
 
 [rehype]: https://github.com/rehypejs/rehype
 
-[rejour]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/rejour
+[rejour]: https://github.com/TrialAndErrorOrg/trialanderror/tree/main/libs/rejour
 
-[rejour-parse]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/rejour/rejour-parse
+[rejour-parse]: https://github.com/TrialAndErrorOrg/trialanderror/tree/main/libs/rejour/rejour-parse
 
-[rejour-stringify]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/rejour/rejour-stringify
+[rejour-stringify]: https://github.com/TrialAndErrorOrg/trialanderror/tree/main/libs/rejour/rejour-stringify
 
-[rejour-move-abstract]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/rejour/rejour-move-abstract
+[rejour-move-abstract]: https://github.com/TrialAndErrorOrg/trialanderror/tree/main/libs/rejour/rejour-move-abstract
 
-[rejour-meta]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/rejour/rejour-meta
+[rejour-meta]: https://github.com/TrialAndErrorOrg/trialanderror/tree/main/libs/rejour/rejour-meta
 
-[rejour-relatex]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/rejour/rejour-relatex
+[rejour-relatex]: https://github.com/TrialAndErrorOrg/trialanderror/tree/main/libs/rejour/rejour-relatex
 
-[relatex]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/relatex
+[relatex]: https://github.com/TrialAndErrorOrg/trialanderror/tree/main/libs/relatex
 
-[relatex-parse]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/relatex/relatex-parse
+[relatex-parse]: https://github.com/TrialAndErrorOrg/trialanderror/tree/main/libs/relatex/relatex-parse
 
-[jast]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/rejour/jast
+[jast]: https://github.com/TrialAndErrorOrg/trialanderror/tree/main/libs/rejour/jast
 
-[jast-util-to-texast]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/rejour/jast-util-to-texast
+[jast-util-to-texast]: https://github.com/TrialAndErrorOrg/trialanderror/tree/main/libs/rejour/jast-util-to-texast
 
-[jastscript]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/rejour/jastscript
+[jastscript]: https://github.com/TrialAndErrorOrg/trialanderror/tree/main/libs/rejour/jastscript
 
-[texast]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/relatex/texast
+[texast]: https://github.com/TrialAndErrorOrg/trialanderror/tree/main/libs/relatex/texast
 
-[texast-util-to-latex]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/relatex/texast-util-to-latex
+[texast-util-to-latex]: https://github.com/TrialAndErrorOrg/trialanderror/tree/main/libs/relatex/texast-util-to-latex
 
 [hast]: https://github.com/syntax-tree/hast
 
@@ -380,12 +380,12 @@ Defined in:  [lib/xast-util-is-element.ts:31](https://github.com/TrialAndErrorOr
 
 [latexjs]: https://github.com/latexjs/latexjs
 
-[reoff]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/reoff
+[reoff]: https://github.com/TrialAndErrorOrg/trialanderror/tree/main/libs/reoff
 
-[reoff-parse]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/reoff/reoff-parse
+[reoff-parse]: https://github.com/TrialAndErrorOrg/trialanderror/tree/main/libs/reoff/reoff-parse
 
-[reoff-rejour]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/reoff/reoff-rejour
+[reoff-rejour]: https://github.com/TrialAndErrorOrg/trialanderror/tree/main/libs/reoff/reoff-rejour
 
-[ooxast]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/ooxast/ooxast
+[ooxast]: https://github.com/TrialAndErrorOrg/trialanderror/tree/main/libs/ooxast/ooxast
 
-[ooxast]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/ooxast/ooxast-util-to-jast
+[ooxast]: https://github.com/TrialAndErrorOrg/trialanderror/tree/main/libs/ooxast/ooxast-util-to-jast

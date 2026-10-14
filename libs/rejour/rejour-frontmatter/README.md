@@ -1,5 +1,5 @@
 > **Note**
-> This repository is automatically generated from the [main parser monorepo](https://github.com/TrialAndErrorOrg/parsers). Please submit any issues or pull requests there.
+> This repository is automatically generated from the [main parser monorepo](https://github.com/TrialAndErrorOrg/trialanderror). Please submit any issues or pull requests there.
 
 ## API
 
@@ -34,7 +34,7 @@ rejourFrontmatter(): Function;
 
 `void`
 
-Defined in:  [lib/rejour-frontmatter.ts:8](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/rejour/rejour-frontmatter/src/lib/rejour-frontmatter.ts#L8)
+Defined in:  [lib/rejour-frontmatter.ts:8](https://github.com/TrialAndErrorOrg/trialanderror/blob/main/libs/rejour/rejour-frontmatter/src/lib/rejour-frontmatter.ts#L8)
 
 ## Install
 

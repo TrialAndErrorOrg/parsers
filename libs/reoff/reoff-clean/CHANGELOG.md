@@ -2,7 +2,7 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
-## [0.4.0](https://github.com/TrialAndErrorOrg/parsers/compare/reoff-clean-0.3.0...reoff-clean-0.4.0) (2024-06-28)
+## [0.4.0](https://github.com/TrialAndErrorOrg/trialanderror/compare/reoff-clean-0.3.0...reoff-clean-0.4.0) (2024-06-28)
 
 ### Dependency Updates
 
@@ -13,9 +13,9 @@ This file was generated using [@jscutlery/semver](https://github.com/jscutlery/s
 
 ### Features
 
-* update to new unified versions ([18bb996](https://github.com/TrialAndErrorOrg/parsers/commit/18bb9960d25843db83cda8bfea932e2e22f44b9b))
+* update to new unified versions ([18bb996](https://github.com/TrialAndErrorOrg/trialanderror/commit/18bb9960d25843db83cda8bfea932e2e22f44b9b))
 
-## [0.3.0](https://github.com/TrialAndErrorOrg/parsers/compare/reoff-clean-0.2.0...reoff-clean-0.3.0) (2023-09-29)
+## [0.3.0](https://github.com/TrialAndErrorOrg/trialanderror/compare/reoff-clean-0.2.0...reoff-clean-0.3.0) (2023-09-29)
 
 ### Dependency Updates
 
@@ -26,9 +26,9 @@ This file was generated using [@jscutlery/semver](https://github.com/jscutlery/s
 
 ### Features
 
-* update all package.json ([d4070e5](https://github.com/TrialAndErrorOrg/parsers/commit/d4070e53ab3389db11fed978f3f74bcfe6808f5e))
+* update all package.json ([d4070e5](https://github.com/TrialAndErrorOrg/trialanderror/commit/d4070e53ab3389db11fed978f3f74bcfe6808f5e))
 
-## [0.2.0](https://github.com/TrialAndErrorOrg/parsers/compare/reoff-clean-0.1.2...reoff-clean-0.2.0) (2023-09-22)
+## [0.2.0](https://github.com/TrialAndErrorOrg/trialanderror/compare/reoff-clean-0.1.2...reoff-clean-0.2.0) (2023-09-22)
 
 ### Dependency Updates
 
@@ -39,9 +39,9 @@ This file was generated using [@jscutlery/semver](https://github.com/jscutlery/s
 
 ### Features
 
-* giant prettier + eslint run ([6becd94](https://github.com/TrialAndErrorOrg/parsers/commit/6becd9492006b9a7f7f91b60db440bb31d9140c8))
+* giant prettier + eslint run ([6becd94](https://github.com/TrialAndErrorOrg/trialanderror/commit/6becd9492006b9a7f7f91b60db440bb31d9140c8))
 
-## [0.1.2](https://github.com/TrialAndErrorOrg/parsers/compare/reoff-clean-0.1.1...reoff-clean-0.1.2) (2023-09-21)
+## [0.1.2](https://github.com/TrialAndErrorOrg/trialanderror/compare/reoff-clean-0.1.1...reoff-clean-0.1.2) (2023-09-21)
 
 ### Dependency Updates
 
@@ -52,11 +52,11 @@ This file was generated using [@jscutlery/semver](https://github.com/jscutlery/s
 
 ### Bug Fixes
 
-- don't use shady custom builder, just run a script that fixes the package.json ([def3c18](https://github.com/TrialAndErrorOrg/parsers/commit/def3c1844ae0a0d547de2b0a01689a302b58ab61))
-- **ooxast-util-to-unified-latex:** just give up on infer heading for now ([4709f1c](https://github.com/TrialAndErrorOrg/parsers/commit/4709f1cbe5fe8bb3e6fbc3ade8f5c92c8c71afb1))
-- **reoff-clean:** also process footnotes and endnotes ([81d36d7](https://github.com/TrialAndErrorOrg/parsers/commit/81d36d76c081a6181078e3aa8d7533ef2f2006f9))
+- don't use shady custom builder, just run a script that fixes the package.json ([def3c18](https://github.com/TrialAndErrorOrg/trialanderror/commit/def3c1844ae0a0d547de2b0a01689a302b58ab61))
+- **ooxast-util-to-unified-latex:** just give up on infer heading for now ([4709f1c](https://github.com/TrialAndErrorOrg/trialanderror/commit/4709f1cbe5fe8bb3e6fbc3ade8f5c92c8c71afb1))
+- **reoff-clean:** also process footnotes and endnotes ([81d36d7](https://github.com/TrialAndErrorOrg/trialanderror/commit/81d36d76c081a6181078e3aa8d7533ef2f2006f9))
 
-## [0.1.1](https://github.com/TrialAndErrorOrg/parsers/compare/reoff-clean-0.1.0...reoff-clean-0.1.1) (2023-03-14)
+## [0.1.1](https://github.com/TrialAndErrorOrg/trialanderror/compare/reoff-clean-0.1.0...reoff-clean-0.1.1) (2023-03-14)
 
 ### Dependency Updates
 
@@ -67,8 +67,8 @@ This file was generated using [@jscutlery/semver](https://github.com/jscutlery/s
 
 ### Patch Changes
 
-- [#134](https://github.com/TrialAndErrorOrg/parsers/pull/134) [`721606c`](https://github.com/TrialAndErrorOrg/parsers/commit/721606cdc14277e234da470475048bddad80be5e) Thanks [@tefkah](https://github.com/tefkah)! - Published from the `TrialAndErrorOrg/parsers` monorepo with npm provenance: `repository` points at the package's directory there, and the build is plain TypeScript (`tsc`) to `dist`. Dependencies are updated to their latest versions.
-- Updated dependencies [[`721606c`](https://github.com/TrialAndErrorOrg/parsers/commit/721606cdc14277e234da470475048bddad80be5e), [`721606c`](https://github.com/TrialAndErrorOrg/parsers/commit/721606cdc14277e234da470475048bddad80be5e), [`721606c`](https://github.com/TrialAndErrorOrg/parsers/commit/721606cdc14277e234da470475048bddad80be5e)]:
+- [#134](https://github.com/TrialAndErrorOrg/trialanderror/pull/134) [`721606c`](https://github.com/TrialAndErrorOrg/trialanderror/commit/721606cdc14277e234da470475048bddad80be5e) Thanks [@tefkah](https://github.com/tefkah)! - Published from the `TrialAndErrorOrg/trialanderror` monorepo with npm provenance: `repository` points at the package's directory there, and the build is plain TypeScript (`tsc`) to `dist`. Dependencies are updated to their latest versions.
+- Updated dependencies [[`721606c`](https://github.com/TrialAndErrorOrg/trialanderror/commit/721606cdc14277e234da470475048bddad80be5e), [`721606c`](https://github.com/TrialAndErrorOrg/trialanderror/commit/721606cdc14277e234da470475048bddad80be5e), [`721606c`](https://github.com/TrialAndErrorOrg/trialanderror/commit/721606cdc14277e234da470475048bddad80be5e)]:
   - ooxast-util-remove-rsid@0.5.1
   - docx-to-vfile@0.11.1
   - ooxast@0.5.0
@@ -82,13 +82,13 @@ This file was generated using [@jscutlery/semver](https://github.com/jscutlery/s
 
 ### Features
 
-- brand spanking new project.json ([32e19eb](https://github.com/TrialAndErrorOrg/parsers/commit/32e19ebf3f71c80336f637297d8f4db274d098bf))
-- **citations:** improve citation recognition somewhat ([93ae18c](https://github.com/TrialAndErrorOrg/parsers/commit/93ae18c42a4bd3e2072c4fb0ffcb350d4fb9c4d2))
-- **parser:** make the parser contain more metadata ([59c8623](https://github.com/TrialAndErrorOrg/parsers/commit/59c8623885f0330e9c945306e09214b5fb378d5b))
-- **reoff:** reoff clean plugin ([75b9016](https://github.com/TrialAndErrorOrg/parsers/commit/75b901685f856438750e9e11ac4d62a070f73c2c))
+- brand spanking new project.json ([32e19eb](https://github.com/TrialAndErrorOrg/trialanderror/commit/32e19ebf3f71c80336f637297d8f4db274d098bf))
+- **citations:** improve citation recognition somewhat ([93ae18c](https://github.com/TrialAndErrorOrg/trialanderror/commit/93ae18c42a4bd3e2072c4fb0ffcb350d4fb9c4d2))
+- **parser:** make the parser contain more metadata ([59c8623](https://github.com/TrialAndErrorOrg/trialanderror/commit/59c8623885f0330e9c945306e09214b5fb378d5b))
+- **reoff:** reoff clean plugin ([75b9016](https://github.com/TrialAndErrorOrg/trialanderror/commit/75b901685f856438750e9e11ac4d62a070f73c2c))
 
 ### Bug Fixes
 
-- enter a new era ([9c2a0e5](https://github.com/TrialAndErrorOrg/parsers/commit/9c2a0e505472c43d384f3cc78543ad90877b7c3d))
-- **jest:** allow jest to be run even if there is a .swcrc ([6f188f2](https://github.com/TrialAndErrorOrg/parsers/commit/6f188f2a06922ee00d9367b29e666894e48c6c1e))
-- properly set all package.jsons ([5af9c17](https://github.com/TrialAndErrorOrg/parsers/commit/5af9c177be9910511844c481ca59cfcc7bd9b0f6))
+- enter a new era ([9c2a0e5](https://github.com/TrialAndErrorOrg/trialanderror/commit/9c2a0e505472c43d384f3cc78543ad90877b7c3d))
+- **jest:** allow jest to be run even if there is a .swcrc ([6f188f2](https://github.com/TrialAndErrorOrg/trialanderror/commit/6f188f2a06922ee00d9367b29e666894e48c6c1e))
+- properly set all package.jsons ([5af9c17](https://github.com/TrialAndErrorOrg/trialanderror/commit/5af9c177be9910511844c481ca59cfcc7bd9b0f6))

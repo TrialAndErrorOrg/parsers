@@ -1,0 +1,26 @@
+---
+import type { Section } from "~/content.config";
+import { getPosts } from "~/lib/sources/blog";
+import PostCard from "../PostCard.astro";
+
+type Props = Extract<Section, { type: "latest-posts" }>;
+const { title, count } = Astro.props;
+const [first, ...rest] = (await getPosts()).slice(0, count);
+---
+
+<section class="page py-16">
+	<div class="mb-10 flex flex-wrap items-end justify-between gap-4">
+		<h2 class="section-title flex-grow">{title}</h2>
+		<a href="/blog" class="button button-plain">All posts</a>
+	</div>
+	{first && <PostCard post={first} wide />}
+	{
+		rest.length > 0 && (
+			<div class="mt-8 grid gap-8 md:grid-cols-2 xl:grid-cols-4">
+				{rest.map((post) => (
+					<PostCard post={post} />
+				))}
+			</div>
+		)
+	}
+</section>

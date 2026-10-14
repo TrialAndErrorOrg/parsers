@@ -1,5 +1,5 @@
 > **Note**
-> This repository is automatically generated from the [main parser monorepo](https://github.com/TrialAndErrorOrg/parsers). Please submit any issues or pull requests there.
+> This repository is automatically generated from the [main parser monorepo](https://github.com/TrialAndErrorOrg/trialanderror). Please submit any issues or pull requests there.
 
 ## API
 
@@ -23,7 +23,7 @@ cslToFront(data: Data): void;
 
 `void`
 
-Defined in: [lib/csl-to-jast.ts:27](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast-util-from-csl/src/lib/csl-to-jast.ts#L27)
+Defined in: [lib/csl-to-jast.ts:27](https://github.com/TrialAndErrorOrg/trialanderror/blob/main/libs/jast/jast-util-from-csl/src/lib/csl-to-jast.ts#L27)
 
 ---
 
@@ -45,7 +45,7 @@ cslToJats(data: Data | Data[]): void | RefList;
 
 `void` | `RefList`
 
-Defined in: [lib/csl-to-jast.ts:19](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast-util-from-csl/src/lib/csl-to-jast.ts#L19)
+Defined in: [lib/csl-to-jast.ts:19](https://github.com/TrialAndErrorOrg/trialanderror/blob/main/libs/jast/jast-util-from-csl/src/lib/csl-to-jast.ts#L19)
 
 ---
 
@@ -68,7 +68,7 @@ cslToRef(data: Data, index: string | number): Ref;
 
 `Ref`
 
-Defined in: [lib/csl-to-jast.ts:44](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast-util-from-csl/src/lib/csl-to-jast.ts#L44)
+Defined in: [lib/csl-to-jast.ts:44](https://github.com/TrialAndErrorOrg/trialanderror/blob/main/libs/jast/jast-util-from-csl/src/lib/csl-to-jast.ts#L44)
 
 ---
 
@@ -92,7 +92,7 @@ cslToRefList(data: Data[] | {
 
 `RefList`
 
-Defined in: [lib/csl-to-jast.ts:31](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast-util-from-csl/src/lib/csl-to-jast.ts#L31)
+Defined in: [lib/csl-to-jast.ts:31](https://github.com/TrialAndErrorOrg/trialanderror/blob/main/libs/jast/jast-util-from-csl/src/lib/csl-to-jast.ts#L31)
 
 ## Install
 

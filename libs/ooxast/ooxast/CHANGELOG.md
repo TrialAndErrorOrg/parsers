@@ -2,49 +2,49 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
-## [0.4.0](https://github.com/TrialAndErrorOrg/parsers/compare/ooxast-0.3.0...ooxast-0.4.0) (2024-06-28)
+## [0.4.0](https://github.com/TrialAndErrorOrg/trialanderror/compare/ooxast-0.3.0...ooxast-0.4.0) (2024-06-28)
 
 
 ### Features
 
-* **ooxast:** make compatible with new xast types ([6b7353a](https://github.com/TrialAndErrorOrg/parsers/commit/6b7353a113fb17d1a928156fbb225669f69c49d7))
-* update to new unified versions ([18bb996](https://github.com/TrialAndErrorOrg/parsers/commit/18bb9960d25843db83cda8bfea932e2e22f44b9b))
+* **ooxast:** make compatible with new xast types ([6b7353a](https://github.com/TrialAndErrorOrg/trialanderror/commit/6b7353a113fb17d1a928156fbb225669f69c49d7))
+* update to new unified versions ([18bb996](https://github.com/TrialAndErrorOrg/trialanderror/commit/18bb9960d25843db83cda8bfea932e2e22f44b9b))
 
-## [0.3.0](https://github.com/TrialAndErrorOrg/parsers/compare/ooxast-0.2.0...ooxast-0.3.0) (2023-09-29)
-
-
-### Features
-
-* update all package.json ([d4070e5](https://github.com/TrialAndErrorOrg/parsers/commit/d4070e53ab3389db11fed978f3f74bcfe6808f5e))
-
-## [0.2.0](https://github.com/TrialAndErrorOrg/parsers/compare/ooxast-0.1.4...ooxast-0.2.0) (2023-09-22)
+## [0.3.0](https://github.com/TrialAndErrorOrg/trialanderror/compare/ooxast-0.2.0...ooxast-0.3.0) (2023-09-29)
 
 
 ### Features
 
-* giant prettier + eslint run ([6becd94](https://github.com/TrialAndErrorOrg/parsers/commit/6becd9492006b9a7f7f91b60db440bb31d9140c8))
+* update all package.json ([d4070e5](https://github.com/TrialAndErrorOrg/trialanderror/commit/d4070e53ab3389db11fed978f3f74bcfe6808f5e))
 
-## [0.1.4](https://github.com/TrialAndErrorOrg/parsers/compare/ooxast-0.1.3...ooxast-0.1.4) (2023-09-21)
+## [0.2.0](https://github.com/TrialAndErrorOrg/trialanderror/compare/ooxast-0.1.4...ooxast-0.2.0) (2023-09-22)
+
+
+### Features
+
+* giant prettier + eslint run ([6becd94](https://github.com/TrialAndErrorOrg/trialanderror/commit/6becd9492006b9a7f7f91b60db440bb31d9140c8))
+
+## [0.1.4](https://github.com/TrialAndErrorOrg/trialanderror/compare/ooxast-0.1.3...ooxast-0.1.4) (2023-09-21)
 
 ### Bug Fixes
 
-- don't use shady custom builder, just run a script that fixes the package.json ([def3c18](https://github.com/TrialAndErrorOrg/parsers/commit/def3c1844ae0a0d547de2b0a01689a302b58ab61))
+- don't use shady custom builder, just run a script that fixes the package.json ([def3c18](https://github.com/TrialAndErrorOrg/trialanderror/commit/def3c1844ae0a0d547de2b0a01689a302b58ab61))
 
-## [0.1.3](https://github.com/TrialAndErrorOrg/parsers/compare/ooxast-0.1.2...ooxast-0.1.3) (2023-03-14)
+## [0.1.3](https://github.com/TrialAndErrorOrg/trialanderror/compare/ooxast-0.1.2...ooxast-0.1.3) (2023-03-14)
 
 ### Bug Fixes
 
-- update types ([1149014](https://github.com/TrialAndErrorOrg/parsers/commit/11490147f93c78274c2432a9f2077bdebec00fca))
+- update types ([1149014](https://github.com/TrialAndErrorOrg/trialanderror/commit/11490147f93c78274c2432a9f2077bdebec00fca))
 
-## [0.1.2](https://github.com/TrialAndErrorOrg/parsers/compare/ooxast-0.1.1...ooxast-0.1.2) (2023-03-09)
+## [0.1.2](https://github.com/TrialAndErrorOrg/trialanderror/compare/ooxast-0.1.1...ooxast-0.1.2) (2023-03-09)
 
-## [0.1.1](https://github.com/TrialAndErrorOrg/parsers/compare/ooxast-0.1.0...ooxast-0.1.1) (2023-03-09)
+## [0.1.1](https://github.com/TrialAndErrorOrg/trialanderror/compare/ooxast-0.1.0...ooxast-0.1.1) (2023-03-09)
 
 ## 0.5.0
 
 ### Minor Changes
 
-- [#134](https://github.com/TrialAndErrorOrg/parsers/pull/134) [`721606c`](https://github.com/TrialAndErrorOrg/parsers/commit/721606cdc14277e234da470475048bddad80be5e) Thanks [@tefkah](https://github.com/tefkah)! - **Breaking:** move to the unified 11 ecosystem (unified 11, unist 3, xast 2, mdast 4, hast 3, vfile 6). The exported types now come from these versions, so use this release together with other unified 11 packages.
+- [#134](https://github.com/TrialAndErrorOrg/trialanderror/pull/134) [`721606c`](https://github.com/TrialAndErrorOrg/trialanderror/commit/721606cdc14277e234da470475048bddad80be5e) Thanks [@tefkah](https://github.com/tefkah)! - **Breaking:** move to the unified 11 ecosystem (unified 11, unist 3, xast 2, mdast 4, hast 3, vfile 6). The exported types now come from these versions, so use this release together with other unified 11 packages.
   
   - `jast-types` declares its own `Data` and `RootData` (unist 3's `Data` has no index signature anymore); augment `Data` to add fields.
   - `ooxast` element types are assignable to xast 2 elements: elements without attributes or children now have `attributes: Record<string, never>` / `children: []`, and text-only drawingml children (`a:t`, …) are `StringElement`s instead of bare strings.
@@ -52,97 +52,97 @@ This file was generated using [@jscutlery/semver](https://github.com/jscutlery/s
 
 ### Patch Changes
 
-- [#134](https://github.com/TrialAndErrorOrg/parsers/pull/134) [`721606c`](https://github.com/TrialAndErrorOrg/parsers/commit/721606cdc14277e234da470475048bddad80be5e) Thanks [@tefkah](https://github.com/tefkah)! - Published from the `TrialAndErrorOrg/parsers` monorepo with npm provenance: `repository` points at the package's directory there, and the build is plain TypeScript (`tsc`) to `dist`. Dependencies are updated to their latest versions.
+- [#134](https://github.com/TrialAndErrorOrg/trialanderror/pull/134) [`721606c`](https://github.com/TrialAndErrorOrg/trialanderror/commit/721606cdc14277e234da470475048bddad80be5e) Thanks [@tefkah](https://github.com/tefkah)! - Published from the `TrialAndErrorOrg/trialanderror` monorepo with npm provenance: `repository` points at the package's directory there, and the build is plain TypeScript (`tsc`) to `dist`. Dependencies are updated to their latest versions.
 
 ## 0.1.0 (2023-03-09)
 
 ### Features
 
-- brand spanking new project.json ([32e19eb](https://github.com/TrialAndErrorOrg/parsers/commit/32e19ebf3f71c80336f637297d8f4db274d098bf))
-- figure parsing in reoff ([fe2b9f8](https://github.com/TrialAndErrorOrg/parsers/commit/fe2b9f8e9eb1fb2421e3272dcc60fe2b871f2392))
-- it working ([53f8f03](https://github.com/TrialAndErrorOrg/parsers/commit/53f8f038f89a6e64a64600b3e6cb8deb1717cda7))
-- **ooxast:** add actual ooxml types ([ad3d947](https://github.com/TrialAndErrorOrg/parsers/commit/ad3d9473fac066d0125316360ce759e3b57e4202))
-- **ooxast:** metadata types ([2cb81c8](https://github.com/TrialAndErrorOrg/parsers/commit/2cb81c8a4ce31a1078a955a974f97a697a5ebe33))
-- **parser:** give up on efficient parsing for now ([92b9c45](https://github.com/TrialAndErrorOrg/parsers/commit/92b9c45361dbf38d7f9be244270ef81e40facd8c))
-- **parser:** make the parser contain more metadata ([59c8623](https://github.com/TrialAndErrorOrg/parsers/commit/59c8623885f0330e9c945306e09214b5fb378d5b))
-- **pdf:** pdf compilation baybee ([f3cf107](https://github.com/TrialAndErrorOrg/parsers/commit/f3cf107193e3e015da3dc950736aa38e5803b5cd))
-- **reoff:** add basic office parsing infrastructure ([3adfb9d](https://github.com/TrialAndErrorOrg/parsers/commit/3adfb9d1b44fe4e6f79a41ae5269c43ddbdfd5c2))
-- **reoff:** read file more async ([fed7aa9](https://github.com/TrialAndErrorOrg/parsers/commit/fed7aa97af458404b04d805250ad5bfc348ee52c))
-- **xast-utils:** add xast-util-select, xast-util-is-element, xast-util-has-attribute ([5f8ab76](https://github.com/TrialAndErrorOrg/parsers/commit/5f8ab764a09da5debb4200ac3a996ced2ca2bbf4))
+- brand spanking new project.json ([32e19eb](https://github.com/TrialAndErrorOrg/trialanderror/commit/32e19ebf3f71c80336f637297d8f4db274d098bf))
+- figure parsing in reoff ([fe2b9f8](https://github.com/TrialAndErrorOrg/trialanderror/commit/fe2b9f8e9eb1fb2421e3272dcc60fe2b871f2392))
+- it working ([53f8f03](https://github.com/TrialAndErrorOrg/trialanderror/commit/53f8f038f89a6e64a64600b3e6cb8deb1717cda7))
+- **ooxast:** add actual ooxml types ([ad3d947](https://github.com/TrialAndErrorOrg/trialanderror/commit/ad3d9473fac066d0125316360ce759e3b57e4202))
+- **ooxast:** metadata types ([2cb81c8](https://github.com/TrialAndErrorOrg/trialanderror/commit/2cb81c8a4ce31a1078a955a974f97a697a5ebe33))
+- **parser:** give up on efficient parsing for now ([92b9c45](https://github.com/TrialAndErrorOrg/trialanderror/commit/92b9c45361dbf38d7f9be244270ef81e40facd8c))
+- **parser:** make the parser contain more metadata ([59c8623](https://github.com/TrialAndErrorOrg/trialanderror/commit/59c8623885f0330e9c945306e09214b5fb378d5b))
+- **pdf:** pdf compilation baybee ([f3cf107](https://github.com/TrialAndErrorOrg/trialanderror/commit/f3cf107193e3e015da3dc950736aa38e5803b5cd))
+- **reoff:** add basic office parsing infrastructure ([3adfb9d](https://github.com/TrialAndErrorOrg/trialanderror/commit/3adfb9d1b44fe4e6f79a41ae5269c43ddbdfd5c2))
+- **reoff:** read file more async ([fed7aa9](https://github.com/TrialAndErrorOrg/trialanderror/commit/fed7aa97af458404b04d805250ad5bfc348ee52c))
+- **xast-utils:** add xast-util-select, xast-util-is-element, xast-util-has-attribute ([5f8ab76](https://github.com/TrialAndErrorOrg/trialanderror/commit/5f8ab764a09da5debb4200ac3a996ced2ca2bbf4))
 
 ### Bug Fixes
 
-- enter a new era ([9c2a0e5](https://github.com/TrialAndErrorOrg/parsers/commit/9c2a0e505472c43d384f3cc78543ad90877b7c3d))
-- fixed all eslint errors like a good boy ([eae924f](https://github.com/TrialAndErrorOrg/parsers/commit/eae924fdc4e9741cc455696daf63754eb5a2481b))
-- **frontend:** make 3 extra packages just so webpack doesn't import fs ugh ([bed432a](https://github.com/TrialAndErrorOrg/parsers/commit/bed432acf70a7950d981fff2a5bce4a98a4440ff))
-- jest ([beee4cc](https://github.com/TrialAndErrorOrg/parsers/commit/beee4cc41cd5789e2405eecf20cf7133066b4b39))
-- **jest:** allow jest to be run even if there is a .swcrc ([6f188f2](https://github.com/TrialAndErrorOrg/parsers/commit/6f188f2a06922ee00d9367b29e666894e48c6c1e))
-- **parser:** okay now nx bork ([e02fd04](https://github.com/TrialAndErrorOrg/parsers/commit/e02fd0412196e36a7e8f39a4e5cb3664ce2f3305))
-- properly set all package.jsons ([5af9c17](https://github.com/TrialAndErrorOrg/parsers/commit/5af9c177be9910511844c481ca59cfcc7bd9b0f6))
-- **types:** added attributes to all elements ([4fc34a8](https://github.com/TrialAndErrorOrg/parsers/commit/4fc34a86ca91ea71e3e3f9235bfb4793ab944b28))
-- **types:** added children to all elements ([ae9e014](https://github.com/TrialAndErrorOrg/parsers/commit/ae9e0141cfe6c7a089da1d53c83d65f8264f17b3))
-- **types:** fixing types ([2893172](https://github.com/TrialAndErrorOrg/parsers/commit/2893172ccf37ad1d12a35fea3ef61700bd24dafb))
-- **types:** sike!!!! fixed it nerd ([d94a66d](https://github.com/TrialAndErrorOrg/parsers/commit/d94a66d8dc3c152fcf6ab8a56251b52c6cbb85f7))
-- **types:** sike!!!! fixed it nerd ([ebbc049](https://github.com/TrialAndErrorOrg/parsers/commit/ebbc049955437627872653b6cfda120f485bc4ab))
+- enter a new era ([9c2a0e5](https://github.com/TrialAndErrorOrg/trialanderror/commit/9c2a0e505472c43d384f3cc78543ad90877b7c3d))
+- fixed all eslint errors like a good boy ([eae924f](https://github.com/TrialAndErrorOrg/trialanderror/commit/eae924fdc4e9741cc455696daf63754eb5a2481b))
+- **frontend:** make 3 extra packages just so webpack doesn't import fs ugh ([bed432a](https://github.com/TrialAndErrorOrg/trialanderror/commit/bed432acf70a7950d981fff2a5bce4a98a4440ff))
+- jest ([beee4cc](https://github.com/TrialAndErrorOrg/trialanderror/commit/beee4cc41cd5789e2405eecf20cf7133066b4b39))
+- **jest:** allow jest to be run even if there is a .swcrc ([6f188f2](https://github.com/TrialAndErrorOrg/trialanderror/commit/6f188f2a06922ee00d9367b29e666894e48c6c1e))
+- **parser:** okay now nx bork ([e02fd04](https://github.com/TrialAndErrorOrg/trialanderror/commit/e02fd0412196e36a7e8f39a4e5cb3664ce2f3305))
+- properly set all package.jsons ([5af9c17](https://github.com/TrialAndErrorOrg/trialanderror/commit/5af9c177be9910511844c481ca59cfcc7bd9b0f6))
+- **types:** added attributes to all elements ([4fc34a8](https://github.com/TrialAndErrorOrg/trialanderror/commit/4fc34a86ca91ea71e3e3f9235bfb4793ab944b28))
+- **types:** added children to all elements ([ae9e014](https://github.com/TrialAndErrorOrg/trialanderror/commit/ae9e0141cfe6c7a089da1d53c83d65f8264f17b3))
+- **types:** fixing types ([2893172](https://github.com/TrialAndErrorOrg/trialanderror/commit/2893172ccf37ad1d12a35fea3ef61700bd24dafb))
+- **types:** sike!!!! fixed it nerd ([d94a66d](https://github.com/TrialAndErrorOrg/trialanderror/commit/d94a66d8dc3c152fcf6ab8a56251b52c6cbb85f7))
+- **types:** sike!!!! fixed it nerd ([ebbc049](https://github.com/TrialAndErrorOrg/trialanderror/commit/ebbc049955437627872653b6cfda120f485bc4ab))
 
 ## 0.1.0 (2023-03-09)
 
 ### Features
 
-- brand spanking new project.json ([32e19eb](https://github.com/TrialAndErrorOrg/parsers/commit/32e19ebf3f71c80336f637297d8f4db274d098bf))
-- figure parsing in reoff ([fe2b9f8](https://github.com/TrialAndErrorOrg/parsers/commit/fe2b9f8e9eb1fb2421e3272dcc60fe2b871f2392))
-- it working ([53f8f03](https://github.com/TrialAndErrorOrg/parsers/commit/53f8f038f89a6e64a64600b3e6cb8deb1717cda7))
-- **ooxast:** add actual ooxml types ([ad3d947](https://github.com/TrialAndErrorOrg/parsers/commit/ad3d9473fac066d0125316360ce759e3b57e4202))
-- **ooxast:** metadata types ([2cb81c8](https://github.com/TrialAndErrorOrg/parsers/commit/2cb81c8a4ce31a1078a955a974f97a697a5ebe33))
-- **parser:** give up on efficient parsing for now ([92b9c45](https://github.com/TrialAndErrorOrg/parsers/commit/92b9c45361dbf38d7f9be244270ef81e40facd8c))
-- **parser:** make the parser contain more metadata ([59c8623](https://github.com/TrialAndErrorOrg/parsers/commit/59c8623885f0330e9c945306e09214b5fb378d5b))
-- **pdf:** pdf compilation baybee ([f3cf107](https://github.com/TrialAndErrorOrg/parsers/commit/f3cf107193e3e015da3dc950736aa38e5803b5cd))
-- **reoff:** add basic office parsing infrastructure ([3adfb9d](https://github.com/TrialAndErrorOrg/parsers/commit/3adfb9d1b44fe4e6f79a41ae5269c43ddbdfd5c2))
-- **reoff:** read file more async ([fed7aa9](https://github.com/TrialAndErrorOrg/parsers/commit/fed7aa97af458404b04d805250ad5bfc348ee52c))
-- **xast-utils:** add xast-util-select, xast-util-is-element, xast-util-has-attribute ([5f8ab76](https://github.com/TrialAndErrorOrg/parsers/commit/5f8ab764a09da5debb4200ac3a996ced2ca2bbf4))
+- brand spanking new project.json ([32e19eb](https://github.com/TrialAndErrorOrg/trialanderror/commit/32e19ebf3f71c80336f637297d8f4db274d098bf))
+- figure parsing in reoff ([fe2b9f8](https://github.com/TrialAndErrorOrg/trialanderror/commit/fe2b9f8e9eb1fb2421e3272dcc60fe2b871f2392))
+- it working ([53f8f03](https://github.com/TrialAndErrorOrg/trialanderror/commit/53f8f038f89a6e64a64600b3e6cb8deb1717cda7))
+- **ooxast:** add actual ooxml types ([ad3d947](https://github.com/TrialAndErrorOrg/trialanderror/commit/ad3d9473fac066d0125316360ce759e3b57e4202))
+- **ooxast:** metadata types ([2cb81c8](https://github.com/TrialAndErrorOrg/trialanderror/commit/2cb81c8a4ce31a1078a955a974f97a697a5ebe33))
+- **parser:** give up on efficient parsing for now ([92b9c45](https://github.com/TrialAndErrorOrg/trialanderror/commit/92b9c45361dbf38d7f9be244270ef81e40facd8c))
+- **parser:** make the parser contain more metadata ([59c8623](https://github.com/TrialAndErrorOrg/trialanderror/commit/59c8623885f0330e9c945306e09214b5fb378d5b))
+- **pdf:** pdf compilation baybee ([f3cf107](https://github.com/TrialAndErrorOrg/trialanderror/commit/f3cf107193e3e015da3dc950736aa38e5803b5cd))
+- **reoff:** add basic office parsing infrastructure ([3adfb9d](https://github.com/TrialAndErrorOrg/trialanderror/commit/3adfb9d1b44fe4e6f79a41ae5269c43ddbdfd5c2))
+- **reoff:** read file more async ([fed7aa9](https://github.com/TrialAndErrorOrg/trialanderror/commit/fed7aa97af458404b04d805250ad5bfc348ee52c))
+- **xast-utils:** add xast-util-select, xast-util-is-element, xast-util-has-attribute ([5f8ab76](https://github.com/TrialAndErrorOrg/trialanderror/commit/5f8ab764a09da5debb4200ac3a996ced2ca2bbf4))
 
 ### Bug Fixes
 
-- enter a new era ([9c2a0e5](https://github.com/TrialAndErrorOrg/parsers/commit/9c2a0e505472c43d384f3cc78543ad90877b7c3d))
-- fixed all eslint errors like a good boy ([eae924f](https://github.com/TrialAndErrorOrg/parsers/commit/eae924fdc4e9741cc455696daf63754eb5a2481b))
-- **frontend:** make 3 extra packages just so webpack doesn't import fs ugh ([bed432a](https://github.com/TrialAndErrorOrg/parsers/commit/bed432acf70a7950d981fff2a5bce4a98a4440ff))
-- jest ([beee4cc](https://github.com/TrialAndErrorOrg/parsers/commit/beee4cc41cd5789e2405eecf20cf7133066b4b39))
-- **jest:** allow jest to be run even if there is a .swcrc ([6f188f2](https://github.com/TrialAndErrorOrg/parsers/commit/6f188f2a06922ee00d9367b29e666894e48c6c1e))
-- **parser:** okay now nx bork ([e02fd04](https://github.com/TrialAndErrorOrg/parsers/commit/e02fd0412196e36a7e8f39a4e5cb3664ce2f3305))
-- properly set all package.jsons ([5af9c17](https://github.com/TrialAndErrorOrg/parsers/commit/5af9c177be9910511844c481ca59cfcc7bd9b0f6))
-- **types:** added attributes to all elements ([4fc34a8](https://github.com/TrialAndErrorOrg/parsers/commit/4fc34a86ca91ea71e3e3f9235bfb4793ab944b28))
-- **types:** added children to all elements ([ae9e014](https://github.com/TrialAndErrorOrg/parsers/commit/ae9e0141cfe6c7a089da1d53c83d65f8264f17b3))
-- **types:** fixing types ([2893172](https://github.com/TrialAndErrorOrg/parsers/commit/2893172ccf37ad1d12a35fea3ef61700bd24dafb))
-- **types:** sike!!!! fixed it nerd ([d94a66d](https://github.com/TrialAndErrorOrg/parsers/commit/d94a66d8dc3c152fcf6ab8a56251b52c6cbb85f7))
-- **types:** sike!!!! fixed it nerd ([ebbc049](https://github.com/TrialAndErrorOrg/parsers/commit/ebbc049955437627872653b6cfda120f485bc4ab))
+- enter a new era ([9c2a0e5](https://github.com/TrialAndErrorOrg/trialanderror/commit/9c2a0e505472c43d384f3cc78543ad90877b7c3d))
+- fixed all eslint errors like a good boy ([eae924f](https://github.com/TrialAndErrorOrg/trialanderror/commit/eae924fdc4e9741cc455696daf63754eb5a2481b))
+- **frontend:** make 3 extra packages just so webpack doesn't import fs ugh ([bed432a](https://github.com/TrialAndErrorOrg/trialanderror/commit/bed432acf70a7950d981fff2a5bce4a98a4440ff))
+- jest ([beee4cc](https://github.com/TrialAndErrorOrg/trialanderror/commit/beee4cc41cd5789e2405eecf20cf7133066b4b39))
+- **jest:** allow jest to be run even if there is a .swcrc ([6f188f2](https://github.com/TrialAndErrorOrg/trialanderror/commit/6f188f2a06922ee00d9367b29e666894e48c6c1e))
+- **parser:** okay now nx bork ([e02fd04](https://github.com/TrialAndErrorOrg/trialanderror/commit/e02fd0412196e36a7e8f39a4e5cb3664ce2f3305))
+- properly set all package.jsons ([5af9c17](https://github.com/TrialAndErrorOrg/trialanderror/commit/5af9c177be9910511844c481ca59cfcc7bd9b0f6))
+- **types:** added attributes to all elements ([4fc34a8](https://github.com/TrialAndErrorOrg/trialanderror/commit/4fc34a86ca91ea71e3e3f9235bfb4793ab944b28))
+- **types:** added children to all elements ([ae9e014](https://github.com/TrialAndErrorOrg/trialanderror/commit/ae9e0141cfe6c7a089da1d53c83d65f8264f17b3))
+- **types:** fixing types ([2893172](https://github.com/TrialAndErrorOrg/trialanderror/commit/2893172ccf37ad1d12a35fea3ef61700bd24dafb))
+- **types:** sike!!!! fixed it nerd ([d94a66d](https://github.com/TrialAndErrorOrg/trialanderror/commit/d94a66d8dc3c152fcf6ab8a56251b52c6cbb85f7))
+- **types:** sike!!!! fixed it nerd ([ebbc049](https://github.com/TrialAndErrorOrg/trialanderror/commit/ebbc049955437627872653b6cfda120f485bc4ab))
 
 ## 0.1.0 (2023-03-09)
 
 ### Features
 
-- brand spanking new project.json ([32e19eb](https://github.com/TrialAndErrorOrg/parsers/commit/32e19ebf3f71c80336f637297d8f4db274d098bf))
-- figure parsing in reoff ([fe2b9f8](https://github.com/TrialAndErrorOrg/parsers/commit/fe2b9f8e9eb1fb2421e3272dcc60fe2b871f2392))
-- it working ([53f8f03](https://github.com/TrialAndErrorOrg/parsers/commit/53f8f038f89a6e64a64600b3e6cb8deb1717cda7))
-- **ooxast:** add actual ooxml types ([ad3d947](https://github.com/TrialAndErrorOrg/parsers/commit/ad3d9473fac066d0125316360ce759e3b57e4202))
-- **ooxast:** metadata types ([2cb81c8](https://github.com/TrialAndErrorOrg/parsers/commit/2cb81c8a4ce31a1078a955a974f97a697a5ebe33))
-- **parser:** give up on efficient parsing for now ([92b9c45](https://github.com/TrialAndErrorOrg/parsers/commit/92b9c45361dbf38d7f9be244270ef81e40facd8c))
-- **parser:** make the parser contain more metadata ([59c8623](https://github.com/TrialAndErrorOrg/parsers/commit/59c8623885f0330e9c945306e09214b5fb378d5b))
-- **pdf:** pdf compilation baybee ([f3cf107](https://github.com/TrialAndErrorOrg/parsers/commit/f3cf107193e3e015da3dc950736aa38e5803b5cd))
-- **reoff:** add basic office parsing infrastructure ([3adfb9d](https://github.com/TrialAndErrorOrg/parsers/commit/3adfb9d1b44fe4e6f79a41ae5269c43ddbdfd5c2))
-- **reoff:** read file more async ([fed7aa9](https://github.com/TrialAndErrorOrg/parsers/commit/fed7aa97af458404b04d805250ad5bfc348ee52c))
-- **xast-utils:** add xast-util-select, xast-util-is-element, xast-util-has-attribute ([5f8ab76](https://github.com/TrialAndErrorOrg/parsers/commit/5f8ab764a09da5debb4200ac3a996ced2ca2bbf4))
+- brand spanking new project.json ([32e19eb](https://github.com/TrialAndErrorOrg/trialanderror/commit/32e19ebf3f71c80336f637297d8f4db274d098bf))
+- figure parsing in reoff ([fe2b9f8](https://github.com/TrialAndErrorOrg/trialanderror/commit/fe2b9f8e9eb1fb2421e3272dcc60fe2b871f2392))
+- it working ([53f8f03](https://github.com/TrialAndErrorOrg/trialanderror/commit/53f8f038f89a6e64a64600b3e6cb8deb1717cda7))
+- **ooxast:** add actual ooxml types ([ad3d947](https://github.com/TrialAndErrorOrg/trialanderror/commit/ad3d9473fac066d0125316360ce759e3b57e4202))
+- **ooxast:** metadata types ([2cb81c8](https://github.com/TrialAndErrorOrg/trialanderror/commit/2cb81c8a4ce31a1078a955a974f97a697a5ebe33))
+- **parser:** give up on efficient parsing for now ([92b9c45](https://github.com/TrialAndErrorOrg/trialanderror/commit/92b9c45361dbf38d7f9be244270ef81e40facd8c))
+- **parser:** make the parser contain more metadata ([59c8623](https://github.com/TrialAndErrorOrg/trialanderror/commit/59c8623885f0330e9c945306e09214b5fb378d5b))
+- **pdf:** pdf compilation baybee ([f3cf107](https://github.com/TrialAndErrorOrg/trialanderror/commit/f3cf107193e3e015da3dc950736aa38e5803b5cd))
+- **reoff:** add basic office parsing infrastructure ([3adfb9d](https://github.com/TrialAndErrorOrg/trialanderror/commit/3adfb9d1b44fe4e6f79a41ae5269c43ddbdfd5c2))
+- **reoff:** read file more async ([fed7aa9](https://github.com/TrialAndErrorOrg/trialanderror/commit/fed7aa97af458404b04d805250ad5bfc348ee52c))
+- **xast-utils:** add xast-util-select, xast-util-is-element, xast-util-has-attribute ([5f8ab76](https://github.com/TrialAndErrorOrg/trialanderror/commit/5f8ab764a09da5debb4200ac3a996ced2ca2bbf4))
 
 ### Bug Fixes
 
-- enter a new era ([9c2a0e5](https://github.com/TrialAndErrorOrg/parsers/commit/9c2a0e505472c43d384f3cc78543ad90877b7c3d))
-- fixed all eslint errors like a good boy ([eae924f](https://github.com/TrialAndErrorOrg/parsers/commit/eae924fdc4e9741cc455696daf63754eb5a2481b))
-- **frontend:** make 3 extra packages just so webpack doesn't import fs ugh ([bed432a](https://github.com/TrialAndErrorOrg/parsers/commit/bed432acf70a7950d981fff2a5bce4a98a4440ff))
-- jest ([beee4cc](https://github.com/TrialAndErrorOrg/parsers/commit/beee4cc41cd5789e2405eecf20cf7133066b4b39))
-- **jest:** allow jest to be run even if there is a .swcrc ([6f188f2](https://github.com/TrialAndErrorOrg/parsers/commit/6f188f2a06922ee00d9367b29e666894e48c6c1e))
-- **parser:** okay now nx bork ([e02fd04](https://github.com/TrialAndErrorOrg/parsers/commit/e02fd0412196e36a7e8f39a4e5cb3664ce2f3305))
-- properly set all package.jsons ([5af9c17](https://github.com/TrialAndErrorOrg/parsers/commit/5af9c177be9910511844c481ca59cfcc7bd9b0f6))
-- **types:** added attributes to all elements ([4fc34a8](https://github.com/TrialAndErrorOrg/parsers/commit/4fc34a86ca91ea71e3e3f9235bfb4793ab944b28))
-- **types:** added children to all elements ([ae9e014](https://github.com/TrialAndErrorOrg/parsers/commit/ae9e0141cfe6c7a089da1d53c83d65f8264f17b3))
-- **types:** fixing types ([2893172](https://github.com/TrialAndErrorOrg/parsers/commit/2893172ccf37ad1d12a35fea3ef61700bd24dafb))
-- **types:** sike!!!! fixed it nerd ([d94a66d](https://github.com/TrialAndErrorOrg/parsers/commit/d94a66d8dc3c152fcf6ab8a56251b52c6cbb85f7))
-- **types:** sike!!!! fixed it nerd ([ebbc049](https://github.com/TrialAndErrorOrg/parsers/commit/ebbc049955437627872653b6cfda120f485bc4ab))
+- enter a new era ([9c2a0e5](https://github.com/TrialAndErrorOrg/trialanderror/commit/9c2a0e505472c43d384f3cc78543ad90877b7c3d))
+- fixed all eslint errors like a good boy ([eae924f](https://github.com/TrialAndErrorOrg/trialanderror/commit/eae924fdc4e9741cc455696daf63754eb5a2481b))
+- **frontend:** make 3 extra packages just so webpack doesn't import fs ugh ([bed432a](https://github.com/TrialAndErrorOrg/trialanderror/commit/bed432acf70a7950d981fff2a5bce4a98a4440ff))
+- jest ([beee4cc](https://github.com/TrialAndErrorOrg/trialanderror/commit/beee4cc41cd5789e2405eecf20cf7133066b4b39))
+- **jest:** allow jest to be run even if there is a .swcrc ([6f188f2](https://github.com/TrialAndErrorOrg/trialanderror/commit/6f188f2a06922ee00d9367b29e666894e48c6c1e))
+- **parser:** okay now nx bork ([e02fd04](https://github.com/TrialAndErrorOrg/trialanderror/commit/e02fd0412196e36a7e8f39a4e5cb3664ce2f3305))
+- properly set all package.jsons ([5af9c17](https://github.com/TrialAndErrorOrg/trialanderror/commit/5af9c177be9910511844c481ca59cfcc7bd9b0f6))
+- **types:** added attributes to all elements ([4fc34a8](https://github.com/TrialAndErrorOrg/trialanderror/commit/4fc34a86ca91ea71e3e3f9235bfb4793ab944b28))
+- **types:** added children to all elements ([ae9e014](https://github.com/TrialAndErrorOrg/trialanderror/commit/ae9e0141cfe6c7a089da1d53c83d65f8264f17b3))
+- **types:** fixing types ([2893172](https://github.com/TrialAndErrorOrg/trialanderror/commit/2893172ccf37ad1d12a35fea3ef61700bd24dafb))
+- **types:** sike!!!! fixed it nerd ([d94a66d](https://github.com/TrialAndErrorOrg/trialanderror/commit/d94a66d8dc3c152fcf6ab8a56251b52c6cbb85f7))
+- **types:** sike!!!! fixed it nerd ([ebbc049](https://github.com/TrialAndErrorOrg/trialanderror/commit/ebbc049955437627872653b6cfda120f485bc4ab))

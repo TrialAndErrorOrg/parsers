@@ -1,0 +1,7 @@
+dist/
+.astro/
+node_modules/
+.env
+dist-*/
+underlay-export/
+.env.local

@@ -8,7 +8,7 @@
 Small tool that parses a string of text containing APA style in text citations, e.g. Jones (2020), and returns a rudimentary AST with the thing parsed.
 
 Not very efficient at all, just uses regex so don't run it on big pieces of text at once. To be used inside other more mature parsers in order to check whether what we are looking at is a citation.
-automatically generated from the [main parser monorepo](https://github.com/TrialAndErrorOrg/parsers). Please submit any issues or pull requests there.
+automatically generated from the [main parser monorepo](https://github.com/TrialAndErrorOrg/trialanderror). Please submit any issues or pull requests there.
 
 ## Install
 
@@ -45,7 +45,7 @@ parseTextCite(string: string, options?: Options): (string | Citation)[] | (strin
 
 (`string` | [`Citation`](modules.md#citation))[] | (`string` | [`Citation`](modules.md#citation))[][]
 
-Defined in: [lib/parse-text-cite.ts:34](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/citations/parse-text-cite/src/lib/parse-text-cite.ts#L34)
+Defined in: [lib/parse-text-cite.ts:34](https://github.com/TrialAndErrorOrg/trialanderror/blob/main/libs/citations/parse-text-cite/src/lib/parse-text-cite.ts#L34)
 
 ---
 
@@ -53,7 +53,7 @@ Defined in: [lib/parse-text-cite.ts:34](https://github.com/TrialAndErrorOrg/pars
 
 > **`Const`** `Parser`
 
-Defined in: [lib/parse-text-cite.ts:32](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/citations/parse-text-cite/src/lib/parse-text-cite.ts#L32)
+Defined in: [lib/parse-text-cite.ts:32](https://github.com/TrialAndErrorOrg/trialanderror/blob/main/libs/citations/parse-text-cite/src/lib/parse-text-cite.ts#L32)
 
 ---
 
@@ -65,25 +65,25 @@ Defined in: [lib/parse-text-cite.ts:32](https://github.com/TrialAndErrorOrg/pars
 
 > `string`
 
-Defined in: [lib/parse-text-cite.ts:6](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/citations/parse-text-cite/src/lib/parse-text-cite.ts#L6)
+Defined in: [lib/parse-text-cite.ts:6](https://github.com/TrialAndErrorOrg/trialanderror/blob/main/libs/citations/parse-text-cite/src/lib/parse-text-cite.ts#L6)
 
 ##### `citationItems`
 
 > [`CitationItem`](modules.md#citationitem)[]
 
-Defined in: [lib/parse-text-cite.ts:7](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/citations/parse-text-cite/src/lib/parse-text-cite.ts#L7)
+Defined in: [lib/parse-text-cite.ts:7](https://github.com/TrialAndErrorOrg/trialanderror/blob/main/libs/citations/parse-text-cite/src/lib/parse-text-cite.ts#L7)
 
 ##### `originalText?`
 
 > `string`
 
-Defined in: [lib/parse-text-cite.ts:9](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/citations/parse-text-cite/src/lib/parse-text-cite.ts#L9)
+Defined in: [lib/parse-text-cite.ts:9](https://github.com/TrialAndErrorOrg/trialanderror/blob/main/libs/citations/parse-text-cite/src/lib/parse-text-cite.ts#L9)
 
 ##### `properties`
 
 > [`Properties`](modules.md#properties)
 
-Defined in: [lib/parse-text-cite.ts:8](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/citations/parse-text-cite/src/lib/parse-text-cite.ts#L8)
+Defined in: [lib/parse-text-cite.ts:8](https://github.com/TrialAndErrorOrg/trialanderror/blob/main/libs/citations/parse-text-cite/src/lib/parse-text-cite.ts#L8)
 
 ---
 
@@ -95,43 +95,43 @@ Defined in: [lib/parse-text-cite.ts:8](https://github.com/TrialAndErrorOrg/parse
 
 > `string`
 
-Defined in: [lib/parse-text-cite.ts:19](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/citations/parse-text-cite/src/lib/parse-text-cite.ts#L19)
+Defined in: [lib/parse-text-cite.ts:19](https://github.com/TrialAndErrorOrg/trialanderror/blob/main/libs/citations/parse-text-cite/src/lib/parse-text-cite.ts#L19)
 
 ##### `infix?`
 
 > `string`
 
-Defined in: [lib/parse-text-cite.ts:22](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/citations/parse-text-cite/src/lib/parse-text-cite.ts#L22)
+Defined in: [lib/parse-text-cite.ts:22](https://github.com/TrialAndErrorOrg/trialanderror/blob/main/libs/citations/parse-text-cite/src/lib/parse-text-cite.ts#L22)
 
 ##### `itemData`
 
 > `Data`
 
-Defined in: [lib/parse-text-cite.ts:18](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/citations/parse-text-cite/src/lib/parse-text-cite.ts#L18)
+Defined in: [lib/parse-text-cite.ts:18](https://github.com/TrialAndErrorOrg/trialanderror/blob/main/libs/citations/parse-text-cite/src/lib/parse-text-cite.ts#L18)
 
 ##### `label?`
 
 > `string`
 
-Defined in: [lib/parse-text-cite.ts:23](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/citations/parse-text-cite/src/lib/parse-text-cite.ts#L23)
+Defined in: [lib/parse-text-cite.ts:23](https://github.com/TrialAndErrorOrg/trialanderror/blob/main/libs/citations/parse-text-cite/src/lib/parse-text-cite.ts#L23)
 
 ##### `locator?`
 
 > `string`
 
-Defined in: [lib/parse-text-cite.ts:24](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/citations/parse-text-cite/src/lib/parse-text-cite.ts#L24)
+Defined in: [lib/parse-text-cite.ts:24](https://github.com/TrialAndErrorOrg/trialanderror/blob/main/libs/citations/parse-text-cite/src/lib/parse-text-cite.ts#L24)
 
 ##### `prefix?`
 
 > `string`
 
-Defined in: [lib/parse-text-cite.ts:20](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/citations/parse-text-cite/src/lib/parse-text-cite.ts#L20)
+Defined in: [lib/parse-text-cite.ts:20](https://github.com/TrialAndErrorOrg/trialanderror/blob/main/libs/citations/parse-text-cite/src/lib/parse-text-cite.ts#L20)
 
 ##### `suffix?`
 
 > `string`
 
-Defined in: [lib/parse-text-cite.ts:21](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/citations/parse-text-cite/src/lib/parse-text-cite.ts#L21)
+Defined in: [lib/parse-text-cite.ts:21](https://github.com/TrialAndErrorOrg/trialanderror/blob/main/libs/citations/parse-text-cite/src/lib/parse-text-cite.ts#L21)
 
 ---
 
@@ -143,13 +143,13 @@ Defined in: [lib/parse-text-cite.ts:21](https://github.com/TrialAndErrorOrg/pars
 
 > `string`
 
-Defined in: [lib/parse-text-cite.ts:14](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/citations/parse-text-cite/src/lib/parse-text-cite.ts#L14)
+Defined in: [lib/parse-text-cite.ts:14](https://github.com/TrialAndErrorOrg/trialanderror/blob/main/libs/citations/parse-text-cite/src/lib/parse-text-cite.ts#L14)
 
 ##### `noteIndex`
 
 > `number`
 
-Defined in: [lib/parse-text-cite.ts:13](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/citations/parse-text-cite/src/lib/parse-text-cite.ts#L13)
+Defined in: [lib/parse-text-cite.ts:13](https://github.com/TrialAndErrorOrg/trialanderror/blob/main/libs/citations/parse-text-cite/src/lib/parse-text-cite.ts#L13)
 
 ## License
 

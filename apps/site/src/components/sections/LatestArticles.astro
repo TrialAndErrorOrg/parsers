@@ -1,0 +1,21 @@
+---
+import type { Section } from "~/content.config";
+import { getArticles } from "~/lib/sources/journal";
+import ArticleCard from "../ArticleCard.astro";
+
+type Props = Extract<Section, { type: "latest-articles" }>;
+const { title, count } = Astro.props;
+const articles = (await getArticles()).slice(0, count);
+---
+
+<section class="border-y-frame border-ink bg-journal-soft py-16">
+	<div class="page">
+		<div class="mb-10 flex flex-wrap items-end justify-between gap-4">
+			<h2 class="section-title flex-grow text-journal after:bg-journal">{title}</h2>
+			<a href="/journal" class="button button-plain">All articles</a>
+		</div>
+		<div class="grid gap-8 md:grid-cols-2 xl:grid-cols-3">
+			{articles.map((article) => <ArticleCard article={article} />)}
+		</div>
+	</div>
+</section>

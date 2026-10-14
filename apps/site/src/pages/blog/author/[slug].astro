@@ -1,0 +1,12 @@
+---
+import type { GetStaticPaths } from "astro";
+import { getPeople, peopleUrl } from "~/lib/people";
+
+// Author pages moved to /people. Every slug a person had redirects there
+export const getStaticPaths = (async () =>
+	(await getPeople()).flatMap((profile) =>
+		[profile.slug, ...profile.aliases].map((slug) => ({ params: { slug }, props: { to: peopleUrl(profile.slug) } })),
+	)) satisfies GetStaticPaths;
+
+return Astro.redirect(Astro.props.to, 301);
+---

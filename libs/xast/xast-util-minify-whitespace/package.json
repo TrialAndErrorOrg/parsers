@@ -6,10 +6,10 @@
   "author": "Thomas F. K. Jorna <hello@tefkah.com>",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/TrialAndErrorOrg/parsers.git",
+    "url": "git+https://github.com/TrialAndErrorOrg/trialanderror.git",
     "directory": "libs/xast/xast-util-minify-whitespace"
   },
-  "homepage": "https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/xast/xast-util-minify-whitespace#readme",
+  "homepage": "https://github.com/TrialAndErrorOrg/trialanderror/tree/main/libs/xast/xast-util-minify-whitespace#readme",
   "keywords": [
     "unified",
     "xast",

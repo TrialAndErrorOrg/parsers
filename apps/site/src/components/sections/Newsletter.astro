@@ -1,0 +1,31 @@
+---
+import { site } from "~/lib/settings";
+---
+
+<section class="page py-16">
+	<div class="grid gap-8 border-heavy border-ink bg-accent p-8 shadow-hard-lg md:grid-cols-2 md:items-center md:p-12">
+		<div>
+			<h2 class="font-heading text-4xl font-black tracking-tighter md:text-6xl">{site.newsletter.title}</h2>
+			<p class="mt-4 text-lg font-medium">{site.newsletter.text}</p>
+		</div>
+		<form action={site.newsletter.action} method="post" target="_blank" class="flex flex-col gap-3">
+			<label for="newsletter-email" class="font-heading font-bold">Email address</label>
+			<div class="flex flex-col gap-3 sm:flex-row">
+				<input
+					id="newsletter-email"
+					type="email"
+					name="EMAIL"
+					required
+					autocomplete="email"
+					placeholder="you@example.org"
+					class="flex-grow border-frame border-ink bg-paper px-4 py-2 text-lg"
+				/>
+				<button type="submit" class="button button-plain justify-center">Subscribe</button>
+			</div>
+			<!-- Mailchimp's bot trap -->
+			<div aria-hidden="true" class="absolute -left-[5000px]">
+				<input type="text" name="b_3b2e720baa7621e1bde91b1a2_13b78e80c7" tabindex="-1" value="" />
+			</div>
+		</form>
+	</div>
+</section>

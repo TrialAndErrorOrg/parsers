@@ -24,7 +24,7 @@ import { promisify } from 'node:util'
 import { publishablePackages, workspaceRoot } from './workspace-packages.ts'
 
 const ORG = 'TrialAndErrorOrg'
-const MONOREPO = `${ORG}/parsers`
+const MONOREPO = `${ORG}/trialanderror`
 // committer of the snapshot commits
 const BOT = ['github-actions[bot]', '41898282+github-actions[bot]@users.noreply.github.com']
 

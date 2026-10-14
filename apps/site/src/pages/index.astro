@@ -1,0 +1,12 @@
+---
+import { getEntry } from "astro:content";
+import Sections from "~/components/Sections.astro";
+import Base from "~/layouts/Base.astro";
+
+const page = await getEntry("pages", "index");
+if (!page) throw new Error("pages/index.yaml is missing from site-content");
+---
+
+<Base title={page.data.title} description={page.data.description}>
+	<Sections sections={page.data.sections} />
+</Base>

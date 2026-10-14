@@ -1,12 +1,12 @@
 {
-  "name": "jote",
+  "name": "trialanderror",
   "version": "0.0.1",
   "private": true,
   "type": "module",
   "license": "GPL-3.0-or-later",
-  "repository": "https://github.com/TrialAndErrorOrg/parsers",
+  "repository": "https://github.com/TrialAndErrorOrg/trialanderror",
   "author": "Thomas F. K. Jorna <hello@tefkah.com>",
-  "description": "JOTE parsers monorepo",
+  "description": "Monorepo for almost development work done by the Center of Trial and Error",
   "packageManager": "pnpm@11.3.0",
   "engines": {
     "node": ">=24"

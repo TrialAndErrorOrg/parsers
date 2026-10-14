@@ -1,0 +1,18 @@
+---
+import type { Post } from "~/lib/types";
+import PostCard from "./PostCard.astro";
+
+interface Props {
+	posts: Post[];
+	/** Show the first post as a wide card */
+	featureFirst?: boolean;
+}
+
+const { posts, featureFirst = false } = Astro.props;
+const [first, ...rest] = posts;
+---
+
+{featureFirst && first && <PostCard post={first} wide eager />}
+<div class:list={["grid gap-8 md:grid-cols-2 xl:grid-cols-3", featureFirst && "mt-8"]}>
+	{(featureFirst ? rest : posts).map((post) => <PostCard post={post} />)}
+</div>

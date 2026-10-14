@@ -47,7 +47,11 @@ jobs:
 
       - run: pnpm format:check
 
-      - run: pnpm turbo run build typecheck test --cache-dir=.turbo/cache
+      # The site is built and deployed by site.yml: its build reads Strapi, Underlay and
+      # site-content. Here it's only type-checked.
+      - run: pnpm turbo run build typecheck test --cache-dir=.turbo/cache --filter='!site'
+
+      - run: pnpm turbo run typecheck --cache-dir=.turbo/cache --filter=site
 
       # Non-blocking reminder: list packages that changed without a changeset.
       - name: Changeset status

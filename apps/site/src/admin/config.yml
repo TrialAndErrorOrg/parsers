@@ -1,0 +1,333 @@
+# Editing interface for the site, served at /admin (through src/pages/admin/config.yml.ts,
+# which points sign-in at Microsoft when ADMIN_AUTH=microsoft). Editors can only change the
+# folders named here (src/lib/admin.ts).
+# Every save is a commit to TrialAndErrorOrg/site-content, which asks this repository to rebuild
+# the site (site-content's .github/workflows/rebuild.yml).
+# Field definitions here mirror src/content.config.ts and src/lib/settings.ts.
+
+backend:
+  name: github
+  repo: TrialAndErrorOrg/site-content
+  branch: main
+  # Who made a change. With Microsoft sign-in every commit is made by the GitHub App, so the
+  # editor's name is only in the message.
+  commit_messages:
+    create: "Create {{collection}} “{{slug}}” (by {{author-name}})"
+    update: "Update {{collection}} “{{slug}}” (by {{author-name}})"
+    delete: "Delete {{collection}} “{{slug}}” (by {{author-name}})"
+    uploadMedia: "Upload “{{path}}” (by {{author-name}})"
+    deleteMedia: "Delete “{{path}}” (by {{author-name}})"
+
+site_url: https://trialanderror.org
+display_url: https://trialanderror.org
+logo_url: /favicon.svg
+
+# Saving makes a draft: a branch with a pull request, which goes Draft, In Review, Ready, and is
+# published (merged into main, which rebuilds the site) from the Workflow view
+publish_mode: editorial_workflow
+
+# Leave empty optional fields out of the files, rather than writing `doi: ""` and the like.
+# An empty description would otherwise replace the excerpt the site falls back on.
+output:
+  omit_empty_optional_fields: true
+
+media_folder: uploads
+public_folder: /uploads
+media_libraries:
+  default:
+    config:
+      max_file_size: 26214400
+      slugify_filename: true
+      # Photos become WebP of at most 2400 pixels before they are committed, so the repository stays small
+      transformations:
+        raster_image: { format: webp, quality: 82, width: 2400, height: 2400 }
+  # Unsplash photos are linked, not copied (Unsplash's rules). The key is filled in by src/pages/admin/index.astro
+  stock_assets:
+    providers: [unsplash]
+
+collections:
+  - name: pages
+    label: Pages
+    label_singular: Page
+    description: Pages built from sections. "index" is the homepage. Free-text pages (donate, events) still live in Strapi.
+    folder: pages
+    extension: yaml
+    format: yaml
+    create: true
+    slug: "{{slug}}"
+    identifier_field: title
+    fields:
+      - { name: title, label: Title, widget: string }
+      - { name: description, label: Description (for search engines and link previews), widget: text, required: false }
+      - { name: showTitle, label: Show the title as a big heading, widget: boolean, default: false }
+      - name: sections
+        label: Sections
+        label_singular: Section
+        widget: list
+        typeKey: type
+        types:
+          - name: hero
+            label: Big intro
+            widget: object
+            summary: "{{title}}"
+            fields:
+              - { name: title, label: Title (each line gets its own box), widget: text }
+              - { name: subtitle, label: Subtitle, widget: string, required: false }
+              - { name: text, label: Text, widget: markdown, required: false }
+              - &buttons
+                name: buttons
+                label: Buttons
+                widget: list
+                required: false
+                fields:
+                  - { name: label, label: Label, widget: string }
+                  - { name: url, label: Link, widget: string }
+                  - { name: style, label: Style, widget: select, options: [accent, plain], default: accent }
+          - name: text
+            label: Text
+            widget: object
+            summary: "{{title}}"
+            fields:
+              - { name: title, label: Title, widget: string, required: false }
+              - { name: id, label: Anchor (for links like /about#mission), widget: string, required: false }
+              - { name: body, label: Text, widget: markdown }
+              - { name: background, label: Background, widget: select, options: [paper, accent, accent-soft, journal, journal-soft], default: paper }
+          - name: features
+            label: Columns
+            widget: object
+            summary: "{{title}}"
+            fields:
+              - { name: title, label: Title, widget: string, required: false }
+              - { name: id, label: Anchor, widget: string, required: false }
+              - name: items
+                label: Columns
+                widget: list
+                fields:
+                  - { name: title, label: Title, widget: string }
+                  - { name: body, label: Text, widget: markdown }
+                  - name: link
+                    label: Link
+                    widget: object
+                    required: false
+                    fields:
+                      - { name: label, label: Label, widget: string }
+                      - { name: url, label: Link, widget: string }
+          - name: latest-posts
+            label: Latest blog posts
+            widget: object
+            summary: "{{title}}"
+            fields:
+              - { name: title, label: Title, widget: string, default: From the Blog }
+              - { name: count, label: How many, widget: number, value_type: int, default: 4, min: 1 }
+          - name: latest-articles
+            label: Latest journal articles
+            widget: object
+            summary: "{{title}}"
+            fields:
+              - { name: title, label: Title, widget: string, default: From the Journal }
+              - { name: count, label: How many, widget: number, value_type: int, default: 4, min: 1 }
+          - name: team
+            label: Team
+            widget: object
+            summary: "{{title}}"
+            fields:
+              - { name: title, label: Title, widget: string, default: Meet the Team }
+              - { name: id, label: Anchor, widget: string, required: false }
+          - name: newsletter
+            label: Newsletter sign-up
+            widget: object
+            fields: []
+          - name: buttons
+            label: Buttons
+            widget: object
+            fields:
+              - *buttons
+
+  - name: blog
+    label: Blog
+    label_singular: Post
+    folder: blog
+    extension: md
+    format: frontmatter
+    create: true
+    slug: "{{slug}}"
+    summary: "{{title}}"
+    sortable_fields: [date, title]
+    media_folder: /uploads/blog
+    public_folder: /uploads/blog
+    fields:
+      - { name: title, label: Title, widget: string }
+      # Picked in the editor's own time, stored in UTC to the minute (2019-09-30T11:44:00Z).
+      # Without output_utc it would store local time with no zone, which the server reads as UTC
+      - { name: date, label: Publish date, widget: datetime, output_utc: true }
+      - name: authors
+        label: Authors
+        widget: relation
+        collection: people
+        value_field: "{{slug}}"
+        search_fields: [firstName, lastName]
+        display_fields: ["{{firstName}} {{lastName}}"]
+        multiple: true
+      - { name: category, label: Category, widget: relation, collection: categories, value_field: "{{slug}}", search_fields: [title], display_fields: [title], required: false }
+      - { name: tags, label: Tags, widget: list, required: false, hint: "Lowercase, like: open science" }
+      - { name: excerpt, label: Excerpt (shown on cards and at the top of the post), widget: text, required: false }
+      - { name: image, label: Cover image, widget: image, required: false }
+      - { name: imageAlt, label: Cover image description (for screen readers), widget: string, required: false }
+      - { name: body, label: Text, widget: markdown }
+      - { name: doi, label: DOI, widget: string, required: false, hint: "Only the DOI, like 10.36850/abcd-1234" }
+      - { name: related, label: Related posts, widget: relation, collection: blog, value_field: "{{slug}}", search_fields: [title], display_fields: [title], multiple: true, required: false }
+      - { name: description, label: Description for search engines (if not the excerpt), widget: text, required: false }
+
+  - name: people
+    label: People
+    label_singular: Person
+    description: Team members and blog authors. "Team" puts someone in the team list.
+    folder: people
+    extension: yaml
+    format: yaml
+    create: true
+    slug: "{{firstName}}-{{lastName}}"
+    identifier_field: lastName
+    summary: "{{firstName}} {{lastName}}"
+    sortable_fields: [lastName, firstName]
+    media_folder: /uploads/people
+    public_folder: /uploads/people
+    fields:
+      - { name: firstName, label: First name, widget: string, required: false }
+      - { name: lastName, label: Last name, widget: string }
+      - { name: team, label: Team member, widget: boolean, default: false }
+      - { name: position, label: Position, widget: string, required: false }
+      - { name: pronouns, label: Pronouns (only if they want them shown), widget: string, required: false }
+      - { name: summary, label: About, widget: markdown, required: false }
+      - { name: image, label: Photo, widget: image, required: false }
+      - { name: email, label: Email (shown for team members), widget: string, required: false }
+      - { name: orcid, label: ORCID iD, widget: string, required: false, hint: "Like https://orcid.org/0000-0002-1825-0097" }
+      - name: links
+        label: Links
+        widget: list
+        required: false
+        summary: "{{icon}}"
+        fields:
+          - { name: icon, label: Kind, widget: select, options: [website, bluesky, mastodon, linkedin, github, twitter] }
+          - { name: url, label: Link, widget: string }
+      - { name: aliases, label: Old addresses (leave as they are), widget: list, required: false, hint: "Earlier /people/... names, which keep redirecting here" }
+
+  - name: categories
+    label: Blog categories
+    label_singular: Category
+    folder: categories
+    extension: yaml
+    format: yaml
+    create: true
+    slug: "{{title}}"
+    identifier_field: title
+    fields:
+      - { name: title, label: Name, widget: string }
+
+  - name: settings
+    label: Settings
+    editor:
+      preview: false
+    files:
+      - name: site
+        label: Site
+        file: settings/site.yaml
+        fields:
+          - { name: name, label: Site name, widget: string }
+          - { name: description, label: Description, widget: text }
+          - { name: url, label: Address, widget: string }
+          - { name: email, label: Contact email, widget: string }
+          - name: blog
+            label: Blog
+            widget: object
+            fields:
+              - { name: title, label: Title, widget: string }
+              - { name: description, label: Description, widget: text }
+              - { name: postsPerPage, label: Posts per page, widget: number, value_type: int }
+              - { name: pitchEmail, label: Email for blog pitches, widget: string, required: false }
+          - name: journal
+            label: Journal
+            widget: object
+            fields:
+              - { name: title, label: Title, widget: string }
+              - { name: description, label: Description, widget: text }
+              - { name: url, label: Address, widget: string }
+          - name: newsletter
+            label: Newsletter
+            widget: object
+            fields:
+              - { name: title, label: Title, widget: string }
+              - { name: text, label: Text, widget: text }
+              - { name: action, label: Mailchimp form address, widget: string }
+          - name: analytics
+            label: Analytics
+            widget: object
+            required: false
+            fields:
+              - { name: script, label: Script address, widget: string }
+              - { name: websiteId, label: Website ID, widget: string }
+          - name: adTracking
+            label: Google Ads conversion tracking
+            widget: object
+            required: false
+            fields:
+              - { name: id, label: Google Ads ID, widget: string }
+              - { name: pages, label: Pages (slugs) that track, widget: list }
+      - name: navigation
+        label: Menus
+        file: settings/navigation.yaml
+        fields:
+          - name: header
+            label: Header menu
+            widget: list
+            summary: "{{title}}"
+            fields:
+              - { name: title, label: Title, widget: string }
+              - { name: url, label: Link (leave empty for a dropdown), widget: string, required: false }
+              - { name: description, label: Description, widget: string, required: false }
+              - { name: color, label: Tab colour, widget: select, options: [{ label: Orange, value: accent }, { label: Light orange, value: accent-soft }, { label: Journal blue, value: journal }], required: false }
+              - name: children
+                label: Dropdown links
+                widget: list
+                required: false
+                summary: "{{title}}"
+                fields:
+                  - { name: title, label: Title, widget: string }
+                  - { name: url, label: Link, widget: string }
+                  - { name: description, label: Description, widget: string, required: false }
+          - name: journal
+            label: Journal menu
+            widget: list
+            summary: "{{title}}"
+            fields:
+              - { name: title, label: Title, widget: string }
+              - { name: url, label: Link (leave empty for a dropdown), widget: string, required: false }
+              - { name: button, label: Show as a button, widget: boolean, required: false }
+              - name: children
+                label: Dropdown links
+                widget: list
+                required: false
+                summary: "{{title}}"
+                fields:
+                  - { name: title, label: Title, widget: string }
+                  - { name: url, label: Link, widget: string }
+          - name: footer
+            label: Footer columns
+            widget: list
+            summary: "{{title}}"
+            fields:
+              - { name: title, label: Column title, widget: string }
+              - name: children
+                label: Links
+                widget: list
+                summary: "{{title}}"
+                fields:
+                  - { name: title, label: Title, widget: string }
+                  - { name: url, label: Link, widget: string }
+          - name: socials
+            label: Social links
+            widget: list
+            summary: "{{icon}}"
+            fields:
+              - { name: icon, label: Icon, widget: select, options: [bluesky, github, mastodon, linkedin, instagram, facebook, email, rss, substack, twitter] }
+              - { name: url, label: Link, widget: string }

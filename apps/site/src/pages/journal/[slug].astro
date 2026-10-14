@@ -1,0 +1,30 @@
+---
+import type { GetStaticPaths } from "astro";
+import JournalArticle from "~/layouts/JournalArticle.astro";
+import JournalPage from "~/layouts/JournalPage.astro";
+import { getArticleDetails, prefetchArticles } from "~/lib/journal-article";
+import { ARTICLE_PAGES, getArticles, getPages } from "~/lib/sources/journal";
+
+export const getStaticPaths = (async () => {
+	// The journal's own pages from PubPub (For Authors, Editorial Board...) share the address space
+	const pages = (await getPages()).map((page) => ({ params: { slug: page.slug }, props: { page } }));
+	if (!ARTICLE_PAGES) return pages;
+	const articles = await getArticles();
+	await prefetchArticles(articles);
+	return [
+		...pages,
+		...articles.map((article) => {
+			const issue = article.issues[0]?.slug;
+			const related = issue
+				? articles.filter((a) => a.id !== article.id && a.issues.some((i) => i.slug === issue)).slice(0, 3)
+				: [];
+			return { params: { slug: article.slug }, props: { article, related } };
+		}),
+	];
+}) satisfies GetStaticPaths;
+
+const { page, article, related } = Astro.props;
+const details = article && (await getArticleDetails(article));
+---
+
+{page ? <JournalPage page={page} /> : article && details && <JournalArticle article={article} details={details} related={related} />}

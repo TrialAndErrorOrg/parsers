@@ -1,0 +1,13 @@
+---
+import IssueCard from "~/components/IssueCard.astro";
+import JournalList from "~/layouts/JournalList.astro";
+import { getIssues } from "~/lib/sources/journal";
+
+const issues = await getIssues();
+---
+
+<JournalList title="Issues" description="Every issue and special issue of the journal, newest first." articles={[]} filters={false}>
+	<div class="grid gap-x-12 gap-y-14 sm:grid-cols-2 lg:grid-cols-3">
+		{issues.map((issue) => <IssueCard issue={issue} href={`/journal/issue/${issue.slug}`} />)}
+	</div>
+</JournalList>

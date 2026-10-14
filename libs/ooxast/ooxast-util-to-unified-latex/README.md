@@ -1,5 +1,5 @@
 > **Note**
-> This repository is automatically generated from the [main parser monorepo](https://github.com/TrialAndErrorOrg/parsers). Please submit any issues or pull requests there.
+> This repository is automatically generated from the [main parser monorepo](https://github.com/TrialAndErrorOrg/trialanderror). Please submit any issues or pull requests there.
 
 # ooxast-util-to-unified-latex
 
@@ -72,7 +72,7 @@ toUnifiedLatex(tree: Element | Text | Root, file: VFile, options?: Options): Uni
 
 `UnifiedLatexRoot`
 
-Defined in: [src/lib/ooxast-util-to-unified-latex.ts:62](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/ooxast/ooxast-util-to-unified-latex/src/lib/ooxast-util-to-unified-latex.ts#L62)
+Defined in: [src/lib/ooxast-util-to-unified-latex.ts:62](https://github.com/TrialAndErrorOrg/trialanderror/blob/main/libs/ooxast/ooxast-util-to-unified-latex/src/lib/ooxast-util-to-unified-latex.ts#L62)
 
 #### Signature
 
@@ -91,7 +91,7 @@ toUnifiedLatex(tree: Element | Text | Root, options?: Options): UnifiedLatexRoot
 
 `UnifiedLatexRoot`
 
-Defined in: [src/lib/ooxast-util-to-unified-latex.ts:67](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/ooxast/ooxast-util-to-unified-latex/src/lib/ooxast-util-to-unified-latex.ts#L67)
+Defined in: [src/lib/ooxast-util-to-unified-latex.ts:67](https://github.com/TrialAndErrorOrg/trialanderror/blob/main/libs/ooxast/ooxast-util-to-unified-latex/src/lib/ooxast-util-to-unified-latex.ts#L67)
 
 ---
 
@@ -107,7 +107,7 @@ A bibliography you can add manually
 
 Needs to be in CSL format, which will be converted to BibTeX, or in BibTeX format
 
-Defined in: [src/lib/types.ts:146](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/ooxast/ooxast-util-to-unified-latex/src/lib/types.ts#L146)
+Defined in: [src/lib/types.ts:146](https://github.com/TrialAndErrorOrg/trialanderror/blob/main/libs/ooxast/ooxast-util-to-unified-latex/src/lib/types.ts#L146)
 
 ##### `bibname?`
 
@@ -119,7 +119,7 @@ Name of the bibliography file
 
 'bibliography.bib'
 
-Defined in: [src/lib/types.ts:47](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/ooxast/ooxast-util-to-unified-latex/src/lib/types.ts#L47)
+Defined in: [src/lib/types.ts:47](https://github.com/TrialAndErrorOrg/trialanderror/blob/main/libs/ooxast/ooxast-util-to-unified-latex/src/lib/types.ts#L47)
 
 ##### `citationType?`
 
@@ -131,7 +131,7 @@ What type of citation is used?
 
 'zotero'
 
-Defined in: [src/lib/types.ts:70](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/ooxast/ooxast-util-to-unified-latex/src/lib/types.ts#L70)
+Defined in: [src/lib/types.ts:70](https://github.com/TrialAndErrorOrg/trialanderror/blob/main/libs/ooxast/ooxast-util-to-unified-latex/src/lib/types.ts#L70)
 
 ##### `collectCitation?`
 
@@ -156,7 +156,7 @@ _Returns\`_
 
 `any`
 
-Defined in: [src/lib/types.ts:72](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/ooxast/ooxast-util-to-unified-latex/src/lib/types.ts#L72)
+Defined in: [src/lib/types.ts:72](https://github.com/TrialAndErrorOrg/trialanderror/blob/main/libs/ooxast/ooxast-util-to-unified-latex/src/lib/types.ts#L72)
 
 ##### `columnSeparator?`
 
@@ -169,7 +169,7 @@ i.e. should `|` be added to the beginning and end of each row?
 
 false
 
-Defined in: [src/lib/types.ts:52](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/ooxast/ooxast-util-to-unified-latex/src/lib/types.ts#L52)
+Defined in: [src/lib/types.ts:52](https://github.com/TrialAndErrorOrg/trialanderror/blob/main/libs/ooxast/ooxast-util-to-unified-latex/src/lib/types.ts#L52)
 
 ##### `defaultCol?`
 
@@ -183,7 +183,7 @@ e.g `l` for left, `r` for right, `c` for center
 
 'l'
 
-Defined in: [src/lib/types.ts:127](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/ooxast/ooxast-util-to-unified-latex/src/lib/types.ts#L127)
+Defined in: [src/lib/types.ts:127](https://github.com/TrialAndErrorOrg/trialanderror/blob/main/libs/ooxast/ooxast-util-to-unified-latex/src/lib/types.ts#L127)
 
 ##### `displayMath?`
 
@@ -201,13 +201,13 @@ What type of display math should be used?
 
 'equation'
 
-Defined in: [src/lib/types.ts:86](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/ooxast/ooxast-util-to-unified-latex/src/lib/types.ts#L86)
+Defined in: [src/lib/types.ts:86](https://github.com/TrialAndErrorOrg/trialanderror/blob/main/libs/ooxast/ooxast-util-to-unified-latex/src/lib/types.ts#L86)
 
 ##### `document?`
 
 > `boolean`
 
-Defined in: [src/lib/types.ts:27](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/ooxast/ooxast-util-to-unified-latex/src/lib/types.ts#L27)
+Defined in: [src/lib/types.ts:27](https://github.com/TrialAndErrorOrg/trialanderror/blob/main/libs/ooxast/ooxast-util-to-unified-latex/src/lib/types.ts#L27)
 
 ##### `documentClass?`
 
@@ -231,7 +231,7 @@ Options for the document class
 | `name`     | `string`   | Name of the document class `Default` 'article'     |
 | `options`? | `string`[] | Options for the document class `Default` undefined |
 
-Defined in: [src/lib/types.ts:56](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/ooxast/ooxast-util-to-unified-latex/src/lib/types.ts#L56)
+Defined in: [src/lib/types.ts:56](https://github.com/TrialAndErrorOrg/trialanderror/blob/main/libs/ooxast/ooxast-util-to-unified-latex/src/lib/types.ts#L56)
 
 ##### `handlers?`
 
@@ -245,7 +245,7 @@ Handlers for specific node types
 
 ###### Type declaration
 
-Defined in: [src/lib/types.ts:26](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/ooxast/ooxast-util-to-unified-latex/src/lib/types.ts#L26)
+Defined in: [src/lib/types.ts:26](https://github.com/TrialAndErrorOrg/trialanderror/blob/main/libs/ooxast/ooxast-util-to-unified-latex/src/lib/types.ts#L26)
 
 ##### `inlineMath?`
 
@@ -257,7 +257,7 @@ What type of inline math should be used? -`$`: `$ ... $` -`()` : `\(...\)`
 
 '$'
 
-Defined in: [src/lib/types.ts:102](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/ooxast/ooxast-util-to-unified-latex/src/lib/types.ts#L102)
+Defined in: [src/lib/types.ts:102](https://github.com/TrialAndErrorOrg/trialanderror/blob/main/libs/ooxast/ooxast-util-to-unified-latex/src/lib/types.ts#L102)
 
 ##### `italics?`
 
@@ -269,13 +269,13 @@ Should italics be rendered as \textit or \emph?
 
 'emph'
 
-Defined in: [src/lib/types.ts:43](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/ooxast/ooxast-util-to-unified-latex/src/lib/types.ts#L43)
+Defined in: [src/lib/types.ts:43](https://github.com/TrialAndErrorOrg/trialanderror/blob/main/libs/ooxast/ooxast-util-to-unified-latex/src/lib/types.ts#L43)
 
 ##### `newLines?`
 
 > `boolean`
 
-Defined in: [src/lib/types.ts:28](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/ooxast/ooxast-util-to-unified-latex/src/lib/types.ts#L28)
+Defined in: [src/lib/types.ts:28](https://github.com/TrialAndErrorOrg/trialanderror/blob/main/libs/ooxast/ooxast-util-to-unified-latex/src/lib/types.ts#L28)
 
 ##### `packages?`
 
@@ -294,7 +294,7 @@ by default, the following packages are added:
 - `caption`
 - `tabularx` (if `tabularx` is enabled)
 
-Defined in: [src/lib/types.ts:158](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/ooxast/ooxast-util-to-unified-latex/src/lib/types.ts#L158)
+Defined in: [src/lib/types.ts:158](https://github.com/TrialAndErrorOrg/trialanderror/blob/main/libs/ooxast/ooxast-util-to-unified-latex/src/lib/types.ts#L158)
 
 ##### `parseCitation?`
 
@@ -318,7 +318,7 @@ _Returns\`_
 
 `any`
 
-Defined in: [src/lib/types.ts:71](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/ooxast/ooxast-util-to-unified-latex/src/lib/types.ts#L71)
+Defined in: [src/lib/types.ts:71](https://github.com/TrialAndErrorOrg/trialanderror/blob/main/libs/ooxast/ooxast-util-to-unified-latex/src/lib/types.ts#L71)
 
 ##### `preamble?`
 
@@ -356,13 +356,13 @@ const options = {
 }
 ```
 
-Defined in: [src/lib/types.ts:192](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/ooxast/ooxast-util-to-unified-latex/src/lib/types.ts#L192)
+Defined in: [src/lib/types.ts:192](https://github.com/TrialAndErrorOrg/trialanderror/blob/main/libs/ooxast/ooxast-util-to-unified-latex/src/lib/types.ts#L192)
 
 ##### `quotes?`
 
 > `string`[]
 
-Defined in: [src/lib/types.ts:29](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/ooxast/ooxast-util-to-unified-latex/src/lib/types.ts#L29)
+Defined in: [src/lib/types.ts:29](https://github.com/TrialAndErrorOrg/trialanderror/blob/main/libs/ooxast/ooxast-util-to-unified-latex/src/lib/types.ts#L29)
 
 ##### `relations?`
 
@@ -374,13 +374,13 @@ Defined in: [src/lib/types.ts:29](https://github.com/TrialAndErrorOrg/parsers/bl
 
 ###### Type declaration
 
-Defined in: [src/lib/types.ts:74](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/ooxast/ooxast-util-to-unified-latex/src/lib/types.ts#L74)
+Defined in: [src/lib/types.ts:74](https://github.com/TrialAndErrorOrg/trialanderror/blob/main/libs/ooxast/ooxast-util-to-unified-latex/src/lib/types.ts#L74)
 
 ##### `strikethrough?`
 
 > `"st"` | `"sout"` | `"s"`
 
-Defined in: [src/lib/types.ts:103](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/ooxast/ooxast-util-to-unified-latex/src/lib/types.ts#L103)
+Defined in: [src/lib/types.ts:103](https://github.com/TrialAndErrorOrg/trialanderror/blob/main/libs/ooxast/ooxast-util-to-unified-latex/src/lib/types.ts#L103)
 
 ##### `tabularx?`
 
@@ -394,7 +394,7 @@ Should tabularx be used instead of tabular?
 
 false
 
-Defined in: [src/lib/types.ts:132](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/ooxast/ooxast-util-to-unified-latex/src/lib/types.ts#L132)
+Defined in: [src/lib/types.ts:132](https://github.com/TrialAndErrorOrg/trialanderror/blob/main/libs/ooxast/ooxast-util-to-unified-latex/src/lib/types.ts#L132)
 
 ##### `title?`
 
@@ -408,7 +408,7 @@ If this is not set, the title will be taken from the heading with the "Title" st
 
 undefined
 
-Defined in: [src/lib/types.ts:119](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/ooxast/ooxast-util-to-unified-latex/src/lib/types.ts#L119)
+Defined in: [src/lib/types.ts:119](https://github.com/TrialAndErrorOrg/trialanderror/blob/main/libs/ooxast/ooxast-util-to-unified-latex/src/lib/types.ts#L119)
 
 ##### `topSection?`
 
@@ -423,7 +423,7 @@ What the top section should be
 4 = paragraph
 5 = subparagraph
 
-Defined in: [src/lib/types.ts:39](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/ooxast/ooxast-util-to-unified-latex/src/lib/types.ts#L39)
+Defined in: [src/lib/types.ts:39](https://github.com/TrialAndErrorOrg/trialanderror/blob/main/libs/ooxast/ooxast-util-to-unified-latex/src/lib/types.ts#L39)
 
 ##### `xcolor?`
 
@@ -438,7 +438,7 @@ and remove color related commands from the output.
 
 true
 
-Defined in: [src/lib/types.ts:111](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/ooxast/ooxast-util-to-unified-latex/src/lib/types.ts#L111)
+Defined in: [src/lib/types.ts:111](https://github.com/TrialAndErrorOrg/trialanderror/blob/main/libs/ooxast/ooxast-util-to-unified-latex/src/lib/types.ts#L111)
 
 ---
 
@@ -446,7 +446,7 @@ Defined in: [src/lib/types.ts:111](https://github.com/TrialAndErrorOrg/parsers/b
 
 > `HWithProps` & `HWithoutProps` & `Context`
 
-Defined in: [src/lib/types.ts:292](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/ooxast/ooxast-util-to-unified-latex/src/lib/types.ts#L292)
+Defined in: [src/lib/types.ts:292](https://github.com/TrialAndErrorOrg/trialanderror/blob/main/libs/ooxast/ooxast-util-to-unified-latex/src/lib/types.ts#L292)
 
 ---
 
@@ -474,7 +474,7 @@ Defined in: [src/lib/types.ts:292](https://github.com/TrialAndErrorOrg/parsers/b
 
 [`UnifiedLatexNode`](modules.md#unifiedlatexnode) | [`UnifiedLatexNode`](modules.md#unifiedlatexnode)[] | `void` | `undefined`
 
-Defined in: [src/lib/types.ts:195](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/ooxast/ooxast-util-to-unified-latex/src/lib/types.ts#L195)
+Defined in: [src/lib/types.ts:195](https://github.com/TrialAndErrorOrg/trialanderror/blob/main/libs/ooxast/ooxast-util-to-unified-latex/src/lib/types.ts#L195)
 
 ---
 
@@ -509,7 +509,7 @@ all(h: H, parent: Parent<Node<Data>, Data> | Node): UnifiedLatexNode[];
 
 [`UnifiedLatexNode`](modules.md#unifiedlatexnode)[]
 
-Defined in: [src/lib/all.ts:10](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/ooxast/ooxast-util-to-unified-latex/src/lib/all.ts#L10)
+Defined in: [src/lib/all.ts:10](https://github.com/TrialAndErrorOrg/trialanderror/blob/34b3326/libs/ooxast/ooxast-util-to-unified-latex/src/lib/all.ts#L10)
 
 ---
 
@@ -533,7 +533,7 @@ one(h: H, node: Node, parent?: Parent<Node<Data>, Data>): UnifiedLatexNode | Uni
 
 [`UnifiedLatexNode`](modules.md#unifiedlatexnode) | [`UnifiedLatexNode`](modules.md#unifiedlatexnode)[] | `void`
 
-Defined in: [src/lib/one.ts:8](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/ooxast/ooxast-util-to-unified-latex/src/lib/one.ts#L8)
+Defined in: [src/lib/one.ts:8](https://github.com/TrialAndErrorOrg/trialanderror/blob/34b3326/libs/ooxast/ooxast-util-to-unified-latex/src/lib/one.ts#L8)
 
 ---
 
@@ -556,7 +556,7 @@ toUnifiedLatex(tree: Element | Text | Root, options: Options): Root;
 
 `Root`
 
-Defined in: [src/lib/ooxast-util-to-unified-latex.ts:45](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/ooxast/ooxast-util-to-unified-latex/src/lib/ooxast-util-to-unified-latex.ts#L45)
+Defined in: [src/lib/ooxast-util-to-unified-latex.ts:45](https://github.com/TrialAndErrorOrg/trialanderror/blob/34b3326/libs/ooxast/ooxast-util-to-unified-latex/src/lib/ooxast-util-to-unified-latex.ts#L45)
 
 ---
 
@@ -564,7 +564,7 @@ Defined in: [src/lib/ooxast-util-to-unified-latex.ts:45](https://github.com/Tria
 
 > **`Const`** `Context`[`"handlers"`]
 
-Defined in: [src/lib/handlers/index.ts:20](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/ooxast/ooxast-util-to-unified-latex/src/lib/handlers/index.ts#L20)
+Defined in: [src/lib/handlers/index.ts:20](https://github.com/TrialAndErrorOrg/trialanderror/blob/34b3326/libs/ooxast/ooxast-util-to-unified-latex/src/lib/handlers/index.ts#L20)
 
 ---
 
@@ -580,7 +580,7 @@ A bibliography you can add manually
 
 Needs to be in CSL format, which will be converted to BibTeX, or in BibTeX format
 
-Defined in: [src/lib/types.ts:147](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/ooxast/ooxast-util-to-unified-latex/src/lib/types.ts#L147)
+Defined in: [src/lib/types.ts:147](https://github.com/TrialAndErrorOrg/trialanderror/blob/34b3326/libs/ooxast/ooxast-util-to-unified-latex/src/lib/types.ts#L147)
 
 ##### `bibname?`
 
@@ -592,7 +592,7 @@ Name of the bibliography file
 
 'bibliography.bib'
 
-Defined in: [src/lib/types.ts:48](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/ooxast/ooxast-util-to-unified-latex/src/lib/types.ts#L48)
+Defined in: [src/lib/types.ts:48](https://github.com/TrialAndErrorOrg/trialanderror/blob/34b3326/libs/ooxast/ooxast-util-to-unified-latex/src/lib/types.ts#L48)
 
 ##### `citationType?`
 
@@ -604,7 +604,7 @@ What type of citation is used?
 
 'zotero'
 
-Defined in: [src/lib/types.ts:71](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/ooxast/ooxast-util-to-unified-latex/src/lib/types.ts#L71)
+Defined in: [src/lib/types.ts:71](https://github.com/TrialAndErrorOrg/trialanderror/blob/34b3326/libs/ooxast/ooxast-util-to-unified-latex/src/lib/types.ts#L71)
 
 ##### `collectCitation?`
 
@@ -629,7 +629,7 @@ _Returns\`_
 
 `any`
 
-Defined in: [src/lib/types.ts:73](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/ooxast/ooxast-util-to-unified-latex/src/lib/types.ts#L73)
+Defined in: [src/lib/types.ts:73](https://github.com/TrialAndErrorOrg/trialanderror/blob/34b3326/libs/ooxast/ooxast-util-to-unified-latex/src/lib/types.ts#L73)
 
 ##### `columnSeparator?`
 
@@ -642,7 +642,7 @@ i.e. should `|` be added to the beginning and end of each row?
 
 false
 
-Defined in: [src/lib/types.ts:53](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/ooxast/ooxast-util-to-unified-latex/src/lib/types.ts#L53)
+Defined in: [src/lib/types.ts:53](https://github.com/TrialAndErrorOrg/trialanderror/blob/34b3326/libs/ooxast/ooxast-util-to-unified-latex/src/lib/types.ts#L53)
 
 ##### `defaultCol?`
 
@@ -656,7 +656,7 @@ e.g `l` for left, `r` for right, `c` for center
 
 'l'
 
-Defined in: [src/lib/types.ts:128](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/ooxast/ooxast-util-to-unified-latex/src/lib/types.ts#L128)
+Defined in: [src/lib/types.ts:128](https://github.com/TrialAndErrorOrg/trialanderror/blob/34b3326/libs/ooxast/ooxast-util-to-unified-latex/src/lib/types.ts#L128)
 
 ##### `displayMath?`
 
@@ -674,13 +674,13 @@ What type of display math should be used?
 
 'equation'
 
-Defined in: [src/lib/types.ts:87](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/ooxast/ooxast-util-to-unified-latex/src/lib/types.ts#L87)
+Defined in: [src/lib/types.ts:87](https://github.com/TrialAndErrorOrg/trialanderror/blob/34b3326/libs/ooxast/ooxast-util-to-unified-latex/src/lib/types.ts#L87)
 
 ##### `document?`
 
 > `boolean`
 
-Defined in: [src/lib/types.ts:28](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/ooxast/ooxast-util-to-unified-latex/src/lib/types.ts#L28)
+Defined in: [src/lib/types.ts:28](https://github.com/TrialAndErrorOrg/trialanderror/blob/34b3326/libs/ooxast/ooxast-util-to-unified-latex/src/lib/types.ts#L28)
 
 ##### `documentClass?`
 
@@ -704,7 +704,7 @@ Options for the document class
 | `name`     | `string`   | Name of the document class `Default` 'article'     |
 | `options`? | `string`[] | Options for the document class `Default` undefined |
 
-Defined in: [src/lib/types.ts:57](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/ooxast/ooxast-util-to-unified-latex/src/lib/types.ts#L57)
+Defined in: [src/lib/types.ts:57](https://github.com/TrialAndErrorOrg/trialanderror/blob/34b3326/libs/ooxast/ooxast-util-to-unified-latex/src/lib/types.ts#L57)
 
 ##### `handlers?`
 
@@ -718,7 +718,7 @@ Handlers for specific node types
 
 ###### Type declaration
 
-Defined in: [src/lib/types.ts:27](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/ooxast/ooxast-util-to-unified-latex/src/lib/types.ts#L27)
+Defined in: [src/lib/types.ts:27](https://github.com/TrialAndErrorOrg/trialanderror/blob/34b3326/libs/ooxast/ooxast-util-to-unified-latex/src/lib/types.ts#L27)
 
 ##### `inlineMath?`
 
@@ -730,7 +730,7 @@ What type of inline math should be used? -`$`: `$ ... $` -`()` : `\(...\)`
 
 '$'
 
-Defined in: [src/lib/types.ts:103](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/ooxast/ooxast-util-to-unified-latex/src/lib/types.ts#L103)
+Defined in: [src/lib/types.ts:103](https://github.com/TrialAndErrorOrg/trialanderror/blob/34b3326/libs/ooxast/ooxast-util-to-unified-latex/src/lib/types.ts#L103)
 
 ##### `italics?`
 
@@ -742,13 +742,13 @@ Should italics be rendered as \textit or \emph?
 
 'emph'
 
-Defined in: [src/lib/types.ts:44](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/ooxast/ooxast-util-to-unified-latex/src/lib/types.ts#L44)
+Defined in: [src/lib/types.ts:44](https://github.com/TrialAndErrorOrg/trialanderror/blob/34b3326/libs/ooxast/ooxast-util-to-unified-latex/src/lib/types.ts#L44)
 
 ##### `newLines?`
 
 > `boolean`
 
-Defined in: [src/lib/types.ts:29](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/ooxast/ooxast-util-to-unified-latex/src/lib/types.ts#L29)
+Defined in: [src/lib/types.ts:29](https://github.com/TrialAndErrorOrg/trialanderror/blob/34b3326/libs/ooxast/ooxast-util-to-unified-latex/src/lib/types.ts#L29)
 
 ##### `packages?`
 
@@ -767,7 +767,7 @@ by default, the following packages are added:
 - `caption`
 - `tabularx` (if `tabularx` is enabled)
 
-Defined in: [src/lib/types.ts:159](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/ooxast/ooxast-util-to-unified-latex/src/lib/types.ts#L159)
+Defined in: [src/lib/types.ts:159](https://github.com/TrialAndErrorOrg/trialanderror/blob/34b3326/libs/ooxast/ooxast-util-to-unified-latex/src/lib/types.ts#L159)
 
 ##### `parseCitation?`
 
@@ -791,7 +791,7 @@ _Returns\`_
 
 `any`
 
-Defined in: [src/lib/types.ts:72](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/ooxast/ooxast-util-to-unified-latex/src/lib/types.ts#L72)
+Defined in: [src/lib/types.ts:72](https://github.com/TrialAndErrorOrg/trialanderror/blob/34b3326/libs/ooxast/ooxast-util-to-unified-latex/src/lib/types.ts#L72)
 
 ##### `preamble?`
 
@@ -829,13 +829,13 @@ const options = {
 }
 ```
 
-Defined in: [src/lib/types.ts:193](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/ooxast/ooxast-util-to-unified-latex/src/lib/types.ts#L193)
+Defined in: [src/lib/types.ts:193](https://github.com/TrialAndErrorOrg/trialanderror/blob/34b3326/libs/ooxast/ooxast-util-to-unified-latex/src/lib/types.ts#L193)
 
 ##### `quotes?`
 
 > `string`[]
 
-Defined in: [src/lib/types.ts:30](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/ooxast/ooxast-util-to-unified-latex/src/lib/types.ts#L30)
+Defined in: [src/lib/types.ts:30](https://github.com/TrialAndErrorOrg/trialanderror/blob/34b3326/libs/ooxast/ooxast-util-to-unified-latex/src/lib/types.ts#L30)
 
 ##### `relations?`
 
@@ -847,13 +847,13 @@ Defined in: [src/lib/types.ts:30](https://github.com/TrialAndErrorOrg/parsers/bl
 
 ###### Type declaration
 
-Defined in: [src/lib/types.ts:75](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/ooxast/ooxast-util-to-unified-latex/src/lib/types.ts#L75)
+Defined in: [src/lib/types.ts:75](https://github.com/TrialAndErrorOrg/trialanderror/blob/34b3326/libs/ooxast/ooxast-util-to-unified-latex/src/lib/types.ts#L75)
 
 ##### `strikethrough?`
 
 > `"st"` | `"sout"` | `"s"`
 
-Defined in: [src/lib/types.ts:104](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/ooxast/ooxast-util-to-unified-latex/src/lib/types.ts#L104)
+Defined in: [src/lib/types.ts:104](https://github.com/TrialAndErrorOrg/trialanderror/blob/34b3326/libs/ooxast/ooxast-util-to-unified-latex/src/lib/types.ts#L104)
 
 ##### `tabularx?`
 
@@ -867,7 +867,7 @@ Should tabularx be used instead of tabular?
 
 false
 
-Defined in: [src/lib/types.ts:133](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/ooxast/ooxast-util-to-unified-latex/src/lib/types.ts#L133)
+Defined in: [src/lib/types.ts:133](https://github.com/TrialAndErrorOrg/trialanderror/blob/34b3326/libs/ooxast/ooxast-util-to-unified-latex/src/lib/types.ts#L133)
 
 ##### `title?`
 
@@ -881,7 +881,7 @@ If this is not set, the title will be taken from the heading with the "Title" st
 
 undefined
 
-Defined in: [src/lib/types.ts:120](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/ooxast/ooxast-util-to-unified-latex/src/lib/types.ts#L120)
+Defined in: [src/lib/types.ts:120](https://github.com/TrialAndErrorOrg/trialanderror/blob/34b3326/libs/ooxast/ooxast-util-to-unified-latex/src/lib/types.ts#L120)
 
 ##### `topSection?`
 
@@ -896,7 +896,7 @@ What the top section should be
 4 = paragraph
 5 = subparagraph
 
-Defined in: [src/lib/types.ts:40](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/ooxast/ooxast-util-to-unified-latex/src/lib/types.ts#L40)
+Defined in: [src/lib/types.ts:40](https://github.com/TrialAndErrorOrg/trialanderror/blob/34b3326/libs/ooxast/ooxast-util-to-unified-latex/src/lib/types.ts#L40)
 
 ##### `xcolor?`
 
@@ -911,7 +911,7 @@ and remove color related commands from the output.
 
 true
 
-Defined in: [src/lib/types.ts:112](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/ooxast/ooxast-util-to-unified-latex/src/lib/types.ts#L112)
+Defined in: [src/lib/types.ts:112](https://github.com/TrialAndErrorOrg/trialanderror/blob/34b3326/libs/ooxast/ooxast-util-to-unified-latex/src/lib/types.ts#L112)
 
 ---
 
@@ -919,7 +919,7 @@ Defined in: [src/lib/types.ts:112](https://github.com/TrialAndErrorOrg/parsers/b
 
 > `HWithProps` & `HWithoutProps` & `Context`
 
-Defined in: [src/lib/types.ts:292](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/ooxast/ooxast-util-to-unified-latex/src/lib/types.ts#L292)
+Defined in: [src/lib/types.ts:292](https://github.com/TrialAndErrorOrg/trialanderror/blob/34b3326/libs/ooxast/ooxast-util-to-unified-latex/src/lib/types.ts#L292)
 
 ---
 
@@ -947,7 +947,7 @@ Defined in: [src/lib/types.ts:292](https://github.com/TrialAndErrorOrg/parsers/b
 
 [`UnifiedLatexNode`](modules.md#unifiedlatexnode) | [`UnifiedLatexNode`](modules.md#unifiedlatexnode)[] | `void` | `undefined`
 
-Defined in: [src/lib/types.ts:196](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/ooxast/ooxast-util-to-unified-latex/src/lib/types.ts#L196)
+Defined in: [src/lib/types.ts:196](https://github.com/TrialAndErrorOrg/trialanderror/blob/34b3326/libs/ooxast/ooxast-util-to-unified-latex/src/lib/types.ts#L196)
 
 ---
 
@@ -977,29 +977,29 @@ Defined in: node_modules/.pnpm/@unified-latex+unified-latex-types\@1.3.0/node_mo
 [unifiedgh]: https://github.com/unifiedjs/unified
 [xast-from-xml]: https://github.com/syntax-tree/xast-util-from-xml
 [rehype]: https://github.com/rehypejs/rehype
-[rejour]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/rejour
-[rejour-parse]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/rejour/rejour-parse
-[rejour-stringify]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/rejour/rejour-stringify
-[rejour-move-abstract]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/rejour/rejour-move-abstract
-[rejour-meta]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/rejour/rejour-meta
-[rejour-relatex]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/rejour/rejour-relatex
-[relatex]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/relatex
-[relatex-parse]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/relatex/relatex-parse
-[unifiedlatex]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/rejour/unifiedLatex
-[unified-latex-util-to-texast]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/rejour/unified-latex-util-to-texast
-[unifiedlatexscript]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/rejour/unifiedLatexscript
-[texast]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/relatex/texast
-[texast-util-to-latex]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/relatex/texast-util-to-latex
+[rejour]: https://github.com/TrialAndErrorOrg/trialanderror/tree/main/libs/rejour
+[rejour-parse]: https://github.com/TrialAndErrorOrg/trialanderror/tree/main/libs/rejour/rejour-parse
+[rejour-stringify]: https://github.com/TrialAndErrorOrg/trialanderror/tree/main/libs/rejour/rejour-stringify
+[rejour-move-abstract]: https://github.com/TrialAndErrorOrg/trialanderror/tree/main/libs/rejour/rejour-move-abstract
+[rejour-meta]: https://github.com/TrialAndErrorOrg/trialanderror/tree/main/libs/rejour/rejour-meta
+[rejour-relatex]: https://github.com/TrialAndErrorOrg/trialanderror/tree/main/libs/rejour/rejour-relatex
+[relatex]: https://github.com/TrialAndErrorOrg/trialanderror/tree/main/libs/relatex
+[relatex-parse]: https://github.com/TrialAndErrorOrg/trialanderror/tree/main/libs/relatex/relatex-parse
+[unifiedlatex]: https://github.com/TrialAndErrorOrg/trialanderror/tree/main/libs/rejour/unifiedLatex
+[unified-latex-util-to-texast]: https://github.com/TrialAndErrorOrg/trialanderror/tree/main/libs/rejour/unified-latex-util-to-texast
+[unifiedlatexscript]: https://github.com/TrialAndErrorOrg/trialanderror/tree/main/libs/rejour/unifiedLatexscript
+[texast]: https://github.com/TrialAndErrorOrg/trialanderror/tree/main/libs/relatex/texast
+[texast-util-to-latex]: https://github.com/TrialAndErrorOrg/trialanderror/tree/main/libs/relatex/texast-util-to-latex
 [hast]: https://github.com/syntax-tree/hast
 [xast]: https://github.com/syntax-tree/xast
 [mdast]: https://github.com/syntax-tree/mdast
 [mdast-markdown]: https://github.com/syntax-tree/mdast-util-to-markdown
 [latex-utensils]: https://github.com/tamuratak/latex-utensils
 [latexjs]: https://github.com/latexjs/latexjs
-[reoff]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/reoff
-[reoff-parse]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/reoff/reoff-parse
-[reoff-rejour]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/reoff/reoff-rejour
-[ooxast]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/ooxast/ooxast
-[ooxast]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/ooxast/ooxast-util-to-unified-latex
-[ooxast-util-to-unified-latex]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/ooxast-util-to-unified-latex
+[reoff]: https://github.com/TrialAndErrorOrg/trialanderror/tree/main/libs/reoff
+[reoff-parse]: https://github.com/TrialAndErrorOrg/trialanderror/tree/main/libs/reoff/reoff-parse
+[reoff-rejour]: https://github.com/TrialAndErrorOrg/trialanderror/tree/main/libs/reoff/reoff-rejour
+[ooxast]: https://github.com/TrialAndErrorOrg/trialanderror/tree/main/libs/ooxast/ooxast
+[ooxast]: https://github.com/TrialAndErrorOrg/trialanderror/tree/main/libs/ooxast/ooxast-util-to-unified-latex
+[ooxast-util-to-unified-latex]: https://github.com/TrialAndErrorOrg/trialanderror/tree/main/libs/ooxast-util-to-unified-latex
 [unified-latex]: https://github.com/siefken/unified-latex

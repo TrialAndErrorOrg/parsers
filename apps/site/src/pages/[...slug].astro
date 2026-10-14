@@ -1,0 +1,48 @@
+---
+import type { GetStaticPaths } from "astro";
+import { getCollection, type CollectionEntry } from "astro:content";
+import AdConsent from "~/components/AdConsent.astro";
+import Sections from "~/components/Sections.astro";
+import Base from "~/layouts/Base.astro";
+import Page from "~/layouts/Page.astro";
+import { site } from "~/lib/settings";
+import { getCmsPages, type CmsPage } from "~/lib/sources/pages";
+
+type Props = { local: CollectionEntry<"pages"> } | { cms: CmsPage };
+
+// Pages in site-content win over Strapi pages with the same slug
+export const getStaticPaths = (async () => {
+	const local = (await getCollection("pages")).filter((p) => p.id !== "index");
+	const localSlugs = new Set(local.map((p) => p.id));
+	const cms = (await getCmsPages()).filter((p) => !localSlugs.has(p.slug));
+	return [
+		...local.map((page) => ({ params: { slug: page.id }, props: { local: page } })),
+		...cms.map((page) => ({ params: { slug: page.slug }, props: { cms: page } })),
+	];
+}) satisfies GetStaticPaths;
+
+const props = Astro.props as Props;
+const tracksAds = site.adTracking?.pages.includes(Astro.params.slug ?? "") ?? false;
+---
+
+{
+	"local" in props ? (
+		<Base title={props.local.data.title} description={props.local.data.description}>
+			{props.local.data.showTitle && (
+				<div class="border-b-frame border-ink bg-accent">
+					<div class="page py-12 md:py-20">
+						<h1 class="font-heading text-5xl font-black tracking-tighter md:text-8xl">{props.local.data.title}</h1>
+					</div>
+				</div>
+			)}
+			<div data-pagefind-body data-pagefind-filter="section:Page">
+				<span hidden data-pagefind-meta="title">{props.local.data.title}</span>
+				<Sections sections={props.local.data.sections} />
+			</div>
+		</Base>
+	) : (
+		<Page title={props.cms.title} description={props.cms.description} body={props.cms.body}>
+			{tracksAds && <AdConsent />}
+		</Page>
+	)
+}

@@ -1,5 +1,5 @@
 > **Note**
-> This repository is automatically generated from the [main parser monorepo](https://github.com/TrialAndErrorOrg/parsers). Please submit any issues or pull requests there.
+> This repository is automatically generated from the [main parser monorepo](https://github.com/TrialAndErrorOrg/trialanderror). Please submit any issues or pull requests there.
 
 ## API
 
@@ -40,7 +40,7 @@ default(options: Options = ...): Function;
 
 `Root`
 
-Defined in:  [lib/reoff-cite.ts:12](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/reoff/reoff-cite/src/lib/reoff-cite.ts#L12)
+Defined in:  [lib/reoff-cite.ts:12](https://github.com/TrialAndErrorOrg/trialanderror/blob/main/libs/reoff/reoff-cite/src/lib/reoff-cite.ts#L12)
 
 ## Install
 

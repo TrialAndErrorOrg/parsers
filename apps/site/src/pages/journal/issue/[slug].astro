@@ -1,0 +1,49 @@
+---
+import type { GetStaticPaths } from "astro";
+import Picture from "~/components/Picture.astro";
+import JournalList from "~/layouts/JournalList.astro";
+import { getRichBody } from "~/lib/journal-article";
+import { formatDate } from "~/lib/format";
+import { getIssues } from "~/lib/sources/journal";
+import "~/styles/journal.css";
+
+export const getStaticPaths = (async () =>
+	(await getIssues()).map((issue) => ({ params: { slug: issue.slug }, props: { issue } }))) satisfies GetStaticPaths;
+
+/*
+ * An issue page, built entirely from the issue's collection on PubPub: its
+ * cover, volume, number, date and intro text, and its articles in PubPub's order.
+ * Nothing has to be laid out by hand.
+ */
+const { issue } = Astro.props;
+const intro = issue.intro && (await getRichBody(issue.intro));
+// Volume and number, unless the title already says them
+const numbered = /\bVolume \d+|\bIssue \d+/i.test(issue.title);
+const facts = [
+	!numbered && issue.volume && `Volume ${issue.volume}`,
+	!numbered && issue.number && `Issue ${issue.number}`,
+	issue.rolling ? "Published continuously" : issue.date && formatDate(issue.date),
+	`${issue.articles.length} ${issue.articles.length === 1 ? "article" : "articles"}`,
+].filter(Boolean);
+---
+
+<JournalList title={issue.title} description={issue.description} articles={issue.articles} current={`/journal/issue/${issue.slug}`} filters={false}>
+	<div slot="hero" class="page grid items-center gap-10 py-12 md:py-20 md:grid-cols-[minmax(0,1fr)_14rem] lg:grid-cols-[minmax(0,1fr)_18rem]">
+		<div class="flex flex-col gap-4">
+			<a href="/journal/issues" class="label self-start bg-paper hover:bg-journal-soft">← All issues</a>
+			<h1 class="font-heading text-5xl leading-[1.05] font-black tracking-tighter md:text-7xl">{issue.title}</h1>
+			<ul class="flex flex-wrap gap-x-4 font-heading text-lg font-bold">
+				{facts.map((fact) => <li>{fact}</li>)}
+			</ul>
+			{issue.description && <p class="max-w-3xl text-lg font-medium md:text-xl">{issue.description}</p>}
+		</div>
+		{
+			issue.image && (
+				<div class="w-48 border-frame border-ink bg-paper shadow-hard-lg md:w-full">
+					<Picture image={issue.image} width={576} class="h-auto w-full" eager />
+				</div>
+			)
+		}
+	</div>
+	{intro && <div slot="intro" class="journal-body prose-site mb-14" data-pagefind-body set:html={intro.body} />}
+</JournalList>

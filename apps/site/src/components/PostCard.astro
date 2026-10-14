@@ -1,0 +1,34 @@
+---
+import { Icon } from "astro-icon/components";
+import { formatDate, listNames } from "~/lib/format";
+import type { Post } from "~/lib/types";
+import Picture from "./Picture.astro";
+
+interface Props {
+	post: Post;
+	/** Big horizontal card for the top post */
+	wide?: boolean;
+	eager?: boolean;
+}
+
+const { post, wide = false, eager = false } = Astro.props;
+const href = `/blog/${post.slug}`;
+---
+
+<article class:list={["card group", wide && "md:flex-row"]}>
+	<div class:list={["relative overflow-hidden border-ink", wide ? "aspect-video border-b-frame md:aspect-auto md:w-1/2 md:border-r-frame md:border-b-0" : "aspect-video border-b-frame"]}>
+		<Picture image={post.image} width={wide ? 1000 : 640} class="size-full object-cover" eager={eager} />
+		{post.category && <span class="label absolute top-4 right-0 border-r-0">{post.category.title}</span>}
+	</div>
+	<div class:list={["flex flex-grow flex-col gap-3 p-6", wide && "md:w-1/2 md:justify-center md:gap-5 md:p-10"]}>
+		<time datetime={post.date} class="text-sm font-semibold text-muted">{formatDate(post.date)}</time>
+		<h3 class:list={["font-heading leading-tight font-bold tracking-tighter", wide ? "text-3xl md:text-5xl" : "text-2xl"]}>
+			<a href={href} class="card-link">{post.title}</a>
+		</h3>
+		{post.authors.length > 0 && <p class="font-semibold">By {listNames(post.authors.map((a) => a.name))}</p>}
+		{post.excerpt && <p class:list={["text-ink/90", wide ? "line-clamp-5 md:text-lg" : "line-clamp-3"]}>{post.excerpt}</p>}
+		<span class="mt-auto flex items-center gap-2 self-end pt-2 font-heading text-lg font-bold">
+			Read <Icon name="lucide:arrow-right" class="size-5 transition-transform group-hover:translate-x-1" aria-hidden="true" />
+		</span>
+	</div>
+</article>

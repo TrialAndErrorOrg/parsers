@@ -212,7 +212,7 @@ const addAdmonition = (readme: string) => {
     return readme
   }
   return `> **Note**
-> This repository is automatically generated from the [main parser monorepo](https://github.com/TrialAndErrorOrg/parsers). Please submit any issues or pull requests there.
+> This repository is automatically generated from the [main monorepo](https://github.com/TrialAndErrorOrg/trialanderror). Please submit any issues or pull requests there.
 
 ${readme}`
 }

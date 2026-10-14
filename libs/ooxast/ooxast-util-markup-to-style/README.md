@@ -1,5 +1,5 @@
 > **Note**
-> This repository is automatically generated from the [main parser monorepo](https://github.com/TrialAndErrorOrg/parsers). Please submit any issues or pull requests there.
+> This repository is automatically generated from the [main parser monorepo](https://github.com/TrialAndErrorOrg/trialanderror). Please submit any issues or pull requests there.
 
 # ooxast-util-markup-to-style
 
@@ -94,7 +94,7 @@ markupToStyle<I>(tree: I, options: Options = ...): I;
 
 `I`
 
-Defined in: [ooxast-util-markup-to-style/src/lib/ooxast-util-markup-to-style.ts:87](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/ooxast/ooxast-util-markup-to-style/src/lib/ooxast-util-markup-to-style.ts#L87)
+Defined in: [ooxast-util-markup-to-style/src/lib/ooxast-util-markup-to-style.ts:87](https://github.com/TrialAndErrorOrg/trialanderror/blob/main/libs/ooxast/ooxast-util-markup-to-style/src/lib/ooxast-util-markup-to-style.ts#L87)
 
 ---
 
@@ -115,7 +115,7 @@ Likewise, if `markup: 'w:b'` is specified and only a period at the end of the pa
 
 true
 
-Defined in: [ooxast-util-markup-to-style/src/lib/ooxast-util-markup-to-style.ts:59](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/ooxast/ooxast-util-markup-to-style/src/lib/ooxast-util-markup-to-style.ts#L59)
+Defined in: [ooxast-util-markup-to-style/src/lib/ooxast-util-markup-to-style.ts:59](https://github.com/TrialAndErrorOrg/trialanderror/blob/main/libs/ooxast/ooxast-util-markup-to-style/src/lib/ooxast-util-markup-to-style.ts#L59)
 
 ##### `markup`
 
@@ -227,7 +227,7 @@ Match text that is bold and italic, and red:
 ;(rPr) => rPr['w:b'] && rPr['w:i'] && rPr['w:color']?.['w:val'] === 'FF0000'
 ```
 
-Defined in: [ooxast-util-markup-to-style/src/lib/ooxast-util-markup-to-style.ts:23](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/ooxast/ooxast-util-markup-to-style/src/lib/ooxast-util-markup-to-style.ts#L23)
+Defined in: [ooxast-util-markup-to-style/src/lib/ooxast-util-markup-to-style.ts:23](https://github.com/TrialAndErrorOrg/trialanderror/blob/main/libs/ooxast/ooxast-util-markup-to-style/src/lib/ooxast-util-markup-to-style.ts#L23)
 
 ##### `matchAll?`
 
@@ -248,7 +248,7 @@ true
 
 Does not apply if `markup` is a function.
 
-Defined in: [ooxast-util-markup-to-style/src/lib/ooxast-util-markup-to-style.ts:44](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/ooxast/ooxast-util-markup-to-style/src/lib/ooxast-util-markup-to-style.ts#L44)
+Defined in: [ooxast-util-markup-to-style/src/lib/ooxast-util-markup-to-style.ts:44](https://github.com/TrialAndErrorOrg/trialanderror/blob/main/libs/ooxast/ooxast-util-markup-to-style/src/lib/ooxast-util-markup-to-style.ts#L44)
 
 ##### `matchFull?`
 
@@ -260,7 +260,7 @@ Whether the entire paragraph should contain the markup, or the markup can be pre
 
 true
 
-Defined in: [ooxast-util-markup-to-style/src/lib/ooxast-util-markup-to-style.ts:50](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/ooxast/ooxast-util-markup-to-style/src/lib/ooxast-util-markup-to-style.ts#L50)
+Defined in: [ooxast-util-markup-to-style/src/lib/ooxast-util-markup-to-style.ts:50](https://github.com/TrialAndErrorOrg/trialanderror/blob/main/libs/ooxast/ooxast-util-markup-to-style/src/lib/ooxast-util-markup-to-style.ts#L50)
 
 ##### `style`
 
@@ -274,7 +274,7 @@ The style to apply if the markup is present.
 'Heading 1'
 ```
 
-Defined in: [ooxast-util-markup-to-style/src/lib/ooxast-util-markup-to-style.ts:29](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/ooxast/ooxast-util-markup-to-style/src/lib/ooxast-util-markup-to-style.ts#L29)
+Defined in: [ooxast-util-markup-to-style/src/lib/ooxast-util-markup-to-style.ts:29](https://github.com/TrialAndErrorOrg/trialanderror/blob/main/libs/ooxast/ooxast-util-markup-to-style/src/lib/ooxast-util-markup-to-style.ts#L29)
 
 ---
 
@@ -299,7 +299,7 @@ const options: Options = [
 ]
 ```
 
-Defined in: [ooxast-util-markup-to-style/src/lib/ooxast-util-markup-to-style.ts:80](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/ooxast/ooxast-util-markup-to-style/src/lib/ooxast-util-markup-to-style.ts#L80)
+Defined in: [ooxast-util-markup-to-style/src/lib/ooxast-util-markup-to-style.ts:80](https://github.com/TrialAndErrorOrg/trialanderror/blob/main/libs/ooxast/ooxast-util-markup-to-style/src/lib/ooxast-util-markup-to-style.ts#L80)
 
 ## Syntax tree
 
@@ -323,28 +323,28 @@ This package uses the [ooxast][ooxast] syntax tree.
 [unifiedgh]: https://github.com/unifiedjs/unified
 [xast-from-xml]: https://github.com/syntax-tree/xast-util-from-xml
 [rehype]: https://github.com/rehypejs/rehype
-[rejour]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/rejour
-[rejour-parse]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/rejour/rejour-parse
-[rejour-stringify]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/rejour/rejour-stringify
-[rejour-move-abstract]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/rejour/rejour-move-abstract
-[rejour-meta]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/rejour/rejour-meta
-[rejour-relatex]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/rejour/rejour-relatex
-[relatex]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/relatex
-[relatex-parse]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/relatex/relatex-parse
-[jast]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/rejour/jast
-[jast-util-to-texast]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/rejour/jast-util-to-texast
-[jastscript]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/rejour/jastscript
-[texast]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/relatex/texast
-[texast-util-to-latex]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/relatex/texast-util-to-latex
+[rejour]: https://github.com/TrialAndErrorOrg/trialanderror/tree/main/libs/rejour
+[rejour-parse]: https://github.com/TrialAndErrorOrg/trialanderror/tree/main/libs/rejour/rejour-parse
+[rejour-stringify]: https://github.com/TrialAndErrorOrg/trialanderror/tree/main/libs/rejour/rejour-stringify
+[rejour-move-abstract]: https://github.com/TrialAndErrorOrg/trialanderror/tree/main/libs/rejour/rejour-move-abstract
+[rejour-meta]: https://github.com/TrialAndErrorOrg/trialanderror/tree/main/libs/rejour/rejour-meta
+[rejour-relatex]: https://github.com/TrialAndErrorOrg/trialanderror/tree/main/libs/rejour/rejour-relatex
+[relatex]: https://github.com/TrialAndErrorOrg/trialanderror/tree/main/libs/relatex
+[relatex-parse]: https://github.com/TrialAndErrorOrg/trialanderror/tree/main/libs/relatex/relatex-parse
+[jast]: https://github.com/TrialAndErrorOrg/trialanderror/tree/main/libs/rejour/jast
+[jast-util-to-texast]: https://github.com/TrialAndErrorOrg/trialanderror/tree/main/libs/rejour/jast-util-to-texast
+[jastscript]: https://github.com/TrialAndErrorOrg/trialanderror/tree/main/libs/rejour/jastscript
+[texast]: https://github.com/TrialAndErrorOrg/trialanderror/tree/main/libs/relatex/texast
+[texast-util-to-latex]: https://github.com/TrialAndErrorOrg/trialanderror/tree/main/libs/relatex/texast-util-to-latex
 [hast]: https://github.com/syntax-tree/hast
 [xast]: https://github.com/syntax-tree/xast
 [mdast]: https://github.com/syntax-tree/mdast
 [mdast-markdown]: https://github.com/syntax-tree/mdast-util-to-markdown
 [latex-utensils]: https://github.com/tamuratak/latex-utensils
 [latexjs]: https://github.com/latexjs/latexjs
-[reoff]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/reoff
-[reoff-parse]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/reoff/reoff-parse
-[reoff-rejour]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/reoff/reoff-rejour
-[ooxast]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/ooxast/ooxast
-[ooxast]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/ooxast/ooxast-util-to-jast
-[ooxast-util-markup-to-style]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/ooxast-util-markup-to-style
+[reoff]: https://github.com/TrialAndErrorOrg/trialanderror/tree/main/libs/reoff
+[reoff-parse]: https://github.com/TrialAndErrorOrg/trialanderror/tree/main/libs/reoff/reoff-parse
+[reoff-rejour]: https://github.com/TrialAndErrorOrg/trialanderror/tree/main/libs/reoff/reoff-rejour
+[ooxast]: https://github.com/TrialAndErrorOrg/trialanderror/tree/main/libs/ooxast/ooxast
+[ooxast]: https://github.com/TrialAndErrorOrg/trialanderror/tree/main/libs/ooxast/ooxast-util-to-jast
+[ooxast-util-markup-to-style]: https://github.com/TrialAndErrorOrg/trialanderror/tree/main/libs/ooxast-util-markup-to-style

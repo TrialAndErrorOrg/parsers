@@ -79,6 +79,11 @@ export const ALL = ({ request }) => gateway.fetch(request);
 Or on its own Cloudflare Worker, for a CMS hosted anywhere (`examples/cloudflare-worker`). Then
 list the site in `allowedOrigins`.
 
+The site's own routes can check sign-in too. `gateway.editor(request)` answers with the editor
+whose session the request carries as `Authorization: Bearer <session>`, or `undefined`. The
+session is the token the CMS keeps after signing in, which a page on the same site can read from
+`localStorage` (`sveltia-cms.user`) or get from the same popup.
+
 ### 4. Point Sveltia CMS at it
 
 In the CMS's `config.yml`:

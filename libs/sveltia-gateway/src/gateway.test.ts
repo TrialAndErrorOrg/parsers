@@ -285,6 +285,19 @@ describe('the GitHub proxy', () => {
     ).toBe(401)
   })
 
+  it('tells other routes who is signed in', async () => {
+    const { gateway, token } = await setup()
+    const editor = (authorization?: string) =>
+      gateway.editor(
+        new Request(`${SITE}/admin/ojs/submissions`, {
+          headers: authorization ? { Authorization: authorization } : {},
+        }),
+      )
+    expect(await editor(`Bearer ${token}`)).toMatchObject({ email: expect.any(String) })
+    expect(await editor()).toBeUndefined()
+    expect(await editor(`Bearer ${token.slice(0, -2)}xx`)).toBeUndefined()
+  })
+
   it('applies the rules', async () => {
     const { world, gateway, token } = await setup()
     expect((await api(gateway, token, '/v3/repos/acme/other')).status).toBe(403)

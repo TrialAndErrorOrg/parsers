@@ -46,6 +46,11 @@ export interface Gateway {
   fetch(request: Request): Promise<Response>
   /** Whether a request is for one of the gateway's routes */
   handles(request: Request): boolean
+  /**
+   * The editor whose session a request carries in its `Authorization` header, as the CMS sends
+   * it. For the site's own routes that only editors may use
+   */
+  editor(request: Request): Promise<Editor | undefined>
 }
 
 const ATTEMPT_COOKIE = 'sveltia-gateway-attempt'
@@ -87,6 +92,11 @@ export function createGateway(options: GatewayOptions): Gateway {
     const path = new URL(request.url).pathname
     if (base && path !== base && !path.startsWith(`${base}/`)) return undefined
     return path.slice(base.length) || '/'
+  }
+
+  async function editorOf(request: Request) {
+    const token = request.headers.get('Authorization')?.replace(/^(token|bearer)\s+/i, '')
+    return (await unseal<{ editor: Editor }>(secret, token))?.editor
   }
 
   async function signIn(request: Request) {
@@ -156,10 +166,8 @@ export function createGateway(options: GatewayOptions): Gateway {
       return response
     }
 
-    const token = request.headers.get('Authorization')?.replace(/^(token|bearer)\s+/i, '')
-    const session = await unseal<{ editor: Editor }>(secret, token)
-    if (!session) return withCors(refuse('Not signed in, or the sign-in has expired', request, 401))
-    const { editor } = session
+    const editor = await editorOf(request)
+    if (!editor) return withCors(refuse('Not signed in, or the sign-in has expired', request, 401))
 
     // Sveltia calls a custom api_root the way it calls GitHub Enterprise: REST under /v3
     path = path.replace(/^\/v3(?=\/|$)/, '')
@@ -248,6 +256,7 @@ export function createGateway(options: GatewayOptions): Gateway {
 
   return {
     handles: (request) => route(request) !== undefined,
+    editor: editorOf,
     async fetch(request) {
       const path = route(request)
       if (path === '/auth' && request.method === 'GET') return signIn(request)

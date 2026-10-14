@@ -251,6 +251,22 @@ describe('the GitHub proxy', () => {
     ])
   })
 
+  it('says editors may push, since an app token gets no permissions from GitHub', async () => {
+    const { gateway, token } = await setup()
+    const repository = await (await api(gateway, token, '/v3/repos/acme/site')).json()
+    expect(repository.permissions).toMatchObject({ push: true, pull: true, admin: false })
+
+    // Read-only still opens, and refuses the writes themselves
+    const readOnly = await setup({ readOnly: true })
+    const opened = await (await api(readOnly.gateway, readOnly.token, '/v3/repos/acme/site')).json()
+    expect(opened.permissions).toMatchObject({ push: true })
+    const write = await api(readOnly.gateway, readOnly.token, '/v3/repos/acme/site/git/refs', {
+      method: 'POST',
+      body: JSON.stringify({ ref: 'refs/heads/cms/x', sha: 'abc' }),
+    })
+    expect(write.status).toBe(403)
+  })
+
   it('refuses requests without a valid session', async () => {
     const { gateway, token } = await setup()
     expect((await api(gateway, '', '/user')).status).toBe(401)
@@ -373,7 +389,7 @@ describe('GitHub App keys', () => {
           headers: { Authorization: `token ${result.token}` },
         }),
       )
-    expect(await (await call()).json()).toEqual({ auth: 'Bearer ghs_installation' })
+    expect(await (await call()).json()).toMatchObject({ auth: 'Bearer ghs_installation' })
     await call()
     expect(calls.filter((c) => c.url.includes('access_tokens'))).toHaveLength(1)
     expect(JSON.parse(calls.find((c) => c.url.includes('access_tokens'))!.body!)).toEqual({

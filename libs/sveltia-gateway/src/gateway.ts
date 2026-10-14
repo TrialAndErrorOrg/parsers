@@ -220,6 +220,29 @@ export function createGateway(options: GatewayOptions): Gateway {
       if (value) headers.set(name, value)
     }
     headers.set('Cache-Control', 'no-store')
+
+    // GitHub only says what the caller may do for user tokens, not for an
+    // app's, and Sveltia won't open at all without `permissions.push`. Say
+    // editors may push: the rules decide each write, and refuse them all when
+    // read-only, which leaves the CMS usable for looking around
+    if (
+      request.method === 'GET' &&
+      upstream.ok &&
+      path.toLowerCase() === `/repos/${rules.repo.toLowerCase()}`
+    ) {
+      const repository = (await upstream.json()) as Record<string, unknown>
+      repository.permissions = {
+        admin: false,
+        maintain: false,
+        push: true,
+        triage: true,
+        pull: true,
+      }
+      headers.delete('etag')
+      headers.set('content-type', 'application/json; charset=utf-8')
+      return withCors(new Response(JSON.stringify(repository), { status: 200, headers }))
+    }
+
     return withCors(new Response(upstream.body, { status: upstream.status, headers }))
   }
 

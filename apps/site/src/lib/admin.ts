@@ -34,15 +34,16 @@ export const editablePaths: string[] = [
 let gateway: Gateway | undefined;
 
 export function adminGateway() {
+	const testing = ADMIN_AUTH === "dev" && import.meta.env.DEV;
 	gateway ??= createGateway({
-		identity:
-			ADMIN_AUTH === "dev" && import.meta.env.DEV
-				? testIdentity()
-				: entra({ tenantId: ENTRA_TENANT_ID ?? "", clientId: ENTRA_CLIENT_ID ?? "", clientSecret: ENTRA_CLIENT_SECRET }),
+		identity: testing
+			? testIdentity()
+			: entra({ tenantId: ENTRA_TENANT_ID ?? "", clientId: ENTRA_CLIENT_ID ?? "", clientSecret: ENTRA_CLIENT_SECRET }),
 		github: GITHUB_CONTENT_TOKEN
 			? { repo, token: GITHUB_CONTENT_TOKEN }
 			: { repo, appId: GITHUB_APP_ID ?? "", privateKey: GITHUB_APP_PRIVATE_KEY ?? "" },
-		sessionSecret: ADMIN_SESSION_SECRET ?? "",
+		// A test editor's sessions only need to last until the dev server restarts
+		sessionSecret: ADMIN_SESSION_SECRET ?? (testing ? `${crypto.randomUUID()}${crypto.randomUUID()}` : ""),
 		basePath: "/admin",
 		branches: [config.backend.branch ?? "main"],
 		paths: editablePaths,

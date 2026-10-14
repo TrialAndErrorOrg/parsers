@@ -128,6 +128,8 @@ group or email, and `toEditor(claims)` to change the name and email the CMS show
 Everything else is refused with a 403 and a reason.
 
 - Read the content repository (REST and GraphQL). Queries naming another repository are refused.
+  The repository's `permissions` say editors may push (GitHub gives an app token none, and
+  Sveltia won't open without them); the rules below decide each write.
 - Commit with `createCommitOnBranch` to an open branch, changing only open paths.
 - Create, update and delete open branches, open and merge pull requests and set their labels,
   for the editorial workflow.

@@ -59,14 +59,14 @@ const IMAGE_WIDTH = 1600;
 export async function getArticleDetails(article: Article, source: Journal = journal()): Promise<ArticleDetails> {
 	const [release, html] = await Promise.all([source.getRelease(article), source.getArticleHtml(article)]);
 	const assets = new Map((release?.assets ?? []).map((file) => [hash(file.$file), file]));
-	const { body, headings, text } = await prepareArticle(html ?? "", assets, source.journalFileUrl);
+	const { body, headings, text } = await prepareArticle(html ?? "", assets, source);
 
 	return {
 		body,
 		headings,
 		empty: text.length < 200,
 		keywords: keywords(html ?? ""),
-		downloads: downloads(release, source.journalFileUrl),
+		downloads: downloads(release, source.downloadUrl),
 		connections: await connections(article, source),
 		updated: release && Date.parse(release.createdAt) - Date.parse(article.date) > 2 * DAY ? release.createdAt : undefined,
 	};
@@ -75,18 +75,18 @@ export async function getArticleDetails(article: Article, source: Journal = jour
 /** A PubPub page or issue intro, fitted into the site like an article's text */
 export async function getRichBody(rich: Rich, source: Journal = journal()) {
 	const assets = new Map(rich.assets.map((file) => [hash(file.$file), file]));
-	const { body, headings } = await prepareArticle(rich.html, assets, source.journalFileUrl);
+	const { body, headings } = await prepareArticle(rich.html, assets, source);
 	return { body, headings };
 }
 
 /** The release's exports, with the typeset PDF in place of the generated one when there is one */
-function downloads(release: Release | undefined, journalFileUrl: FileUrl): Download[] {
+function downloads(release: Release | undefined, downloadUrl: FileUrl): Download[] {
 	const files = (release?.exports ?? [])
 		.filter((file) => DOWNLOADS[file.format])
 		.sort((a, b) => Object.keys(DOWNLOADS).indexOf(a.format) - Object.keys(DOWNLOADS).indexOf(b.format))
-		.map((file) => ({ format: file.format, label: DOWNLOADS[file.format], url: journalFileUrl(file) }));
+		.map((file) => ({ format: file.format, label: DOWNLOADS[file.format], url: downloadUrl(file) }));
 	if (!release?.formatted) return files;
-	return [{ format: "pdf", label: "PDF", url: journalFileUrl(release.formatted) }, ...files.filter((file) => file.format !== "pdf")];
+	return [{ format: "pdf", label: "PDF", url: downloadUrl(release.formatted) }, ...files.filter((file) => file.format !== "pdf")];
 }
 
 /** Warm the download cache for every article at once, instead of one page at a time */
@@ -132,7 +132,7 @@ function keywords(html: string) {
  * itself, move headings one level down under the page's h1, serve images
  * from this site and point attachments at their Underlay file.
  */
-async function prepareArticle(html: string, assets: Map<string, UnderlayFile>, journalFileUrl: FileUrl) {
+async function prepareArticle(html: string, assets: Map<string, UnderlayFile>, source: Journal) {
 	let body = html
 		.replace(/^\s*<article>|<\/article>\s*$/g, "")
 		.replace(/<footer class="pub-footer">[\s\S]*?<\/footer>/, "")
@@ -143,7 +143,7 @@ async function prepareArticle(html: string, assets: Map<string, UnderlayFile>, j
 		.replace(/\s(?:data-(?!node-type|align|size)[\w-]+|date-structured-value|style|class="MsoNormal")(?:="[^"]*")?/g, "")
 		.replace(/<(\/?)h([1-6])\b/g, (_, slash: string, level: string) => `<${slash}h${Math.min(Number(level) + 1, 6)}`)
 		.replace(/<iframe\b/g, '<iframe loading="lazy" title="Embedded figure"')
-		.replace(/href="sha256:([0-9a-f]{64})"/g, (_, h: string) => `href="${journalFileUrl(assets.get(h) ?? { $file: h })}"`);
+		.replace(/href="sha256:([0-9a-f]{64})"/g, (_, h: string) => `href="${source.downloadUrl(assets.get(h) ?? { $file: h })}"`);
 
 	// An empty "References" heading in the text duplicates the one PubPub adds to the notes
 	if (/<div class="pub-notes">[\s\S]*<h2>References<\/h2>/.test(body)) {
@@ -157,7 +157,7 @@ async function prepareArticle(html: string, assets: Map<string, UnderlayFile>, j
 			Number(size) < 100 ? `<figure${attrs} data-align="${align}" style="width: ${size}%"` : match,
 	);
 
-	body = await replaceImages(body, assets, journalFileUrl);
+	body = await replaceImages(body, assets, source.journalFileUrl);
 	body = await replaceDeadEmbeds(body);
 
 	const ids = new Set([...body.matchAll(/\sid="([^"]+)"/g)].map((m) => m[1]));

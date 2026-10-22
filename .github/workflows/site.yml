@@ -123,6 +123,7 @@ jobs:
           expect 401 /preview/blog/x
           expect 401 /preview/page/x
           expect 401 '/api/draft?secret=x&slug=x'
+          expect 404 /journal/files/x/x.pdf
           expect 200 '/_image?href=%2Ffavicon-32x32.png&w=16&h=16&f=webp'
 
       - name: Push the image

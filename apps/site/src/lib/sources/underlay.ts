@@ -66,6 +66,35 @@ export async function fetchFile(owner: string, slug: string, file: UnderlayFile)
 	return response;
 }
 
+const TYPES: Record<string, string> = {
+	pdf: "application/pdf",
+	epub: "application/epub+zip",
+	docx: "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+	xml: "application/xml",
+	tex: "application/x-tex",
+};
+
+/**
+ * A file passed through from Underlay, for serving it from this site's own
+ * domain (Google Scholar only indexes PDFs on the same site as the article).
+ * A hash never points to other contents, so caches may keep it for good.
+ */
+export async function fileResponse(owner: string, slug: string, hash: string, name: string) {
+	if (!/^[0-9a-f]{64}$/.test(hash)) return new Response("Not found", { status: 404 });
+	const upstream = await underlayFetch(fileUrl(owner, slug, { $file: hash }));
+	if (!upstream.ok || !upstream.body) return new Response("Not found", { status: upstream.status === 404 ? 404 : 502 });
+
+	const type = TYPES[name.split(".").pop() ?? ""] ?? upstream.headers.get("content-type") ?? "application/octet-stream";
+	const headers = new Headers({
+		"Content-Type": type,
+		"Content-Disposition": `inline; filename="${name.replace(/["\\]/g, "")}"`,
+		"Cache-Control": "public, max-age=31536000, immutable",
+	});
+	const length = upstream.headers.get("content-length");
+	if (length) headers.set("Content-Length", length);
+	return new Response(upstream.body, { headers });
+}
+
 // Files are named by their hash, so a copy on disk never goes stale
 const cacheDir = path.resolve("node_modules/.cache/underlay");
 let active = 0;

@@ -2,7 +2,7 @@ import { inferRemoteSize } from "astro:assets";
 import { stripHtml } from "../format";
 import { type NavLink, navigation, site } from "../settings";
 import type { Article, Picture, Term } from "../types";
-import { fetchFileText, fileUrl, getCollection, type UnderlayFile } from "./underlay";
+import { fetchFileText, fileResponse, fileUrl, getCollection, type UnderlayFile } from "./underlay";
 
 /*
  * Journal articles, read from each journal's PubPub export on Underlay:
@@ -155,7 +155,7 @@ export interface JournalPage extends Rich {
 }
 
 /** Paths under a journal that are the site's own, so a PubPub page can't take them */
-const RESERVED = ["issues", "issue", "kind", "rss.xml"];
+const RESERVED = ["issues", "issue", "kind", "files", "rss.xml"];
 
 export const kindSlug = (kind: string) =>
 	kind
@@ -183,6 +183,12 @@ function createJournal(config: JournalConfig) {
 	const articleUrl = (slug: string) => (ARTICLE_PAGES ? `${config.path}/${slug}` : `${config.url}/pub/${slug}`);
 	const kindUrl = (kind: string) => `${config.path}/kind/${kindSlug(kind)}`;
 	const journalFileUrl = (file: UnderlayFile) => fileUrl(owner, collection, file);
+	/** Where a download is served on this site, see src/pages/journal/files */
+	const downloadUrl = (file: UnderlayFile) => {
+		const hash = file.$file.replace(/^sha256:/, "");
+		return `${config.path}/files/${hash}/${encodeURIComponent(file.fileName ?? hash)}`;
+	};
+	const serveFile = (hash: string, name: string) => fileResponse(owner, collection, hash, name);
 
 	function picture(file: UnderlayFile | undefined): Picture | undefined {
 		if (!file) return undefined;
@@ -289,7 +295,7 @@ function createJournal(config: JournalConfig) {
 			volume: meta.volume ?? term.title.match(/\bVol(?:ume|\.) ?(\d+)/i)?.[1],
 			number: meta.issue ?? term.title.match(/\bIssue (\d+)/i)?.[1],
 			date: meta.publicationDate ?? meta.printPublicationDate ?? "",
-			intro: d.introHtml ? { html: d.introHtml, assets: d.introAssets ?? [] } : undefined,
+			intro: d.layoutHtml ? { html: d.layoutHtml, assets: d.layoutAssets ?? [] } : undefined,
 		};
 	}
 
@@ -407,6 +413,8 @@ function createJournal(config: JournalConfig) {
 		articleUrl,
 		kindUrl,
 		journalFileUrl,
+		downloadUrl,
+		serveFile,
 		getJournalRecords,
 		getRelease,
 		getArticleHtml,

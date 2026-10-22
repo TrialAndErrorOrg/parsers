@@ -51,7 +51,7 @@ const meta = {
 	citation_issue: issue,
 	citation_doi: article.doi,
 	citation_fulltext_html_url: url,
-	citation_pdf_url: pdf?.url,
+	citation_pdf_url: pdf && new URL(pdf.url, Astro.site).href,
 	citation_keywords: details.keywords,
 	citation_language: "en",
 	"dc.title": article.title,

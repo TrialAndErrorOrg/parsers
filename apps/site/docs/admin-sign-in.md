@@ -54,8 +54,16 @@ permission the app has.
 
 ## Adding an editor
 
-Entra admin center, Enterprise applications, "trialanderror admin", Users and
-groups, Add user/group. Assigning a group instead of people needs Entra ID P1.
+From `apps/site`, after `az login`:
+
+```sh
+node scripts/add-editor.ts                               # who can sign in now
+node scripts/add-editor.ts someone@trialanderror.org     # add one or more people
+```
+
+By hand: Entra admin center, Enterprise applications, "trialanderror.org
+admin", Users and groups, Add user/group. Assigning a group instead of people
+needs Entra ID P1, which our Microsoft 365 plans don't include.
 Taking someone off the list stops their next sign-in. A session already open
 lasts until it expires (8 hours).
 

@@ -20,6 +20,8 @@ interface Props {
 }
 
 const { title, kicker, description, articles, journal = defaultJournal(), filters: showFilters = true } = Astro.props;
+// How many cards the script below shows at a time
+const MORE = 12;
 const { config } = journal;
 const current = Astro.props.current ?? config.path;
 const filters = showFilters
@@ -79,14 +81,43 @@ const filters = showFilters
 							</a>
 						)}
 					</div>
-					<div class="grid gap-8 md:grid-cols-2 xl:grid-cols-3">
+					<div class="grid gap-8 md:grid-cols-2 xl:grid-cols-3" data-more-list>
 						{articles.map((article) => (
 							<ArticleCard article={article} />
 						))}
 					</div>
+					{articles.length > MORE && (
+						<div class="mt-10 flex justify-center">
+							<button type="button" class="button button-plain" hidden>
+								Show more articles
+							</button>
+						</div>
+					)}
 				</>
 			)
 		}
 		<slot />
 	</div>
 </Base>
+
+<script>
+	// A long list starts with a few cards and shows the rest as you scroll. The page holds every
+	// card, so without JavaScript (and for search engines) the whole list is there.
+	const MORE = 12;
+	for (const list of document.querySelectorAll<HTMLElement>("[data-more-list]")) {
+		const rest = [...list.children].slice(MORE) as HTMLElement[];
+		const button = list.nextElementSibling?.querySelector("button");
+		if (!button || rest.length === 0) continue;
+		for (const card of rest) card.hidden = true;
+		button.hidden = false;
+		const more = () => {
+			for (const card of rest.splice(0, MORE)) card.hidden = false;
+			if (rest.length > 0) return;
+			observer.disconnect();
+			button.parentElement?.remove();
+		};
+		const observer = new IntersectionObserver((entries) => entries.some((e) => e.isIntersecting) && more(), { rootMargin: "400px" });
+		observer.observe(button);
+		button.addEventListener("click", more);
+	}
+</script>

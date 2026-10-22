@@ -222,7 +222,7 @@ export function articleCard(
 		colors[BRANDS[journal.brand].soft],
 		top(journal.brand, article.kind, article.date),
 		title(article.title),
-		byline(names(article.authors), article.doi ? `doi.org/${article.doi}` : journal.site),
+		byline(names(article.authors), article.doi ? `https://doi.org/${article.doi}` : journal.site),
 	);
 }
 

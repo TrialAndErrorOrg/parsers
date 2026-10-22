@@ -171,12 +171,18 @@ const meta = {
 			<div class="sticky top-28 flex flex-col gap-6">
 				{
 					details.headings.length > 2 && (
-						<nav aria-label="Table of contents" class="max-h-[60vh] overflow-y-auto border-frame border-ink bg-paper p-5 shadow-hard">
-							<p class="mb-3 font-heading text-lg font-black">Contents</p>
-							<ol class="flex flex-col gap-2 text-sm">
+						<nav aria-label="Table of contents" data-toc class="relative max-h-[60vh] overflow-y-auto">
+							<p class="mb-2 font-heading text-sm font-bold tracking-wide text-muted uppercase">Contents</p>
+							<ol class="flex flex-col border-l-2 border-ink/15 text-sm">
 								{details.headings.map((h) => (
-									<li class:list={[h.depth === 3 && "ml-4"]}>
-										<a href={`#${h.slug}`} class="hover:underline">
+									<li>
+										<a
+											href={`#${h.slug}`}
+											class:list={[
+												"-ml-0.5 block border-l-2 border-transparent py-1 pr-2 text-muted transition-colors hover:text-ink aria-[current=location]:border-journal aria-[current=location]:font-semibold aria-[current=location]:text-ink",
+												h.depth === 3 ? "pl-6" : "pl-3",
+											]}
+										>
 											{h.text}
 										</a>
 									</li>
@@ -259,3 +265,38 @@ const meta = {
 		)
 	}
 </Base>
+
+<script>
+	// Marks the section being read in the contents: the last heading above a line a third of the
+	// way down the screen
+	const toc = document.querySelector<HTMLElement>("[data-toc]");
+	if (toc) {
+		const links = [...toc.querySelectorAll<HTMLAnchorElement>('a[href^="#"]')];
+		const headings = links.map((a) => document.getElementById(decodeURIComponent(a.hash.slice(1))));
+		let queued = false;
+		const update = () => {
+			queued = false;
+			const line = innerHeight / 3;
+			let current = -1;
+			headings.forEach((h, i) => {
+				if (h && h.getBoundingClientRect().top <= line) current = i;
+			});
+			links.forEach((a, i) => (i === current ? a.setAttribute("aria-current", "location") : a.removeAttribute("aria-current")));
+			// Keep the marked entry in view when the contents scroll on their own
+			const active = links[current];
+			if (active && (active.offsetTop < toc.scrollTop || active.offsetTop + active.offsetHeight > toc.scrollTop + toc.clientHeight)) {
+				toc.scrollTop = active.offsetTop - toc.clientHeight / 2;
+			}
+		};
+		addEventListener(
+			"scroll",
+			() => {
+				if (queued) return;
+				queued = true;
+				requestAnimationFrame(update);
+			},
+			{ passive: true },
+		);
+		update();
+	}
+</script>

@@ -67,5 +67,54 @@ const extraMeta = Object.entries(meta).flatMap(([name, value]) =>
 			<slot />
 		</main>
 		<Footer />
+		<script>
+			// Menus made of <details data-dropdown>: one open at a time, closed by a click elsewhere or
+			// Escape. data-dropdown="hover" also opens on hover where there is a mouse.
+			const menus = () => document.querySelectorAll<HTMLDetailsElement>("details[data-dropdown]");
+
+			document.addEventListener("click", (event) => {
+				for (const menu of menus()) if (menu.open && !menu.contains(event.target as Node)) menu.open = false;
+			});
+			document.addEventListener("keydown", (event) => {
+				if (event.key !== "Escape") return;
+				for (const menu of menus()) {
+					if (!menu.open) continue;
+					menu.open = false;
+					menu.querySelector("summary")?.focus();
+				}
+			});
+			// toggle doesn't bubble, so listen while it travels down
+			document.addEventListener(
+				"toggle",
+				(event) => {
+					const opened = event.target;
+					if (!(opened instanceof HTMLDetailsElement) || !opened.open || !opened.matches("[data-dropdown]")) return;
+					for (const menu of menus()) if (menu !== opened && !menu.contains(opened)) menu.open = false;
+				},
+				true,
+			);
+
+			const mouse = matchMedia("(hover: hover) and (pointer: fine)");
+			for (const menu of document.querySelectorAll<HTMLDetailsElement>('details[data-dropdown="hover"]')) {
+				let closing: number | undefined;
+				let hovered = false;
+				menu.addEventListener("pointerenter", () => {
+					if (!mouse.matches) return;
+					clearTimeout(closing);
+					hovered = true;
+					menu.open = true;
+				});
+				// A short delay, so crossing the gap between the label and the menu doesn't close it
+				menu.addEventListener("pointerleave", () => {
+					if (!hovered) return;
+					hovered = false;
+					closing = window.setTimeout(() => (menu.open = false), 150);
+				});
+				// Hovering already opened it, so a click on the label shouldn't close it again
+				menu.querySelector("summary")?.addEventListener("click", (event) => {
+					if (hovered && menu.open) event.preventDefault();
+				});
+			}
+		</script>
 	</body>
 </html>

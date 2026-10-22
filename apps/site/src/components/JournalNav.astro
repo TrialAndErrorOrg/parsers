@@ -40,7 +40,7 @@ const external = (url?: string) => !!url && /^https?:/.test(url);
 			menu.map((item) =>
 				item.children?.length ? (
 					<li>
-						<details class="journal-menu group/menu relative">
+						<details data-dropdown="hover" class="group/menu relative">
 							<summary class="flex cursor-pointer list-none items-center gap-1 border-frame border-transparent px-3 py-1 hover:border-paper [&::-webkit-details-marker]:hidden">
 								{item.title}
 								<Icon name="lucide:chevron-down" class="size-4 transition-transform group-open/menu:rotate-180" aria-hidden="true" />
@@ -78,12 +78,3 @@ const external = (url?: string) => !!url && /^https?:/.test(url);
 		}
 	</ul>
 </nav>
-
-<script>
-	// Close an open menu when clicking elsewhere or opening another
-	document.addEventListener("click", (event) => {
-		for (const menu of document.querySelectorAll<HTMLDetailsElement>("details.journal-menu[open]")) {
-			if (!menu.contains(event.target as Node)) menu.open = false;
-		}
-	});
-</script>

@@ -24,7 +24,7 @@ const others = downloads.filter((d) => d !== pdf);
 				</a>
 			)}
 			{others.length > 0 && (
-				<details class="group/formats relative">
+				<details data-dropdown class="group/formats relative">
 					<summary class="button button-plain cursor-pointer list-none text-base [&::-webkit-details-marker]:hidden">
 						{pdf ? "More formats" : "Download"}
 						<Icon name="lucide:chevron-down" class="size-4 transition-transform group-open/formats:rotate-180" aria-hidden="true" />

@@ -39,7 +39,7 @@ const external = /^https?:/.test(article.url);
 		}
 	</div>
 	<span class="mt-auto flex items-center justify-between gap-2 px-6 pb-6 text-sm">
-		{article.doi ? <span class="font-mono text-xs text-muted">doi:{article.doi}</span> : <span />}
+		{article.doi ? <span class="font-mono text-xs break-all text-muted">https://doi.org/{article.doi}</span> : <span />}
 		<span class="flex items-center gap-1 font-heading text-lg font-bold">
 			Read
 			<Icon name={external ? "lucide:external-link" : "lucide:arrow-right"} class="size-5 transition-transform group-hover:translate-x-1" aria-hidden="true" />

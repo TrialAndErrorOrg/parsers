@@ -24,6 +24,8 @@ export interface JournalConfig {
 	collection: string;
 	/** Where the journal's pages live on this site */
 	path: string;
+	/** Where all its articles are listed: the journal's own path, unless it has a front page */
+	listPath: string;
 	title: string;
 	description: string;
 	/** The journal on PubPub, where articles link when ARTICLE_PAGES is off */
@@ -55,6 +57,8 @@ export const JOURNALS = {
 		owner: "centeroftrialanderror",
 		collection: "jote",
 		path: "/journal",
+		// /journal is the front page from pages/journal.yaml in site-content, or this list without one
+		listPath: "/journal/articles",
 		title: site.journal.title,
 		description: site.journal.description,
 		url: site.journal.url,
@@ -83,6 +87,7 @@ export const JOURNALS = {
 		owner: "centeroftrialanderror",
 		collection: "jrn",
 		path: "/jrn",
+		listPath: "/jrn",
 		title: "Journal for Reproducibility in Neuroscience",
 		description:
 			"A platform for sharing results that support or contradict articles that have already been published in the scientific literature of basic and applied neuroscience.",
@@ -155,7 +160,7 @@ export interface JournalPage extends Rich {
 }
 
 /** Paths under a journal that are the site's own, so a PubPub page can't take them */
-const RESERVED = ["issues", "issue", "kind", "files", "rss.xml"];
+const RESERVED = ["articles", "issues", "issue", "kind", "files", "rss.xml"];
 
 export const kindSlug = (kind: string) =>
 	kind

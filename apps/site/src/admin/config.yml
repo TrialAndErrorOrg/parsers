@@ -49,7 +49,7 @@ collections:
   - name: pages
     label: Pages
     label_singular: Page
-    description: Pages built from sections. "index" is the homepage. Free-text pages (donate, events) still live in Strapi.
+    description: Pages built from sections. "index" is the homepage and "journal" the journal's front page. Free-text pages (donate, events) still live in Strapi.
     folder: pages
     extension: yaml
     format: yaml
@@ -74,6 +74,7 @@ collections:
               - { name: title, label: Title (each line gets its own box), widget: text }
               - { name: subtitle, label: Subtitle, widget: string, required: false }
               - { name: text, label: Text, widget: markdown, required: false }
+              - { name: color, label: Colour, widget: select, options: [{ label: Orange, value: accent }, { label: Journal blue, value: journal }], default: accent }
               - &buttons
                 name: buttons
                 label: Buttons
@@ -126,6 +127,14 @@ collections:
             fields:
               - { name: title, label: Title, widget: string, default: From the Journal }
               - { name: count, label: How many, widget: number, value_type: int, default: 4, min: 1 }
+              - { name: style, label: Look, widget: select, options: [{ label: Cards with the abstract, value: cards }, { label: Compact list, value: list }], default: cards }
+          - name: issues
+            label: Latest issues
+            widget: object
+            summary: "{{title}}"
+            fields:
+              - { name: title, label: Title, widget: string, default: Issues }
+              - { name: count, label: How many, widget: number, value_type: int, default: 3, min: 1 }
           - name: team
             label: Team
             widget: object
@@ -252,6 +261,7 @@ collections:
               - { name: title, label: Title, widget: string }
               - { name: description, label: Description, widget: text }
               - { name: url, label: Address, widget: string }
+              - { name: listStyle, label: "How article lists look (all articles, issues, types)", widget: select, options: [{ label: Cards with the abstract, value: cards }, { label: Compact list, value: list }], default: cards }
           - name: newsletter
             label: Newsletter
             widget: object

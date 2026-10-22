@@ -24,11 +24,12 @@ const menu = await Promise.all(
 	})),
 );
 const base = config.path;
+const list = config.listPath;
 const path = Astro.url.pathname.replace(/\/$/, "") || "/";
-// "Articles" (/journal) is current on the article list and its filters; other links on their own pages
+// "Articles" is current on the article list and its type filters, other links on their own pages
 const isCurrent = (url?: string) => {
 	if (!url?.startsWith("/")) return false;
-	if (url === base) return path === base || path.startsWith(`${base}/kind/`);
+	if (url === list) return path === list || path.startsWith(`${base}/kind/`);
 	return path === url || (url === `${base}/issues` && path.startsWith(`${base}/issue/`));
 };
 const external = (url?: string) => !!url && /^https?:/.test(url);

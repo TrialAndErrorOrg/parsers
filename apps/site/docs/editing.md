@@ -34,10 +34,12 @@ repository.
 Go to `/admin` and sign in. Pages are lists of **sections**, drawn top to
 bottom. You can add, remove, reorder and edit sections:
 
-- **Big intro**: the large title block. Each line of the title gets its own box.
+- **Big intro**: the large title block, in orange or journal blue. Each line of the title gets its own box.
 - **Text**: a block of text, optionally with a title and a coloured background.
 - **Columns**: two or three boxes side by side (like "What do we do?").
 - **Latest blog posts** / **Latest journal articles**: filled in automatically.
+  Journal articles show as cards or as a compact list.
+- **Latest issues**: the newest numbered issues, as covers.
 - **Team**: everyone under People marked as team member who has a photo.
 - **Newsletter sign-up**
 - **Buttons**
@@ -46,6 +48,13 @@ Text fields take Markdown: `**bold**`, `*italic*`, `[a link](https://...)`.
 
 To make a new page, click **New Page** in `/admin`. Its address is its title
 in lowercase with dashes (`Open Positions` becomes `/open-positions`).
+
+The page called `journal` is the journal's front page at `/journal`, with the
+journal's menu above it. All articles are at `/journal/articles`, as cards or
+a compact list depending on Settings → Site → Journal.
+
+The preview next to the fields is the page as the site draws it, updated a
+moment after you stop typing. Links in it work, but lead away from the preview.
 
 Saving in `/admin` makes a commit to site-content, which triggers a rebuild.
 

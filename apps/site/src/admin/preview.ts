@@ -109,3 +109,42 @@ function BlogPreview({ entry, getAsset, getCollection }: PreviewProps) {
 }
 
 CMS.registerPreviewTemplate("blog", BlogPreview);
+
+/** The editor's session, which the CMS keeps once they've signed in */
+const session = () => JSON.parse(localStorage.getItem("sveltia-cms.user") ?? "null")?.token as string | undefined;
+
+/*
+ * A page of sections, drawn by the site itself rather than copied here: the page
+ * as the editor has it goes to /admin/preview (src/pages/admin/preview.astro),
+ * which answers with the page as it will look, shown in a frame.
+ */
+function PagePreview({ entry }: PreviewProps) {
+	const [html, setHtml] = React.useState("<p style='font-family: sans-serif'>Loading the preview…</p>");
+	const body = JSON.stringify({ slug: entry.get("slug"), data: entry.get("data")?.toJS?.() ?? {} });
+
+	React.useEffect(() => {
+		const controller = new AbortController();
+		// Wait for a pause in typing, and drop an answer the next change makes stale
+		const timer = setTimeout(async () => {
+			try {
+				const response = await fetch("/admin/preview", {
+					method: "POST",
+					headers: { "Content-Type": "application/json", Authorization: `Bearer ${session()}` },
+					body,
+					signal: controller.signal,
+				});
+				setHtml(await response.text());
+			} catch (error) {
+				if (!controller.signal.aborted) setHtml(`<p style='font-family: sans-serif'>No preview: ${error}</p>`);
+			}
+		}, 500);
+		return () => {
+			clearTimeout(timer);
+			controller.abort();
+		};
+	}, [body]);
+
+	return h("iframe", { srcDoc: html, title: "Preview", style: { width: "100%", height: "100vh", border: 0, display: "block" } });
+}
+
+CMS.registerPreviewTemplate("pages", PagePreview);

@@ -12,6 +12,8 @@ import { contentDir } from "./integrations/content";
 
 const button = z.object({ label: z.string(), url: z.string(), style: z.enum(["accent", "plain"]).default("accent") });
 const background = z.enum(["paper", "accent", "accent-soft", "journal", "journal-soft"]).default("paper");
+/** How a list of journal articles looks: cards with the abstract, or a compact list like a table of contents */
+export const articleStyle = z.enum(["cards", "list"]);
 
 const section = z.discriminatedUnion("type", [
 	z.object({
@@ -20,6 +22,7 @@ const section = z.discriminatedUnion("type", [
 		subtitle: z.string().optional(),
 		text: z.string().optional(),
 		buttons: z.array(button).default([]),
+		color: z.enum(["accent", "journal"]).default("accent"),
 	}),
 	z.object({
 		type: z.literal("text"),
@@ -49,6 +52,12 @@ const section = z.discriminatedUnion("type", [
 		type: z.literal("latest-articles"),
 		title: z.string().default("From the Journal"),
 		count: z.number().int().positive().default(4),
+		style: articleStyle.default("cards"),
+	}),
+	z.object({
+		type: z.literal("issues"),
+		title: z.string().default("Issues"),
+		count: z.number().int().positive().default(3),
 	}),
 	z.object({
 		type: z.literal("team"),
@@ -66,15 +75,19 @@ const section = z.discriminatedUnion("type", [
 
 export type Section = z.infer<typeof section>;
 
+export const pageSchema = z.object({
+	title: z.string(),
+	description: z.string().optional(),
+	/** Show the title as a big heading above the sections */
+	showTitle: z.boolean().default(false),
+	sections: z.array(section),
+});
+
+export type PageData = z.infer<typeof pageSchema>;
+
 const pages = defineCollection({
 	loader: glob({ pattern: "**/*.yaml", base: `${contentDir}/pages` }),
-	schema: z.object({
-		title: z.string(),
-		description: z.string().optional(),
-		/** Show the title as a big heading above the sections */
-		showTitle: z.boolean().default(false),
-		sections: z.array(section),
-	}),
+	schema: pageSchema,
 });
 
 /*

@@ -30,7 +30,7 @@ const external = /^https?:/.test(article.url);
 				<a href={article.url} class="card-link">{article.title}</a>
 			</h3>
 			{article.authors.length > 0 && <p class="text-sm font-semibold">{listNames(article.authors.map((a) => a.name))}</p>}
-			{article.description && <p class="line-clamp-4 border-l-heavy border-journal-soft pl-3 text-sm text-ink/90">{article.description}</p>}
+			{article.description && <p class="line-clamp-4 text-sm text-ink/80">{article.description}</p>}
 		</div>
 		{
 			!compact && article.image && (

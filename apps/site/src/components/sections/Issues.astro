@@ -1,0 +1,22 @@
+---
+import type { Section } from "~/content.config";
+import { getIssues } from "~/lib/sources/journal";
+import IssueCard from "../IssueCard.astro";
+
+type Props = Extract<Section, { type: "issues" }>;
+const { title, count } = Astro.props;
+// Rolling issues come first in the list, but here the newest numbered ones matter more
+const issues = (await getIssues()).filter((issue) => !issue.rolling).slice(0, count);
+---
+
+<section class="py-16">
+	<div class="page">
+		<div class="mb-10 flex flex-wrap items-end justify-between gap-4">
+			<h2 class="section-title flex-grow text-journal after:bg-journal">{title}</h2>
+			<a href="/journal/issues" class="button button-plain">All issues</a>
+		</div>
+		<div class="grid gap-x-12 gap-y-14 sm:grid-cols-2 lg:grid-cols-3">
+			{issues.map((issue) => <IssueCard issue={issue} href={`/journal/issue/${issue.slug}`} />)}
+		</div>
+	</div>
+</section>

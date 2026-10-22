@@ -34,6 +34,8 @@ const siteSchema = z.object({
 		title: z.string(),
 		description: z.string(),
 		url: z.url(),
+		/** How article lists (all articles, issues, types) look: cards with the abstract, or a compact list */
+		listStyle: z.enum(["cards", "list"]).default("cards"),
 	}),
 	newsletter: z.object({
 		title: z.string(),

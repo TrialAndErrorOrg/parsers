@@ -1,0 +1,27 @@
+---
+import { formatDate, listNames } from "~/lib/format";
+import type { Article } from "~/lib/types";
+
+interface Props {
+	article: Article;
+}
+
+/*
+ * A journal article as one entry of a compact list, like a journal's table of
+ * contents: type and date, title, authors and DOI. ArticleCard is the roomier
+ * version with the abstract and cover.
+ */
+const { article } = Astro.props;
+---
+
+<article class="flex flex-col gap-1 border-b border-ink/20 py-5">
+	<p class="font-heading text-sm font-bold text-journal">
+		{article.kind ?? "Article"} <span aria-hidden="true">·</span>{" "}
+		<time datetime={article.date}>{formatDate(article.date)}</time>
+	</p>
+	<h3 class="font-heading text-xl leading-tight font-bold tracking-tight md:text-2xl">
+		<a href={article.url} class="decoration-2 underline-offset-4 hover:underline">{article.title}</a>
+	</h3>
+	{article.authors.length > 0 && <p class="text-sm font-semibold">{listNames(article.authors.map((a) => a.name))}</p>}
+	{article.doi && <a href={`https://doi.org/${article.doi}`} class="self-start font-mono text-xs break-all text-muted hover:underline">https://doi.org/{article.doi}</a>}
+</article>

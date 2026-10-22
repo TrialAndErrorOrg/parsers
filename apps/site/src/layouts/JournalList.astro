@@ -1,5 +1,5 @@
 ---
-import ArticleCard from "~/components/ArticleCard.astro";
+import ArticleList from "~/components/ArticleList.astro";
 import JournalNav from "~/components/JournalNav.astro";
 import { type Journal, journal as defaultJournal } from "~/lib/sources/journal";
 import type { Article } from "~/lib/types";
@@ -20,10 +20,10 @@ interface Props {
 }
 
 const { title, kicker, description, articles, journal = defaultJournal(), filters: showFilters = true } = Astro.props;
-// How many cards the script below shows at a time
+// How many articles the script below shows at a time
 const MORE = 12;
 const { config } = journal;
-const current = Astro.props.current ?? config.path;
+const current = Astro.props.current ?? config.listPath;
 const filters = showFilters
 	? [{ title: "Type", links: (await journal.getKinds()).map((k) => ({ title: k.title, url: journal.kindUrl(k.title), count: k.articles.length })) }]
 	: [];
@@ -75,17 +75,13 @@ const filters = showFilters
 						<p class="font-heading text-2xl font-bold">
 							{articles.length} {articles.length === 1 ? "article" : "articles"}
 						</p>
-						{current !== config.path && (
-							<a href={config.path} class="sleek-underline font-heading font-bold">
+						{current !== config.listPath && (
+							<a href={config.listPath} class="sleek-underline font-heading font-bold">
 								All articles
 							</a>
 						)}
 					</div>
-					<div class="grid gap-8 md:grid-cols-2 xl:grid-cols-3" data-more-list>
-						{articles.map((article) => (
-							<ArticleCard article={article} />
-						))}
-					</div>
+					<ArticleList articles={articles} data-more-list />
 					{articles.length > MORE && (
 						<div class="mt-10 flex justify-center">
 							<button type="button" class="button button-plain" hidden>

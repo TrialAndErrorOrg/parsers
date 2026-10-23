@@ -44,6 +44,23 @@ Content is fetched at build time, so the site has to rebuild when it changes:
 - Journal: a daily run picks up new articles from Underlay.
 - Code: a push to `main` that touches the site.
 
+## By hand
+
+`scripts/release.sh` does what the workflow does, on your own machine: pull
+site-content, build, package, build the image, smoke test it, push it and have
+Coolify deploy it. For when the workflow can't, such as from a branch other than
+`main`.
+
+```sh
+pnpm --filter site release                 # all of it
+pnpm --filter site release --no-deploy     # push, but leave the running site alone
+pnpm --filter site release --local         # only build and test the image
+```
+
+It needs Docker, the 1Password app, and `docker login ghcr.io` with a GitHub
+token that has `write:packages`. The image gets the tags `latest` and the
+commit, or `<commit>-dirty` with uncommitted changes. Coolify deploys `latest`.
+
 ## Secrets
 
 One secret, `OP_TOKEN`, a 1Password service account token that can read the

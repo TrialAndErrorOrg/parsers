@@ -12,7 +12,8 @@
     "build": "varlock run -- astro build",
     "preview": "astro preview",
     "start": "varlock run -- node dist/server/entry.mjs",
-    "typecheck": "astro check"
+    "typecheck": "astro check",
+    "release": "scripts/release.sh"
   },
   "dependencies": {
     "@varlock/1password-plugin": "^2.0.5",

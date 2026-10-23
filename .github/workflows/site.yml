@@ -105,26 +105,9 @@ jobs:
             -t "$IMAGE:latest" -t "$IMAGE:${{ github.sha }}"
 
       # Every route the server renders itself, so a runtime package missing from the image's
-      # dependencies fails here instead of on the live site
+      # dependencies fails here instead of on the live site. scripts/release.sh runs it too
       - name: Smoke test the image
-        run: |
-          docker run -d --name smoke -p 4321:4321 -e ONEPASSWORD=false -e ADMIN_AUTH=microsoft \
-            -e ADMIN_SESSION_SECRET="$(openssl rand -hex 32)" "$IMAGE:${{ github.sha }}"
-          trap 'docker logs smoke; docker rm -f smoke >/dev/null' EXIT
-          for _ in $(seq 1 30); do curl -sf -o /dev/null localhost:4321/ && break; sleep 1; done
-          expect() {
-            status=$(curl -s -o /dev/null -w '%{http_code}' "localhost:4321$2")
-            [ "$status" = "$1" ] || { echo "::error::$2 answered $status, expected $1"; exit 1; }
-          }
-          expect 200 /
-          expect 200 /admin/
-          expect 200 /admin/config.yml
-          expect 401 /admin/api/v3/user
-          expect 401 /preview/blog/x
-          expect 401 /preview/page/x
-          expect 401 '/api/draft?secret=x&slug=x'
-          expect 404 /journal/files/x/x.pdf
-          expect 200 '/_image?href=%2Ffavicon-32x32.png&w=16&h=16&f=webp'
+        run: apps/site/scripts/smoke-test.sh "$IMAGE:${{ github.sha }}"
 
       - name: Push the image
         run: |

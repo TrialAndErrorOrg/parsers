@@ -1,0 +1,19 @@
+---
+import { getEntry } from "astro:content";
+import JournalList from "~/layouts/JournalList.astro";
+import SectionsPage from "~/layouts/SectionsPage.astro";
+import { site } from "~/lib/settings";
+import { getArticles, journal } from "~/lib/sources/journal";
+
+// The journal's front page is pages/journal.yaml in site-content (/admin → Pages → journal).
+// Without it, /journal lists every article, as /journal/articles does
+const page = await getEntry("pages", "journal");
+---
+
+{
+	page ? (
+		<SectionsPage page={page.data} journal={journal()} searchSection="Journal" />
+	) : (
+		<JournalList title={site.journal.title} description={site.journal.description} articles={await getArticles()} />
+	)
+}

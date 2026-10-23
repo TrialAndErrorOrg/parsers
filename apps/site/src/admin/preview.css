@@ -1,0 +1,5 @@
+/*
+ * The site's styles inside /admin's preview pane, loaded by preview.ts. Only
+ * the pane gets them: Sveltia shows each preview in a frame of its own.
+ */
+@import "../styles/global.css";

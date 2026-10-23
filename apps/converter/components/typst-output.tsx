@@ -1,5 +1,3 @@
-'use client'
-
 import { useCallback, useEffect, useMemo, useState } from 'react'
 import { useConversionStore } from '../lib/store'
 import { docxToTypstConverter, typstProjectFiles } from '../lib/converters/docx-to-typst'

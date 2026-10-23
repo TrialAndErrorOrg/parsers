@@ -1,7 +1,7 @@
-'use client'
-
 import { Settings } from 'lucide-react'
-import { useCredentialsStore } from '../lib/store'
+import { useApiKeyStore } from '../lib/store'
+import { useOjsAccess } from '../lib/ojs'
+import { ApiKeyHelp } from './credentials-prompt'
 import { Button } from './ui/button'
 import { Input } from './ui/input'
 import { Label } from './ui/label'
@@ -15,12 +15,15 @@ import {
 } from './ui/sheet'
 
 export function SettingsSheet() {
-  const { token, endpoint, setToken, setEndpoint } = useCredentialsStore()
+  const access = useOjsAccess()
+  const { apiKey, setApiKey } = useApiKeyStore()
+
+  if (!access) return null
 
   return (
     <Sheet>
       <SheetTrigger asChild>
-        <Button variant="ghost" size="icon">
+        <Button variant="ghost" size="icon" aria-label="OJS settings">
           <Settings className="h-5 w-5" />
         </Button>
       </SheetTrigger>
@@ -28,30 +31,21 @@ export function SettingsSheet() {
         <SheetHeader>
           <SheetTitle>OJS Settings</SheetTitle>
           <SheetDescription>
-            Configure your OJS API credentials. These are saved locally in your browser.
+            Your own OJS API key, saved in this browser only. Clear it to disconnect.
           </SheetDescription>
         </SheetHeader>
         <div className="mt-6 space-y-4">
           <div className="space-y-2">
-            <Label htmlFor="ojs-token">API Token</Label>
+            <Label htmlFor="ojs-api-key">API Key</Label>
             <Input
-              id="ojs-token"
+              id="ojs-api-key"
               type="password"
-              placeholder="Your OJS API token"
-              value={token}
-              onChange={(e) => setToken(e.target.value)}
+              autoComplete="off"
+              value={apiKey}
+              onChange={(e) => setApiKey(e.target.value)}
             />
           </div>
-          <div className="space-y-2">
-            <Label htmlFor="ojs-endpoint">API Endpoint</Label>
-            <Input
-              id="ojs-endpoint"
-              placeholder="https://your-journal.com/api/v1"
-              value={endpoint}
-              onChange={(e) => setEndpoint(e.target.value)}
-            />
-            <p className="text-xs text-muted-foreground">Must end with /api/v1</p>
-          </div>
+          <ApiKeyHelp url={access.url} />
         </div>
       </SheetContent>
     </Sheet>

@@ -1,0 +1,29 @@
+---
+import { prepareBody } from "~/lib/html";
+import Base from "./Base.astro";
+
+interface Props {
+	title: string;
+	description?: string;
+	/** HTML from the CMS */
+	body: string;
+	noindex?: boolean;
+}
+
+const { title, description, body, noindex } = Astro.props;
+const { body: html } = prepareBody(body);
+---
+
+<Base title={title} description={description} noindex={noindex}>
+	<slot name="head" slot="head" />
+	<slot name="banner" />
+	<div class="border-b-frame border-ink bg-accent-soft">
+		<div class="page py-12 md:py-20">
+			<h1 class="max-w-4xl font-heading text-4xl font-black tracking-tighter md:text-7xl" data-pagefind-meta="title">{title}</h1>
+		</div>
+	</div>
+	<article class="page py-12">
+		<div class="prose-site" data-pagefind-body={noindex ? undefined : ""} data-pagefind-filter="section:Page" set:html={html} />
+	</article>
+	<slot />
+</Base>

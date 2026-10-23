@@ -1,0 +1,16 @@
+---
+import type { Section } from "~/content.config";
+
+type Props = Extract<Section, { type: "buttons" }>;
+const { buttons } = Astro.props;
+---
+
+<section class="page flex flex-wrap gap-4 py-8">
+	{
+		buttons.map((b) => (
+			<a href={b.url} class:list={["button", b.style === "plain" && "button-plain"]}>
+				{b.label}
+			</a>
+		))
+	}
+</section>

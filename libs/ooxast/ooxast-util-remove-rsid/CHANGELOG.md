@@ -2,7 +2,7 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
-## [0.5.0](https://github.com/TrialAndErrorOrg/parsers/compare/ooxast-util-remove-rsid-0.4.0...ooxast-util-remove-rsid-0.5.0) (2024-06-28)
+## [0.5.0](https://github.com/TrialAndErrorOrg/trialanderror/compare/ooxast-util-remove-rsid-0.4.0...ooxast-util-remove-rsid-0.5.0) (2024-06-28)
 
 ### Dependency Updates
 
@@ -13,9 +13,9 @@ This file was generated using [@jscutlery/semver](https://github.com/jscutlery/s
 
 ### Features
 
-* update to new unified versions ([18bb996](https://github.com/TrialAndErrorOrg/parsers/commit/18bb9960d25843db83cda8bfea932e2e22f44b9b))
+* update to new unified versions ([18bb996](https://github.com/TrialAndErrorOrg/trialanderror/commit/18bb9960d25843db83cda8bfea932e2e22f44b9b))
 
-## [0.4.0](https://github.com/TrialAndErrorOrg/parsers/compare/ooxast-util-remove-rsid-0.3.0...ooxast-util-remove-rsid-0.4.0) (2023-09-29)
+## [0.4.0](https://github.com/TrialAndErrorOrg/trialanderror/compare/ooxast-util-remove-rsid-0.3.0...ooxast-util-remove-rsid-0.4.0) (2023-09-29)
 
 ### Dependency Updates
 
@@ -26,9 +26,9 @@ This file was generated using [@jscutlery/semver](https://github.com/jscutlery/s
 
 ### Features
 
-* update all package.json ([d4070e5](https://github.com/TrialAndErrorOrg/parsers/commit/d4070e53ab3389db11fed978f3f74bcfe6808f5e))
+* update all package.json ([d4070e5](https://github.com/TrialAndErrorOrg/trialanderror/commit/d4070e53ab3389db11fed978f3f74bcfe6808f5e))
 
-## [0.3.0](https://github.com/TrialAndErrorOrg/parsers/compare/ooxast-util-remove-rsid-0.2.1...ooxast-util-remove-rsid-0.3.0) (2023-09-22)
+## [0.3.0](https://github.com/TrialAndErrorOrg/trialanderror/compare/ooxast-util-remove-rsid-0.2.1...ooxast-util-remove-rsid-0.3.0) (2023-09-22)
 
 ### Dependency Updates
 
@@ -39,14 +39,14 @@ This file was generated using [@jscutlery/semver](https://github.com/jscutlery/s
 
 ### Features
 
-* giant prettier + eslint run ([6becd94](https://github.com/TrialAndErrorOrg/parsers/commit/6becd9492006b9a7f7f91b60db440bb31d9140c8))
+* giant prettier + eslint run ([6becd94](https://github.com/TrialAndErrorOrg/trialanderror/commit/6becd9492006b9a7f7f91b60db440bb31d9140c8))
 
 
 ### Bug Fixes
 
-* remove misc dependency ([dc33f05](https://github.com/TrialAndErrorOrg/parsers/commit/dc33f053cacdfb632d0a44e573f8d84fe5382520))
+* remove misc dependency ([dc33f05](https://github.com/TrialAndErrorOrg/trialanderror/commit/dc33f053cacdfb632d0a44e573f8d84fe5382520))
 
-## [0.2.1](https://github.com/TrialAndErrorOrg/parsers/compare/ooxast-util-remove-rsid-0.2.0...ooxast-util-remove-rsid-0.2.1) (2023-09-21)
+## [0.2.1](https://github.com/TrialAndErrorOrg/trialanderror/compare/ooxast-util-remove-rsid-0.2.0...ooxast-util-remove-rsid-0.2.1) (2023-09-21)
 
 ### Dependency Updates
 
@@ -58,10 +58,10 @@ This file was generated using [@jscutlery/semver](https://github.com/jscutlery/s
 
 ### Bug Fixes
 
-- don't use shady custom builder, just run a script that fixes the package.json ([def3c18](https://github.com/TrialAndErrorOrg/parsers/commit/def3c1844ae0a0d547de2b0a01689a302b58ab61))
-- make typecheck work sort of ([d6a2eb6](https://github.com/TrialAndErrorOrg/parsers/commit/d6a2eb690a06d376043309f8bea6f418a4ff16ec))
+- don't use shady custom builder, just run a script that fixes the package.json ([def3c18](https://github.com/TrialAndErrorOrg/trialanderror/commit/def3c1844ae0a0d547de2b0a01689a302b58ab61))
+- make typecheck work sort of ([d6a2eb6](https://github.com/TrialAndErrorOrg/trialanderror/commit/d6a2eb690a06d376043309f8bea6f418a4ff16ec))
 
-## [0.2.0](https://github.com/TrialAndErrorOrg/parsers/compare/ooxast-util-remove-rsid-0.1.2...ooxast-util-remove-rsid-0.2.0) (2023-05-30)
+## [0.2.0](https://github.com/TrialAndErrorOrg/trialanderror/compare/ooxast-util-remove-rsid-0.1.2...ooxast-util-remove-rsid-0.2.0) (2023-05-30)
 
 ### Dependency Updates
 
@@ -69,9 +69,9 @@ This file was generated using [@jscutlery/semver](https://github.com/jscutlery/s
 
 ### Features
 
-- **ooxast-util-remove-rsid.ts:** import xast-util-to-string to be able to convert nodes to string ([5d03a25](https://github.com/TrialAndErrorOrg/parsers/commit/5d03a25bdbae077af4222bee4920e9c4b5533273))
+- **ooxast-util-remove-rsid.ts:** import xast-util-to-string to be able to convert nodes to string ([5d03a25](https://github.com/TrialAndErrorOrg/trialanderror/commit/5d03a25bdbae077af4222bee4920e9c4b5533273))
 
-## [0.1.2](https://github.com/TrialAndErrorOrg/parsers/compare/ooxast-util-remove-rsid-0.1.1...ooxast-util-remove-rsid-0.1.2) (2023-03-14)
+## [0.1.2](https://github.com/TrialAndErrorOrg/trialanderror/compare/ooxast-util-remove-rsid-0.1.1...ooxast-util-remove-rsid-0.1.2) (2023-03-14)
 
 ### Dependency Updates
 
@@ -80,7 +80,7 @@ This file was generated using [@jscutlery/semver](https://github.com/jscutlery/s
 - `utils-misc` updated to version `0.1.0`
 - `xast-util-is-element` updated to version `0.1.4`
 
-## [0.1.1](https://github.com/TrialAndErrorOrg/parsers/compare/ooxast-util-remove-rsid-0.1.0...ooxast-util-remove-rsid-0.1.1) (2023-03-09)
+## [0.1.1](https://github.com/TrialAndErrorOrg/trialanderror/compare/ooxast-util-remove-rsid-0.1.0...ooxast-util-remove-rsid-0.1.1) (2023-03-09)
 
 ### Dependency Updates
 
@@ -88,7 +88,7 @@ This file was generated using [@jscutlery/semver](https://github.com/jscutlery/s
 - `ooxast` updated to version `0.1.2`
 - `xast-util-is-element` updated to version `0.1.2`
 
-## [0.1.1](https://github.com/TrialAndErrorOrg/parsers/compare/ooxast-util-remove-rsid-0.1.0...ooxast-util-remove-rsid-0.1.1) (2023-03-09)
+## [0.1.1](https://github.com/TrialAndErrorOrg/trialanderror/compare/ooxast-util-remove-rsid-0.1.0...ooxast-util-remove-rsid-0.1.1) (2023-03-09)
 
 ### Dependency Updates
 
@@ -100,7 +100,7 @@ This file was generated using [@jscutlery/semver](https://github.com/jscutlery/s
 
 ### Patch Changes
 
-- [#134](https://github.com/TrialAndErrorOrg/parsers/pull/134) [`721606c`](https://github.com/TrialAndErrorOrg/parsers/commit/721606cdc14277e234da470475048bddad80be5e) Thanks [@tefkah](https://github.com/tefkah)! - Bug fixes:
+- [#134](https://github.com/TrialAndErrorOrg/trialanderror/pull/134) [`721606c`](https://github.com/TrialAndErrorOrg/trialanderror/commit/721606cdc14277e234da470475048bddad80be5e) Thanks [@tefkah](https://github.com/tefkah)! - Bug fixes:
   
   - `jast-util-to-csl`: CSL `date-parts` ordered year, month, day.
   - `ooxast-util-citations`: native Word citations inside content controls (`w:sdt`) are reparsed
@@ -111,8 +111,8 @@ This file was generated using [@jscutlery/semver](https://github.com/jscutlery/s
   - `rejour-stringify` writes kebab-case JATS names again (it wrote the camelCased names from `rejour-parse`).
   - `reoff-rejour` passes the VFile and its document relations to `ooxast-util-to-jast`.
 
-- [#134](https://github.com/TrialAndErrorOrg/parsers/pull/134) [`721606c`](https://github.com/TrialAndErrorOrg/parsers/commit/721606cdc14277e234da470475048bddad80be5e) Thanks [@tefkah](https://github.com/tefkah)! - Published from the `TrialAndErrorOrg/parsers` monorepo with npm provenance: `repository` points at the package's directory there, and the build is plain TypeScript (`tsc`) to `dist`. Dependencies are updated to their latest versions.
-- Updated dependencies [[`721606c`](https://github.com/TrialAndErrorOrg/parsers/commit/721606cdc14277e234da470475048bddad80be5e), [`721606c`](https://github.com/TrialAndErrorOrg/parsers/commit/721606cdc14277e234da470475048bddad80be5e)]:
+- [#134](https://github.com/TrialAndErrorOrg/trialanderror/pull/134) [`721606c`](https://github.com/TrialAndErrorOrg/trialanderror/commit/721606cdc14277e234da470475048bddad80be5e) Thanks [@tefkah](https://github.com/tefkah)! - Published from the `TrialAndErrorOrg/trialanderror` monorepo with npm provenance: `repository` points at the package's directory there, and the build is plain TypeScript (`tsc`) to `dist`. Dependencies are updated to their latest versions.
+- Updated dependencies [[`721606c`](https://github.com/TrialAndErrorOrg/trialanderror/commit/721606cdc14277e234da470475048bddad80be5e), [`721606c`](https://github.com/TrialAndErrorOrg/trialanderror/commit/721606cdc14277e234da470475048bddad80be5e)]:
   - ooxast@0.5.0
   - ooxast-util-get-style@0.4.2
   - xast-util-is-element@0.4.1
@@ -129,13 +129,13 @@ This file was generated using [@jscutlery/semver](https://github.com/jscutlery/s
 
 ### Features
 
-- brand spanking new project.json ([32e19eb](https://github.com/TrialAndErrorOrg/parsers/commit/32e19ebf3f71c80336f637297d8f4db274d098bf))
-- **reoff:** reoff clean plugin ([75b9016](https://github.com/TrialAndErrorOrg/parsers/commit/75b901685f856438750e9e11ac4d62a070f73c2c))
-- **reoff:** utiltiy to clean ooxast tree ([0827207](https://github.com/TrialAndErrorOrg/parsers/commit/082720772ffe4caff8d812962c2f42d4c71b5747))
+- brand spanking new project.json ([32e19eb](https://github.com/TrialAndErrorOrg/trialanderror/commit/32e19ebf3f71c80336f637297d8f4db274d098bf))
+- **reoff:** reoff clean plugin ([75b9016](https://github.com/TrialAndErrorOrg/trialanderror/commit/75b901685f856438750e9e11ac4d62a070f73c2c))
+- **reoff:** utiltiy to clean ooxast tree ([0827207](https://github.com/TrialAndErrorOrg/trialanderror/commit/082720772ffe4caff8d812962c2f42d4c71b5747))
 
 ### Bug Fixes
 
-- enter a new era ([9c2a0e5](https://github.com/TrialAndErrorOrg/parsers/commit/9c2a0e505472c43d384f3cc78543ad90877b7c3d))
-- **jest:** allow jest to be run even if there is a .swcrc ([6f188f2](https://github.com/TrialAndErrorOrg/parsers/commit/6f188f2a06922ee00d9367b29e666894e48c6c1e))
-- make build work ([b80360b](https://github.com/TrialAndErrorOrg/parsers/commit/b80360bc88bc7c1ba838c070ab8fae598dc963b4))
-- properly set all package.jsons ([5af9c17](https://github.com/TrialAndErrorOrg/parsers/commit/5af9c177be9910511844c481ca59cfcc7bd9b0f6))
+- enter a new era ([9c2a0e5](https://github.com/TrialAndErrorOrg/trialanderror/commit/9c2a0e505472c43d384f3cc78543ad90877b7c3d))
+- **jest:** allow jest to be run even if there is a .swcrc ([6f188f2](https://github.com/TrialAndErrorOrg/trialanderror/commit/6f188f2a06922ee00d9367b29e666894e48c6c1e))
+- make build work ([b80360b](https://github.com/TrialAndErrorOrg/trialanderror/commit/b80360bc88bc7c1ba838c070ab8fae598dc963b4))
+- properly set all package.jsons ([5af9c17](https://github.com/TrialAndErrorOrg/trialanderror/commit/5af9c177be9910511844c481ca59cfcc7bd9b0f6))

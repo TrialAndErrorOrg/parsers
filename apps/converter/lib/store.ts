@@ -3,24 +3,19 @@ import { persist } from 'zustand/middleware'
 import { type MetaForm, metaToPreamble } from './meta-to-preamble'
 import { metaToTemplateArgs, type JoteArticleMeta } from 'docx-to-typst'
 
-interface CredentialsState {
-  token: string
-  endpoint: string
-  setToken: (token: string) => void
-  setEndpoint: (endpoint: string) => void
-  hasCredentials: () => boolean
+interface ApiKeyState {
+  /** The editor's own OJS API key, kept in this browser only */
+  apiKey: string
+  setApiKey: (apiKey: string) => void
 }
 
-export const useCredentialsStore = create<CredentialsState>()(
+export const useApiKeyStore = create<ApiKeyState>()(
   persist(
-    (set, get) => ({
-      token: '',
-      endpoint: '',
-      setToken: (token: string) => set({ token }),
-      setEndpoint: (endpoint: string) => set({ endpoint }),
-      hasCredentials: () => Boolean(get().token && get().endpoint),
+    (set) => ({
+      apiKey: '',
+      setApiKey: (apiKey: string) => set({ apiKey: apiKey.trim() }),
     }),
-    { name: 'converter-ojs-credentials' },
+    { name: 'converter-ojs-api-key' },
   ),
 )
 
@@ -45,7 +40,8 @@ export interface SelectedSubmission {
   id: number
   title: string
   authors: string
-  publicationUrl: string
+  /** The publication's path in the OJS API, e.g. `submissions/12/publications/15` */
+  publicationPath: string
   sectionId: number
   stageId: number
   dateSubmitted: string

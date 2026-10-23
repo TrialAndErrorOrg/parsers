@@ -1,20 +1,18 @@
 {
   "extends": "../../tsconfig.base.json",
   "compilerOptions": {
-    "jsx": "preserve",
+    "jsx": "react-jsx",
     "allowJs": true,
     "lib": ["es2022", "dom", "dom.iterable"],
     "module": "esnext",
     "moduleResolution": "bundler",
     "noEmit": true,
     "isolatedModules": true,
-    "incremental": true,
     "declaration": false,
     "declarationMap": false,
-    // Global CSS is imported for its side effects; Next handles it.
-    "noUncheckedSideEffectImports": false,
-    "plugins": [{ "name": "next" }]
+    // The stylesheet is imported for its side effects by the site that hosts the converter
+    "noUncheckedSideEffectImports": false
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "next.config.mjs", ".next/types/**/*.ts"],
-  "exclude": ["node_modules", ".next/standalone"]
+  "include": ["**/*.ts", "**/*.tsx"],
+  "exclude": ["node_modules"]
 }

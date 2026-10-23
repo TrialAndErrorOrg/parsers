@@ -1,5 +1,3 @@
-'use client'
-
 import { useCallback } from 'react'
 import { useConversionStore } from '../lib/store'
 import { Upload, FileText } from 'lucide-react'

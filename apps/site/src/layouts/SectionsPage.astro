@@ -1,0 +1,43 @@
+---
+import type { PageData } from "~/content.config";
+import JournalNav from "~/components/JournalNav.astro";
+import Sections from "~/components/Sections.astro";
+import type { Journal } from "~/lib/sources/journal";
+import Base from "./Base.astro";
+
+interface Props {
+	page: PageData;
+	/** Draw it as one of the journal's pages, with its menu and colours */
+	journal?: Journal;
+	/** The search section it's filed under, or leave it out of search */
+	searchSection?: string;
+}
+
+/* A page built from sections in site-content: pages/<slug>.yaml, also drawn by /admin's preview */
+const { page, journal, searchSection } = Astro.props;
+---
+
+<Base title={page.title} description={page.description} class={journal?.config.theme}>
+	{journal && <JournalNav journal={journal} />}
+	{
+		page.showTitle && (
+			<div class:list={["border-b-frame border-ink", journal ? "bg-journal text-paper" : "bg-accent"]}>
+				<div class="page py-12 md:py-20">
+					<h1 class="font-heading text-5xl font-black tracking-tighter md:text-8xl">{page.title}</h1>
+				</div>
+			</div>
+		)
+	}
+	{
+		searchSection ? (
+			<div data-pagefind-body data-pagefind-filter={`section:${searchSection}`}>
+				<span hidden data-pagefind-meta="title">
+					{page.title}
+				</span>
+				<Sections sections={page.sections} />
+			</div>
+		) : (
+			<Sections sections={page.sections} />
+		)
+	}
+</Base>

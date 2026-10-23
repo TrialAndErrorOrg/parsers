@@ -1,9 +1,8 @@
-'use client'
-
 import { useCallback, useEffect, useRef, useState } from 'react'
 import { Search, Loader2 } from 'lucide-react'
 import { Input } from './ui/input'
-import { useCredentialsStore, useConversionStore, type SelectedSubmission } from '../lib/store'
+import { useConversionStore, type SelectedSubmission } from '../lib/store'
+import { apiPath, useOjs } from '../lib/ojs'
 
 interface OJSSubmission {
   id: number
@@ -19,11 +18,12 @@ interface OJSSubmission {
 }
 
 export function OjsSearch() {
-  const { token, endpoint } = useCredentialsStore()
+  const ojs = useOjs()
   const { setSelectedSubmission } = useConversionStore()
   const [query, setQuery] = useState('')
   const [results, setResults] = useState<OJSSubmission[]>([])
   const [loading, setLoading] = useState(false)
+  const [error, setError] = useState<string | null>(null)
   const [open, setOpen] = useState(false)
   const debounceRef = useRef<ReturnType<typeof setTimeout> | undefined>(undefined)
   const containerRef = useRef<HTMLDivElement>(null)
@@ -35,20 +35,24 @@ export function OjsSearch() {
         return
       }
       setLoading(true)
+      setError(null)
       try {
-        const res = await fetch(
-          `/api/ojs/submissions?endpoint=${encodeURIComponent(endpoint)}&apiToken=${encodeURIComponent(token)}&searchPhrase=${encodeURIComponent(phrase)}`,
-        )
+        const res = await ojs('submissions', { searchPhrase: phrase })
         const data = await res.json()
         setResults(data.items ?? [])
         setOpen(true)
-      } catch {
+      } catch (e) {
         setResults([])
+        setError(
+          e instanceof Error && / 403 /.test(e.message)
+            ? 'OJS refused your API key. Check it in the settings (top right).'
+            : 'Could not search OJS.',
+        )
       } finally {
         setLoading(false)
       }
     },
-    [token, endpoint],
+    [ojs],
   )
 
   useEffect(() => {
@@ -75,7 +79,7 @@ export function OjsSearch() {
       id: sub.id,
       title: pub?.fullTitle?.en_US ?? `Submission #${sub.id}`,
       authors: pub?.authorsString ?? '',
-      publicationUrl: pub?._href ?? '',
+      publicationPath: pub?._href ? apiPath(pub._href) : '',
       sectionId: sub.sectionId,
       stageId: sub.stageId,
       dateSubmitted: sub.dateSubmitted,
@@ -103,6 +107,7 @@ export function OjsSearch() {
           <Loader2 className="absolute top-1/2 right-3 h-4 w-4 -translate-y-1/2 animate-spin text-muted-foreground" />
         )}
       </div>
+      {error && <p className="mt-2 text-sm text-destructive">{error}</p>}
       {open && results.length > 0 && (
         <div className="absolute z-50 mt-1 w-full rounded-md border bg-popover shadow-lg">
           <div className="max-h-64 overflow-y-auto p-1">

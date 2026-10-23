@@ -1,0 +1,119 @@
+---
+import ArticleList from "~/components/ArticleList.astro";
+import JournalNav from "~/components/JournalNav.astro";
+import { type Journal, journal as defaultJournal } from "~/lib/sources/journal";
+import type { Article } from "~/lib/types";
+import Base from "./Base.astro";
+
+interface Props {
+	title: string;
+	/** Small label above the title, e.g. "Issue" */
+	kicker?: string;
+	description?: string;
+	articles: Article[];
+	/** Link of the filter being shown, to highlight it */
+	current?: string;
+	/** Show the article type filter */
+	filters?: boolean;
+	/** The Journal of Trial and Error unless given */
+	journal?: Journal;
+}
+
+const { title, kicker, description, articles, journal = defaultJournal(), filters: showFilters = true } = Astro.props;
+// How many articles the script below shows at a time
+const MORE = 12;
+const { config } = journal;
+const current = Astro.props.current ?? config.listPath;
+const filters = showFilters
+	? [{ title: "Type", links: (await journal.getKinds()).map((k) => ({ title: k.title, url: journal.kindUrl(k.title), count: k.articles.length })) }]
+	: [];
+---
+
+<Base title={title} description={description} class={config.theme}>
+	<JournalNav journal={journal} />
+	<div class="border-b-frame border-ink bg-journal text-paper">
+		<slot name="hero">
+			<div class="page flex flex-col gap-4 py-12 md:py-20">
+				{kicker && <p class="label self-start bg-paper">{kicker}</p>}
+				<h1 class="font-heading text-5xl font-black tracking-tighter md:text-8xl">{title}</h1>
+				{description && <p class="max-w-3xl text-lg font-medium md:text-xl">{description}</p>}
+				{config.notice && <p class="max-w-3xl font-semibold opacity-80">{config.notice}</p>}
+				{
+					filters.map((filter) => (
+						<nav aria-label={`Filter by ${filter.title.toLowerCase()}`} class="mt-4 flex flex-col gap-2 md:flex-row md:items-baseline">
+							<p class="w-16 shrink-0 font-heading font-bold">{filter.title}</p>
+							<ul class="flex flex-wrap gap-2">
+								{filter.links.map((link) => (
+									<li>
+										<a
+											href={link.url}
+											class:list={[
+												"inline-block border-frame px-3 py-0.5 font-heading text-sm font-bold transition-all",
+												link.url === current
+													? "border-ink bg-paper text-ink shadow-hard"
+													: "border-paper/60 hover:-translate-y-0.5 hover:border-paper hover:bg-paper/10",
+											]}
+											aria-current={link.url === current ? "page" : undefined}
+										>
+											{link.title} <span class="font-normal opacity-80">({link.count})</span>
+										</a>
+									</li>
+								))}
+							</ul>
+						</nav>
+					))
+				}
+			</div>
+		</slot>
+	</div>
+	<div class="page py-12">
+		<slot name="intro" />
+		{
+			articles.length > 0 && (
+				<>
+					<div class="mb-8 flex flex-wrap items-baseline justify-between gap-4">
+						<p class="font-heading text-2xl font-bold">
+							{articles.length} {articles.length === 1 ? "article" : "articles"}
+						</p>
+						{current !== config.listPath && (
+							<a href={config.listPath} class="sleek-underline font-heading font-bold">
+								All articles
+							</a>
+						)}
+					</div>
+					<ArticleList articles={articles} data-more-list />
+					{articles.length > MORE && (
+						<div class="mt-10 flex justify-center">
+							<button type="button" class="button button-plain" hidden>
+								Show more articles
+							</button>
+						</div>
+					)}
+				</>
+			)
+		}
+		<slot />
+	</div>
+</Base>
+
+<script>
+	// A long list starts with a few cards and shows the rest as you scroll. The page holds every
+	// card, so without JavaScript (and for search engines) the whole list is there.
+	const MORE = 12;
+	for (const list of document.querySelectorAll<HTMLElement>("[data-more-list]")) {
+		const rest = [...list.children].slice(MORE) as HTMLElement[];
+		const button = list.nextElementSibling?.querySelector("button");
+		if (!button || rest.length === 0) continue;
+		for (const card of rest) card.hidden = true;
+		button.hidden = false;
+		const more = () => {
+			for (const card of rest.splice(0, MORE)) card.hidden = false;
+			if (rest.length > 0) return;
+			observer.disconnect();
+			button.parentElement?.remove();
+		};
+		const observer = new IntersectionObserver((entries) => entries.some((e) => e.isIntersecting) && more(), { rootMargin: "400px" });
+		observer.observe(button);
+		button.addEventListener("click", more);
+	}
+</script>

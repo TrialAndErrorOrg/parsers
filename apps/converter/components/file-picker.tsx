@@ -1,7 +1,6 @@
-'use client'
-
 import { useEffect, useState } from 'react'
-import { useCredentialsStore, useConversionStore, type SelectedSubmission } from '../lib/store'
+import { useConversionStore, type SelectedSubmission } from '../lib/store'
+import { useOjs } from '../lib/ojs'
 import { Card, CardContent, CardHeader, CardTitle } from './ui/card'
 import { Tabs, TabsList, TabsTrigger, TabsContent } from './ui/tabs'
 import { Button } from './ui/button'
@@ -42,7 +41,7 @@ const formatDate = (dateStr: string | undefined): string | null => {
 }
 
 export function FilePicker({ submission }: { submission: SelectedSubmission }) {
-  const { token, endpoint } = useCredentialsStore()
+  const ojs = useOjs()
   const { setInput } = useConversionStore()
   const [files, setFiles] = useState<SubmissionFile[]>([])
   const [loading, setLoading] = useState(true)
@@ -52,9 +51,7 @@ export function FilePicker({ submission }: { submission: SelectedSubmission }) {
     const load = async () => {
       setLoading(true)
       try {
-        const res = await fetch(
-          `/api/ojs/files?apiToken=${encodeURIComponent(token)}&submissionId=${submission.id}&stageId=${submission.stageId}&endpoint=${encodeURIComponent(endpoint)}`,
-        )
+        const res = await ojs(`submissions/${submission.id}/files`)
         const data = await res.json()
         setFiles(data.items ?? [])
       } catch {
@@ -64,16 +61,14 @@ export function FilePicker({ submission }: { submission: SelectedSubmission }) {
       }
     }
     load()
-  }, [submission, token, endpoint])
+  }, [submission, ojs])
 
   const handleLoadFile = async (file: SubmissionFile) => {
     const fileId = file.submissionFileId ?? file.id
     setLoadingFile(file.id)
     try {
       // use the _files endpoint which works like galley downloads
-      const fileUrl = `${endpoint}/_files/${fileId}?apiToken=${encodeURIComponent(token)}`
-      const res = await fetch(`/api/ojs/file?url=${encodeURIComponent(fileUrl)}`)
-      if (!res.ok) throw new Error(`Failed to fetch file: ${res.status}`)
+      const res = await ojs(`_files/${fileId}`)
       const buf = await res.arrayBuffer()
       setInput(buf)
     } catch (e) {

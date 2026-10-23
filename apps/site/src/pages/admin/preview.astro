@@ -1,0 +1,55 @@
+---
+import { pageSchema } from "~/content.config";
+import SectionsPage from "~/layouts/SectionsPage.astro";
+import { adminGateway, siteSignIn } from "~/lib/admin";
+import { journal } from "~/lib/sources/journal";
+
+/*
+ * The live preview of a page in /admin (src/admin/preview.ts): the CMS posts the
+ * page as the editor has it, unsaved, and gets it back drawn by the site's own
+ * sections. Only for signed-in editors, and with GitHub sign-in only in dev.
+ */
+
+export const prerender = false;
+
+Astro.response.headers.set("Cache-Control", "no-store");
+Astro.response.headers.set("X-Robots-Tag", "noindex");
+
+const allowed = siteSignIn ? await adminGateway().editor(Astro.request) : import.meta.env.DEV;
+if (Astro.request.method !== "POST") return new Response("Not found", { status: 404 });
+if (!allowed) return new Response("Sign in again to see the preview", { status: 401 });
+
+/** The CMS sends empty fields as null or "", where the schema expects them left out */
+const clean = (value: unknown): unknown => {
+	if (Array.isArray(value)) return value.map(clean);
+	if (value && typeof value === "object") {
+		return Object.fromEntries(
+			Object.entries(value)
+				.filter(([, v]) => v !== null && v !== "")
+				.map(([k, v]) => [k, clean(v)]),
+		);
+	}
+	return value;
+};
+
+const { slug, data } = (await Astro.request.json().catch(() => ({}))) as { slug?: string; data?: unknown };
+const parsed = pageSchema.safeParse(clean(data ?? {}));
+const problems = parsed.success ? [] : parsed.error.issues.map((issue) => `${issue.path.join(" → ") || "page"}: ${issue.message}`);
+---
+
+{
+	parsed.success ? (
+		<SectionsPage page={parsed.data} journal={slug === "journal" ? journal() : undefined} />
+	) : (
+		<html lang="en">
+			<body style="font-family: sans-serif; padding: 2rem">
+				<p>The preview appears once the page is complete. Still missing or wrong:</p>
+				<ul>
+					{problems.map((problem) => (
+						<li>{problem}</li>
+					))}
+				</ul>
+			</body>
+		</html>
+	)
+}

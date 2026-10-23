@@ -1,5 +1,5 @@
 > **Note**
-> This repository is automatically generated from the [main parser monorepo](https://github.com/TrialAndErrorOrg/parsers). Please submit any issues or pull requests there.
+> This repository is automatically generated from the [main parser monorepo](https://github.com/TrialAndErrorOrg/trialanderror). Please submit any issues or pull requests there.
 
 # rejour-meta
 
@@ -78,7 +78,7 @@ rejourMoveAbstract(options: ArticleMeta): Function;
 
 `void`
 
-Defined in:  [lib/rejour-meta.ts:4](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/rejour/rejour-meta/src/lib/rejour-meta.ts#L4)
+Defined in:  [lib/rejour-meta.ts:4](https://github.com/TrialAndErrorOrg/trialanderror/blob/main/libs/rejour/rejour-meta/src/lib/rejour-meta.ts#L4)
 
 ***
 
@@ -86,7 +86,7 @@ Defined in:  [lib/rejour-meta.ts:4](https://github.com/TrialAndErrorOrg/parsers/
 
 > `Record`\<keyof `ArticleMeta`, `Element` | `Text`>
 
-Defined in:  [lib/rejour-meta.ts:3](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/rejour/rejour-meta/src/lib/rejour-meta.ts#L3)
+Defined in:  [lib/rejour-meta.ts:3](https://github.com/TrialAndErrorOrg/trialanderror/blob/main/libs/rejour/rejour-meta/src/lib/rejour-meta.ts#L3)
 
 ## Syntax tree
 
@@ -112,31 +112,31 @@ Defined in:  [lib/rejour-meta.ts:3](https://github.com/TrialAndErrorOrg/parsers/
 
 [rehype]: https://github.com/rehypejs/rehype
 
-[rejour]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/rejour
+[rejour]: https://github.com/TrialAndErrorOrg/trialanderror/tree/main/libs/rejour
 
-[rejour-parse]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/rejour/rejour-parse
+[rejour-parse]: https://github.com/TrialAndErrorOrg/trialanderror/tree/main/libs/rejour/rejour-parse
 
-[rejour-stringify]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/rejour/rejour-stringify
+[rejour-stringify]: https://github.com/TrialAndErrorOrg/trialanderror/tree/main/libs/rejour/rejour-stringify
 
-[rejour-move-abstract]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/rejour/rejour-move-abstract
+[rejour-move-abstract]: https://github.com/TrialAndErrorOrg/trialanderror/tree/main/libs/rejour/rejour-move-abstract
 
-[rejour-meta]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/rejour/rejour-meta
+[rejour-meta]: https://github.com/TrialAndErrorOrg/trialanderror/tree/main/libs/rejour/rejour-meta
 
-[rejour-relatex]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/rejour/rejour-relatex
+[rejour-relatex]: https://github.com/TrialAndErrorOrg/trialanderror/tree/main/libs/rejour/rejour-relatex
 
-[relatex]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/relatex
+[relatex]: https://github.com/TrialAndErrorOrg/trialanderror/tree/main/libs/relatex
 
-[relatex-stringify]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/relatex/relatex-stringify
+[relatex-stringify]: https://github.com/TrialAndErrorOrg/trialanderror/tree/main/libs/relatex/relatex-stringify
 
-[jast]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/rejour/jast
+[jast]: https://github.com/TrialAndErrorOrg/trialanderror/tree/main/libs/rejour/jast
 
-[jast-util-to-texast]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/rejour/jast-util-to-texast
+[jast-util-to-texast]: https://github.com/TrialAndErrorOrg/trialanderror/tree/main/libs/rejour/jast-util-to-texast
 
-[jastscript]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/rejour/jastscript
+[jastscript]: https://github.com/TrialAndErrorOrg/trialanderror/tree/main/libs/rejour/jastscript
 
-[texast]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/relatex/texast
+[texast]: https://github.com/TrialAndErrorOrg/trialanderror/tree/main/libs/relatex/texast
 
-[texast-util-to-latex]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/relatex/texast-util-to-latex
+[texast-util-to-latex]: https://github.com/TrialAndErrorOrg/trialanderror/tree/main/libs/relatex/texast-util-to-latex
 
 [hast]: https://github.com/syntax-tree/hast
 

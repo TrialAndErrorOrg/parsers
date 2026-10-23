@@ -1,5 +1,5 @@
 > **Note**
-> This repository is automatically generated from the [main parser monorepo](https://github.com/TrialAndErrorOrg/parsers). Please submit any issues or pull requests there.
+> This repository is automatically generated from the [main parser monorepo](https://github.com/TrialAndErrorOrg/trialanderror). Please submit any issues or pull requests there.
 
 # ooxast-util-parse-bib
 
@@ -84,7 +84,7 @@ parseBib(tree: Node<Data>, options: Options): Promise<undefined | Data[]>;
 
 `Promise`<`undefined` | `Data`[]>
 
-Defined in: [lib/ooxast-util-parse-bib.ts:13](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/ooxast/ooxast-util-parse-bib/src/lib/ooxast-util-parse-bib.ts#L13)
+Defined in: [lib/ooxast-util-parse-bib.ts:13](https://github.com/TrialAndErrorOrg/trialanderror/blob/main/libs/ooxast/ooxast-util-parse-bib/src/lib/ooxast-util-parse-bib.ts#L13)
 
 ---
 
@@ -96,7 +96,7 @@ Defined in: [lib/ooxast-util-parse-bib.ts:13](https://github.com/TrialAndErrorOr
 
 > `string`
 
-Defined in: [lib/ooxast-util-parse-bib.ts:8](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/ooxast/ooxast-util-parse-bib/src/lib/ooxast-util-parse-bib.ts#L8)
+Defined in: [lib/ooxast-util-parse-bib.ts:8](https://github.com/TrialAndErrorOrg/trialanderror/blob/main/libs/ooxast/ooxast-util-parse-bib/src/lib/ooxast-util-parse-bib.ts#L8)
 
 ##### `apiParams?`
 
@@ -114,13 +114,13 @@ Defined in: [lib/ooxast-util-parse-bib.ts:8](https://github.com/TrialAndErrorOrg
 | :------ | :------- |
 | `param` | `string` |
 
-Defined in: [lib/ooxast-util-parse-bib.ts:6](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/ooxast/ooxast-util-parse-bib/src/lib/ooxast-util-parse-bib.ts#L6)
+Defined in: [lib/ooxast-util-parse-bib.ts:6](https://github.com/TrialAndErrorOrg/trialanderror/blob/main/libs/ooxast/ooxast-util-parse-bib/src/lib/ooxast-util-parse-bib.ts#L6)
 
 ##### `apiUrl?`
 
 > `string`
 
-Defined in: [lib/ooxast-util-parse-bib.ts:5](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/ooxast/ooxast-util-parse-bib/src/lib/ooxast-util-parse-bib.ts#L5)
+Defined in: [lib/ooxast-util-parse-bib.ts:5](https://github.com/TrialAndErrorOrg/trialanderror/blob/main/libs/ooxast/ooxast-util-parse-bib/src/lib/ooxast-util-parse-bib.ts#L5)
 
 ##### `headers?`
 
@@ -138,19 +138,19 @@ Defined in: [lib/ooxast-util-parse-bib.ts:5](https://github.com/TrialAndErrorOrg
 | :------- | :------- |
 | `header` | `string` |
 
-Defined in: [lib/ooxast-util-parse-bib.ts:7](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/ooxast/ooxast-util-parse-bib/src/lib/ooxast-util-parse-bib.ts#L7)
+Defined in: [lib/ooxast-util-parse-bib.ts:7](https://github.com/TrialAndErrorOrg/trialanderror/blob/main/libs/ooxast/ooxast-util-parse-bib/src/lib/ooxast-util-parse-bib.ts#L7)
 
 ##### `mailto?`
 
 > `string`
 
-Defined in: [lib/ooxast-util-parse-bib.ts:9](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/ooxast/ooxast-util-parse-bib/src/lib/ooxast-util-parse-bib.ts#L9)
+Defined in: [lib/ooxast-util-parse-bib.ts:9](https://github.com/TrialAndErrorOrg/trialanderror/blob/main/libs/ooxast/ooxast-util-parse-bib/src/lib/ooxast-util-parse-bib.ts#L9)
 
 ##### `overrideId?`
 
 > `boolean`
 
-Defined in: [lib/ooxast-util-parse-bib.ts:10](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/ooxast/ooxast-util-parse-bib/src/lib/ooxast-util-parse-bib.ts#L10)
+Defined in: [lib/ooxast-util-parse-bib.ts:10](https://github.com/TrialAndErrorOrg/trialanderror/blob/main/libs/ooxast/ooxast-util-parse-bib/src/lib/ooxast-util-parse-bib.ts#L10)
 
 ## Syntax tree
 
@@ -172,27 +172,27 @@ Defined in: [lib/ooxast-util-parse-bib.ts:10](https://github.com/TrialAndErrorOr
 [unifiedgh]: https://github.com/unifiedjs/unified
 [xast-from-xml]: https://github.com/syntax-tree/xast-util-from-xml
 [rehype]: https://github.com/rehypejs/rehype
-[rejour]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/rejour
-[rejour-parse]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/rejour/rejour-parse
-[rejour-stringify]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/rejour/rejour-stringify
-[rejour-move-abstract]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/rejour/rejour-move-abstract
-[rejour-meta]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/rejour/rejour-meta
-[rejour-relatex]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/rejour/rejour-relatex
-[relatex]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/relatex
-[ooxast-util-to-jast]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/relatex/ooxast-util-to-jast
-[jast]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/rejour/jast
-[jast-util-to-texast]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/rejour/jast-util-to-texast
-[jastscript]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/rejour/jastscript
-[texast]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/relatex/texast
-[texast-util-to-latex]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/relatex/texast-util-to-latex
+[rejour]: https://github.com/TrialAndErrorOrg/trialanderror/tree/main/libs/rejour
+[rejour-parse]: https://github.com/TrialAndErrorOrg/trialanderror/tree/main/libs/rejour/rejour-parse
+[rejour-stringify]: https://github.com/TrialAndErrorOrg/trialanderror/tree/main/libs/rejour/rejour-stringify
+[rejour-move-abstract]: https://github.com/TrialAndErrorOrg/trialanderror/tree/main/libs/rejour/rejour-move-abstract
+[rejour-meta]: https://github.com/TrialAndErrorOrg/trialanderror/tree/main/libs/rejour/rejour-meta
+[rejour-relatex]: https://github.com/TrialAndErrorOrg/trialanderror/tree/main/libs/rejour/rejour-relatex
+[relatex]: https://github.com/TrialAndErrorOrg/trialanderror/tree/main/libs/relatex
+[ooxast-util-to-jast]: https://github.com/TrialAndErrorOrg/trialanderror/tree/main/libs/relatex/ooxast-util-to-jast
+[jast]: https://github.com/TrialAndErrorOrg/trialanderror/tree/main/libs/rejour/jast
+[jast-util-to-texast]: https://github.com/TrialAndErrorOrg/trialanderror/tree/main/libs/rejour/jast-util-to-texast
+[jastscript]: https://github.com/TrialAndErrorOrg/trialanderror/tree/main/libs/rejour/jastscript
+[texast]: https://github.com/TrialAndErrorOrg/trialanderror/tree/main/libs/relatex/texast
+[texast-util-to-latex]: https://github.com/TrialAndErrorOrg/trialanderror/tree/main/libs/relatex/texast-util-to-latex
 [hast]: https://github.com/syntax-tree/hast
 [xast]: https://github.com/syntax-tree/xast
 [mdast]: https://github.com/syntax-tree/mdast
 [mdast-markdown]: https://github.com/syntax-tree/mdast-util-to-markdown
 [latex-utensils]: https://github.com/tamuratak/latex-utensils
 [latexjs]: https://github.com/latexjs/latexjs
-[reoff]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/reoff
-[reoff-parse]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/reoff/reoff-parse
-[reoff-rejour]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/reoff/reoff-rejour
-[ooxast]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/ooxast/ooxast
-[ooxast]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/ooxast/ooxast-util-to-jast
+[reoff]: https://github.com/TrialAndErrorOrg/trialanderror/tree/main/libs/reoff
+[reoff-parse]: https://github.com/TrialAndErrorOrg/trialanderror/tree/main/libs/reoff/reoff-parse
+[reoff-rejour]: https://github.com/TrialAndErrorOrg/trialanderror/tree/main/libs/reoff/reoff-rejour
+[ooxast]: https://github.com/TrialAndErrorOrg/trialanderror/tree/main/libs/ooxast/ooxast
+[ooxast]: https://github.com/TrialAndErrorOrg/trialanderror/tree/main/libs/ooxast/ooxast-util-to-jast

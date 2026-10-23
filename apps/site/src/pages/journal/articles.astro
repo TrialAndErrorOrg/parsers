@@ -1,0 +1,7 @@
+---
+import JournalList from "~/layouts/JournalList.astro";
+import { site } from "~/lib/settings";
+import { getArticles } from "~/lib/sources/journal";
+---
+
+<JournalList title={site.journal.title} description={site.journal.description} articles={await getArticles()} />

@@ -1,0 +1,10 @@
+name = "sveltia-gateway"
+main = "src/index.ts"
+compatibility_date = "2026-09-01"
+
+[vars]
+ENTRA_TENANT_ID = "00000000-0000-0000-0000-000000000000"
+ENTRA_CLIENT_ID = "00000000-0000-0000-0000-000000000000"
+GITHUB_APP_ID = "123456"
+REPO = "owner/name"
+ALLOWED_ORIGINS = "https://example.org"

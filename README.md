@@ -18,7 +18,7 @@ Additionally, there are a few other tools:
 - `unified-latex`: Utilities for working with [unified-latex](https://github.com/siefkenj/unified-latex) trees.
 - `book-converter`: a CLI to turn a `.docx` book into LaTeX.
 
-`apps/converter` is the web converter (Next.js) that uses the parsers to turn `.docx` manuscripts into LaTeX.
+`apps/converter` is the web converter, a React component that uses the parsers to turn `.docx` manuscripts into LaTeX and Typst in the browser. The website (`apps/site`) shows it at `/admin/convert`, where editors signed in with Microsoft can also search OJS.
 
 See below for more info.
 
@@ -74,7 +74,7 @@ Packages marked _private_ are not published.
 
 | Package | Description |
 |---|---|
-| [`crossref-json`](libs/citations/crossref-json) | Defined in:  [index.ts:38](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/citations/crossref-json/src/index.ts |
+| [`crossref-json`](libs/citations/crossref-json) | Defined in:  [index.ts:38](https://github.com/TrialAndErrorOrg/trialanderror/blob/main/libs/citations/crossref-json/src/index.ts |
 | [`crossref-to-csl`](libs/citations/crossref-to-csl) | crossrefToCsl(item: CrossrefJSON): CSL; |
 | [`csl-consolidate`](libs/citations/csl-consolidate) | Try to resolve a list of CSL data with crossref metadata |
 | [`csl-to-biblatex`](libs/citations/csl-to-biblatex) | Somewhat jank CSL-JSON to biblatex converter |
@@ -265,8 +265,8 @@ typst compile \
   out/article/main.typ
 ```
 
-Or pass `--compile --font-path …` to either CLI to do it in one go. The converter app
-(`apps/converter`) has a Typst tab that downloads the same output, template included, as a zip.
+Or pass `--compile --font-path …` to either CLI to do it in one go. The converter
+(`apps/converter`, on the site at `/admin/convert`) has a Typst tab that downloads the same output, template included, as a zip.
 
 <!--
 
@@ -311,13 +311,13 @@ Plugin tries to locate an "abstract" section in a `jast` tree and moves it to th
 [unifiedgh]: https://github.com/unifiedjs/unified
 [xast-from-xml]: https://github.com/syntax-tree/xast-util-from-xml
 [rehype]: https://github.com/rehypejs/rehype
-[rejour]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/rejour
-[rejour-parse]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/rejour-parse
-[rejour-stringify]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/rejour-stringify
-[rejour-move-abstract]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/rejour-move-abstract
-[rejour-meta]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/rejour-meta
-[jast]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/jast
-[jastscript]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/jastscript
+[rejour]: https://github.com/TrialAndErrorOrg/trialanderror/tree/main/libs/rejour
+[rejour-parse]: https://github.com/TrialAndErrorOrg/trialanderror/tree/main/libs/rejour-parse
+[rejour-stringify]: https://github.com/TrialAndErrorOrg/trialanderror/tree/main/libs/rejour-stringify
+[rejour-move-abstract]: https://github.com/TrialAndErrorOrg/trialanderror/tree/main/libs/rejour-move-abstract
+[rejour-meta]: https://github.com/TrialAndErrorOrg/trialanderror/tree/main/libs/rejour-meta
+[jast]: https://github.com/TrialAndErrorOrg/trialanderror/tree/main/libs/jast
+[jastscript]: https://github.com/TrialAndErrorOrg/trialanderror/tree/main/libs/jastscript
 [hast]: https://github.com/syntax-tree/hast
 [xast]: https://github.com/syntax-tree/xast
 [mdast]: https://github.com/syntax-tree/mdast

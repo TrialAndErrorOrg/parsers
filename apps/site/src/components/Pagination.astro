@@ -1,0 +1,36 @@
+---
+interface Props {
+	current: number;
+	total: number;
+	/** URL of page n */
+	href: (page: number) => string;
+}
+
+const { current, total, href } = Astro.props;
+---
+
+{
+	total > 1 && (
+		<nav aria-label="Pages" class="mt-12 flex flex-wrap items-center justify-center gap-2">
+			{current > 1 && (
+				<a href={href(current - 1)} class="button button-plain">
+					← Newer
+				</a>
+			)}
+			{Array.from({ length: total }, (_, i) => i + 1).map((n) => (
+				<a
+					href={href(n)}
+					class:list={["border-frame border-ink px-4 py-2 font-heading font-bold", n === current ? "bg-accent" : "bg-paper hover:bg-accent-soft"]}
+					aria-current={n === current ? "page" : undefined}
+				>
+					{n}
+				</a>
+			))}
+			{current < total && (
+				<a href={href(current + 1)} class="button button-plain">
+					Older →
+				</a>
+			)}
+		</nav>
+	)
+}

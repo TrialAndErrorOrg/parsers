@@ -1,5 +1,5 @@
 > **Note**
-> This repository is automatically generated from the [main parser monorepo](https://github.com/TrialAndErrorOrg/parsers). Please submit any issues or pull requests there.
+> This repository is automatically generated from the [main parser monorepo](https://github.com/TrialAndErrorOrg/trialanderror). Please submit any issues or pull requests there.
 
 ## API
 
@@ -27,7 +27,7 @@ consolidate(data: Data[], options: object): Promise<undefined | Data[]>;
 
 `Promise`<`undefined` | `Data`[]>
 
-Defined in: [lib/csl-consolidate.ts:12](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/citations/csl-consolidate/src/lib/csl-consolidate.ts#L12)
+Defined in: [lib/csl-consolidate.ts:12](https://github.com/TrialAndErrorOrg/trialanderror/blob/main/libs/citations/csl-consolidate/src/lib/csl-consolidate.ts#L12)
 
 ---
 
@@ -50,7 +50,7 @@ dateSim(ref: Data, csl: Data): number;
 
 `number`
 
-Defined in: [lib/csl-consolidate.ts:144](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/citations/csl-consolidate/src/lib/csl-consolidate.ts#L144)
+Defined in: [lib/csl-consolidate.ts:144](https://github.com/TrialAndErrorOrg/trialanderror/blob/main/libs/citations/csl-consolidate/src/lib/csl-consolidate.ts#L144)
 
 ## Install
 

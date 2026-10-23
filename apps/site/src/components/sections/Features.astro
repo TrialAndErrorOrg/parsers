@@ -1,0 +1,29 @@
+---
+import type { Section } from "~/content.config";
+import Markdown from "../Markdown.astro";
+
+type Props = Extract<Section, { type: "features" }>;
+const { id, title, items } = Astro.props;
+---
+
+<section id={id} class="page py-16">
+	{title && <h2 class="section-title mb-10">{title}</h2>}
+	<div class="grid gap-6 md:grid-cols-3">
+		{
+			items.map((item, i) => (
+				<div class="card p-6 md:p-8">
+					<span class="mb-4 font-heading text-6xl leading-none font-black text-accent [-webkit-text-stroke:2px_var(--color-ink)]">
+						{String(i + 1).padStart(2, "0")}
+					</span>
+					<h3 class="mb-3 font-heading text-3xl font-black">{item.title}</h3>
+					<Markdown text={item.body} class="prose-site text-base" />
+					{item.link && (
+						<a href={item.link.url} class="sleek-underline mt-4 self-start font-heading font-bold">
+							{item.link.label} →
+						</a>
+					)}
+				</div>
+			))
+		}
+	</div>
+</section>

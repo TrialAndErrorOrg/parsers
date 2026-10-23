@@ -1,0 +1,48 @@
+---
+import { Icon } from "astro-icon/components";
+import { formatDate, listNames } from "~/lib/format";
+import type { Article } from "~/lib/types";
+import Picture from "./Picture.astro";
+
+interface Props {
+	article: Article;
+	/** Leave out the small cover image */
+	compact?: boolean;
+}
+
+/*
+ * A journal article, made to look like a paper rather than a blog post: a
+ * blue running head with its type and date, then title, authors and
+ * abstract. The cover is only a small thumbnail.
+ */
+const { article, compact = false } = Astro.props;
+const external = /^https?:/.test(article.url);
+---
+
+<article class="card group">
+	<div class="flex items-center justify-between gap-3 border-b-frame border-ink bg-journal px-6 py-2 font-heading text-sm font-bold text-paper">
+		<span>{article.kind ?? "Article"}</span>
+		<time datetime={article.date} class="font-semibold">{formatDate(article.date)}</time>
+	</div>
+	<div class="flex gap-5 p-6 pb-3">
+		<div class="flex min-w-0 flex-grow flex-col gap-3">
+			<h3 class="font-heading text-xl leading-tight font-bold tracking-tighter md:text-2xl">
+				<a href={article.url} class="card-link">{article.title}</a>
+			</h3>
+			{article.authors.length > 0 && <p class="text-sm font-semibold">{listNames(article.authors.map((a) => a.name))}</p>}
+			{article.description && <p class="line-clamp-4 text-sm text-ink/80">{article.description}</p>}
+		</div>
+		{
+			!compact && article.image && (
+				<Picture image={article.image} width={160} class="hidden size-20 shrink-0 border-frame border-ink object-cover sm:block" />
+			)
+		}
+	</div>
+	<span class="mt-auto flex items-center justify-between gap-2 px-6 pb-6 text-sm">
+		{article.doi ? <span class="font-mono text-xs break-all text-muted">https://doi.org/{article.doi}</span> : <span />}
+		<span class="flex items-center gap-1 font-heading text-lg font-bold">
+			Read
+			<Icon name={external ? "lucide:external-link" : "lucide:arrow-right"} class="size-5 transition-transform group-hover:translate-x-1" aria-hidden="true" />
+		</span>
+	</span>
+</article>

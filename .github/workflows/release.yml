@@ -6,7 +6,7 @@
 #                         -> build, pack and publish them via npm trusted publishing (OIDC)
 #
 # No npm token is used anywhere. Each package must have a trusted publisher configured on npmjs.com
-# pointing at TrialAndErrorOrg/parsers + this file (release.yml). See docs/releasing.md.
+# pointing at TrialAndErrorOrg/trialanderror + this file (release.yml). See docs/releasing.md.
 #
 # Layout follows https://changesets.dev/guide/automating (trusted publishing variant): only the
 # `publish` job gets `id-token: write`.

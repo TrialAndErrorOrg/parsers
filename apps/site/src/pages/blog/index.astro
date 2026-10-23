@@ -1,0 +1,29 @@
+---
+import BlogList from "~/layouts/BlogList.astro";
+import { site } from "~/lib/settings";
+import { getPosts, getTerms } from "~/lib/sources/blog";
+
+const posts = await getPosts();
+const perPage = site.blog.postsPerPage;
+const categories = await getTerms("category");
+---
+
+<BlogList
+	title={site.blog.title}
+	description={site.blog.description}
+	posts={posts.slice(0, perPage)}
+	featureFirst
+	page={{ current: 1, total: Math.ceil(posts.length / perPage), href: (n) => (n === 1 ? "/blog" : `/blog/page/${n}`) }}
+>
+	<ul slot="header" class="flex flex-wrap gap-2">
+		{
+			categories.map((c) => (
+				<li>
+					<a href={`/blog/category/${c.slug}`} class="label bg-paper hover:bg-accent-soft">
+						{c.title}
+					</a>
+				</li>
+			))
+		}
+	</ul>
+</BlogList>

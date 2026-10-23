@@ -1,0 +1,37 @@
+---
+import { Image, inferRemoteSize } from "astro:assets";
+import { Icon } from "astro-icon/components";
+import type { Picture } from "~/lib/types";
+
+interface Props {
+	image?: Picture;
+	/** Width to render at; the file is resized to this at build time */
+	width: number;
+	class?: string;
+	eager?: boolean;
+	alt?: string;
+}
+
+const { image, width, class: className, eager = false, alt } = Astro.props;
+// Measure the image when its source didn't say how big it is, so it keeps its proportions
+const size = image && !(image.width && image.height) ? await inferRemoteSize(image.url).catch(() => undefined) : image;
+const height = size?.width && size?.height ? Math.round((size.height / size.width) * width) : undefined;
+const attributes = { alt: alt ?? image?.alt ?? "", width, class: className, loading: eager ? ("eager" as const) : ("lazy" as const) };
+---
+
+{
+	image ? (
+		// A local image (site-content's uploads) is resized from its file, a remote one from its address
+		image.src ? (
+			<Image src={image.src} {...attributes} fetchpriority={eager ? "high" : undefined} />
+		) : height ? (
+			<Image src={image.url} {...attributes} height={height} fetchpriority={eager ? "high" : undefined} />
+		) : (
+			<Image src={image.url} {...attributes} inferSize />
+		)
+	) : (
+		<div class:list={["flex items-center justify-center bg-subtle", className]}>
+			<Icon name="lucide:image" class="size-12 text-ink/20" aria-hidden="true" />
+		</div>
+	)
+}

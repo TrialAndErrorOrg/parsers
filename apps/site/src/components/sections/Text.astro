@@ -1,0 +1,22 @@
+---
+import type { Section } from "~/content.config";
+import Markdown from "../Markdown.astro";
+
+type Props = Extract<Section, { type: "text" }>;
+const { id, title, body, background } = Astro.props;
+
+const backgrounds = {
+	paper: "bg-paper",
+	accent: "bg-accent border-y-frame border-ink",
+	"accent-soft": "bg-accent-soft border-y-frame border-ink",
+	journal: "bg-journal text-paper border-y-frame border-ink",
+	"journal-soft": "bg-journal-soft border-y-frame border-ink",
+};
+---
+
+<section id={id} class:list={["py-16", backgrounds[background]]}>
+	<div class="page">
+		{title && <h2 class="section-title mb-8">{title}</h2>}
+		<Markdown text={body} class:list={["prose-site", background === "journal" && "prose-invert"]} />
+	</div>
+</section>

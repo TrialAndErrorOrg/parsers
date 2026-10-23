@@ -1,0 +1,81 @@
+---
+import { Icon } from "astro-icon/components";
+import { type Journal, journal as defaultJournal } from "~/lib/sources/journal";
+
+/*
+ * The journal's own menu: a blue bar under the header on every /journal
+ * page. Its links are set in settings/navigation.yaml in site-content (or /admin → Menus).
+ * Other journals bring their own links, see src/lib/sources/journal.ts.
+ */
+
+interface Props {
+	journal?: Journal;
+}
+
+const source = Astro.props.journal ?? defaultJournal();
+const { config } = source;
+// Links to the journal's PubPub pages go to this site's copy once the export has it
+const localize = async (url?: string) => (url ? source.localUrl(url) : url);
+const menu = await Promise.all(
+	config.menu.map(async (item) => ({
+		...item,
+		url: await localize(item.url),
+		children: item.children && (await Promise.all(item.children.map(async (child) => ({ ...child, url: await localize(child.url) })))),
+	})),
+);
+const base = config.path;
+const list = config.listPath;
+const path = Astro.url.pathname.replace(/\/$/, "") || "/";
+// "Articles" is current on the article list and its type filters, other links on their own pages
+const isCurrent = (url?: string) => {
+	if (!url?.startsWith("/")) return false;
+	if (url === list) return path === list || path.startsWith(`${base}/kind/`);
+	return path === url || (url === `${base}/issues` && path.startsWith(`${base}/issue/`));
+};
+const external = (url?: string) => !!url && /^https?:/.test(url);
+---
+
+<nav aria-label="Journal" class="border-b-frame border-ink bg-journal text-paper">
+	<ul class="page flex flex-wrap items-center gap-x-1 gap-y-1 py-2 font-heading font-bold">
+		{
+			menu.map((item) =>
+				item.children?.length ? (
+					<li>
+						<details data-dropdown="hover" class="group/menu relative">
+							<summary class="flex cursor-pointer list-none items-center gap-1 border-frame border-transparent px-3 py-1 hover:border-paper [&::-webkit-details-marker]:hidden">
+								{item.title}
+								<Icon name="lucide:chevron-down" class="size-4 transition-transform group-open/menu:rotate-180" aria-hidden="true" />
+							</summary>
+							<ul class="absolute left-0 z-30 mt-2 w-64 border-frame border-ink bg-paper font-sans font-semibold text-ink shadow-hard">
+								{item.children.map((child) => (
+									<li class="border-b border-ink last:border-b-0">
+										<a href={child.url} class="flex items-center justify-between gap-2 px-4 py-2 hover:bg-journal-soft">
+											{child.title}
+											{external(child.url) && <Icon name="lucide:arrow-up-right" class="size-4 shrink-0" aria-hidden="true" />}
+										</a>
+									</li>
+								))}
+							</ul>
+						</details>
+					</li>
+				) : (
+					<li class:list={[item.button && "ml-auto"]}>
+						<a
+							href={item.url}
+							class:list={[
+								item.button
+									? "button button-plain py-1 text-base"
+									: "flex items-center gap-1 border-frame border-transparent px-3 py-1 hover:border-paper",
+								isCurrent(item.url) && "!border-paper bg-paper text-journal",
+							]}
+							aria-current={isCurrent(item.url) ? "page" : undefined}
+						>
+							{item.title}
+							{external(item.url) && <Icon name="lucide:arrow-up-right" class="size-4" aria-hidden="true" />}
+						</a>
+					</li>
+				),
+			)
+		}
+	</ul>
+</nav>

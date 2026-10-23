@@ -1,0 +1,19 @@
+---
+import type { Section } from "~/content.config";
+import { getArticles, journal } from "~/lib/sources/journal";
+import ArticleList from "../ArticleList.astro";
+
+type Props = Extract<Section, { type: "latest-articles" }>;
+const { title, count, style } = Astro.props;
+const articles = (await getArticles()).slice(0, count);
+---
+
+<section class="border-y-frame border-ink bg-journal-soft py-16">
+	<div class="page">
+		<div class="mb-10 flex flex-wrap items-end justify-between gap-4">
+			<h2 class="section-title flex-grow text-journal after:bg-journal">{title}</h2>
+			<a href={journal().config.listPath} class="button button-plain">All articles</a>
+		</div>
+		<ArticleList articles={articles} style={style} class={style === "list" ? "max-w-none border-frame border-ink bg-paper px-6 [&>article:last-child]:border-b-0" : undefined} />
+	</div>
+</section>

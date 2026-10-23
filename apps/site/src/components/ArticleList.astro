@@ -1,0 +1,31 @@
+---
+import type { HTMLAttributes } from "astro/types";
+import { site } from "~/lib/settings";
+import type { Article } from "~/lib/types";
+import ArticleCard from "./ArticleCard.astro";
+import ArticleRow from "./ArticleRow.astro";
+
+interface Props extends HTMLAttributes<"div"> {
+	articles: Article[];
+	/** Cards or a compact list. The journal's setting (settings/site.yaml) unless given */
+	style?: "cards" | "list";
+}
+
+const { articles, style = site.journal.listStyle, class: className, ...rest } = Astro.props;
+---
+
+{
+	style === "list" ? (
+		<div class:list={["flex max-w-4xl flex-col", className ?? "border-t border-ink/20"]} {...rest}>
+			{articles.map((article) => (
+				<ArticleRow article={article} />
+			))}
+		</div>
+	) : (
+		<div class:list={["grid gap-8 md:grid-cols-2 xl:grid-cols-3", className]} {...rest}>
+			{articles.map((article) => (
+				<ArticleCard article={article} />
+			))}
+		</div>
+	)
+}

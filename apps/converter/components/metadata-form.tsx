@@ -1,7 +1,6 @@
-'use client'
-
 import { useEffect, useRef, useState } from 'react'
-import { useConversionStore, useCredentialsStore, type SelectedSubmission } from '../lib/store'
+import { useConversionStore, type SelectedSubmission } from '../lib/store'
+import { useOjs } from '../lib/ojs'
 import type { MetaForm, Author } from '../lib/meta-to-preamble'
 import { Input } from './ui/input'
 import { Label } from './ui/label'
@@ -62,7 +61,7 @@ interface PublicationData {
 }
 
 export function MetadataForm({ submission }: { submission: SelectedSubmission }) {
-  const { token, endpoint } = useCredentialsStore()
+  const ojs = useOjs()
   const { setPreamble } = useConversionStore()
   const [form, setForm] = useState<MetaForm>(EMPTY_FORM)
   const [loading, setLoading] = useState(true)
@@ -83,7 +82,7 @@ export function MetadataForm({ submission }: { submission: SelectedSubmission })
   }, [form, loading, dirty, setPreamble])
 
   useEffect(() => {
-    if (!submission.publicationUrl || !token) {
+    if (!submission.publicationPath) {
       setLoading(false)
       return
     }
@@ -95,12 +94,8 @@ export function MetadataForm({ submission }: { submission: SelectedSubmission })
       setLoading(true)
       try {
         const [pubRes, filesRes] = await Promise.all([
-          fetch(
-            `/api/ojs/publication?url=${encodeURIComponent(submission.publicationUrl)}&apiToken=${encodeURIComponent(token)}`,
-          ),
-          fetch(
-            `/api/ojs/files?apiToken=${encodeURIComponent(token)}&submissionId=${submission.id}&stageId=${submission.stageId}&endpoint=${encodeURIComponent(endpoint)}`,
-          ),
+          ojs(submission.publicationPath),
+          ojs(`submissions/${submission.id}/files`),
         ])
 
         const pub: PublicationData = await pubRes.json()
@@ -146,7 +141,7 @@ export function MetadataForm({ submission }: { submission: SelectedSubmission })
     }
 
     load()
-  }, [submission, token, endpoint])
+  }, [submission, ojs])
 
   const updateField = <K extends keyof MetaForm>(key: K, value: MetaForm[K]) => {
     setForm((prev) => ({ ...prev, [key]: value }))

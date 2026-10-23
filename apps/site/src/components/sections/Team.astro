@@ -1,0 +1,16 @@
+---
+import type { Section } from "~/content.config";
+import { getTeam } from "~/lib/sources/blog";
+import PersonCard from "../PersonCard.astro";
+
+type Props = Extract<Section, { type: "team" }>;
+const { id, title } = Astro.props;
+const team = (await getTeam()).filter((person) => person.image);
+---
+
+<section id={id} class="page py-16">
+	<h2 class="section-title mb-10">{title}</h2>
+	<div class="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+		{team.map((person) => <PersonCard person={person} />)}
+	</div>
+</section>

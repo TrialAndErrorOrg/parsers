@@ -1,0 +1,302 @@
+---
+import { Icon } from "astro-icon/components";
+import ArticleCard from "~/components/ArticleCard.astro";
+import Downloads from "~/components/Downloads.astro";
+import JournalNav from "~/components/JournalNav.astro";
+import SocialIcon from "~/components/SocialIcon.astro";
+import { formatDate, listNames } from "~/lib/format";
+import type { ArticleDetails } from "~/lib/journal-article";
+import { type Journal, journal as defaultJournal } from "~/lib/sources/journal";
+import type { Article } from "~/lib/types";
+import "~/styles/journal.css";
+import Base from "./Base.astro";
+
+interface Props {
+	article: Article;
+	details: ArticleDetails;
+	/** Other articles from the same issue */
+	related?: Article[];
+	/** The Journal of Trial and Error unless given */
+	journal?: Journal;
+}
+
+const { article, details, related = [], journal = defaultJournal() } = Astro.props;
+const { config } = journal;
+const url = new URL(`${config.path}/${article.slug}`, Astro.site).href;
+const doiUrl = article.doi && `https://doi.org/${article.doi}`;
+const share = [
+	{ icon: "bluesky", label: "Share on Bluesky", href: `https://bsky.app/intent/compose?text=${encodeURIComponent(`${article.title} ${doiUrl ?? url}`)}` },
+	{ icon: "linkedin", label: "Share on LinkedIn", href: `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(url)}` },
+	{ icon: "email", label: "Share by email", href: `mailto:?subject=${encodeURIComponent(article.title)}&body=${encodeURIComponent(doiUrl ?? url)}` },
+];
+
+// Each affiliation is listed once and numbered in order of appearance
+const affiliations = [...new Set(article.authors.flatMap((a) => (a.affiliation ? [a.affiliation] : [])))];
+const names = article.authors.map((a) => a.name);
+const pdf = details.downloads.find((d) => d.format === "pdf");
+const numbered = article.issues.find((i) => /\bIssue \d+|\bVol(?:ume|\.) ?\d+/i.test(i.title));
+const volume = numbered?.title.match(/\bVol(?:ume|\.) ?(\d+)/i)?.[1];
+const issue = numbered?.title.match(/\bIssue (\d+)/i)?.[1];
+const year = article.date.slice(0, 4);
+
+// Scholarly metadata, read by Google Scholar and Zotero. Authors go in the
+// head slot so each one's institution and ORCID follow their name.
+const date = article.date.slice(0, 10).replaceAll("-", "/");
+const meta = {
+	citation_title: article.title,
+	citation_publication_date: date,
+	citation_online_date: date,
+	citation_journal_title: config.title,
+	citation_volume: volume,
+	citation_issue: issue,
+	citation_doi: article.doi,
+	citation_fulltext_html_url: url,
+	citation_pdf_url: pdf && new URL(pdf.url, Astro.site).href,
+	citation_keywords: details.keywords,
+	citation_language: "en",
+	"dc.title": article.title,
+	"dc.creator": names,
+	"dc.date": article.date,
+	"dc.identifier": article.doi,
+	"dc.rights": article.license?.url,
+	"article:published_time": article.date,
+};
+---
+
+<Base title={article.title} description={article.description} image={`/og${config.path}/${article.slug}.png`} type="article" meta={meta} class={config.theme}>
+	<Fragment slot="head">
+		{
+			article.authors.map((author) => (
+				<>
+					<meta name="citation_author" content={author.name} />
+					{author.affiliation && <meta name="citation_author_institution" content={author.affiliation} />}
+					{author.orcid && <meta name="citation_author_orcid" content={author.orcid} />}
+				</>
+			))
+		}
+	</Fragment>
+
+	<JournalNav journal={journal} />
+
+	<article class="page grid grid-cols-1 gap-x-10 py-10 lg:grid-cols-[4rem_minmax(0,48rem)_1fr]">
+		<header class="flex flex-col gap-4 lg:col-start-2">
+			<div class="flex flex-wrap items-center gap-3 text-sm font-semibold">
+				{article.kind && <a href={journal.kindUrl(article.kind)} class="label label-journal">{article.kind}</a>}
+				{
+					article.issues.map((i) => (
+						<a href={config.issueUrl(i.slug)} class="label bg-journal-soft hover:bg-paper">
+							{i.title}
+						</a>
+					))
+				}
+				<time datetime={article.date}>{formatDate(article.date)}</time>
+				{
+					details.updated && (
+						<span class="text-muted">
+							Updated <time datetime={details.updated}>{formatDate(details.updated)}</time>
+						</span>
+					)
+				}
+			</div>
+			<h1 class="font-heading text-4xl leading-[1.05] font-black tracking-tighter md:text-6xl">{article.title}</h1>
+			{
+				article.authors.length > 0 && (
+					<p class="text-lg">
+						{article.authors.map((author, i) => (
+							<>
+								<span class="whitespace-nowrap">
+									<span class="font-bold">{author.name}</span>
+									{author.affiliation && <sup class="ml-0.5">{affiliations.indexOf(author.affiliation) + 1}</sup>}
+									{author.orcid && (
+										<a href={author.orcid} class="ml-1 inline-block align-middle text-orcid" aria-label={`ORCID of ${author.name}`}>
+											<SocialIcon icon="orcid" class="size-4" />
+										</a>
+									)}
+								</span>
+								{i < article.authors.length - 2 ? ", " : i === article.authors.length - 2 ? " & " : ""}
+							</>
+						))}
+					</p>
+				)
+			}
+			{
+				affiliations.length > 0 && (
+					<ol class="flex flex-col gap-0.5 text-sm text-muted">
+						{affiliations.map((affiliation, i) => (
+							<li>
+								<sup class="mr-1">{i + 1}</sup>
+								{affiliation}
+							</li>
+						))}
+					</ol>
+				)
+			}
+			{
+				doiUrl && (
+					<p class="text-sm">
+						DOI:{" "}
+						<a href={doiUrl} class="font-mono font-semibold underline">
+							{doiUrl}
+						</a>
+					</p>
+				)
+			}
+			<Downloads downloads={details.downloads} class="lg:hidden" />
+		</header>
+
+		<aside class="order-first mt-0 flex gap-3 lg:sticky lg:top-28 lg:col-start-1 lg:row-span-2 lg:row-start-1 lg:mt-2 lg:h-max lg:flex-col" aria-label="Share">
+			{
+				share.map((s) => (
+					<a href={s.href} class="flex size-10 items-center justify-center border-frame border-ink bg-paper transition-all hover:-translate-y-0.5 hover:bg-accent hover:shadow-hard" aria-label={s.label}>
+						<SocialIcon icon={s.icon} />
+					</a>
+				))
+			}
+		</aside>
+
+		{
+			details.empty && pdf && (
+				<div class="mt-10 flex flex-col items-start gap-4 border-frame border-ink bg-journal-soft p-6 shadow-hard lg:col-start-2">
+					<p class="font-heading text-xl font-bold">This article is published as a PDF.</p>
+					<a href={pdf.url} class="button">
+						<Icon name="lucide:file-down" class="size-5" aria-hidden="true" /> Read the PDF
+					</a>
+				</div>
+			)
+		}
+
+		<div class="journal-body prose-site mt-10 lg:col-start-2" data-pagefind-body data-pagefind-filter={`section:${config.section}`} set:html={details.body} />
+
+		<div class="hidden lg:col-start-3 lg:row-span-3 lg:row-start-1 lg:block">
+			<div class="sticky top-28 flex flex-col gap-6">
+				{
+					details.headings.length > 2 && (
+						<nav aria-label="Table of contents" data-toc class="relative max-h-[60vh] overflow-y-auto">
+							<p class="mb-2 font-heading text-sm font-bold tracking-wide text-muted uppercase">Contents</p>
+							<ol class="flex flex-col border-l-2 border-ink/15 text-sm">
+								{details.headings.map((h) => (
+									<li>
+										<a
+											href={`#${h.slug}`}
+											class:list={[
+												"-ml-0.5 block border-l-2 border-transparent py-1 pr-2 text-muted transition-colors hover:text-ink aria-[current=location]:border-journal aria-[current=location]:font-semibold aria-[current=location]:text-ink",
+												h.depth === 3 ? "pl-6" : "pl-3",
+											]}
+										>
+											{h.text}
+										</a>
+									</li>
+								))}
+							</ol>
+						</nav>
+					)
+				}
+				<Downloads downloads={details.downloads} align="right" />
+			</div>
+		</div>
+
+		<footer class="mt-16 flex flex-col gap-10 lg:col-start-2">
+			{
+				details.keywords.length > 0 && (
+					<section>
+						<h2 class="mb-3 font-heading text-2xl font-black">Keywords</h2>
+						<ul class="flex flex-wrap gap-2">
+							{details.keywords.map((keyword) => (
+								<li class="tag">{keyword}</li>
+							))}
+						</ul>
+					</section>
+				)
+			}
+			{
+				details.connections.length > 0 && (
+					<section>
+						<h2 class="mb-4 font-heading text-3xl font-black">Connections</h2>
+						<ul class="grid gap-4">
+							{details.connections.map((c) => (
+								<li class="card p-5">
+									<span class="text-sm font-semibold text-muted">{c.label}</span>
+									<a href={c.url} class="card-link font-heading text-lg leading-tight font-bold">
+										{c.title}
+									</a>
+									{c.article && c.article.authors.length > 0 && <span class="text-sm">{listNames(c.article.authors.map((a) => a.name))}</span>}
+								</li>
+							))}
+						</ul>
+					</section>
+				)
+			}
+			<section class="border-frame border-ink bg-journal-soft p-6">
+				<h2 class="mb-2 font-heading text-2xl font-black">Cite as</h2>
+				<p>
+					{listNames(names)} ({year}). {article.title}. <em>{config.title}</em>{volume && <>, <em>{volume}</em>{issue && `(${issue})`}</>}.{" "}
+					{doiUrl && <a href={doiUrl} class="font-semibold break-all underline">{doiUrl}</a>}
+				</p>
+			</section>
+			{
+				article.license && (
+					<section class="border-frame border-ink bg-subtle p-6">
+						<h2 class="mb-2 font-heading text-2xl font-black">License</h2>
+						<p>
+							<em>{article.title}</em> by {listNames(names)} is licensed under{" "}
+							<a rel="license" href={article.license.url} class="font-semibold underline">
+								{article.license.name}
+							</a>
+							.
+						</p>
+					</section>
+				)
+			}
+		</footer>
+	</article>
+
+	{
+		related.length > 0 && (
+			<section class="border-t-frame border-ink bg-journal-soft py-12">
+				<div class="page">
+					<h2 class="section-title mb-8 text-journal after:bg-journal">More from {article.issues[0].title}</h2>
+					<div class="grid gap-8 md:grid-cols-2 xl:grid-cols-3">
+						{related.map((a) => (
+							<ArticleCard article={a} />
+						))}
+					</div>
+				</div>
+			</section>
+		)
+	}
+</Base>
+
+<script>
+	// Marks the section being read in the contents: the last heading above a line a third of the
+	// way down the screen
+	const toc = document.querySelector<HTMLElement>("[data-toc]");
+	if (toc) {
+		const links = [...toc.querySelectorAll<HTMLAnchorElement>('a[href^="#"]')];
+		const headings = links.map((a) => document.getElementById(decodeURIComponent(a.hash.slice(1))));
+		let queued = false;
+		const update = () => {
+			queued = false;
+			const line = innerHeight / 3;
+			let current = -1;
+			headings.forEach((h, i) => {
+				if (h && h.getBoundingClientRect().top <= line) current = i;
+			});
+			links.forEach((a, i) => (i === current ? a.setAttribute("aria-current", "location") : a.removeAttribute("aria-current")));
+			// Keep the marked entry in view when the contents scroll on their own
+			const active = links[current];
+			if (active && (active.offsetTop < toc.scrollTop || active.offsetTop + active.offsetHeight > toc.scrollTop + toc.clientHeight)) {
+				toc.scrollTop = active.offsetTop - toc.clientHeight / 2;
+			}
+		};
+		addEventListener(
+			"scroll",
+			() => {
+				if (queued) return;
+				queued = true;
+				requestAnimationFrame(update);
+			},
+			{ passive: true },
+		);
+		update();
+	}
+</script>

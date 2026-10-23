@@ -123,7 +123,7 @@ jobs:
           # shellcheck disable=SC2016 # expanded by the inner shell, after varlock has filled them in
           pnpm exec varlock run -- sh -c '
             if [ -z "$COOLIFY_DEPLOY_URL" ]; then echo "No COOLIFY_DEPLOY_URL, not deploying"; exit 0; fi
-            curl --fail --silent --show-error -H "Authorization: Bearer $COOLIFY_TOKEN" "$COOLIFY_DEPLOY_URL"
+            curl --fail --silent --show-error -X POST -H "Authorization: Bearer $COOLIFY_TOKEN" "$COOLIFY_DEPLOY_URL"
           '
         env:
           OP_TOKEN: ${{ secrets.OP_TOKEN }}

@@ -73,6 +73,6 @@ echo "› Deploying"
 cd "$site"
 # shellcheck disable=SC2016 # expanded by the inner shell, after varlock has filled them in
 COOLIFY_TOKEN=$(op read --account trialanderror "op://Website/Coolify Website Deploy Token/credential") \
-	pnpm exec varlock run -- sh -c 'curl --fail --silent --show-error -H "Authorization: Bearer $COOLIFY_TOKEN" "$COOLIFY_DEPLOY_URL"'
+	pnpm exec varlock run -- sh -c 'curl --fail --silent --show-error -X POST -H "Authorization: Bearer $COOLIFY_TOKEN" "$COOLIFY_DEPLOY_URL"'
 echo
 echo "Deployed $image:$tag"
